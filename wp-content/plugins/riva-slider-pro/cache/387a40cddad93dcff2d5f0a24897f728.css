@@ -1,0 +1,465 @@
+.riva-slider-holder div,
+.riva-slider-holder ul,
+.riva-slider-holder .riva-slider li,
+.riva-slider-holder span,
+.riva-slider-holder a,
+.riva-slider-holder img,
+.riva-slider-holder iframe {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  max-width: none !important;
+  max-height: none !important;
+  list-style: none !important;
+  list-style-type: none !important;
+  list-style-image: none !important;
+  list-style-position: outside !important;
+}
+
+.riva-slider-holder iframe {
+  outline: none !important;
+  z-index: 7 !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.riva-slider-holder div.riva-slider-preload,
+.riva-slider-holder ul.riva-slider {
+  overflow: hidden !important;
+}
+
+div.riva-slider-holder {
+  position: relative !important;
+}
+
+div.riva-slider-preload {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  z-index: 7;
+}
+
+div.rs-pause-timer {
+  z-index: 2;
+}
+
+ul.riva-slider {
+  position: relative !important;
+}
+
+ul.riva-slider li {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 1;
+}
+
+ul.riva-slider li iframe {
+  display: none;
+  z-index: 7;
+}
+
+li.z-index {
+  z-index: 4 !important;
+}
+
+ul.riva-slider li div.rs-content {
+  position: absolute;
+  display: none;
+}
+
+ul.riva-slider li div.rs-content h2,
+ul.riva-slider li div.rs-content p {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul.riva-slider li div.rs-content .rs-content-holder {
+  overflow: hidden;
+}
+
+div.rs-next, div.rs-prev {
+  z-index: 5;
+  opacity: 0;
+  position: absolute !important;
+  cursor: pointer;
+  display: none;
+}
+
+div.rs-next.no-hide, div.rs-prev.no-hide {
+  opacity: 1 !important;
+  display: block !important;
+}
+
+ul.rs-control-nav {
+  visibility: hidden;
+  z-index: 6;
+}
+
+ul.rs-control-nav li {
+  cursor: pointer;
+  list-style: none !important;
+  list-style-type: none !important;
+  list-style-image: none !important;
+  list-style-position: outside !important;
+}
+
+ul.rs-control-nav li.rs-numbers {
+  background-image: none !important;
+}
+
+div.rs-pause-button {
+  z-index: 5;
+  cursor: pointer;
+  display: none;
+  opacity: 0;
+}
+
+div.rs-pause-button.no-hide {
+  opacity: 0.5;
+  display: block !important;
+}
+
+div.rs-video-button {
+  z-index: 5;
+  cursor: pointer;
+}
+
+div.rs-close-video {
+  z-index: 5;
+  cursor: pointer;
+}
+
+div.rs-pause-button.paused {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+/* Important structural CSS for slideshow id: 1 */
+
+.slider-id-1,
+.slider-id-1 div.riva-slider-preload,
+.slider-id-1 ul.riva-slider {
+    width: 1440px;
+    height: 376px;
+}
+
+.slider-id-1 ul.riva-slider {
+    display: none;
+}
+
+.slider-id-1 ul.riva-slider li {
+    width: 1440px;
+    height: 376px;
+}
+
+.slider-id-1 div.riva-slider-preload {
+    background-image: url(http://localhost/rr2/wp-content/plugins/riva-slider-pro/images/loading/circle_default.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #FFF;
+}
+
+.slider-id-1 div.rs-next,
+.slider-id-1 div.rs-prev {
+    top: 174px;
+}
+
+.slider-id-1 .rs-blind {
+    height: 376px;
+    width: 103px;
+    position: absolute;
+    z-index: 3;
+}
+
+.slider-id-1 .rs-blind.no-width {
+    width: 0px;
+}
+
+.slider-id-1 .rs-blind.no-height {
+    height: 0px;
+}
+
+.slider-id-1 .rs-cube {
+    height: 94px;
+    width: 180px;
+    position: absolute;
+    z-index: 3;
+}
+
+.slider-id-1 .rs-cube.no-dim {
+    height: 0px;
+    width: 0px;
+}
+
+.slider-id-1 .rs-thumbnails {
+    height: 30px;
+    width: 50px;
+}
+
+.slider-shadow-1 {
+    width: 1440px;
+    height: 110px;
+}
+
+/* Skin CSS for slideshow id: 1 */
+
+.slider-id-1 {
+    border: 10px solid #191919;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.slider-id-1 .rs-content .rs-content-holder {
+    padding: 15px !important;
+    margin: 10px !important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.slider-id-1 .rs-content .rs-title-only .rs-content-holder h2 {
+    padding-bottom: 5px !important;
+}
+
+.slider-id-1 .rs-content .rs-content-holder span {
+    display: block;
+}
+
+.slider-id-1 .rs-text-left,
+.slider-id-1 .rs-text-right {
+    top: 0px;
+    height: 100%;
+    width: 45%;
+}
+
+.slider-id-1 .rs-text-left {
+    left: 0px;
+}
+
+.slider-id-1 .rs-text-right {
+    right: 0px;
+}
+
+.slider-id-1 .rs-text-left .rs-content-holder,
+.slider-id-1 .rs-text-right .rs-content-holder {
+    height: 100%;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+}
+
+.slider-id-1 .rs-text-top,
+.slider-id-1 .rs-text-bottom {
+    left: 0px;
+    width: 100%;
+}
+
+.slider-id-1 .rs-text-top {
+    top: 0px;
+}
+
+.slider-id-1 .rs-text-bottom {
+    bottom: 0px;
+}
+
+.slider-id-1 .rs-text-top .rs-content-holder,
+.slider-id-1 .rs-text-bottom .rs-content-holder {
+    width: 100%;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+}
+
+.slider-id-1 .rs-pause-timer {
+    background-color: #000;
+    height: 5px;
+    width: 0px;
+    opacity: 0.3;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.slider-id-1.rs-ie7 .rs-pause-timer,
+.slider-id-1.rs-ie8 .rs-pause-timer {
+    filter: alpha(opacity=30); 
+}
+
+.slider-id-1 .rs-next {
+    background: url(http://localhost/rr2/wp-content/plugins/riva-slider-pro/styles/skins/default/next.png) top left no-repeat;
+}
+
+.slider-id-1 .rs-prev {
+    background: url(http://localhost/rr2/wp-content/plugins/riva-slider-pro/styles/skins/default/prev.png) top left no-repeat;
+}
+
+.slider-id-1 .rs-next.inside {
+  right: 0px;
+}
+
+.slider-id-1 .rs-prev.inside {
+  left: 0px;
+}
+
+.slider-id-1 .rs-next.outside {
+    right: -50px;
+}
+
+.slider-id-1 .rs-prev.outside {
+    left: -50px;
+}
+
+.slider-id-1 .rs-next.inside,
+.slider-id-1 .rs-prev.outside {
+    margin-right: 10px !important;
+}
+
+.slider-id-1 .rs-prev.inside,
+.slider-id-1 .rs-next.outside {
+    margin-left: 10px !important; 
+}
+
+.slider-id-1 .rs-next,
+.slider-id-1 .rs-prev {
+    width: 25px;
+    height: 32px;
+    font-size: 12px;
+    font-family: 'Lucida Sans Grande', Arial, sans-serif;
+}
+
+.slider-id-1 .rs-control-nav {
+    background-image: url(http://localhost/rr2/wp-content/plugins/riva-slider-pro/styles/skins/default/controlnav_bg.jpg) !important;
+    background-position: top left !important;
+    background-repeat: repeat-x !important;
+    background-color: #ddd !important;
+    border-bottom: 1px solid #d6d6d6 !important;
+    padding: 4px !important;
+    clear: both;
+}
+
+.slider-id-1.rs-ie7 .rs-control-nav {
+    padding-bottom: 8px !important;
+}
+
+.slider-id-1 .bottom-center,
+.slider-id-1 .bottom-left,
+.slider-id-1 .bottom-right {
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    -moz-border-radius-bottomright: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    
+}
+
+.slider-id-1 .bottom-left {
+    left: 20px;
+}
+
+.slider-id-1 .bottom-right {
+    right: 20px;
+}
+
+.slider-id-1 .rs-control-nav li {
+    background-image: url(http://localhost/rr2/wp-content/plugins/riva-slider-pro/styles/skins/default/controlnav.png) !important;
+    background-position: 0px 0px !important;
+    background-repeat: no-repeat !important;
+    margin: 4px !important;
+    vertical-align: middle !important;
+    line-height: 14px !important;
+    font-size: 14px !important;
+    letter-spacing: 30px !important;
+    font-weight: bold !important;
+    float: left !important;
+    font-family: 'Lucida Sans Grande', Arial, sans-serif;
+}
+
+.slider-id-1 .rs-control-nav li.rs-icons {
+    width: 14px !important;
+    height: 14px !important;
+}
+
+.slider-id-1 .rs-control-nav li.rs-icons.hover {
+    background-position: 0px -14px !important;
+}
+
+.slider-id-1 .rs-control-nav li.rs-icons.current {
+    background-position: 0px -28px !important;
+}
+
+.slider-id-1 .rs-control-nav li.rs-numbers {
+    width: 10px !important;
+    color: #777 !important;
+}
+
+.slider-id-1 .rs-control-nav li.rs-numbers.hover {
+    color: #444 !important;
+}
+
+.slider-id-1 .rs-control-nav li.rs-numbers.current {
+    color: #000 !important;
+}
+
+.slider-id-1 .rs-control-nav li.rs-thumbnails {
+    margin: 6px !important;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.slider-id-1 .rs-control-nav li.rs-thumbnails.current {
+    margin: 3px !important;
+    border: 3px solid #191919 !important;
+}
+
+.slider-id-1 .rs-pause-button {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    background: url(http://localhost/rr2/wp-content/plugins/riva-slider-pro/styles/skins/default/pause.png) 0px 0px no-repeat;
+}
+
+.slider-id-1 .rs-pause-button.big {
+    width: 65px;
+    height: 65px;
+    background: url(http://localhost/rr2/wp-content/plugins/riva-slider-pro/styles/skins/default/pause_big.png) 0px 0px no-repeat !important;
+}
+
+.slider-id-1 .rs-video-button {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    background: url(http://localhost/rr2/wp-content/plugins/riva-slider-pro/styles/skins/default/video.png) 0px 0px no-repeat;
+    display: none;
+    opacity: 0;
+}
+
+.slider-id-1 .rs-video-button.big {
+    width: 65px;
+    height: 65px;
+    background: url(http://localhost/rr2/wp-content/plugins/riva-slider-pro/styles/skins/default/video_big.png) 0px 0px no-repeat;
+}
+
+.slider-id-1 .rs-close-video {
+    width: 28px;
+    height: 32px;
+    position: absolute;
+    bottom: -32px;
+    right: 10px;
+    display: none;
+    background: url(http://localhost/rr2/wp-content/plugins/riva-slider-pro/styles/skins/default/close.png) 0px 0px no-repeat;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    -moz-border-radius-bottomright: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.slider-shadow-1 {
+    background: url(http://localhost/rr2/wp-content/plugins/riva-slider-pro/timthumb.php?src=http://localhost/rr2/wp-content/plugins/riva-slider-pro/styles/skins/default/shadow.png&w=1440&h=110) top center no-repeat;
+    margin-left: 10px;
+}

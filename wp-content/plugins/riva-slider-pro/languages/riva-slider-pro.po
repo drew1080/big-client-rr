@@ -1,0 +1,495 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: riva-slider-pro\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-03-13 23:02-0000\n"
+"PO-Revision-Date: 2012-03-13 23:02-0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr_e;esc_html_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../functions.php:241
+#: ../admin/functions.php:571
+#: ../admin/functions.php:572
+msgid "Slideshows"
+msgstr ""
+
+#: ../functions.php:249
+msgid "Manage Slideshows"
+msgstr ""
+
+#: ../functions.php:257
+#: ../admin/functions.php:588
+msgid "Global Settings"
+msgstr ""
+
+#: ../functions.php:265
+msgid "Slideshow"
+msgstr ""
+
+#: ../generate-css.php:489
+msgid "Failed to create the dynamic CSS file. This may be due to a file permissions error. Inside your Wordpress directories <b>wp-content/plugins/</b> folder, make sure the <b>riva-slider-pro</b> file permissions are set to <b>755</b>, and the individual files within this folder are set to <b>644</b>. Also try setting file permissions to <b>777</b>. If you are still running into issues, please contact the Riva Slider support."
+msgstr ""
+
+#: ../slideshow.php:236
+msgid "This slideshow has no images set to it."
+msgstr ""
+
+#: ../slideshow.php:239
+msgid "The slideshow you have selected does not exist (ID: "
+msgstr ""
+
+#: ../update-check.php:57
+msgid "Something has gone wrong checking your Serial Code. Your site is blocking outbound requests. This may be due to your server running SSL. If your not sure what to do, please contact support."
+msgstr ""
+
+#: ../widget.php:11
+msgid "Display a slideshow using a widget."
+msgstr ""
+
+#: ../widget.php:32
+msgid "<b>Unable to display the slideshow. Function does not exist."
+msgstr ""
+
+#: ../widget.php:49
+msgid "You must create a slideshow before you can display one in a widget!"
+msgstr ""
+
+#: ../widget.php:54
+msgid "Title:"
+msgstr ""
+
+#: ../widget.php:58
+msgid "Slideshow:"
+msgstr ""
+
+#: ../admin/activate.php:36
+#: ../admin/activate.php:146
+msgid "Slideshow One"
+msgstr ""
+
+#: ../admin/activate.php:37
+#: ../admin/activate.php:147
+msgid "This is the first slideshow created when you activated the plugin."
+msgstr ""
+
+#: ../admin/bulk.php:55
+#: ../admin/delete.php:46
+#: ../admin/duplicate.php:53
+msgid "You do not have sufficient permissions to edit slideshows."
+msgstr ""
+
+#: ../admin/duplicate.php:27
+msgid " - Copy"
+msgstr ""
+
+#: ../admin/functions.php:111
+msgid "all_categories"
+msgstr ""
+
+#: ../admin/functions.php:342
+msgid "Slideshow has been created successfully."
+msgstr ""
+
+#: ../admin/functions.php:344
+msgid "Slideshow has successfully been saved."
+msgstr ""
+
+#: ../admin/functions.php:346
+msgid "Slideshow has successfully been duplicated."
+msgstr ""
+
+#: ../admin/functions.php:348
+msgid "Slideshow has been deleted."
+msgstr ""
+
+#: ../admin/functions.php:350
+msgid "Bulk delete successful. Slideshow(s) have been deleted."
+msgstr ""
+
+#: ../admin/functions.php:352
+msgid "Slideshow settings have been imported."
+msgstr ""
+
+#: ../admin/functions.php:354
+msgid "Imported settings not valid. Please try again."
+msgstr ""
+
+#: ../admin/functions.php:356
+msgid "Global settings have successfully been saved."
+msgstr ""
+
+#: ../admin/functions.php:358
+msgid "Global setting saved, but the serial code you have entered invalid. Please enter a valid one to receive update notifications."
+msgstr ""
+
+#: ../admin/functions.php:360
+msgid "Global settings have successfully been imported."
+msgstr ""
+
+#: ../admin/functions.php:362
+msgid "CSS has successfully been reset."
+msgstr ""
+
+#: ../admin/functions.php:364
+msgid "Plugin settings have been reset successfully."
+msgstr ""
+
+#: ../admin/functions.php:366
+msgid "Please enter a serial code. Check the email you received upon purchase for more information."
+msgstr ""
+
+#: ../admin/functions.php:368
+msgid "An unknown error has occurred. Please try again."
+msgstr ""
+
+#: ../admin/functions.php:580
+msgid "Add New"
+msgstr ""
+
+#: ../admin/functions.php:614
+msgid "Riva Slider Pro"
+msgstr ""
+
+#: ../admin/functions.php:615
+msgid "No name has been entered for the slideshow. Please enter a slideshow name."
+msgstr ""
+
+#: ../admin/functions.php:616
+msgid "Image #"
+msgstr ""
+
+#: ../admin/functions.php:619
+msgid "Click to edit"
+msgstr ""
+
+#: ../admin/functions.php:620
+msgid "Close editor"
+msgstr ""
+
+#: ../admin/functions.php:621
+msgid "Are you sure you want to delete all the images?"
+msgstr ""
+
+#: ../admin/functions.php:622
+msgid "Please enter a slideshow name"
+msgstr ""
+
+#: ../admin/functions.php:623
+msgid "Close"
+msgstr ""
+
+#: ../admin/functions.php:624
+msgid "This slideshow currently has no images"
+msgstr ""
+
+#: ../admin/functions.php:625
+msgid "Slideshow is currently set to use Images From Posts. Therefore, this panel is currently disabled. To enable it, change the image source on the right-hand side."
+msgstr ""
+
+#: ../admin/functions.php:626
+msgid " - Pause Button positioned here"
+msgstr ""
+
+#: ../admin/functions.php:627
+msgid " - Styling disabled. Slideshow is set to use thumbnails"
+msgstr ""
+
+#: ../admin/functions.php:628
+msgid "Are you sure you wish to Reset All Slideshows & Settings? (They will be lost and cannot be recovered)."
+msgstr ""
+
+#: ../admin/interface.php:77
+msgid "Do not forget to enter your Serial Code. You will not receive notifications of updates without it. <a href=\"admin.php?page="
+msgstr ""
+
+#: ../admin/interface.php:106
+msgid "Change Slideshow"
+msgstr ""
+
+#: ../admin/interface.php:120
+#: ../admin/interface.php:122
+msgid "Reset CSS"
+msgstr ""
+
+#: ../admin/interface.php:126
+msgid "Reset Defaults"
+msgstr ""
+
+#: ../admin/interface.php:128
+msgid "Reset Slideshows & Settings"
+msgstr ""
+
+#: ../admin/interface.php:136
+msgid "Export"
+msgstr ""
+
+#: ../admin/interface.php:139
+msgid "This button will output a .txt file that contains all of your plugins settings, including slideshows. Save this .txt file in a safe place for future restorations."
+msgstr ""
+
+#: ../admin/interface.php:143
+msgid "Import"
+msgstr ""
+
+#: ../admin/interface.php:146
+msgid "Paste the code from one of your exported .txt files into this text area. Then click \"Save Settings\" to restore the entire plugin (including slideshows) to a previous state. Do not use codes from a Wordpress site. Doing so will throw up errors and you will have to reset the plugin."
+msgstr ""
+
+#: ../admin/interface.php:241
+msgid "No repeat"
+msgstr ""
+
+#: ../admin/interface.php:242
+msgid "Repeat horizontally"
+msgstr ""
+
+#: ../admin/interface.php:243
+msgid "Repeat vertically"
+msgstr ""
+
+#: ../admin/interface.php:246
+msgid "Top"
+msgstr ""
+
+#: ../admin/interface.php:247
+#: ../admin/interface.php:252
+msgid "Center"
+msgstr ""
+
+#: ../admin/interface.php:248
+msgid "Bottom"
+msgstr ""
+
+#: ../admin/interface.php:251
+msgid "Left"
+msgstr ""
+
+#: ../admin/interface.php:253
+msgid "Right"
+msgstr ""
+
+#: ../admin/interface.php:272
+msgid "You do not have sufficient permissions to view the "
+msgstr ""
+
+#: ../admin/interface.php:305
+msgid "<i>Top</i>"
+msgstr ""
+
+#: ../admin/interface.php:306
+msgid "<i>Right</i>"
+msgstr ""
+
+#: ../admin/interface.php:307
+msgid "<i>Bottom</i>"
+msgstr ""
+
+#: ../admin/interface.php:308
+msgid "<i>Left</i>"
+msgstr ""
+
+#: ../admin/interface.php:319
+msgid "<i>Top-left</i>"
+msgstr ""
+
+#: ../admin/interface.php:320
+msgid "<i>Top-right</i>"
+msgstr ""
+
+#: ../admin/interface.php:321
+msgid "<i>Bottom-left</i>"
+msgstr ""
+
+#: ../admin/interface.php:322
+msgid "<i>Bottom-right</i>"
+msgstr ""
+
+#: ../admin/interface.php:454
+msgid "PHP Version"
+msgstr ""
+
+#: ../admin/interface.php:458
+msgid "GB Library"
+msgstr ""
+
+#: ../admin/interface.php:461
+msgid "GD Library is installed."
+msgstr ""
+
+#: ../admin/interface.php:463
+msgid "GD Library is not installed and therefore image resizing will not work. Please contact your hosting company to have it enabled."
+msgstr ""
+
+#: ../admin/interface.php:468
+msgid "MySQL Version"
+msgstr ""
+
+#: ../admin/interface.php:472
+msgid "Wordpress Version"
+msgstr ""
+
+#: ../admin/interface.php:476
+msgid "Plugin Version"
+msgstr ""
+
+#: ../admin/interface.php:478
+msgid " - Your site is blocking outbound requests. This may be due to SSL. Unable to check for updates. Please contact support."
+msgstr ""
+
+#: ../admin/interface.php:478
+msgid " - A new version of the Riva Slider Pro ("
+msgstr ""
+
+#: ../admin/interface.php:478
+msgid ") is available. You can upgrade via the "
+msgstr ""
+
+#: ../admin/interface.php:478
+msgid "plugins"
+msgstr ""
+
+#: ../admin/interface.php:478
+msgid " admin panel. <br /><b>Please Note:</b> Backup your Skins before updating. All Skins will be deleted when updating and will have to be re-uploaded afterwards."
+msgstr ""
+
+#: ../admin/interface.php:498
+#: ../admin/interface.php:643
+#: ../admin/interface.php:838
+#: ../admin/interface.php:884
+msgid "Delete"
+msgstr ""
+
+#: ../admin/interface.php:589
+msgid "Change image #0"
+msgstr ""
+
+#: ../admin/interface.php:589
+#: ../admin/interface.php:734
+msgid "Change image"
+msgstr ""
+
+#: ../admin/interface.php:734
+msgid "Change image #"
+msgstr ""
+
+#: ../admin/interface.php:790
+msgid "Manage Images"
+msgstr ""
+
+#: ../admin/interface.php:795
+msgid "Add image to slideshow"
+msgstr ""
+
+#: ../admin/interface.php:795
+msgid "Add a new image"
+msgstr ""
+
+#: ../admin/interface.php:796
+msgid "Delete all slideshows images"
+msgstr ""
+
+#: ../admin/interface.php:796
+msgid "Delete all images"
+msgstr ""
+
+#: ../admin/interface.php:805
+msgid "Change Image Source"
+msgstr ""
+
+#: ../admin/interface.php:811
+msgid "This Panel"
+msgstr ""
+
+#: ../admin/interface.php:812
+msgid "Images From Posts"
+msgstr ""
+
+#: ../admin/interface.php:819
+msgid "<b>Display a maximum of</b>"
+msgstr ""
+
+#: ../admin/interface.php:819
+msgid "<b>images.</b>"
+msgstr ""
+
+#: ../admin/interface.php:820
+msgid "Select a source to get the images from. Setting the slideshow to get \"Images from Posts\" will disable this images panel."
+msgstr ""
+
+#: ../admin/interface.php:837
+msgid "Bulk Actions"
+msgstr ""
+
+#: ../admin/interface.php:840
+msgid "Apply"
+msgstr ""
+
+#: ../admin/interface.php:850
+#: ../admin/interface.php:897
+msgid "ID"
+msgstr ""
+
+#: ../admin/interface.php:854
+#: ../admin/interface.php:901
+msgid "Name"
+msgstr ""
+
+#: ../admin/interface.php:867
+#: ../admin/interface.php:873
+msgid "Edit this slideshow"
+msgstr ""
+
+#: ../admin/interface.php:874
+msgid "Edit"
+msgstr ""
+
+#: ../admin/interface.php:878
+msgid "Duplicate this slideshow"
+msgstr ""
+
+#: ../admin/interface.php:879
+msgid "Duplicate"
+msgstr ""
+
+#: ../admin/interface.php:883
+msgid "Delete this slideshow"
+msgstr ""
+
+#: ../admin/interface.php:919
+msgid "<p><strong>Wordpress version is too low. Please upgrade to 3.0 or higher.</strong></p>"
+msgstr ""
+
+#: ../admin/media.php:64
+msgid "Use this image"
+msgstr ""
+
+#: ../admin/metabox.php:30
+msgid "Choose an image"
+msgstr ""
+
+#: ../admin/metabox.php:34
+msgid "Insert an image"
+msgstr ""
+
+#: ../admin/metabox.php:136
+msgid "Use the button below to add a slideshow to this post."
+msgstr ""
+
+#: ../admin/metabox.php:142
+msgid "Insert a slideshow"
+msgstr ""
+
+#: ../admin/save.php:220
+msgid "You do not have sufficient permissions to create a slideshow."
+msgstr ""
+
+#: ../admin/save.php:319
+msgid "You do not have sufficient permissions to edit the Global Settings."
+msgstr ""
+

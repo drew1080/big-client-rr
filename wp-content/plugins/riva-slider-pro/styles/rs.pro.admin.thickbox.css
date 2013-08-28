@@ -1,0 +1,30 @@
+div#rs-media-items {
+	margin: 5px 5px;
+}
+
+ul#rs-media-items-list {
+	list-style: none;
+}
+
+ul#rs-media-items-list li {
+	float: left;
+	position: relative;
+	width: 150px;
+	height: 150px;
+	margin: 0px 5px 10px 5px;
+	
+}
+
+ul#rs-media-items-list li img {	
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+}
+
+.use-this-image {
+	position: absolute;
+	bottom: 5px;
+	left: 16px;
+	width: 97px;
+	text-align: center;
+}

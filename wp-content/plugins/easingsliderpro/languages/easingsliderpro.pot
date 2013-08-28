@@ -1,0 +1,997 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Easing Slider \"Pro\"\n"
+"POT-Creation-Date: 2013-04-25 18:51-0000\n"
+"PO-Revision-Date: 2013-04-25 18:51-0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: easingsliderpro.php:480 easingsliderpro.php:481 easingsliderpro.php:492
+#: easingsliderpro.php:595
+msgid "Slideshows"
+msgstr ""
+
+#: easingsliderpro.php:493 easingsliderpro.php:605
+msgid "All Slideshows"
+msgstr ""
+
+#: easingsliderpro.php:500
+msgid "Add New Slideshow"
+msgstr ""
+
+#: easingsliderpro.php:501 easingsliderpro.php:614
+#: templates/listslideshows.php:13
+msgid "Add New"
+msgstr ""
+
+#: easingsliderpro.php:508
+msgid "Customizer"
+msgstr ""
+
+#: easingsliderpro.php:509 easingsliderpro.php:624
+msgid "Customize"
+msgstr ""
+
+#: easingsliderpro.php:516 templates/importexport.php:7
+msgid "Import/Export Slideshows"
+msgstr ""
+
+#: easingsliderpro.php:517 easingsliderpro.php:634
+msgid "Import/Export"
+msgstr ""
+
+#: easingsliderpro.php:524 templates/editsettings.php:7
+msgid "Edit Settings"
+msgstr ""
+
+#: easingsliderpro.php:525 easingsliderpro.php:644
+msgid "Settings"
+msgstr ""
+
+#: easingsliderpro.php:585 includes/Widget.php:19 includes/Widget.php:79
+msgid "Slideshow"
+msgstr ""
+
+#: easingsliderpro.php:672 easingsliderpro.php:719
+msgid "Add a slideshow"
+msgstr ""
+
+#: easingsliderpro.php:672
+msgid "Add Slideshow"
+msgstr ""
+
+#: easingsliderpro.php:707
+msgid "Please select a slideshow"
+msgstr ""
+
+#: easingsliderpro.php:720
+msgid "Select a slideshow to insert from the box below."
+msgstr ""
+
+#: easingsliderpro.php:725 templates/customizer.php:58
+msgid "Select a slideshow"
+msgstr ""
+
+#: easingsliderpro.php:734
+msgid "Insert Slideshow"
+msgstr ""
+
+#: easingsliderpro.php:735 templates/customizer.php:50
+msgid "Close"
+msgstr ""
+
+#: easingsliderpro.php:808 easingsliderpro.php:958 easingsliderpro.php:1113
+msgid "Security check has failed. Save has been prevented. Please try again."
+msgstr ""
+
+#: easingsliderpro.php:817
+msgid ""
+"Failed to save slideshow. An error has occurred. Please try again or contact "
+"support."
+msgstr ""
+
+#: easingsliderpro.php:819
+msgid "Slideshow has been <strong>saved</strong> successfully."
+msgstr ""
+
+#: easingsliderpro.php:848
+msgid ""
+"Security check has failed. Bulk action has been prevented. Please try again."
+msgstr ""
+
+#: easingsliderpro.php:901
+msgid ""
+"Security check has failed. Duplicate has been prevented. Please try again."
+msgstr ""
+
+#: easingsliderpro.php:923
+msgid "Security check has failed. Delete has been prevented. Please try again."
+msgstr ""
+
+#: easingsliderpro.php:990 includes/Legacy.php:147 includes/Legacy.php:316
+msgid "Security check has failed. Import has been prevented. Please try again."
+msgstr ""
+
+#: easingsliderpro.php:1005
+msgid ""
+"Uploaded file is not a valid JSON file. Please upload a .json file exported "
+"from EasingSliderPro."
+msgstr ""
+
+#: easingsliderpro.php:1010
+msgid "Import slideshows failed: file_get_contents not successful."
+msgstr ""
+
+#: easingsliderpro.php:1048
+msgid "Security check has failed. Export has been prevented. Please try again."
+msgstr ""
+
+#: easingsliderpro.php:1054
+msgid ""
+"No slideshows have been selected to export. Please select some and try again."
+msgstr ""
+
+#: easingsliderpro.php:1070
+msgid ""
+"PHP json_encode has failed to encode slideshows correctly. Please try again."
+msgstr ""
+
+#: easingsliderpro.php:1095
+msgid "Security check has failed. Reset has been prevented. Please try again."
+msgstr ""
+
+#: easingsliderpro.php:1104
+msgid "Plugin has been reset successfully."
+msgstr ""
+
+#: easingsliderpro.php:1144
+msgid "Settings have been <strong>saved</strong> successfully."
+msgstr ""
+
+#: easingsliderpro.php:1208
+msgid "Slideshows have been <strong>duplicated</strong> successfully."
+msgstr ""
+
+#: easingsliderpro.php:1212
+msgid ""
+"Failed to duplicate slideshows. An error has occurred. Please try again or "
+"contact support."
+msgstr ""
+
+#: easingsliderpro.php:1216
+msgid "Slideshows have been <strong>deleted</strong> successfully."
+msgstr ""
+
+#: easingsliderpro.php:1220
+msgid ""
+"Failed to delete slideshows. An error has occurred. Please try again or "
+"contact support."
+msgstr ""
+
+#: easingsliderpro.php:1225
+msgid "Slideshow has been <strong>duplicated</strong> successfully."
+msgstr ""
+
+#: easingsliderpro.php:1229
+msgid ""
+"Failed to duplicate slideshow. An error has occurred. Please try again or "
+"contact support."
+msgstr ""
+
+#: easingsliderpro.php:1233
+msgid "Slideshow has been <strong>deleted</strong> successfully."
+msgstr ""
+
+#: easingsliderpro.php:1237
+msgid ""
+"Failed to delete slideshow. An error has occurred. Please try again or "
+"contact support."
+msgstr ""
+
+#: easingsliderpro.php:1242
+msgid "Slideshows have successfully been <strong>imported</strong>."
+msgstr ""
+
+#: easingsliderpro.php:1268
+msgid ""
+"Looks like you've forgotten to add a slideshow ID to this shortcode. Oh dear!"
+msgstr ""
+
+#: easingsliderpro.php:1407
+msgid "Are you sure you wish to do this? This cannot be reversed."
+msgstr ""
+
+#: easingsliderpro.php:1408
+msgid ""
+"Are you sure you wish to do this? Your current settings and slideshows will "
+"be removed. This cannot be reversed."
+msgstr ""
+
+#: easingsliderpro.php:1409
+msgid "Are you sure you wish to delete this image? This cannot be reversed."
+msgstr ""
+
+#: easingsliderpro.php:1410
+msgid ""
+"Are you sure you wish to delete all of this slideshows images? This cannot "
+"be reversed."
+msgstr ""
+
+#: easingsliderpro.php:1411
+msgid ""
+"Are you sure you wish to delete this slideshow? This cannot be reversed."
+msgstr ""
+
+#: easingsliderpro.php:1412
+msgid ""
+"Are you sure you wish to delete these slideshows? This cannot be reversed."
+msgstr ""
+
+#: easingsliderpro.php:1414
+msgid "Add Images to Slideshow"
+msgstr ""
+
+#: easingsliderpro.php:1415
+msgid "Insert into slideshow"
+msgstr ""
+
+#: easingsliderpro.php:1416
+msgid "Use this image"
+msgstr ""
+
+#: easingsliderpro.php:1417
+msgid "Are you sure you wish to discard your changes?"
+msgstr ""
+
+#: includes/Database.php:185
+msgid "New Slideshow"
+msgstr ""
+
+#: includes/Database.php:348
+msgid " Copy"
+msgstr ""
+
+#: includes/HTTP.php:164
+msgid ""
+"Please <a href=\"admin.php?page=easingsliderpro_edit_settings\">register</a> "
+"your copy of Easing Slider \"Pro\" to receive access to upgrades and "
+"support. Need a license key? <a href=\"http://easingslider.com/purchase"
+"\">Purchase one here</a>."
+msgstr ""
+
+#: includes/HTTP.php:227
+msgid ""
+"The License Key validation service is temporarily unavailable. Please try "
+"again later."
+msgstr ""
+
+#: includes/HTTP.php:236
+msgid ""
+"Failed to validate license key. Please make sure it is correct and try again."
+msgstr ""
+
+#: includes/HTTP.php:244
+msgid "License key has been validated successfully."
+msgstr ""
+
+#: includes/Legacy.php:155
+msgid "Riva Slider Pro settings have been imported successfully."
+msgstr ""
+
+#: includes/Legacy.php:173 includes/Legacy.php:342
+msgid ""
+"Security check has failed. Removal has been prevented. Please try again."
+msgstr ""
+
+#: includes/Legacy.php:200
+msgid "Riva Slider Pro settings have been permanently deleted."
+msgstr ""
+
+#: includes/Legacy.php:221
+msgid "Riva Slider \"Pro\" Settings Detected"
+msgstr ""
+
+#: includes/Legacy.php:223
+msgid ""
+"Click the button below to import your settings from Riva Slider \"Pro\"."
+msgstr ""
+
+#: includes/Legacy.php:250
+msgid "Riva Slider \"Pro\" Settings"
+msgstr ""
+
+#: includes/Legacy.php:259
+msgid "Legacy Settings"
+msgstr ""
+
+#: includes/Legacy.php:263
+msgid ""
+"These buttons allow you to import and remove your old Riva Slider \"Pro\" v1."
+"x settings. Only remove them if you are sure you will not be downgrading the "
+"plugin in the future."
+msgstr ""
+
+#: includes/Legacy.php:286
+msgid "Easing Slider \"Lite\" slideshow"
+msgstr ""
+
+#: includes/Legacy.php:383
+msgid "Easing Slider \"Lite\" Settings Detected"
+msgstr ""
+
+#: includes/Legacy.php:385
+msgid ""
+"Click the button below to import your settings from Easing Slider \"Lite\"."
+msgstr ""
+
+#: includes/Legacy.php:412
+msgid "Easing Slider \"Lite\" Settings"
+msgstr ""
+
+#: includes/Legacy.php:421
+msgid "\"Lite\" Settings"
+msgstr ""
+
+#: includes/Legacy.php:425
+msgid ""
+"These buttons allow you to import and remove your Easing Slider \"Lite\" "
+"settings. Only remove them if you are sure you will not be downgrading the "
+"plugin in the future."
+msgstr ""
+
+#: includes/Resize.php:22
+msgid "No image URL has been entered."
+msgstr ""
+
+#: includes/Widget.php:20
+msgid "Display a slideshow using a widget"
+msgstr ""
+
+#: includes/Widget.php:75 templates/editslideshow-slide.php:40
+#: templates/listslideshows.php:62
+msgid "Title"
+msgstr ""
+
+#: includes/Widget.php:82 templates/importexport.php:69
+#, php-format
+msgid " (ID #%s)"
+msgstr ""
+
+#: templates/customizer.php:8
+msgid ""
+"<p style=\"background-color: #ffebe8; border: 1px solid #c00; border-radius: "
+"4px; padding: 8px !important;\">You need to create some slideshows to use "
+"the customizer. Whoops!</p>"
+msgstr ""
+
+#: templates/customizer.php:48
+msgid "Save"
+msgstr ""
+
+#: templates/customizer.php:56
+msgid ""
+"You are customizing <strong class=\"theme-name\">Easing Slider \"Pro\"</"
+"strong>"
+msgstr ""
+
+#: templates/customizer.php:70 templates/editslideshow-sidebar.php:106
+msgid "Next & Previous Arrows"
+msgstr ""
+
+#: templates/customizer.php:74
+msgid "\"Next\" Arrow Image"
+msgstr ""
+
+#: templates/customizer.php:80
+msgid "\"Previous\" Arrow Image"
+msgstr ""
+
+#: templates/customizer.php:86 templates/customizer.php:140
+msgid "Width"
+msgstr ""
+
+#: templates/customizer.php:92
+msgid "Height"
+msgstr ""
+
+#: templates/customizer.php:100 templates/editslideshow-sidebar.php:159
+msgid "Pagination Icons"
+msgstr ""
+
+#: templates/customizer.php:104
+msgid "\"Inactive\" Image"
+msgstr ""
+
+#: templates/customizer.php:110
+msgid "\"Active\" Image"
+msgstr ""
+
+#: templates/customizer.php:116
+msgid "Icon Width"
+msgstr ""
+
+#: templates/customizer.php:122
+msgid "Icon Height"
+msgstr ""
+
+#: templates/customizer.php:130
+msgid "Border"
+msgstr ""
+
+#: templates/customizer.php:134
+msgid "Color"
+msgstr ""
+
+#: templates/customizer.php:146
+msgid "Radius"
+msgstr ""
+
+#: templates/customizer.php:155
+msgid "Drop Shadow"
+msgstr ""
+
+#: templates/customizer.php:159
+msgid "Display a Drop Shadow"
+msgstr ""
+
+#: templates/customizer.php:160 templates/editslideshow-sidebar.php:129
+#: templates/editslideshow-sidebar.php:182
+msgid "True"
+msgstr ""
+
+#: templates/customizer.php:161 templates/editslideshow-sidebar.php:132
+#: templates/editslideshow-sidebar.php:185
+msgid "False"
+msgstr ""
+
+#: templates/customizer.php:166
+msgid "Shadow Image"
+msgstr ""
+
+#: templates/customizer.php:178
+msgid "Collapse Sidebar"
+msgstr ""
+
+#: templates/customizer.php:180
+msgid "Collapse"
+msgstr ""
+
+#: templates/editsettings.php:24 templates/editslideshow-slide.php:8
+msgid "General Settings"
+msgstr ""
+
+#: templates/editsettings.php:28
+msgid "Support License Key"
+msgstr ""
+
+#: templates/editsettings.php:36
+msgid "License key entered is invalid."
+msgstr ""
+
+#: templates/editsettings.php:36
+msgid "License key is valid."
+msgstr ""
+
+#: templates/editsettings.php:38
+msgid ""
+"Enter your license key to receive update information and support for this "
+"installation."
+msgstr ""
+
+#: templates/editsettings.php:43
+msgid "Image Resizing"
+msgstr ""
+
+#: templates/editsettings.php:46 templates/editslideshow-sidebar.php:114
+#: templates/editslideshow-sidebar.php:167
+#: templates/editslideshow-sidebar.php:228
+msgid "Enable"
+msgstr ""
+
+#: templates/editsettings.php:49 templates/editslideshow-sidebar.php:117
+#: templates/editslideshow-sidebar.php:170
+#: templates/editslideshow-sidebar.php:231
+msgid "Disable"
+msgstr ""
+
+#: templates/editsettings.php:51
+msgid ""
+"Enable or disable the plugins image resizing functionality. Disable this if "
+"you do not want the slide images to be resized."
+msgstr ""
+
+#: templates/editsettings.php:56
+msgid "Output JS"
+msgstr ""
+
+#: templates/editsettings.php:59 templates/editsettings.php:75
+msgid "Header"
+msgstr ""
+
+#: templates/editsettings.php:62 templates/editsettings.php:78
+msgid "Footer"
+msgstr ""
+
+#: templates/editsettings.php:65 templates/editsettings.php:81
+msgid "Off"
+msgstr ""
+
+#: templates/editsettings.php:67
+msgid ""
+"Settings for Javascript output. Scripts loaded in the \"Footer\" are only "
+"when they are needed. This decreases page loading times but is prone to "
+"errors."
+msgstr ""
+
+#: templates/editsettings.php:72
+msgid "Output CSS"
+msgstr ""
+
+#: templates/editsettings.php:83
+msgid ""
+"Settings for CSS output. Styles loaded in the \"Footer\" will invalidate the "
+"HTML, but will prevent them from loading when not needed."
+msgstr ""
+
+#: templates/editsettings.php:91 templates/editsettings.php:97
+msgid "Reset Plugin"
+msgstr ""
+
+#: templates/editsettings.php:95
+msgid "Plugin Settings"
+msgstr ""
+
+#: templates/editsettings.php:98
+msgid ""
+"Click this button to reset the plugin to its default settings. This cannot "
+"be reversed, so be sure before you do this!"
+msgstr ""
+
+#: templates/editsettings.php:106
+msgid "Installation Settings"
+msgstr ""
+
+#: templates/editsettings.php:110
+msgid "PHP Version"
+msgstr ""
+
+#: templates/editsettings.php:115
+msgid "MySQL Version"
+msgstr ""
+
+#: templates/editsettings.php:120
+msgid "WordPress Version"
+msgstr ""
+
+#: templates/editsettings.php:125
+msgid "Plugin Version"
+msgstr ""
+
+#: templates/editsettings.php:139
+msgid "Save Settings"
+msgstr ""
+
+#: templates/editslideshow-media-details.php:3
+msgid "Image Details"
+msgstr ""
+
+#: templates/editslideshow-media-details.php:30
+msgid "Edit Image"
+msgstr ""
+
+#: templates/editslideshow-media-details.php:31
+msgid "Refresh"
+msgstr ""
+
+#: templates/editslideshow-media-details.php:36
+msgid "Delete Permanently"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:5
+msgid "Manage Slides"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:9
+msgid "Add Images"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:10
+msgid "Delete Images"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:16
+msgid "Randomize the slideshow order."
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:27
+msgid "Dimensions"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:33
+msgid "Width:"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:39
+msgid "Height:"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:43
+msgid "Slideshow \"width\" and \"height\" values (in pixels)."
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:50
+msgid "Make this slideshow responsive."
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:53
+msgid ""
+"Check this option to make this slideshow responsive. If enabled, the \"width"
+"\" and \"height\" values above will act as maximums."
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:63
+msgid "Transitions"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:69
+msgid "Effect:"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:71
+msgid "Slide"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:72
+msgid "Fade"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:76
+msgid "Choose the transition effect you would like to use."
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:82
+msgid "Duration:"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:86
+msgid "Sets the duration (in milliseconds) for the slideshow transition."
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:93
+msgid "Enable touch gestures (when supported)"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:96
+msgid ""
+"Check this option to enable touch gestures on devices that support them. "
+"This allows the user to change slide by swiping across the slideshow."
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:111
+msgid "Arrows:"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:121
+msgid "Toggles the next and previous slide arrows."
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:126
+#: templates/editslideshow-sidebar.php:179
+msgid "On Hover:"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:136
+msgid ""
+"Set to \"True\" to only show the arrows when the user hovers over the "
+"slideshow."
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:142
+#: templates/editslideshow-sidebar.php:195
+msgid "Position:"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:144
+#: templates/editslideshow-sidebar.php:197
+msgid "Inside"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:145
+#: templates/editslideshow-sidebar.php:198
+msgid "Outside"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:149
+msgid "Select a position for the arrows."
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:164
+msgid "Pagination:"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:174
+msgid ""
+"Enable/Disable the Pagination Icons. Each icon represents a slide in their "
+"respective order."
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:189
+msgid ""
+"Set to \"True\" to only show the pagination when the user hovers over the "
+"slideshow."
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:201
+msgid "Top Left"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:202
+msgid "Top Right"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:203
+msgid "Top Center"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:204
+msgid "Bottom Left"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:205
+msgid "Bottom Right"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:206
+msgid "Bottom Center"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:210
+msgid "Select a position for the pagination icons."
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:220
+msgid "Automatic Playback"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:225
+msgid "Playback:"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:235
+msgid "Enable/Disable slideshow automatic playback."
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:241
+msgid "Pause Duration:"
+msgstr ""
+
+#: templates/editslideshow-sidebar.php:245
+msgid ""
+"Sets the duration (in milliseconds) for the pause between slide transitions."
+msgstr ""
+
+#: templates/editslideshow-slide.php:9 templates/editslideshow-slide.php:56
+msgid "HTML Markup"
+msgstr ""
+
+#: templates/editslideshow-slide.php:14
+msgid "Edit a Slide: #{{ data.id }}"
+msgstr ""
+
+#: templates/editslideshow-slide.php:26
+msgid "Change Image"
+msgstr ""
+
+#: templates/editslideshow-slide.php:30
+msgid "Link URL"
+msgstr ""
+
+#: templates/editslideshow-slide.php:33
+msgid "Open link same tab/window"
+msgstr ""
+
+#: templates/editslideshow-slide.php:34
+msgid "Open link in new tab/window"
+msgstr ""
+
+#: templates/editslideshow-slide.php:36
+msgid ""
+"Enter a slide link. Videos will automatically be detected and played within "
+"the slideshow when clicked."
+msgstr ""
+
+#: templates/editslideshow-slide.php:42
+msgid "Enter a value for the image \"title\" attribute."
+msgstr ""
+
+#: templates/editslideshow-slide.php:46
+msgid "Alt Text"
+msgstr ""
+
+#: templates/editslideshow-slide.php:48
+msgid "Enter a value for the image \"alt\" text attribute."
+msgstr ""
+
+#: templates/editslideshow-slide.php:58
+msgid "Here you can add HTML markup to the slide."
+msgstr ""
+
+#: templates/editslideshow-slide.php:67
+msgid "Apply Changes"
+msgstr ""
+
+#: templates/editslideshow-welcome.php:21
+msgid "Dismiss"
+msgstr ""
+
+#: templates/editslideshow-welcome.php:23
+msgid "Welcome to Easing Slider \"Pro\""
+msgstr ""
+
+#: templates/editslideshow-welcome.php:25
+msgid ""
+"Thanks for installing Easing Slider \"Pro\". Here are some links to help get "
+"you started."
+msgstr ""
+
+#: templates/editslideshow-welcome.php:29
+msgid "Get Started"
+msgstr ""
+
+#: templates/editslideshow-welcome.php:30
+msgid "View the Documentation"
+msgstr ""
+
+#: templates/editslideshow-welcome.php:34
+msgid "Need some help?"
+msgstr ""
+
+#: templates/editslideshow-welcome.php:36
+msgid "Displaying a Slideshow"
+msgstr ""
+
+#: templates/editslideshow-welcome.php:37
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: templates/editslideshow-welcome.php:38
+msgid "Help & Support"
+msgstr ""
+
+#: templates/editslideshow.php:16
+#, php-format
+msgid "%s Slideshow: "
+msgstr ""
+
+#: templates/editslideshow.php:16
+msgid "Enter a slideshow name"
+msgstr ""
+
+#: templates/editslideshow.php:45
+msgid "Save Slideshow"
+msgstr ""
+
+#: templates/importexport.php:18 templates/importexport.php:33
+msgid "Import Slideshows"
+msgstr ""
+
+#: templates/importexport.php:22
+msgid "Upload slideshows file"
+msgstr ""
+
+#: templates/importexport.php:29
+msgid ""
+"Replace domain name within URLs (check this if you are changing domain name)."
+msgstr ""
+
+#: templates/importexport.php:50 templates/importexport.php:79
+msgid "Export Slideshows"
+msgstr ""
+
+#: templates/importexport.php:54
+msgid "Select slideshows to export"
+msgstr ""
+
+#: templates/importexport.php:60
+msgid "Select all slideshows"
+msgstr ""
+
+#: templates/listslideshows.php:12
+msgid "Slideshows "
+msgstr ""
+
+#: templates/listslideshows.php:14
+#, php-format
+msgid "Search results for “%s”"
+msgstr ""
+
+#: templates/listslideshows.php:25
+msgid "Search Slideshows:"
+msgstr ""
+
+#: templates/listslideshows.php:27
+msgid "Search Slideshows"
+msgstr ""
+
+#: templates/listslideshows.php:42 templates/listslideshows.php:113
+msgid "Bulk Actions"
+msgstr ""
+
+#: templates/listslideshows.php:43 templates/listslideshows.php:99
+#: templates/listslideshows.php:114
+msgid "Duplicate"
+msgstr ""
+
+#: templates/listslideshows.php:44 templates/listslideshows.php:100
+#: templates/listslideshows.php:115
+msgid "Delete"
+msgstr ""
+
+#: templates/listslideshows.php:55
+msgid "Select All"
+msgstr ""
+
+#: templates/listslideshows.php:58
+msgid "ID"
+msgstr ""
+
+#: templates/listslideshows.php:65
+msgid "Author"
+msgstr ""
+
+#: templates/listslideshows.php:72
+msgid "No slideshows found."
+msgstr ""
+
+#: templates/listslideshows.php:77
+msgid "Select "
+msgstr ""
+
+#: templates/listslideshows.php:85
+#, php-format
+msgid "Edit &#8220;%s&#8221;"
+msgstr ""
+
+#: templates/listslideshows.php:98
+msgid "Edit this slideshow"
+msgstr ""
+
+#: templates/listslideshows.php:98
+msgid "Edit"
+msgstr ""
+
+#: templates/listslideshows.php:99
+msgid "Duplicate this slideshow"
+msgstr ""
+
+#: templates/listslideshows.php:100
+msgid "Delete this slideshow"
+msgstr ""
+
+#: templates/listslideshows.php:117
+msgid "Apply"
+msgstr ""
+
+#: templates/slideshow.php:17
+#, php-format
+msgid ""
+"<p style=\"background-color: #ffebe8; border: 1px solid #c00; border-radius: "
+"4px; padding: 8px !important;\">The slideshow specified (ID #%d) does not "
+"appear to exist.</p>"
+msgstr ""
+
+#: templates/slideshow.php:22
+#, php-format
+msgid ""
+"<p style=\"background-color: #ffebe8; border: 1px solid #c00; border-radius: "
+"4px; padding: 8px !important;\">This slideshow (ID #%d) contains no slides. "
+"Uh oh!</p>"
+msgstr ""
