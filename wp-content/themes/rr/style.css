@@ -167,7 +167,7 @@ section[role="about"] {
 	max-width:960px;
 	margin:40px auto;
 	padding: 0 25px;
-	background:url(img/logo-rr.png) no-repeat right 130px;
+	background:url(img/logo-rr.png) no-repeat right 90px;
 	/*
 	
 	padding-left:10px;
@@ -203,7 +203,7 @@ section[role="about"] h3,section[role="about-us"] h3 {
 	font-size:44px;
 	font-family:oswaldbold;
 	text-align:center;
-	margin:0;
+	margin: 30px 0 30px 0;
 }
 
 section[role="about-us"] h4 {
@@ -247,7 +247,7 @@ section[role="about-us"] ul li {
 section[role="about-us"] .whatsNewleft{
 	background: #ffffff;
   	padding: 8px;
-	box-shadow: 0 7px 8px #333333; 
+	box-shadow: 0 0 0 4px #ffffff, 0 6px 4px #A8A8A8;
 }
 section[role="about-us"] .whatsNewleft img{
 	float: left;
@@ -1018,7 +1018,7 @@ header .icons {
 .nav li .sub-menu { 
 
 	background: url("img/selector2.jpg") no-repeat scroll 0 0 #FAFBFC;
-    box-shadow: 0 7px 8px #333333, 0 0 0 #333333 inset;
+    box-shadow: 0 7px 8px #5E5E5E, 0 0 0 #333332 inset;
     display: none;
     margin-top: 20px;
     padding-bottom: 17px;
@@ -1050,7 +1050,7 @@ section[role="trusted"] .wrap ul li {
 }
 .nav li .sub-menu li .sub-menu {
 	background: #FAFBFC;
-    box-shadow: 0 7px 8px #333333, 0 0 0 #333333 inset;
+    box-shadow: 0 7px 8px #5E5E5E, 0 0 0 #333332 inset;
     display: none;
     margin-top: -30px;
     padding-bottom: 17px;
