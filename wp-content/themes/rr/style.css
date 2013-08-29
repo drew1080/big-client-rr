@@ -2483,12 +2483,11 @@ a img.aligncenter {
 
 p.button a {
 	background-color: #a3aab3;
-	padding:10px;
-	color: #ffffff !important;
-	margin: 0 auto;
-	font-family: robotocondensed;
-	font-size: 18px;
-	
+  padding:10px 18px;
+  color: #ffffff !important;
+  margin: 0 12px;
+  font-family: robotocondensed;
+  font-size: 18px;
 }
 p.button a:hover {
 	background-color: #990101;
