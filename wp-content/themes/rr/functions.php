@@ -466,7 +466,7 @@ function contact_us_func($atts, $content = null) {
   #TODO: Add thin/regular/bold classes
 	extract( shortcode_atts( array(
 		'bg' => 'white',
-		'tagline_thickness' => 'thin',
+		'tagline_thickness' => 'regular',
 		'url' => 'http://rr.dev.secretsushi.com/company/contact-us/',
 		'title' => 'Enough about us; we want to hear from you!'), $atts ) );
 	
