@@ -463,14 +463,16 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 
 
 function contact_us_func($atts, $content = null) {
+  #TODO: Add thin/regular/bold classes
 	extract( shortcode_atts( array(
 		'bg' => 'white',
+		'tagline_thickness' => 'thin',
 		'url' => 'http://rr.dev.secretsushi.com/company/contact-us/',
 		'title' => 'Enough about us; we want to hear from you!'), $atts ) );
 	
 	$html = '<section role="enough" class="'. esc_attr($bg).'">
 				<div class="wrap" >
-					<h3>'. esc_attr($title).'</h3>
+					<span class='. esc_attr($tagline_thickness).'>'. esc_attr($title).'</span>
 					<div class="contact-us" onclick="document.location=\'' . $atts['url'] . '\';" style="cursor:pointer;">
 						<p><span>Contact Us</span></p>
 					</div>
