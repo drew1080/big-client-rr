@@ -337,39 +337,11 @@ if ($post->post_parent == 0) {
 
 
 
-  <?php if(get_post_meta($post->ID, 'banner', true)) : ?>
-
-
-    <?php ///if( $post->post_excerpt) : ?>
-      <!--
-      <div class="slider-content">
-      <h1 class="entry-title with-excerpt"><?php the_title(); ?></h1>
-      <p><?php the_excerpt();?></p>
-
-</div>
--->
-<?php //else:?>
-
-  <!-- <h1 class="entry-title"><?php the_title(); ?></h1> -->
-
-  <?php //endif; ?>
 
 
 
+  <?php if ( !get_post_meta($post->ID, 'banner', true) && function_exists('easingsliderpro') ) { easingsliderpro( 1 ); } ?>
 
-  <img src="<?php echo get_post_meta($post->ID, 'banner', true); ?>" />
-
-
-
-<?php else : ?>
-
-
-
-  <?php if ( function_exists('easingsliderpro') ) { easingsliderpro( 1 ); } ?>
-
-
-
-<?php endif; ?>
 
 
 
