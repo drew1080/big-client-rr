@@ -1054,7 +1054,7 @@ section[role="trusted"] .wrap ul li {
     display: none;
     margin-top: -30px;
     padding-bottom: 17px;
-    margin-left: 130px;
+    margin-left: 83px;
     padding-left: 0;
 
   /*    width: 170px; */
@@ -1900,12 +1900,19 @@ display:block;
 	right: 0;
 	top: 125px;
 }
-.nav > ul {	background: none repeat scroll 0 0 #FAFBFC;    margin-bottom: 0;    margin-left: 0;    margin-right: 0;    padding-left: 0;    padding-top: 17px;}.nav > ul > li {	display: block;    margin: 0;    position: relative;}.nav > ul > li > a {    color: #667280;    font-family: robotocondensed;    font-size: 18px;    line-height: 32px;    padding: 0 20px;    text-transform: uppercase;}.nav > ul > li > a:hover {	color: #990101;	background:#FAFBFC;}		.nav > ul > li > .sub-menu {    box-shadow: -10px 0 12px #999999;    min-width: 172px;    padding-bottom: 6px;    padding-left: 0;    padding-top: 6px;    position: absolute;	display:none;    right: 127px;    top: 0;    z-index: 1;	    background:url(img/sombra-ul.jpg) repeat-y right top #fafbfc; 	}	.nav > ul > li > .sub-menu > li {		display: block;		float: none;		margin: 0;		padding: 0;	}	.nav > ul > li > .sub-menu > li:hover{		background:none;	}	.nav > ul > li:hover .sub-menu{		display:block;	}	.nav > ul > li > .sub-menu > li > a{	     padding-left: 17px;		 padding-right: 25px;		 text-transform: none;	}.desplegar-menu{	display:block;	right: 50px;    top: 43px;	background:url(img/menu-desplegar.png) no-repeat 0 -75px;	width:48px;	height:68px;	position:absolute;	cursor:pointer;}.desplegar-menu:hover{	background:url(img/menu-desplegar.png) no-repeat 0 0px;}}   
+.nav > ul {	background: none repeat scroll 0 0 #FAFBFC;    margin-bottom: 0;    margin-left: 0;    margin-right: 0;    padding-left: 0;    padding-top: 17px;}.nav > ul > li {	display: block;    margin: 0;    position: relative;}.nav > ul > li > a {    color: #667280;    font-family: robotocondensed;    font-size: 18px;    line-height: 32px;    padding: 0 20px;    text-transform: uppercase;}.nav > ul > li > a:hover {	color: #990101;	background:#FAFBFC;}		.nav > ul > li > .sub-menu {    box-shadow: -10px 0 12px #999999;    min-width: 172px;    padding-bottom: 6px;    padding-left: 0;    padding-top: 6px;    position: absolute;	display:none;    right: 127px;    top: 0;    z-index: 1;	    background:url(img/sombra-ul.jpg) repeat-y right top #fafbfc; 	}	.nav > ul > li > .sub-menu > li {		display: block;		float: none;		margin: 0;		padding: 0;	}	.nav > ul > li > .sub-menu > li:hover{		background:none;	}	
+/*.nav > ul > li:hover .sub-menu{   display:block;  } */
+.nav > ul > li > .sub-menu > li > a{	     padding-left: 17px;		 padding-right: 25px;		 text-transform: none;	}.desplegar-menu{	display:block;	right: 50px;    top: 43px;	background:url(img/menu-desplegar.png) no-repeat 0 -75px;	width:48px;	height:68px;	position:absolute;	cursor:pointer;}.desplegar-menu:hover{	background:url(img/menu-desplegar.png) no-repeat 0 0px;}}   
 
 @media (max-width: 769px){	
 section[role="trusted"] .wrap ul{		width:85% !important; margin:0 auto !important;	}
 
-	/* nav */.nav {	 	position: absolute;    right: 0;    top: 125px;}
+	/* nav */.nav {	 	
+	  position: absolute;    
+	  right: 0;    
+	  top: 98px;
+	  z-index: 1;
+	}
 
 	.nav > ul {	
 
@@ -1951,7 +1958,7 @@ section[role="trusted"] .wrap ul{		width:85% !important; margin:0 auto !importan
 
 	margin-top:0;
 
-	box-shadow: -10px 0 12px #999999;    min-width: 172px;    padding-bottom: 6px;    padding-left: 0;    padding-top: 6px;    position: absolute;    right: 127px;	display:none;    top: 0;    z-index: 1;	    background:url(img/sombra-ul.jpg) repeat-y right top #fafbfc; 	}	
+	box-shadow: -10px 0 12px #999999;    min-width: 172px;    padding-bottom: 6px;    padding-left: 0;    padding-top: 6px;    position: absolute;    right: 125px;	display:none;    top: 0;    z-index: 1;	    background:url(img/sombra-ul.jpg) repeat-y right top #fafbfc; 	}	
 
 .nav > ul > li > .sub-menu > li {		display: block;		float: none;		margin: 0;		padding: 0;	}	
 
@@ -1963,15 +1970,15 @@ section[role="trusted"] .wrap ul{		width:85% !important; margin:0 auto !importan
 
 }
 
-.nav > ul > li:hover .sub-menu{		
+.nav li .sub-menu li {   
 
-	display:block;	
+  display:block;  
 
 }
 
 .nav > ul > li > .sub-menu > li > a{	     padding-left: 17px;		 padding-right: 25px;		 text-transform: none;	}
 
-.desplegar-menu{	display:block;	right: 50px;    top: 43px;	background:url(img/menu-desplegar.png) no-repeat 0 -75px;	width:48px;	height:68px;	position:absolute;	cursor:pointer;}.desplegar-menu:hover{	background:url(img/menu-desplegar.png) no-repeat 0 0px;}
+.desplegar-menu{	display:block;	right: 9px;    top: 47px;	background:url(img/menu-desplegar.png) no-repeat 0 -75px;	width:48px;	height:68px;	position:absolute;	cursor:pointer;}.desplegar-menu:hover{	background:url(img/menu-desplegar.png) no-repeat 0 0px;}
 
 
 
