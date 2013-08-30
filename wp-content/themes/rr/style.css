@@ -2565,3 +2565,38 @@ p a.imgpartners:nth-child(4) img {
   font-size: 44px;
   font-family: oswaldbold;
 }
+
+
+/*****FANCYBOX STYLING*****/
+
+#fancybox-overlay {
+  background-color: #000000 !important;
+  opacity: 0.8 !important;
+}
+
+#fancybox-close {
+  position: absolute;
+  right: -35px !important;
+  top: -15px  !important;
+}
+
+#fancybox-right {
+  position: absolute !important;
+  right: -80px !important;
+}
+
+#fancybox-left {
+  position: absolute !importnat;
+  left: -60px !important;
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
