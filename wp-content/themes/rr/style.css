@@ -1089,7 +1089,7 @@ section[role="trusted"] .wrap ul li {
 	width: 100%;
 }
 
-.slider img { width:100%; }
+.slider img { width:100%; min-height: 150px}
 .easingsliderpro-arrows {
 	top:45% !important;
 }
@@ -1658,7 +1658,7 @@ width: 100%;
 font-size: 6.5em;
 width: 50%;
 line-height: 40px;
-text-align: left;
+text-align: right;
 display: inline-block;
 position: relative;
 vertical-align: top;
