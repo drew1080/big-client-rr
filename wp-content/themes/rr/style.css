@@ -1137,6 +1137,7 @@ section[role="blog"] h3 {
 	margin: 0 0 30px;
 
 	border-radius: 10px 15px 10px 15px / 15px 10px 15px 10px;
+	max-width: 690px;
 
 }
 
@@ -1162,10 +1163,15 @@ section[role="blog"] article {
 
 	max-width: 640px;
 
-	margin: 0 auto;
+	margin: 0 20px;
 
 	overflow: hidden;
 
+}
+
+section[role="blog"] .pagination {
+  font-size: 17px;
+  margin: 0 0 20px 20px;
 }
 
 section[role="blog"] .date {
