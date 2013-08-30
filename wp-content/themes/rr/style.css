@@ -259,6 +259,10 @@ section[role="about-us"] .whatsNewleft p {
 	font-size: 12px;
   line-height: 18px;
 	margin: 0 0 20px 0;
+	padding-right: 4px;
+}
+section[role="about-us"] .whatsNewleft p.button {
+	padding-right: 0px;
 }
 section[role="about-us"] .whatsNewleft p a { 
 	float: right;
@@ -275,7 +279,7 @@ section[role="about-us"] ul.whatsNew {
 }
 section[role="about-us"] ul.whatsNew li {
 	width: 910px;
-	font-size: 16px;
+	font-size: 18px;
 	list-style: none;
 	font-family:robotocondensed;
 	margin-bottom: 8px;
@@ -290,6 +294,8 @@ section[role="about-us"] ul.whatsNew li strong {
 section[role="about-us"] ul.whatsNew li a {
 	float: left;
 	width: 317px;
+	font-size: 18px;
+	font-family: robotoregular;
 }
 
 section[role="about-us"] ul.newsroom {
