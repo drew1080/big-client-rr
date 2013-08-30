@@ -482,25 +482,6 @@ function contact_us_func($atts, $content = null) {
 	return $html; 
 }
 
-function add_header_image_func($atts, $content = null) {
-	extract( shortcode_atts( array(
-	    'title' => 'Rich Relevance',
-      'excerpt' => '',
-      'image_url' => '')
-		    , $atts ) );
-	
-	$html = '<div class="slider">
-            <div class="slider-content">
-          	<h1 class="entry-title with-excerpt">'. esc_attr($title).'</h1>
-          	<p>'. esc_attr($excerpt).'</p>
-            </div>
-            <img alt="" src="'. esc_attr($image_url).'" />
-          </div>';
-
-	return $html; 
-}
-
-add_shortcode('add_header_image', 'add_header_image_func');
 
 
 ?>
