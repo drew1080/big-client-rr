@@ -2570,7 +2570,7 @@ p a.imgpartners:nth-child(4) img {
 
 #fancybox-close {
   position: absolute;
-  right: -35px !important;
+  right: -115px !important;
   top: -15px  !important;
 }
 
@@ -2583,8 +2583,11 @@ p a.imgpartners:nth-child(4) img {
   position: absolute !importnat;
   left: -60px !important;
 }
-  
-  
+ 
+#fancybox-content {
+  width: 640px !important;
+  height: 360px !important;
+}
   
   
   
