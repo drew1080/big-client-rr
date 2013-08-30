@@ -1026,9 +1026,9 @@ header .icons {
 .nav li .sub-menu { 
 
 	background: url("img/selector2.jpg") no-repeat scroll 0 0 #FAFBFC;
-    -webkit-box-shadow: 4px 6px 12px -6px #222222, 0 0 0 #333332 inset;
-		-moz-box-shadow: 4px 6px 12px -6px #222222, 0 0 0 #333332 inset;
-		box-shadow: 4px 6px 12px -6px #222222, 0 0 0 #333332 inset;
+    -webkit-box-shadow: 0px 6px 10px rgba(0,0,0,0.2), 0 0 0 #333332 inset;
+		-moz-box-shadow: 0px 6px 10px rgba(0,0,0,0.2), 0 0 0 #333332 inset;
+		box-shadow: 0px 6px 10px rgba(0,0,0,0.2), 0 0 0 #333332 inset;
     display: none;
     margin-top: 20px;
     padding-bottom: 17px;
@@ -1060,9 +1060,9 @@ section[role="trusted"] .wrap ul li {
 }
 .nav li .sub-menu li .sub-menu {
 	background: #FAFBFC;
-    -webkit-box-shadow: 0px 6px 20px -6px #222222, 0 0 0 #333332 inset;
-		-moz-box-shadow: 0px 6px 20px -6px #222222, 0 0 0 #333332 inset;
-		box-shadow: 0px 6px 20px -6px #222222, 0 0 0 #333332 inset;
+    -webkit-box-shadow: 0px 6px 10px rgba(0,0,0,0.2), 0 0 0 #333332 inset;
+		-moz-box-shadow: 0px 6px 10px rgba(0,0,0,0.2), 0 0 0 #333332 inset;
+		box-shadow: 0px 6px 10px rgba(0,0,0,0.2), 0 0 0 #333332 inset;
     display: none;
     margin-top: -30px;
     padding-bottom: 17px;
