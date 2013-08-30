@@ -753,7 +753,7 @@ header .icons {
 	top: 0;
 }
 
-.search-box {
+.search {
 	width: 32px;
 	height: 32px;
 	display: inline-block;
@@ -766,19 +766,19 @@ header .icons {
 	-ms-transition: all .3s ease;
 	-o-transition: all .3s ease;
 }
-.search-box input {
+.search input {
 	width: 200px;
 	display: none;
 }
 
-.search-box:hover {
+.search:hover {
 	width: 232px;
 	background-position: 0 bottom;
 	padding: 0 0 0 32px;
 }
 
-.search-box form {float: left;}
-.search-box:hover input {
+.search form {float: left;}
+.search:hover input {
 	display: block;
 	line-height: 28px;
 	border: 1px solid #f1f3f5;
@@ -1149,7 +1149,6 @@ section[role="blog"] h3 {
 	margin: 0 0 30px;
 
 	border-radius: 10px 15px 10px 15px / 15px 10px 15px 10px;
-	max-width: 690px;
 
 }
 
@@ -1175,15 +1174,10 @@ section[role="blog"] article {
 
 	max-width: 640px;
 
-	margin: 0 20px;
+	margin: 0 auto;
 
 	overflow: hidden;
 
-}
-
-section[role="blog"] .pagination {
-  font-size: 17px;
-  margin: 0 0 20px 20px;
 }
 
 section[role="blog"] .date {
@@ -2534,11 +2528,11 @@ p a.imgpartners:nth-child(4) img {
 
 
 .embed-box {
-  position: relative;
-  padding-bottom: 53%; /* ratio for youtube embed */
-  padding-top: 30px;
-  height: auto;
-  overflow: hidden;
+    position: relative;
+    padding-bottom: 53%; /* ratio for youtube embed */
+    padding-top: 30px;
+    height: auto;
+    overflow: hidden;
 }
 
 .embed-box iframe,
