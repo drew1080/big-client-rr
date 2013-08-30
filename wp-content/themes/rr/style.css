@@ -122,8 +122,8 @@ input:focus {
 .logo-img {}
 
 /* COLUMNS */
-.columns2 				{ float:left; width:442px;}
-.columns2.last 			{ float:right;}
+.columns2 				{ float:left; width:442px; max-width:100%}
+.columns2.last 			{ float:right; max-width:100%}
 .columns2 li 			{ width: auto !important; margin-bottom: 20px;}
 .columns2 li > a 		{ color:#990101; text-decoration:none;	 }
 .columns2 li > a:hover 	{ text-decoration:underline; }
@@ -2157,7 +2157,20 @@ section[role="blog"] .date {
 		display: block;
 
 	}
+	
+}
 
+@media only screen and (max-width:950px) {
+	.selector{
+		display: none;
+	}
+	.columns2.last {
+		float:none;
+	}	
+	 section[role="about-us"] .whatsNewleft {
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
 }
 
 @media only screen and (min-width:1024px) {
