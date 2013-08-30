@@ -2503,11 +2503,11 @@ p a.imgpartners:nth-child(4) img {
 
 
 .embed-box {
-    position: relative;
-    padding-bottom: 53%; /* ratio for youtube embed */
-    padding-top: 30px;
-    height: auto;
-    overflow: hidden;
+  position: relative;
+  padding-bottom: 53%; /* ratio for youtube embed */
+  padding-top: 30px;
+  height: auto;
+  overflow: hidden;
 }
 
 .embed-box iframe,
