@@ -122,8 +122,8 @@ input:focus {
 .logo-img {}
 
 /* COLUMNS */
-.columns2 				{ float:left; width:442px;}
-.columns2.last 			{ float:right;}
+.columns2 				{ float:left; width:442px; max-width:100%}
+.columns2.last 			{ float:right; max-width:100%}
 .columns2 li 			{ width: auto !important; margin-bottom: 20px;}
 .columns2 li > a 		{ color:#990101; text-decoration:none;	 }
 .columns2 li > a:hover 	{ text-decoration:underline; }
@@ -203,7 +203,6 @@ section[role="about"] h3,section[role="about-us"] h3 {
 	font-size:44px;
 	font-family:oswaldbold;
 	text-align:center;
-	margin: 30px 0 30px 0;
 }
 
 section[role="about-us"] h4 {
@@ -244,21 +243,30 @@ section[role="about-us"] ul li {
 	float:left;
 	width:460px;
 }
-section[role="about-us"] .whatsNewleft{
+section[role="about-us"] .whatsNewleft {
 	background: #ffffff;
   	padding: 8px;
-	box-shadow: 0 0 0 4px #ffffff, 0 6px 4px #A8A8A8;
+		-webkit-box-shadow: 0px 7px 12px #999999;
+		-moz-box-shadow: 0px 7px 12px -8px #999999;
+		box-shadow: 0px 7px 12px -8px #999999;
+		margin-top: 8px;
 }
-section[role="about-us"] .whatsNewleft img{
+section[role="about-us"] .whatsNewleft img {
 	float: left;
-	padding-right: 8px;
+	margin: 0 18px 0 0;
 }
-section[role="about-us"] .whatsNewleft p{
+section[role="about-us"] .whatsNewleft p {
 	font-size: 13px;
-  	line-height: 20px;
+  line-height: 20px;
+	margin: 0 0 20px 0;
 }
-section[role="about-us"] .whatsNewleft p a{
+section[role="about-us"] .whatsNewleft p a { 
 	float: right;
+	margin: 2px;
+}
+.selector {
+	float: left;
+	margin-top: 8px;
 }
 section[role="about-us"] ul.whatsNew {
 	padding: 0px;
@@ -272,14 +280,14 @@ section[role="about-us"] ul.whatsNew li {
 	font-family:robotocondensed;
 	margin-bottom: 8px;
 }
-section[role="about-us"] ul.whatsNew li strong{
+section[role="about-us"] ul.whatsNew li strong {
 	margin-right: 25px;
 	float: left;
 	width: 100px;
 	display: block;
   	font-size: 13px;
 }
-section[role="about-us"] ul.whatsNew li a{
+section[role="about-us"] ul.whatsNew li a {
 	float: left;
 	width: 317px;
 }
@@ -1018,7 +1026,9 @@ header .icons {
 .nav li .sub-menu { 
 
 	background: url("img/selector2.jpg") no-repeat scroll 0 0 #FAFBFC;
-    box-shadow: 0 7px 8px #5E5E5E, 0 0 0 #333332 inset;
+    -webkit-box-shadow: 4px 6px 12px -6px #222222, 0 0 0 #333332 inset;
+		-moz-box-shadow: 4px 6px 12px -6px #222222, 0 0 0 #333332 inset;
+		box-shadow: 4px 6px 12px -6px #222222, 0 0 0 #333332 inset;
     display: none;
     margin-top: 20px;
     padding-bottom: 17px;
@@ -1050,7 +1060,9 @@ section[role="trusted"] .wrap ul li {
 }
 .nav li .sub-menu li .sub-menu {
 	background: #FAFBFC;
-    box-shadow: 0 7px 8px #5E5E5E, 0 0 0 #333332 inset;
+    -webkit-box-shadow: 0px 6px 20px -6px #222222, 0 0 0 #333332 inset;
+		-moz-box-shadow: 0px 6px 20px -6px #222222, 0 0 0 #333332 inset;
+		box-shadow: 0px 6px 20px -6px #222222, 0 0 0 #333332 inset;
     display: none;
     margin-top: -30px;
     padding-bottom: 17px;
@@ -2151,7 +2163,20 @@ section[role="blog"] .date {
 		display: block;
 
 	}
+	
+}
 
+@media only screen and (max-width:950px) {
+	.selector{
+		display: none;
+	}
+	.columns2.last {
+		float:none;
+	}	
+	 section[role="about-us"] .whatsNewleft {
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
 }
 
 @media only screen and (min-width:1024px) {
