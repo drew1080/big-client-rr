@@ -745,7 +745,7 @@ header .icons {
 	top: 0;
 }
 
-.search {
+.search-box {
 	width: 32px;
 	height: 32px;
 	display: inline-block;
@@ -758,19 +758,19 @@ header .icons {
 	-ms-transition: all .3s ease;
 	-o-transition: all .3s ease;
 }
-.search input {
+.search-box input {
 	width: 200px;
 	display: none;
 }
 
-.search:hover {
+.search-box:hover {
 	width: 232px;
 	background-position: 0 bottom;
 	padding: 0 0 0 32px;
 }
 
-.search form {float: left;}
-.search:hover input {
+.search-box form {float: left;}
+.search-box:hover input {
 	display: block;
 	line-height: 28px;
 	border: 1px solid #f1f3f5;

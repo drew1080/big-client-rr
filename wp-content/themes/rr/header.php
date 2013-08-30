@@ -123,19 +123,19 @@
 
 
 
-            <div class="search">Search
+            <div class="search-box">Search
+
+              <?php get_search_form(); ?>
+
+              <!-- <form action="" method="">
 
 
 
-              <form action="" method="">
+                              <input type="text" id="search" name="search" />
 
 
 
-                <input type="text" id="search" name="search" />
-
-
-
-              </form>
+                            </form> -->
 
 
 
