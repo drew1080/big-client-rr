@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php 
+/*
+Template Name: Search Page
+*/
+
+get_header(); 
+?>
 	
 	<!-- section -->
 	<section role="main">
