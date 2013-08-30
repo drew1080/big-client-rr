@@ -15,7 +15,7 @@ if (!function_exists('create_leadership')) {
             'hierarchical' => false,
             'rewrite' => true,
             'menu_icon' => get_bloginfo('template_directory').'/img/ico-admin-leadership.png', // 16px16
-            'supports' => array('title','editor')
+            'supports' => array('title','editor','thumbnail')
          );
         register_post_type('leadership_gallery', $tech_args);
     }
@@ -33,14 +33,14 @@ $leadership_box_data = array(
         array(
             'name' => __('Image', 'framework'),
             'desc' => __('Upload the leader image. Once uploaded, click "Insert to Post".', 'framework'),
-            'id' => 'leader_image',
+            'id' => 'hover_image',
             "type" => "text",
             'std' => ''
         ),
         array(
             'name' => '',
             'desc' => '',
-            'id' => 'leader_image_button',
+            'id' => 'hover_image_button',
             'type' => 'button',
             'std' => 'Browse'
         ),
@@ -189,7 +189,8 @@ function create_leadership_func($atts) {
 		if (!empty($item)) 
 		{
 			$lis .= '<li>
-						<img src="' . $item["img"]  . '" />
+			      <img src="' . $item["thumbnail"]  . '" />
+						<img src="' . $item["hover_image"]  . '" />
 						<div>
 							<h4>' . $item["title"]  . '</h4>
 							<p>' . $item["content"]  . '</p>
@@ -225,12 +226,13 @@ if (!function_exists('get_leadership')) {
 		
         foreach ($query as $key => $item ) 
         {
-        	$data[$key]['img'] = get_post_meta($item->ID,'leader_image',TRUE);
+        	$data[$key]['hover_image'] = get_post_meta($item->ID,'hover_image',TRUE);
+        	$data[$key]['thumbnail'] = wp_get_attachment_url( get_post_thumbnail_id($item->ID) );
         	$data[$key]['cartoon'] = get_post_meta($item->ID,'leader_cartoon',TRUE);
         	$data[$key]['twitter'] = get_post_meta($item->ID,'leader_cartoon',TRUE);
         	$data[$key]['linkedin'] = get_post_meta($item->ID,'leader_cartoon',TRUE);
-            $data[$key]['title'] = get_the_title($item->ID);
-            $data[$key]['content'] = $item->post_content;
+          $data[$key]['title'] = get_the_title($item->ID);
+          $data[$key]['content'] = $item->post_content;
         }
        
         return $data;
