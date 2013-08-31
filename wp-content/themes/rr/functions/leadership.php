@@ -216,23 +216,20 @@ function create_leadership_func($atts) {
 		if (!empty($item)) 
 		{
 			$lis .= '<li>
-			            <a href="test">TEST
-    			        <img class="leader-thumbnail" src="' . $item["thumbnail"]  . '" />
-      						<img class="leader-hover-thumbnail" src="' . $item["hover_image"]  . '" />
+    			        <a href="#">
+    			          <img class="leader-thumbnail" src="' . $item["thumbnail"]  . '" />
+        						<img class="leader-hover-thumbnail" src="' . $item["hover_image"]  . '" />
       						
-      						<h4>' . $item["title"]  . '</h4>
-      						<span class="tagline">' . $item["tagline"]  . '</span>
+        						<h4>' . $item["title"]  . '</h4>
+        						<span class="tagline">' . $item["tagline"]  . '</span>
       						</a>
-    						
     						  <div class="leader-popout">
     					      <div class="leader-popout-left">
-    					        <a href="cool">
     					        <img class="leader-thumbnail" src="' . $item["thumbnail"]  . '" />
-      						    <ul class="social">
-            						<li class="tw"><a href="' . esc_attr($item["twitter"])  . '" target="_blank" title="Twitter">Twitter</a></li>
-            						<li class="li"><a href="' . esc_attr($item["linkedin"])  . '" target="_blank" title="Linkedin">Linkedin</a></li>
-            					</ul>
-            					</a>
+    					        <ul class="social">
+                      	<li class="tw"><a href="' . $item["twitter"]  . '" target="_blank" title="Twitter">Twitter</a></li>
+                      	<li class="li"><a href="' . $item["linkedin"]  . '" target="_blank" title="Linkedin">Linkedin</a></li>
+                      </ul>
           					</div>
         						<div class="leader-popout-right">
         							<p>' . $item["content"]  . '</p>
@@ -243,7 +240,7 @@ function create_leadership_func($atts) {
 		}
 	}
 	
-	$content .= '<section role="leader" class="'. esc_attr($bg).'"><ul id="section_items">' . $lis . '</ul></section>';
+	$content .= '<section role="leader" class="'. esc_attr($bg).'"><ul>' . $lis . '</ul></section>';
 	
 	/* $html = '<section role="'.$atts['role'].'" class="' . esc_attr($bg) . ' ' . esc_attr($align) . '" ><div class="wrap" >'.do_shortcode($content).'</div><div class="' . esc_attr($class) . '"></div></section>'; */
 	
