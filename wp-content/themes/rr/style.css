@@ -2073,6 +2073,12 @@ section[role="blog"] .date {
 
 }
 
+@media only screen and (max-width:800px) {
+ #section_items li div {
+   width: 100%;
+ }
+}
+
 @media only screen and (max-width:900px) {
 
 	
