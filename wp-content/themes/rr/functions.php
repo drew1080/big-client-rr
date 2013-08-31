@@ -463,7 +463,6 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 
 
 function contact_us_func($atts, $content = null) {
-  #TODO: Add thin/regular/bold classes
 	extract( shortcode_atts( array(
 		'bg' => 'white',
 		'tagline_thickness' => 'regular',

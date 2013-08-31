@@ -180,7 +180,7 @@ function create_tech_func($atts) {
 		if (!empty($item)) 
 		{
 			$lis .= '<li>
-						<img src="' . $item["img"]  . '" />
+						<img src="' . $item["img"]  . '" />\
 						<div>
 							<h4>' . $item["title"]  . '</h4>
 							<p>' . $item["content"]  . '</p>
