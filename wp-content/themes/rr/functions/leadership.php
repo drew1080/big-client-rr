@@ -3,6 +3,22 @@
 /*-----------------------------------------------------------------------------------*/
 /* create custom post => Leadership Page
 /*-----------------------------------------------------------------------------------*/
+
+if (!function_exists('create_leadership')) {
+  function create_leadership_tax() {
+  	register_taxonomy(
+  		'leadership-category',
+  		'leadership',
+  		array(
+  			'label' => __( 'Leadership Categories' ),
+  			'rewrite' => array( 'slug' => 'leadership-categories' ),
+  			'hierarchical' => true
+  		)
+  	);
+  }
+  
+  add_action( 'init', 'create_leadership_tax' );
+}
 if (!function_exists('create_leadership')) {
     function create_leadership()
     {
@@ -15,7 +31,8 @@ if (!function_exists('create_leadership')) {
             'hierarchical' => false,
             'rewrite' => true,
             'menu_icon' => get_bloginfo('template_directory').'/img/ico-admin-leadership.png', // 16px16
-            'supports' => array('title','editor','thumbnail')
+            'supports' => array('title','editor','thumbnail'),
+            'taxonomies' => array('leadership-category')
          );
         register_post_type('leadership_gallery', $tech_args);
     }
@@ -180,8 +197,11 @@ function save_leadership_meta_data($post_id)
 add_shortcode('leadership', 'create_leadership_func');
 
 function create_leadership_func($atts) {
+  extract( shortcode_atts( array(
+		'cat' => 'executive-team',
+		'bg' => 'white'), $atts ) );
 	
-	$leadership = get_leadership();
+	$leadership = get_leadership($atts['cat']);
 	
 	foreach ($leadership as $item) 
 	{
@@ -191,8 +211,11 @@ function create_leadership_func($atts) {
 			$lis .= '<li>
 			      <img src="' . $item["thumbnail"]  . '" />
 						<img src="' . $item["hover_image"]  . '" />
+						<ul class="social">
+  						<li class="tw"><a href="' . $item["twitter"]  . '" target="_blank" title="Twitter">Twitter</a></li>
+  						<li class="li"><a href="' . $item["linkedin"]  . '" target="_blank" title="Linkedin">Linkedin</a></li>
+  					</ul>
 						<div>
-							<h4>' . $item["title"]  . '</h4>
 							<p>' . $item["content"]  . '</p>
 						</div>
 					</li>';
@@ -200,7 +223,7 @@ function create_leadership_func($atts) {
 		}
 	}
 	
-	$content .= '<ul id="section_items">' . $lis . '</ul>';
+	$content .= '<section role="leader" class="'. esc_attr($bg).'"><ul id="section_items">' . $lis . '</ul></section>';
 	
 	/* $html = '<section role="'.$atts['role'].'" class="' . esc_attr($bg) . ' ' . esc_attr($align) . '" ><div class="wrap" >'.do_shortcode($content).'</div><div class="' . esc_attr($class) . '"></div></section>'; */
 	
@@ -210,31 +233,35 @@ function create_leadership_func($atts) {
 /* Get Leadership People
 /*-----------------------------------------------------------------------------------*/
 if (!function_exists('get_leadership')) {
-    function get_leadership()
+    function get_leadership($cat)
     {
-    	/** first get the posts **/
-        global $wpdb;
-		$querystr = "
-			SELECT $wpdb->posts.post_title,$wpdb->posts.post_content,$wpdb->posts.ID
-			FROM $wpdb->posts
-			WHERE $wpdb->posts.post_type = 'leadership_gallery'
-			";
-
-			$query = $wpdb->get_results($querystr, OBJECT);
-		
-		$data = array();
-		
-        foreach ($query as $key => $item ) 
-        {
-        	$data[$key]['hover_image'] = get_post_meta($item->ID,'hover_image',TRUE);
-        	$data[$key]['thumbnail'] = wp_get_attachment_url( get_post_thumbnail_id($item->ID) );
-        	$data[$key]['cartoon'] = get_post_meta($item->ID,'leader_cartoon',TRUE);
-        	$data[$key]['twitter'] = get_post_meta($item->ID,'leader_cartoon',TRUE);
-        	$data[$key]['linkedin'] = get_post_meta($item->ID,'leader_cartoon',TRUE);
-          $data[$key]['title'] = get_the_title($item->ID);
-          $data[$key]['content'] = $item->post_content;
-        }
-       
-        return $data;
+      $args=array(
+          'leadership-category' => $cat,
+          'post_type' => 'leadership_gallery',
+          'post_status' => 'publish',
+          'posts_per_page' => 100,
+          'caller_get_posts'=> 1
+        );
+        
+      $my_query = null;
+      $my_query = new WP_Query($args);
+      $posts = $my_query->get_posts();
+      
+      $data = array();
+      
+      foreach ($posts as $key => $item ) 
+      {
+        $data[$key]['hover_image'] = get_post_meta($item->ID,'hover_image',TRUE);
+        $data[$key]['thumbnail'] = wp_get_attachment_url( get_post_thumbnail_id($item->ID) );
+        #$data[$key]['cartoon'] = get_post_meta($item->ID,'leader_cartoon',TRUE);
+        $data[$key]['twitter'] = get_post_meta($item->ID,'leader_twitter',TRUE);
+        $data[$key]['linkedin'] = get_post_meta($item->ID,'leader_linkedin',TRUE);
+        #$data[$key]['title'] = get_the_title($item->ID);
+        $data[$key]['content'] = $item->post_content;
+      }
+      
+      wp_reset_query();
+    
+      return $data;
     }
 }
