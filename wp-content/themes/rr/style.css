@@ -2565,3 +2565,19 @@ p a.imgpartners:nth-child(4) img {
   font-size: 44px;
   font-family: oswaldbold;
 }
+
+/*------------------------------------*\
+
+    LEADERSHIP PAGE
+
+\*------------------------------------*/
+
+section[role="leader"] .leader-hover-thumbnail {
+  display: none;
+}
+
+section[role="leader"] .leader-popout {
+  display: none;
+}
+
+

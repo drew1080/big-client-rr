@@ -48,6 +48,13 @@ $leadership_box_data = array(
     'priority' => 'high',
     'fields' => array(
         array(
+            'name' => __('Tagline', 'framework'),
+            'desc' => __('Please enter the leader tagline.', 'framework'),
+            'id' => 'tagline',
+            "type" => "text",
+            'std' => ''
+        ),
+        array(
             'name' => __('Image', 'framework'),
             'desc' => __('Upload the leader image. Once uploaded, click "Insert to Post".', 'framework'),
             'id' => 'hover_image',
@@ -209,16 +216,29 @@ function create_leadership_func($atts) {
 		if (!empty($item)) 
 		{
 			$lis .= '<li>
-			      <img src="' . $item["thumbnail"]  . '" />
-						<img src="' . $item["hover_image"]  . '" />
-						<ul class="social">
-  						<li class="tw"><a href="' . $item["twitter"]  . '" target="_blank" title="Twitter">Twitter</a></li>
-  						<li class="li"><a href="' . $item["linkedin"]  . '" target="_blank" title="Linkedin">Linkedin</a></li>
-  					</ul>
-						<div>
-							<p>' . $item["content"]  . '</p>
-						</div>
-					</li>';
+			            <a href="test">TEST
+    			        <img class="leader-thumbnail" src="' . $item["thumbnail"]  . '" />
+      						<img class="leader-hover-thumbnail" src="' . $item["hover_image"]  . '" />
+      						
+      						<h4>' . $item["title"]  . '</h4>
+      						<span class="tagline">' . $item["tagline"]  . '</span>
+      						</a>
+    						
+    						  <div class="leader-popout">
+    					      <div class="leader-popout-left">
+    					        <a href="cool">
+    					        <img class="leader-thumbnail" src="' . $item["thumbnail"]  . '" />
+      						    <ul class="social">
+            						<li class="tw"><a href="' . esc_attr($item["twitter"])  . '" target="_blank" title="Twitter">Twitter</a></li>
+            						<li class="li"><a href="' . esc_attr($item["linkedin"])  . '" target="_blank" title="Linkedin">Linkedin</a></li>
+            					</ul>
+            					</a>
+          					</div>
+        						<div class="leader-popout-right">
+        							<p>' . $item["content"]  . '</p>
+        						</div>
+      						</div>
+    					</li>';
 			
 		}
 	}
@@ -256,7 +276,8 @@ if (!function_exists('get_leadership')) {
         #$data[$key]['cartoon'] = get_post_meta($item->ID,'leader_cartoon',TRUE);
         $data[$key]['twitter'] = get_post_meta($item->ID,'leader_twitter',TRUE);
         $data[$key]['linkedin'] = get_post_meta($item->ID,'leader_linkedin',TRUE);
-        #$data[$key]['title'] = get_the_title($item->ID);
+        $data[$key]['title'] = get_the_title($item->ID);
+        $data[$key]['tagline'] = get_post_meta($item->ID,'tagline',TRUE);
         $data[$key]['content'] = $item->post_content;
       }
       
