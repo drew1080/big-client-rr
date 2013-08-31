@@ -1416,7 +1416,7 @@ footer .icons {display: none;}
 
 }
 
-.footer .social {
+.social {
 
 	float: left;
 
@@ -1426,7 +1426,7 @@ footer .icons {display: none;}
 
 }
 
-.footer .social li {
+.social li {
 
 	display: inline-block;
 
@@ -1436,7 +1436,7 @@ footer .icons {display: none;}
 
 }
 
-.footer .social li a {
+.social li a {
 
 	display: block;
 
@@ -1448,37 +1448,37 @@ footer .icons {display: none;}
 
 }
 
-.footer .social li.fb a {
+.social li.fb a {
 
 	background: url(img/ico-facebook.png) no-repeat 0 0;
 
 }
 
-.footer .social li.gplus a {
+.social li.gplus a {
 
 	background: url(img/ico-google.png) no-repeat 0 0;
 
 }
 
-.footer .social li.tw a {
+.social li.tw a {
 
 	background: url(img/ico-twitter.png) no-repeat 0 0;
 
 }
 
-.footer .social li.li a {
+.social li.li a {
 
 	background: url(img/ico-linkedin.png) no-repeat 0 0;
 
 }
 
-.footer .social li.yt a {
+.social li.yt a {
 
 	background: url(img/ico-youtube.png) no-repeat 0 0;
 
 }
 
-.footer .social li a:hover {
+.social li a:hover {
 
 	background-position: 0 -29px;
 
@@ -2591,6 +2591,19 @@ p a.imgpartners:nth-child(4) img {
   font-family: oswaldbold;
 }
 
+/*------------------------------------*\
+
+    LEADERSHIP PAGE
+
+\*------------------------------------*/
+
+section[role="leader"] .leader-hover-thumbnail {
+  display: none;
+}
+
+section[role="leader"] .leader-popout {
+  display: none;
+}
 
 /*****FANCYBOX STYLING*****/
 
@@ -2619,12 +2632,4 @@ p a.imgpartners:nth-child(4) img {
   width: 640px !important;
   height: 360px !important;
 }
-  
-  
-  
-  
-  
-  
-  
-  
   
