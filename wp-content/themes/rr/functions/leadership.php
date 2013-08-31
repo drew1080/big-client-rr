@@ -55,7 +55,7 @@ $leadership_box_data = array(
             'std' => ''
         ),
         array(
-            'name' => __('Image', 'framework'),
+            'name' => __('Hover Image', 'framework'),
             'desc' => __('Upload the leader image. Once uploaded, click "Insert to Post".', 'framework'),
             'id' => 'hover_image',
             "type" => "text",
@@ -210,20 +210,20 @@ function create_leadership_func($atts) {
 	
 	$leadership = get_leadership($atts['cat']);
 	
-	foreach ($leadership as $item) 
+	foreach ($leadership as $key => $item ) 
 	{
 
 		if (!empty($item)) 
 		{
 			$lis .= '<li>
-    			        <a href="#">
+    			        <a class="leader-popouts" rel="leaders" href="#leader-' . $atts['cat'] . '-'. $key . '">
     			          <img class="leader-thumbnail" src="' . $item["thumbnail"]  . '" />
         						<img class="leader-hover-thumbnail" src="' . $item["hover_image"]  . '" />
       						
         						<h4>' . $item["title"]  . '</h4>
         						<span class="tagline">' . $item["tagline"]  . '</span>
       						</a>
-    						  <div class="leader-popout">
+    						  <div id="leader-' . $atts['cat'] . '-'. $key . '" class="leader-popout">
     					      <div class="leader-popout-left">
     					        <img class="leader-thumbnail" src="' . $item["thumbnail"]  . '" />
     					        <ul class="social">
