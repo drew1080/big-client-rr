@@ -2656,4 +2656,75 @@ section[role="leader"] .leader-popout {
   width: 640px !important;
   height: 360px !important;
 }
-  
+
+/* Banner Styling */
+.slider h1.with-excerpt {
+  font-size: 5.4em;
+  width: 50%;
+  line-height: 65px;
+  text-align: left;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  margin-top: 38px;
+}
+
+.slider p {
+  color: #ffffff;
+  font-size: 2.6em;
+  width: 48%;
+  position: relative;
+  padding-left: 40px;
+  display: inline-block;
+  margin-top: 18px;
+}
+
+@media only screen and (max-width:1200px) {
+
+  .slider h1.with-excerpt {
+    font-size: 4.4em;
+    width: 50%;
+    line-height: 65px;
+    text-align: left;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    margin-top: 38px;
+  }
+
+  .slider p {
+    color: #ffffff;
+    font-size: 1.6em;
+    position: relative;
+    padding-left: 40px;
+    margin-top: 18px;
+  }
+
+}
+
+@media only screen and (max-width:400px) {
+
+  .slider h1.with-excerpt {
+    font-size: 2.3em;
+    width: 100%;
+    line-height: 32px;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    margin-top: 38px;
+    padding: 0px;
+    text-align: center;
+  }
+
+  .slider p {
+    color: #ffffff;
+    font-size: 1.6em;
+    position: relative;
+    padding: 0px;
+    margin-top: 5px;
+    text-align: center;
+    width: 100%;
+  }
+
+}
+
