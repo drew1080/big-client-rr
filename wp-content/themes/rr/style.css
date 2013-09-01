@@ -2604,6 +2604,7 @@ section[role="leader"] .leader-popout {
 
 /* home */
 /* Banner Styling */
+
 .slider {
 	z-index: 0;
 	position: relative;
@@ -2626,7 +2627,15 @@ section[role="leader"] .leader-popout {
 	width: 100%;
 }
 
-.slider img { width:100%; min-height: 150px}
+.slider img { 
+  width:100%; 
+  min-height: 150px
+}
+
+.easingsliderpro img {
+  min-height: 0;
+}
+
 .easingsliderpro-arrows {
 	top:45% !important;
 }
