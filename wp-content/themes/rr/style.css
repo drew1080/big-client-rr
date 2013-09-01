@@ -714,6 +714,14 @@ section[role="leader"] {
   padding: 0;
 }
 
+section[role="leader"] img.leader-thumbnail:hover{
+  display: none;
+}
+
+section[role="leader"] img.leader-thumbnail:hover{
+  display: block;
+}
+
 section[role="leader"] ul {
   list-style-type: none;
   padding: 0;
@@ -741,6 +749,18 @@ section[role="leader"] .tagline {
   line-height: 3px;
 }
 
+.leader-popout-left{
+  width: 215px;
+  float: left;
+}
+.leader-popout-left img.leader-thumbnail {
+  float: left;
+}
+
+.leader-popout-right {
+  max-width: 400px;
+  float: right;
+}
 /*------------------------------------*\
 	TECHNOLOGY ITEMS
 \*------------------------------------*/
