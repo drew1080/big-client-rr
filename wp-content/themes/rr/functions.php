@@ -485,6 +485,7 @@ function contact_us_func($atts, $content = null) {
 //[add_header_image title="Personalized Content" excerpt="Transform your entire webpage in real time to reflect the true interests of your individual consumer." image_url="/wp-content/uploads/2013/08/solutions-personalization-bg1.jpg"]
 function add_header_image_func($atts, $content = null) {
   extract( shortcode_atts( array(
+    'class' => '',
 		'title' => 'Rich Relevance',
 		'excerpt' => '',
 		'image_url' => ''), $atts ) );
@@ -495,8 +496,8 @@ function add_header_image_func($atts, $content = null) {
 	  $has_excerpt_class = '';
 	}
 	
-	$html = '<div class="slider">
-	          <div class="slider-content" style="background-image: url(' . $image_url . ')">
+	$html = '<div class="slider ' . $class . '">
+	          <div class="slider-content ' . $has_excerpt_class . '" style="background-image: url(' . $image_url . ')">
     			  <h1 class="entry-title ' . $has_excerpt_class . '">' . esc_attr($title) . '</h1>
     			  <p>' . esc_attr($excerpt) . '</p>
           </div>
