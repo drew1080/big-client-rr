@@ -333,9 +333,13 @@ $(".nav > ul > li > .sub-menu").removeClass("visible-sm");
 
 
 
-			<div class="slider">
-        <?php if ( !get_post_meta($post->ID, 'banner', true) && function_exists('easingsliderpro') ) { easingsliderpro( 1 ); } ?>
-			</div>
+			
+      <?php if ( !get_post_meta($post->ID, 'banner', true) && function_exists('easingsliderpro') ) { 
+          echo '<div class="slider">';
+          easingsliderpro( 1 ); 
+          echo '</div>';
+      } ?>
+			
 			
 
 			<!-- /Slider -->

@@ -1090,9 +1090,9 @@ section[role="trusted"] .wrap ul li {
 /* home */
 
 .slider {
-
-	z-index: 0;position: relative;
-
+	z-index: 0;
+	position: relative;
+  height: 230px;
 }
 
 .slider h1 {
@@ -1678,34 +1678,7 @@ text-transform: uppercase;
 width: 100%;
 }
 */
-.slider-content{
-	width: 100%;
-	position: absolute;
-	height: 200px;
-	padding: 0 15%;
-}
-.slider h1.with-excerpt {
-font-size: 6.5em;
-width: 50%;
-line-height: 40px;
-text-align: right;
-display: inline-block;
-position: relative;
-vertical-align: top;
-margin-top: 131px;
-padding-left: 96px;
-}
 
-.slider p {
-color: #ffffff;
-font-size: 2.7em;
-width: 44%;
-position: relative;
-padding-left: 22px;
-display: inline-block;
-margin-top: 85px;
-line-height: 148%;
-}
 
 /*------------------------------------*\
 
@@ -2658,11 +2631,30 @@ section[role="leader"] .leader-popout {
 }
 
 /* Banner Styling */
+
+.slider-content {
+	width: 100%;
+	position: absolute;
+	height: 232px;
+	padding: 0 15%;
+}
+
+.slider h1.entry-title {
+  font-size: 6.0em;
+  width: 100%;
+  line-height: 65px;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  margin-top: 87px;
+}
+
 .slider h1.with-excerpt {
   font-size: 5.4em;
   width: 50%;
   line-height: 65px;
-  text-align: left;
+  text-align: right;
   display: inline-block;
   position: relative;
   vertical-align: top;
@@ -2682,27 +2674,29 @@ section[role="leader"] .leader-popout {
 @media only screen and (max-width:1200px) {
 
   .slider h1.with-excerpt {
-    font-size: 4.4em;
+    font-size: 3.7em;
     width: 50%;
-    line-height: 65px;
-    text-align: left;
+    line-height: 57px;
+    text-align: right;
     display: inline-block;
     position: relative;
     vertical-align: top;
-    margin-top: 38px;
+    margin-top: 43px;
+    padding: 0px;
   }
 
   .slider p {
     color: #ffffff;
-    font-size: 1.6em;
+    font-size: 1.8em;
     position: relative;
     padding-left: 40px;
-    margin-top: 18px;
+    margin-top: 44px;
+    width: 49%;
   }
 
 }
 
-@media only screen and (max-width:400px) {
+@media only screen and (max-width:600px) {
 
   .slider h1.with-excerpt {
     font-size: 2.3em;
