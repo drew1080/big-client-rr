@@ -2610,6 +2610,10 @@ section[role="leader"] .leader-popout {
   height: 250px;
 }
 
+.slider.home {
+  height: 400px;
+}
+
 .slider h1 {
 	color: #FFF;
 	display: block;
