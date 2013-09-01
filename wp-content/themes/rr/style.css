@@ -710,7 +710,57 @@ section[role="main"] .view-article {
 	float:right;
 	margin-top:30px;
 }
+section[role="leader"] {
+  padding: 0;
+}
 
+/*section[role="leader"] img.leader-thumbnail:hover{
+  display: none;
+}
+
+section[role="leader"] img.leader-hover-thumbnail:hover{
+  display: block;
+}*/
+
+section[role="leader"] ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+section[role="leader"] ul li {
+  display: inline;
+  width: 199px;
+  margin: 30px 14px 0 14px;
+  line-height: 22px;
+}
+
+section[role="leader"] ul li a:hover {
+  text-decoration: none;
+}
+section[role="leader"] h4 {
+  font-family: robotoregular;
+  font-size: 18px;
+  margin: 0;
+}
+section[role="leader"] .tagline {
+  font-family: robotolight;
+  font-size: 14px;
+  color: #667280;
+  line-height: 3px;
+}
+
+.leader-popout-left{
+  width: 215px;
+  float: left;
+}
+.leader-popout-left img.leader-thumbnail {
+  float: left;
+}
+
+.leader-popout-right {
+  max-width: 400px;
+  float: right;
+}
 /*------------------------------------*\
 	TECHNOLOGY ITEMS
 \*------------------------------------*/
