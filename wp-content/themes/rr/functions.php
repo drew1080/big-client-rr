@@ -492,7 +492,16 @@ function icon_box_func($atts, $content = null) {
 	extract( shortcode_atts( array(
 	  'class' => '',
 		'title' => '',
-		'icon_url' => ''), $atts ) );
+		'icon_url' => '',
+		'video_url' => ''), $atts ) );
+		
+	$video_html = "";
+	
+	if ( trim($video_url) != '' ) {
+	  $video_html = '<ul>
+                    <li><a href="' . esc_attr($video_url) . '">Watch video</a>&nbsp;&gt;</li>
+                   </ul>';
+	}
 	
 	$html = '<ul class="section_items ' . esc_attr($class) . '">
 	          <li>
@@ -500,6 +509,7 @@ function icon_box_func($atts, $content = null) {
   						<div>
   							<h4>' . esc_attr($title) . '</h4>
   							<p>' . esc_attr($content) . '</p>
+  							' . $video_html . '
   						</div>
   					</li>
   				</ul>';

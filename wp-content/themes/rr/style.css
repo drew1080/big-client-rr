@@ -719,6 +719,7 @@ section[role="main"] .view-article {
 	list-style: none;
 	float: left;
 	padding: 0px;
+	margin: 0px;
 }
 ul.section_items li {
 	width: 100% !important;
@@ -745,6 +746,16 @@ ul.section_items li {
 .section_items.capabilities ul {
 	margin: 10px 0;
 	padding: 0;
+}
+
+.section_items.first {
+  padding-top: 30px;
+  margin-top: 1em;
+}
+
+.section_items.last {
+  padding-bottom: 30px;
+  margin-bottom: 1em;
 }
 
 /*------------------------------------*\
