@@ -2874,3 +2874,35 @@ section[role="leader"] .leader-popout {
 
 }
 
+@media only screen and (max-width:400px) {
+ /* .slider-content {
+     display: block;
+   }*/
+  .slider-content.with-excerpt {
+    display: block;
+  }
+    
+  .slider h1.with-excerpt {
+    font-size: 2.8em;
+    line-height: 40px;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    margin: 38px 0 0 0;
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .slider p {
+    color: #ffffff;
+    font-size: 1.8em;
+    position: relative;
+    padding: 0px;
+    margin-top: 5px;
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
