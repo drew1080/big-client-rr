@@ -240,7 +240,7 @@ function create_leadership_func($atts) {
 		}
 	}
 	
-	$content .= '<section role="leader" class="'. esc_attr($bg).'"><ul>' . $lis . '</ul></section>';
+	$content .= '<section role="leader" class="'. esc_attr($bg).'"><ul>' . $lis . '</ul></section><div class="clear"></div>';
 	
 	/* $html = '<section role="'.$atts['role'].'" class="' . esc_attr($bg) . ' ' . esc_attr($align) . '" ><div class="wrap" >'.do_shortcode($content).'</div><div class="' . esc_attr($class) . '"></div></section>'; */
 	
