@@ -335,7 +335,7 @@ $(".nav > ul > li > .sub-menu").removeClass("visible-sm");
 
 			
       <?php if ( !get_post_meta($post->ID, 'banner', true) && function_exists('easingsliderpro') ) { 
-          echo '<div class="slider">';
+          echo '<div class="slider home">';
           easingsliderpro( 1 ); 
           echo '</div>';
       } ?>
