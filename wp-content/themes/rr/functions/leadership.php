@@ -208,34 +208,36 @@ function create_leadership_func($atts) {
 		'cat' => 'executive-team',
 		'bg' => 'white'), $atts ) );
 	
-	$leadership = get_leadership($atts['cat']);
+  $leadership = get_leadership($atts['cat']);
 	
 	foreach ($leadership as $key => $item ) 
 	{
 
 		if (!empty($item)) 
 		{
+    	$onmouseover = "onmouseover=\"this.src='" . $item["hover_image"]  . "'\" ";
+    	$onmouseout = "onmouseout=\"this.src='" . $item["thumbnail"]  . "'\"";
+    	
 			$lis .= '<li>
-    			        <a class="leader-popouts" rel="leaders" href="#leader-' . $atts['cat'] . '-'. $key . '">
-    			          <img class="leader-thumbnail" src="' . $item["thumbnail"]  . '" />
-        						<img class="leader-hover-thumbnail" src="' . $item["hover_image"]  . '" />
-      						
-        						<h4>' . $item["title"]  . '</h4>
-        						<span class="tagline">' . $item["tagline"]  . '</span>
-      						</a>
-    						  <div id="leader-' . $atts['cat'] . '-'. $key . '" class="leader-popout">
-    					      <div class="leader-popout-left">
-    					        <img class="leader-thumbnail" src="' . $item["thumbnail"]  . '" />
-    					        <ul class="social">
-                      	<li class="tw"><a href="' . $item["twitter"]  . '" target="_blank" title="Twitter">Twitter</a></li>
+                <a class="leader-popouts" rel="leaders" href="#leader-' . $atts['cat'] . '-'. $key . '">
+                  <img class="leader-thumbnail" src="' . $item["thumbnail"]  . '" ' . $onmouseover  . '  ' . $onmouseout  . '"/>
+
+                  <h4>' . $item["title"]  . '</h4>
+                  <span class="tagline">' . $item["tagline"]  . '</span>
+                </a>
+                <div id="leader-' . $atts['cat'] . '-'. $key . '" class="leader-popout">
+                  <div class="leader-popout-left">
+                    <img class="leader-thumbnail" src="' . $item["thumbnail"]  . '" />
+                      <ul class="social">
+                        <li class="tw"><a href="' . $item["twitter"]  . '" target="_blank" title="Twitter">Twitter</a></li>
                       	<li class="li"><a href="' . $item["linkedin"]  . '" target="_blank" title="Linkedin">Linkedin</a></li>
                       </ul>
-          					</div>
-        						<div class="leader-popout-right">
-        							<p>' . $item["content"]  . '</p>
-        						</div>
-      						</div>
-    					</li>';
+                  </div>
+                  <div class="leader-popout-right">
+                  	<p>' . $item["content"]  . '</p>
+                  </div>
+                </div>
+              </li>';
 			
 		}
 	}

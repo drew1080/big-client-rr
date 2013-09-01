@@ -714,13 +714,13 @@ section[role="leader"] {
   padding: 0;
 }
 
-section[role="leader"] img.leader-thumbnail:hover{
+/*section[role="leader"] img.leader-thumbnail:hover{
   display: none;
 }
 
-section[role="leader"] img.leader-thumbnail:hover{
+section[role="leader"] img.leader-hover-thumbnail:hover{
   display: block;
-}
+}*/
 
 section[role="leader"] ul {
   list-style-type: none;
