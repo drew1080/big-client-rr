@@ -333,47 +333,13 @@ $(".nav > ul > li > .sub-menu").removeClass("visible-sm");
 
 
 
-			<div class="slider">
-
-
-
-				<?php if(get_post_meta($post->ID, 'banner', true)) : ?>
-
-
-					<?php ///if( $post->post_excerpt) : ?>
-					<!--
-<div class="slider-content">
-						<h1 class="entry-title with-excerpt"><?php the_title(); ?></h1>
-						<p><?php the_excerpt();?></p>
-						
-					</div>
--->
-					<?php //else:?>
-					
-						<!-- <h1 class="entry-title"><?php the_title(); ?></h1> -->
-					
-					<?php //endif; ?>
-						
-					
-					
-					
-					<img src="<?php echo get_post_meta($post->ID, 'banner', true); ?>" />
-
-
-
-				<?php else : ?>
-
-
-
-					<?php if ( function_exists('easingsliderpro') ) { easingsliderpro( 1 ); } ?>
-
-
-
-				<?php endif; ?>
-
-
-
-			</div>
+			
+      <?php if ( !get_post_meta($post->ID, 'banner', true) && function_exists('easingsliderpro') ) { 
+          echo '<div class="slider">';
+          easingsliderpro( 1 ); 
+          echo '</div>';
+      } ?>
+			
 			
 
 			<!-- /Slider -->
