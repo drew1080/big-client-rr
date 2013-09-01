@@ -2631,11 +2631,11 @@ section[role="leader"] .leader-popout {
 	width: 100%;
 	position: absolute;
 	height: 250px;
-	display: table;
 }
 
 .slider-content.with-excerpt {
   padding: 0 15%;
+	display: table;
 }
 
 .slider h1.entry-title {
@@ -2646,7 +2646,7 @@ section[role="leader"] .leader-popout {
   display: inline-block;
   position: relative;
   vertical-align: top;
-/*  margin-top: 97px;*/
+  margin-top: 97px;
 }
 
 .slider h1.with-excerpt {
@@ -2674,10 +2674,39 @@ section[role="leader"] .leader-popout {
   vertical-align: middle;
 }
 
+@media only screen and (max-width:1250px) {
+
+  .slider h1.with-excerpt {
+    font-size: 5.5em;
+    width: 48%;
+    line-height: 80px;
+    text-align: right;
+    display: inline-block;
+    position: relative;
+  /*  vertical-align: top;*/
+  /*  margin-top: 45px;*/
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .slider p {
+    color: #ffffff;
+    font-size: 2.5em;
+    width: 48%;
+    position: relative;
+    padding-left: 40px;
+    display: inline-block;
+  /*  margin-top: 41px;*/
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+}
+
 @media only screen and (max-width:1100px) {
 
   .slider h1.with-excerpt {
-    font-size: 5.4em;
+    font-size: 4.5em;
     width: 50%;
     line-height: 70px;
     text-align: right;
@@ -2692,7 +2721,7 @@ section[role="leader"] .leader-popout {
 
   .slider p {
     color: #ffffff;
-    font-size: 2.3em;
+    font-size: 2.2em;
     position: relative;
     padding-left: 40px;
 /*    margin-top: 47px;*/
@@ -2703,40 +2732,48 @@ section[role="leader"] .leader-popout {
 
 }
 
-@media only screen and (max-width:850px) {
 
+
+@media only screen and (max-width:930px) {
+ /* .slider-content {
+     display: block;
+   }*/
+  .slider-content.with-excerpt {
+    display: block;
+  }
+    
   .slider h1.with-excerpt {
-    font-size: 4.4em;
-    line-height: 54px;
+    font-size: 4.0em;
+    line-height: 40px;
     display: inline-block;
     position: relative;
-/*    vertical-align: top;*/
-/*    margin: 38px 0 0 0;*/
+    vertical-align: top;
+    margin: 38px 0 0 0;
     padding: 0px;
-    width: 50%;
-    text-align: right;
-    display: table-cell;
-    vertical-align: middle;
+    width: 100%;
+    text-align: center;
   }
 
   .slider p {
     color: #ffffff;
-    font-size: 2.1em;
+    font-size: 2.5em;
     position: relative;
-    padding-left: 40px;
-/*    margin-top: 5px;*/
-    width: 49%;
-    text-align: left;
-    display: table-cell;
-    vertical-align: middle;
+    padding: 0px;
+    margin-top: 5px;
+    width: 100%;
+    text-align: center;
   }
 
 }
 
-@media only screen and (max-width:690px) {
-  .slider-content {
+@media only screen and (max-width:650px) {
+ /* .slider-content {
+     display: block;
+   }*/
+  .slider-content.with-excerpt {
     display: block;
   }
+    
   .slider h1.with-excerpt {
     font-size: 3.4em;
     line-height: 40px;
