@@ -715,36 +715,47 @@ section[role="main"] .view-article {
 	TECHNOLOGY ITEMS
 \*------------------------------------*/
 
-#section_items{
+.section_items{
 	list-style: none;
 	float: left;
-	padding: 30px 0;
+	padding: 0px;
+	margin: 0px;
 }
-#section_items li {
-	width: 100%;
-	list-style: none;
-	margin-bottom: 20px;
+ul.section_items li {
+	width: 100% !important;
+	list-style: none !important;
+	margin-bottom: 20px !important;
 }
-#section_items li img {
+.section_items li img {
 	vertical-align: top;
 	padding-right: 25px;
 }
-#section_items li div {
+.section_items li div {
 	width: 760px;
 	display: inline-block;
 }
-#section_items li div > h4 {
+.section_items li div > h4 {
 	text-transform: uppercase;
 	margin: 0;
 }
-#section_items li div > p {
+.section_items li div > p {
 	font-size: 19px;
 	line-height: 30px;
 }
 
-#section_items.capabilities ul {
+.section_items.capabilities ul {
 	margin: 10px 0;
 	padding: 0;
+}
+
+.section_items.first {
+  padding-top: 30px;
+  margin-top: 1em;
+}
+
+.section_items.last {
+  padding-bottom: 30px;
+  margin-bottom: 1em;
 }
 
 /*------------------------------------*\
@@ -2115,7 +2126,7 @@ section[role="blog"] .date {
 }
 
 @media only screen and (max-width:800px) {
- #section_items li div {
+ .section_items li div {
    width: 100%;
  }
 }

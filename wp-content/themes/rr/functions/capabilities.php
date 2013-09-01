@@ -20,8 +20,8 @@ if (!function_exists('create_capabilities')) {
         register_post_type('capability_item', $tech_args);
     }
     
-
-    add_action('init', 'create_capabilities');
+    // Disabling capabilities
+    //add_action('init', 'create_capabilities');
 }
 
 $capability_box_data = array(
