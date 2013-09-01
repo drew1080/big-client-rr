@@ -711,6 +711,29 @@ section[role="main"] .view-article {
 	margin-top:30px;
 }
 
+section[role="leader"] ul {
+  list-style-type: none;
+}
+
+section[role="leader"] ul li {
+  display: inline;
+  width: 199px;
+  margin: 0 9px;
+  line-height: 22px;
+}
+section[role="leader"] ul li a:hover {
+  text-decoration: none;
+}
+section[role="leader"] h4 {
+  font-family: robotoregular;
+  margin: 10px 0 0 0;
+}
+section[role="leader"] .tagline {
+  font-family: robotolight;
+  font-size: 14px;
+  color: #667280;
+}
+
 /*------------------------------------*\
 	TECHNOLOGY ITEMS
 \*------------------------------------*/
