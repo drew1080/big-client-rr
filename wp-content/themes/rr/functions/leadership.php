@@ -205,8 +205,10 @@ add_shortcode('leadership', 'create_leadership_func');
 
 function create_leadership_func($atts) {
   extract( shortcode_atts( array(
+    'class' => '',
 		'cat' => 'executive-team',
-		'bg' => 'white'), $atts ) );
+		'bg' => 'white',
+		'title' => ''), $atts ) );
 	
   $leadership = get_leadership($atts['cat']);
 	
@@ -234,7 +236,9 @@ function create_leadership_func($atts) {
                       </ul>
                   </div>
                   <div class="leader-popout-right">
-                  	<p>' . $item["content"]  . '</p>
+                    <h4>' . $item["title"]  . '</h4>
+                    <span class="tagline">' . $item["tagline"]  . '</span>
+                  	<div class="leader-popout-content"><p>' . $item["content"]  . '</p></div>
                   </div>
                 </div>
               </li>';
@@ -242,7 +246,12 @@ function create_leadership_func($atts) {
 		}
 	}
 	
-	$content .= '<section role="leader" class="'. esc_attr($bg).'"><ul>' . $lis . '</ul></section><div class="clear"></div>';
+	$content .= '<section role="leader" class="'. esc_attr($class).' '. esc_attr($bg).'">
+	              <div class="wrap">
+	                <h3>'. esc_attr($title).'</h3>
+	                <ul>' . $lis . '</ul>
+	              </div>
+	              <div class="clear"></div></section>';
 	
 	/* $html = '<section role="'.$atts['role'].'" class="' . esc_attr($bg) . ' ' . esc_attr($align) . '" ><div class="wrap" >'.do_shortcode($content).'</div><div class="' . esc_attr($class) . '"></div></section>'; */
 	
