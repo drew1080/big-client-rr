@@ -764,7 +764,7 @@ section[role="leader"] .tagline {
 }
 
 #fancybox-close {
-  right: -55px;
+  right: -33px;
 }
 #fancybox-content {
   background: white;
@@ -783,13 +783,13 @@ section[role="leader"] .tagline {
 }
 
 #fancybox-left, #fancybox-right {
-  visibility: visible;
+  visibility: visible !important;
   display: block;
 }
 
 #fancybox-left-ico span, #fancybox-right-ico span{
   left: auto;
-  right: 0;
+  right: 0px;
 }
 
 #fancybox-left-ico {
@@ -1497,7 +1497,14 @@ section[role="blog"] .view-article {
 
 }	
 
-
+section[role="blog"] .older {
+  display: inline-block;
+  margin: 0 10px;
+}
+section[role="blog"] .newer {
+  display: inline-block;
+  margin: 0 10px;
+}
 
 /** Submenu **/
 
@@ -2993,4 +3000,3 @@ section[role="leader"] .leader-popout {
   }
 
 }
-
