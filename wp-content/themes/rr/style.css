@@ -1497,7 +1497,14 @@ section[role="blog"] .view-article {
 
 }	
 
-
+section[role="blog"] .older {
+  display: inline-block;
+  margin: 0 10px;
+}
+section[role="blog"] .newer {
+  display: inline-block;
+  margin: 0 10px;
+}
 
 /** Submenu **/
 

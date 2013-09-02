@@ -10,7 +10,6 @@ get_header();
 <section role="blog">
 	<div class="wrap">
 		<div class="all-posts">	   		
-		  <?php $wp_query = new WP_Query('post_type=post&posts_per_page=5&paged='.$paged ); ?>	
 			<?php get_template_part('loop_blog'); ?>   		
 		</div>		
 		<div class="posts-sidebar">		   
