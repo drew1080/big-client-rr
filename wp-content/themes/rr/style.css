@@ -757,6 +757,53 @@ section[role="leader"] .tagline {
   line-height: 3px;
 }
 
+/* Fancybox Styling */
+.fancybox-lock {
+  overflow: hidden;
+  margin: 0 !important;
+}
+
+#fancybox-content {
+  background: white;
+}
+
+/*#fancybox-close {
+  right: -55px !important;
+}*/
+
+/*****FANCYBOX STYLING*****/
+
+/*#fancybox-overlay {
+  background-color: #000000 !important;
+  opacity: 0.8 !important;
+}
+
+#fancybox-close {
+  position: absolute;
+  right: -55px !important;
+  top: -15px  !important;
+}
+
+#fancybox-right {
+  position: absolute !important;
+  right: -80px !important;
+}
+
+#fancybox-left {
+  position: absolute !importnat;
+  left: -60px !important;
+}
+ 
+#fancybox-content {
+  width: 640px !important;
+  height: 360px !important;
+}*/
+
+
+section[role="leader"] .leader-popout {
+  width: 680px;
+}
+
 .leader-popout-left{
   width: 200px;
   float: left;
@@ -767,8 +814,10 @@ section[role="leader"] .tagline {
 }
 
 .leader-popout-right {
-  max-width: 360px;
-  float: left;
+  max-width: 310px;
+  float: right;
+  height: 400px;
+  overflow: scroll;
 }
 
 .leader-popout-right h2 {
@@ -787,9 +836,7 @@ section[role="leader"] .tagline {
   font-size: 14px;
 }
 
-section[role="leader"] #fancybox-wrap {
-  width: 680px !important;
-}
+
 /*------------------------------------*\
 	TECHNOLOGY ITEMS
 \*------------------------------------*/
@@ -2717,31 +2764,4 @@ section[role="leader"] .leader-popout {
   display: none;
 }
 
-/*****FANCYBOX STYLING*****/
 
-#fancybox-overlay {
-  background-color: #000000 !important;
-  opacity: 0.8 !important;
-}
-
-#fancybox-close {
-  position: absolute;
-  right: -115px !important;
-  top: -15px  !important;
-}
-
-#fancybox-right {
-  position: absolute !important;
-  right: -80px !important;
-}
-
-#fancybox-left {
-  position: absolute !importnat;
-  left: -60px !important;
-}
- 
-#fancybox-content {
-  width: 640px !important;
-  height: 360px !important;
-}
-  
