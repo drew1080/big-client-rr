@@ -2,7 +2,6 @@
 	get_header('blog'); 
 ?>
 	
-	
 	<!-- section -->
 	<section role="blog">
 		<div style="max-width:1080px;margin:0 auto;">

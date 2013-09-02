@@ -333,12 +333,20 @@ $(".nav > ul > li > .sub-menu").removeClass("visible-sm");
 
 
 
+			<?php if( is_single()) { 
+			  //echo do_shortcode('[add_header_image title="Blog" image_url="/wp-content/uploads/2013/09/blog-bg.png"]'); 
+			  $blog_page_id = get_ID_by_slug('blog/rr-blog');
+        $page_rr_blog = get_page($blog_page_id);
+        $content = $page_rr_blog->post_content;
+        echo apply_filters('the_content', $page_rr_blog->post_content); 
+			}?>
 			
-      <?php if ( !get_post_meta($post->ID, 'banner', true) && function_exists('easingsliderpro') ) { 
+      <?php if ( !is_single() && !get_post_meta($post->ID, 'banner', true) && function_exists('easingsliderpro') ) { 
           echo '<div class="slider home">';
           easingsliderpro( 1 ); 
           echo '</div>';
       } ?>
+      
 			
 			
 
