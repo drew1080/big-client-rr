@@ -175,7 +175,7 @@ section[role="about"] {
 }
 
 section[role="about-us"] {
-	padding: 10px 0 10px;
+	padding: 10px 0 10px; 
 	/* padding: 20px 0px; */
 	/* max-width:960px; */
 /* margin: 40px auto 0px; */
@@ -711,7 +711,14 @@ section[role="main"] .view-article {
 	margin-top:30px;
 }
 section[role="leader"] {
-  padding: 0;
+  padding: 40px 0 40px;
+}
+
+section[role="leader"] h3 {
+	color:#667280;
+	font-size:44px;
+	font-family:oswaldbold;
+	text-align:center;
 }
 
 /*section[role="leader"] img.leader-thumbnail:hover{
@@ -728,7 +735,8 @@ section[role="leader"] ul {
 }
 
 section[role="leader"] ul li {
-  display: inline;
+  display: block;
+  float: left;
   width: 199px;
   margin: 30px 14px 0 14px;
   line-height: 22px;
@@ -750,16 +758,37 @@ section[role="leader"] .tagline {
 }
 
 .leader-popout-left{
-  width: 215px;
+  width: 200px;
   float: left;
+  margin: 15px 25px 15px 15px;
 }
 .leader-popout-left img.leader-thumbnail {
   float: left;
 }
 
 .leader-popout-right {
-  max-width: 400px;
-  float: right;
+  max-width: 360px;
+  float: left;
+}
+
+.leader-popout-right h2 {
+  font-family: robotolight;
+  font-size: 28px;
+  margin: 0.5em 0;
+}
+
+.leader-popout-right h3 {
+  font-family: robotobold;
+  font-size: 14px;
+}
+
+.leader-popout-right p {
+  font-family: robotolight;
+  font-size: 14px;
+}
+
+section[role="leader"] #fancybox-wrap {
+  width: 680px !important;
 }
 /*------------------------------------*\
 	TECHNOLOGY ITEMS
