@@ -393,6 +393,8 @@ remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altoget
 add_shortcode('html5_shortcode_demo', 'html5_shortcode_demo'); // You can place [html5_shortcode_demo] in Pages, Posts now.
 add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [html5_shortcode_demo_2] in Pages, Posts now.
 add_shortcode('contact_us', 'contact_us_func');
+add_shortcode('icon_box', 'icon_box_func');
+add_shortcode('add_header_image', 'add_header_image_func');
 
 
 
@@ -463,7 +465,6 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 
 
 function contact_us_func($atts, $content = null) {
-  #TODO: Add thin/regular/bold classes
 	extract( shortcode_atts( array(
 		'bg' => 'white',
 		'tagline_thickness' => 'regular',
@@ -482,6 +483,73 @@ function contact_us_func($atts, $content = null) {
 	return $html; 
 }
 
+//[icon_box class="custom" bg="gray" title="ENSEMBLE LEARNING" icon_url="/wp-content/uploads/2013/08/tech-ensemble_learning.png" ]
+// The enRICH Personalization Engine is the first commercial application of ensemble learning. The approach is the only one that facilitates competition among 100+ independent algorithms (recommendation types), wherein each makes use of different kinds of user behavior and catalog data to select the highest‐ performing strategy for each unique placement. (The FAA uses ensemble learning for airspace management when multiple requests for airspace use need to be automatically reconciled and managed.) In contrast, most recommendation systems leverage one highly complex algorithm for use across the entire customer base. The enRICH Personalization Engine performs thousands of multivariate experiments to decide, in real time, which algorithm best matches a particular customer’s needs at a specific place and time. On many pages, several recommendation placements enable us to display a combination of high-performing messages, based on the best-performing algorithms.
+// [/icon_box]
+//[icon_box class="custom" bg="gray" title="Personalization and the wisdom of the crowds" icon_url="/wp-content/uploads/2013/08/tech-personalization.png" ]
+// The enRICH Engine doesn’t just depend on the wisdom of the crowds to make recommendations relevant to each customer. We also consider current and recent site activity in our recommendations, so we serve as a real-time aid in the customer’s discovery process.
+// [/icon_box]
+function icon_box_func($atts, $content = null) {
+	extract( shortcode_atts( array(
+	  'class' => '',
+		'title' => '',
+		'icon_url' => '',
+		'video_url' => ''), $atts ) );
+		
+	$video_html = "";
+	
+	if ( trim($video_url) != '' ) {
+	  $video_html = '<ul>
+                    <li><a href="' . esc_attr($video_url) . '">Watch video</a>&nbsp;&gt;</li>
+                   </ul>';
+	}
+	
+	$html = '<ul class="section_items ' . esc_attr($class) . '">
+	          <li>
+  						<img src="'. esc_attr($icon_url) . '">
+  						<div>
+  							<h4>' . esc_attr($title) . '</h4>
+  							<p>' . esc_attr($content) . '</p>
+  							' . $video_html . '
+  						</div>
+  					</li>
+  				</ul>';
+  				
+  return $html; 
+}
 
+//[add_header_image title="Personalized Content" excerpt="Transform your entire webpage in real time to reflect the true interests of your individual consumer." image_url="/wp-content/uploads/2013/08/solutions-personalization-bg1.jpg"]
+function add_header_image_func($atts, $content = null) {
+  extract( shortcode_atts( array(
+    'class' => '',
+		'title' => 'Rich Relevance',
+		'excerpt' => '',
+		'image_url' => ''), $atts ) );
+		
+	$has_excerpt_class = 'with-excerpt';
+	
+	if ( trim($excerpt)==='' ) {
+	  $has_excerpt_class = '';
+	}
+	
+	$html = '<div class="slider ' . $class . '">
+	          <div class="slider-content ' . $has_excerpt_class . '" style="background-image: url(' . $image_url . ')">
+    			  <h1 class="entry-title ' . $has_excerpt_class . '">' . esc_attr($title) . '</h1>
+    			  <p>' . esc_attr($excerpt) . '</p>
+          </div>
+          <div class="clear"></div></div>';
 
+	return $html;
+	//<img src="">
+}
+
+// Helper function
+function get_ID_by_slug($page_slug) {
+    $page = get_page_by_path($page_slug);
+    if ($page) {
+        return $page->ID;
+    } else {
+        return null;
+    }
+}
 ?>
