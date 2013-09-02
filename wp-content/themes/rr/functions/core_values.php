@@ -19,8 +19,9 @@ if (!function_exists('create_core_values')) {
          );
         register_post_type('core_values_item', $core_args);
     }
-
-    add_action('init', 'create_core_values');
+    
+    // Disabling core values
+    //add_action('init', 'create_core_values');
 }
 
 $core_box_data = array(

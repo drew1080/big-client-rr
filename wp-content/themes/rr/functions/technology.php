@@ -20,7 +20,8 @@ if (!function_exists('create_technology')) {
         register_post_type('technology_item', $tech_args);
     }
 
-    add_action('init', 'create_technology');
+    // Disabling the technology_item post type
+    //add_action('init', 'create_technology');
 }
 
 $tech_box_data = array(
