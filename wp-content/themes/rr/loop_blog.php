@@ -1,4 +1,3 @@
-<?php $wp_query = new WP_Query('post_type=post&posts_per_page=5&paged='.$paged ); ?>	
 <?php while ($wp_query->have_posts()) :$wp_query->the_post(); ?>	
   <article id="post-<?php the_ID(); ?>" "<?php post_class(); ?>">		
     <div class="date" style="float:left;">			
