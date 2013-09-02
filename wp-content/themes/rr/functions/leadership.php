@@ -236,7 +236,9 @@ function create_leadership_func($atts) {
                       </ul>
                   </div>
                   <div class="leader-popout-right">
-                  	<p>' . $item["content"]  . '</p>
+                    <h4>' . $item["title"]  . '</h4>
+                    <span class="tagline">' . $item["tagline"]  . '</span>
+                  	<div class="leader-popout-content"><p>' . $item["content"]  . '</p></div>
                   </div>
                 </div>
               </li>';
