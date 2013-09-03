@@ -1916,7 +1916,7 @@ display:block;
     }
         
   p.button a {
-    display: block;
+    display: block !important;
   }
 }
 @media only screen and (max-width:320px) {	
@@ -2578,7 +2578,7 @@ p.button a {
   padding:10px 14px;
   color: #ffffff !important;
   margin: 0 12px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-family: robotocondensed;
   font-size: 18px;
   font-weight: bold;
