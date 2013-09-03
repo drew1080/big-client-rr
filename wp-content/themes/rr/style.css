@@ -913,12 +913,12 @@ ul.section_items li {
 	padding: 0;
 }
 
-.section_items.first {
+.section_items.icon-first {
   padding-top: 30px;
   margin-top: 1em;
 }
 
-.section_items.last {
+.section_items.icon-last {
   padding-bottom: 30px;
   margin-bottom: 1em;
 }
