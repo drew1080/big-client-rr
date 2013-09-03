@@ -840,7 +840,7 @@ section[role="leader"] .tagline {
 .leader-popout-left{
   width: 200px;
   float: left;
-  margin: 15px 25px 15px 15px;
+  margin: 25px 5px 15px 25px;
 }
 .leader-popout-left img.leader-thumbnail {
   float: left;
@@ -858,13 +858,13 @@ section[role="leader"] .tagline {
   margin-top: 15px;
 }
 
-.leader-popout-right h2 {
+.leader-popout-right h4 {
   font-family: robotolight;
   font-size: 28px;
   margin: 0.5em 0;
 }
 
-.leader-popout-right h3 {
+.leader-popout-right .tagline {
   font-family: robotobold;
   font-size: 14px;
 }
