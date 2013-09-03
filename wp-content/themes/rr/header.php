@@ -329,41 +329,50 @@ $(".nav > ul > li > .sub-menu").removeClass("visible-sm");
 
 
 
-			<!-- Slider -->
+			<div class="slider">
 
 
 
-			<?php if( is_single() || is_archive() || is_page( 'rr-blog' ) ) { 
-			  //echo do_shortcode('[add_header_image title="Blog" image_url="/wp-content/uploads/2013/09/blog-bg.png"]'); 
-			  $blog_page_id = get_ID_by_slug('blog/rr-blog');
-        $page_rr_blog = get_page($blog_page_id);
-        $content = $page_rr_blog->post_content;
-        $content = apply_filters('the_content', $page_rr_blog->post_content); 
-        //echo apply_filters('the_content', $page_rr_blog->post_content); 
-        
-        //if ( is_search() ) {
-        if ( isset($_GET['search']) ) {
-          $content = str_replace('Blog', 'Search', $content);
-          echo $content;
-        } else if ( is_archive() ) {
-          $content = str_replace('Blog', 'Archive', $content);
-          echo $content;
-        } else {
-          echo $content;
-        }
-        
-			}?>
-			
-      <?php if ( !is_single() && !is_archive() && !get_post_meta($post->ID, 'banner', true) && function_exists('easingsliderpro') ) { 
-          echo '<div class="slider home">';
-          easingsliderpro( 1 ); 
-          echo '</div>';
-      } ?>
-      
-			
-			
+      				<?php if(get_post_meta($post->ID, 'banner', true)) : ?>
 
-			<!-- /Slider -->
+
+      					<?php ///if( $post->post_excerpt) : ?>
+      					<!--
+      <div class="slider-content">
+      						<h1 class="entry-title with-excerpt"><?php the_title(); ?></h1>
+      						<p><?php the_excerpt();?></p>
+
+      					</div>
+      -->
+      					<?php //else:?>
+
+      						<!-- <h1 class="entry-title"><?php the_title(); ?></h1> -->
+
+      					<?php //endif; ?>
+
+
+
+
+      					<img src="<?php echo get_post_meta($post->ID, 'banner', true); ?>" />
+
+
+
+      				<?php else : ?>
+
+
+
+      					<?php if ( function_exists('easingsliderpro') ) { easingsliderpro( 1 ); } ?>
+
+
+
+      				<?php endif; ?>
+
+
+
+      			</div>
+
+
+      			<!-- /Slider -->
 
 
 
