@@ -1911,9 +1911,13 @@ display:block;
 		right:34px;
 	}
 	section[role="explore"] .wrap{
-        width:70%;
-        margin: 0 auto;
-        }
+    width:70%;
+    margin: 0 auto;
+    }
+        
+  p.button a {
+    display: block;
+  }
 }
 @media only screen and (max-width:320px) {	
         section[role="explore"] .wrap{
@@ -2577,6 +2581,7 @@ p.button a {
   font-family: robotocondensed;
   font-size: 18px;
   font-weight: bold;
+  display: inline-block;
 }
 p.button a:hover {
 	background-color: #990101;
@@ -2707,11 +2712,13 @@ section[role="leader"] .leader-popout {
 	width: 100%;
 	position: absolute;
 	height: 250px;
+	background-repeat: no-repeat;
 }
 
 .slider-content.with-excerpt {
   padding: 0 15%;
 	display: table;
+	background-repeat: no-repeat;
 }
 
 .slider h1.entry-title {
@@ -2728,6 +2735,7 @@ section[role="leader"] .leader-popout {
 .slider h1.with-excerpt {
   font-size: 6.5em;
   width: 48%;
+  max-width: 480px;
   line-height: 80px;
   text-align: right;
   display: inline-block;
@@ -2742,6 +2750,7 @@ section[role="leader"] .leader-popout {
   color: #ffffff;
   font-size: 2.8em;
   width: 48%;
+  max-width: 480px;
   position: relative;
   padding-left: 40px;
   display: inline-block;
@@ -2824,7 +2833,7 @@ section[role="leader"] .leader-popout {
     display: inline-block;
     position: relative;
     vertical-align: top;
-    margin: 38px 0 0 0;
+    margin: 38px 0 15px 0;
     padding: 0px;
     width: 100%;
     text-align: center;
@@ -2856,7 +2865,7 @@ section[role="leader"] .leader-popout {
     display: inline-block;
     position: relative;
     vertical-align: top;
-    margin: 38px 0 0 0;
+    margin: 38px 0 15px 0;
     padding: 0px;
     width: 100%;
     text-align: center;
@@ -2888,7 +2897,7 @@ section[role="leader"] .leader-popout {
     display: inline-block;
     position: relative;
     vertical-align: top;
-    margin: 38px 0 0 0;
+    margin: 38px 0 15px 0;
     padding: 0px;
     width: 100%;
     text-align: center;
