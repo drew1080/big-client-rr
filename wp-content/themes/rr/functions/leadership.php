@@ -23,7 +23,7 @@ if (!function_exists('create_leadership')) {
     function create_leadership()
     {
         $tech_args = array(
-            'label' => __('Leadership-Test', 'framework'),
+            'label' => __('Leadership', 'framework'),
             'singular_label' => __('Leadership', 'framework'),
             'public' => true,
             'show_ui' => true,
