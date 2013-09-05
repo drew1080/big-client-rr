@@ -23,7 +23,7 @@ if (!function_exists('create_leadership')) {
     function create_leadership()
     {
         $tech_args = array(
-            'label' => __('Leadership-Test', 'framework'),
+            'label' => __('Leadership', 'framework'),
             'singular_label' => __('Leadership', 'framework'),
             'public' => true,
             'show_ui' => true,
@@ -211,16 +211,22 @@ function create_leadership_func($atts) {
 		'title' => ''), $atts ) );
 	
   $leadership = get_leadership($atts['cat']);
+  
+  $count = 1;
+  $last_class = "";
 	
 	foreach ($leadership as $key => $item ) 
 	{
+	  if ( $count % 4 == 0 ) {
+	    $last_class = 'class="last"';
+	  }
 
 		if (!empty($item)) 
 		{
     	$onmouseover = "onmouseover=\"this.src='" . $item["hover_image"]  . "'\" ";
     	$onmouseout = "onmouseout=\"this.src='" . $item["thumbnail"]  . "'\"";
     	
-			$lis .= '<li>
+			$lis .= '<li ' . $last_class . ' >
                 <a class="leader-popouts" rel="leaders" href="#leader-' . $atts['cat'] . '-'. $key . '">
                   <img class="leader-thumbnail" src="' . $item["thumbnail"]  . '" ' . $onmouseover  . '  ' . $onmouseout  . '"/>
 
@@ -238,12 +244,15 @@ function create_leadership_func($atts) {
                   <div class="leader-popout-right">
                     <h4>' . $item["title"]  . '</h4>
                     <span class="tagline">' . $item["tagline"]  . '</span>
-                  	<div class="leader-popout-content"><p>' . $item["content"]  . '</p></div>
+                  	<div class="leader-popout-content">' . apply_filters('the_content', $item["content"])  . '</div>
                   </div>
                 </div>
               </li>';
 			
 		}
+		
+		$last_class = "";
+		$count++;
 	}
 	
 	$content .= '<section role="leader" class="'. esc_attr($class).' '. esc_attr($bg).'">
