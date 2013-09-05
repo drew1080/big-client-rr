@@ -532,12 +532,15 @@ function add_header_image_func($atts, $content = null) {
 	  $has_excerpt_class = '';
 	}
 	
-	$html = '<div class="slider ' . $class . '">
-	          <div class="slider-content ' . $has_excerpt_class . '" style="background-image: url(' . $image_url . ')">
-    			  <h1 class="entry-title ' . $has_excerpt_class . '">' . esc_attr($title) . '</h1>
-    			  <p>' . esc_attr($excerpt) . '</p>
-          </div>
-          <div class="clear"></div></div>';
+	$html = '<div class="slider ' . $class . '" style="background-image: url(' . $image_url . '); background-repeat: no-repeat;">
+	          <div class="slider-content ' . $has_excerpt_class . '" >
+    			    <div class="inner-content">
+    			      <h1 class="entry-title ' . $has_excerpt_class . '">' . esc_attr($title) . '</h1>
+        			  <p>' . esc_attr($excerpt) . '</p>
+      			  </div>
+            </div>
+            <div class="clear"></div>
+          </div>';
 
 	return $html;
 	//<img src="">

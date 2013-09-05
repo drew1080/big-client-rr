@@ -2912,21 +2912,30 @@ section[role="leader"] .leader-popout {
 
 
 @media only screen and (max-width:930px) {
- /* .slider-content {
-     display: block;
-   }*/
+  /* TODO: replicate this section everywhere */
+  .slider {
+    display: table; 
+  }
+  
   .slider-content.with-excerpt {
-    display: block;
-    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    padding: 0px;
+  }
+  
+  .slider .slider-content .inner-content {
+    width: 70%;
+    margin: 0 auto;
   }
     
   .slider h1.with-excerpt {
     font-size: 4.0em;
-    line-height: 40px;
-    display: inline-block;
+    line-height: 1em;
+    display:table-row;
     position: relative;
     vertical-align: top;
-    margin: 38px 0 15px 0;
+    margin: 0px;
     padding: 0px;
     width: 100%;
     text-align: center;
@@ -2937,10 +2946,11 @@ section[role="leader"] .leader-popout {
     font-size: 2.5em;
     position: relative;
     padding: 0px;
-    margin-top: 5px;
+    margin-top: 0px;
     width: 100%;
     text-align: center;
-    display: inline-block;
+    display:table-row;
+    
   }
 
   .long p {
