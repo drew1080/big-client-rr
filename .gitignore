@@ -14,4 +14,8 @@ sitemap.xml.gz
 wp-content/bps-backup/
 *.DS_Store
 _notes/
+<<<<<<< HEAD
+=======
+wp-snapshots/
+>>>>>>> sandbox
 *.sh
