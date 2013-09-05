@@ -15,3 +15,4 @@ wp-content/bps-backup/
 *.DS_Store
 _notes/
 wp-snapshots/
+*.sh
