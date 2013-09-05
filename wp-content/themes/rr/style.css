@@ -2962,6 +2962,17 @@ section[role="leader"] .leader-popout {
   }
 }
 
+@media only screen and (max-width:900px) {
+  .columns3{
+    float: none;
+    width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center;
+  }
+
+}
+
 @media only screen and (max-width:650px) {
  /* .slider-content {
      display: block;
