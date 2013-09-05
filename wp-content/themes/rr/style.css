@@ -738,8 +738,12 @@ section[role="leader"] ul li {
   display: block;
   float: left;
   width: 199px;
-  margin: 30px 14px 0 14px;
+  margin: 30px 38px 0 0;
   line-height: 22px;
+}
+
+section[role="leader"] ul li.last {
+  margin: 30px 0 0 0;
 }
 
 section[role="leader"] ul li a:hover {
@@ -755,6 +759,10 @@ section[role="leader"] .tagline {
   font-size: 14px;
   color: #667280;
   line-height: 3px;
+}
+
+.leader-popout-content p {
+  margin-top: 0px;
 }
 
 /* Fancybox Styling */
@@ -848,20 +856,20 @@ section[role="leader"] .tagline {
 
 .leader-popout-right {
   max-width: 380px;
-  float: right;
+  float: left;
   padding: 20px;
 }
 
 .leader-popout-content {
   overflow: scroll;
   height: 375px;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .leader-popout-right h4 {
   font-family: robotolight;
   font-size: 28px;
-  margin: 0.5em 0;
+  margin: 0.1em 0 0.5em 0;
 }
 
 .leader-popout-right .tagline {
@@ -2841,6 +2849,11 @@ section[role="leader"] .leader-popout {
 /*  margin-top: 45px;*/
   display: table-cell;
   vertical-align: middle;
+  padding-right: 40px;
+}
+
+.long h1.with-excerpt {
+  font-size: 5em;
 }
 
 .slider p {
@@ -2849,12 +2862,13 @@ section[role="leader"] .leader-popout {
   width: 48%;
   max-width: 480px;
   position: relative;
-  padding-left: 40px;
+/*  padding-left: 40px;*/
   display: inline-block;
 /*  margin-top: 41px;*/
   display: table-cell;
   vertical-align: middle;
 }
+
 
 @media only screen and (max-width:1250px) {
 
@@ -2871,47 +2885,25 @@ section[role="leader"] .leader-popout {
     vertical-align: middle;
   }
 
+  .long h1.with-excerpt {
+    font-size: 5em;
+  }
+
   .slider p {
     color: #ffffff;
     font-size: 2.5em;
     width: 48%;
     position: relative;
-    padding-left: 40px;
+    /*padding-left: 40px;*/
     display: inline-block;
   /*  margin-top: 41px;*/
     display: table-cell;
     vertical-align: middle;
   }
 
-}
-
-@media only screen and (max-width:1100px) {
-
-  .slider h1.with-excerpt {
-    font-size: 4.5em;
-    width: 50%;
-    line-height: 70px;
-    text-align: right;
-    display: inline-block;
-    position: relative;
-/*    vertical-align: top;*/
-/*    margin-top: 49px;*/
-    padding: 0px;
-    display: table-cell;
-    vertical-align: middle;
+  .long p {
+    font-size: 2em;
   }
-
-  .slider p {
-    color: #ffffff;
-    font-size: 2.2em;
-    position: relative;
-    padding-left: 40px;
-/*    margin-top: 47px;*/
-    width: 49%;
-    display: table-cell;
-    vertical-align: middle;
-  }
-
 }
 
 
@@ -2922,6 +2914,7 @@ section[role="leader"] .leader-popout {
    }*/
   .slider-content.with-excerpt {
     display: block;
+    text-align: center;
   }
     
   .slider h1.with-excerpt {
@@ -2944,8 +2937,12 @@ section[role="leader"] .leader-popout {
     margin-top: 5px;
     width: 100%;
     text-align: center;
+    display: inline-block;
   }
 
+  .long p {
+    font-size: 2em;
+  }
 }
 
 @media only screen and (max-width:930px) {
@@ -3006,7 +3003,7 @@ section[role="leader"] .leader-popout {
   }
     
   .slider h1.with-excerpt {
-    font-size: 2.8em;
+    font-size: 3.2em;
     line-height: 40px;
     display: inline-block;
     position: relative;
@@ -3016,6 +3013,7 @@ section[role="leader"] .leader-popout {
     width: 100%;
     text-align: center;
   }
+  
 
   .slider p {
     color: #ffffff;
