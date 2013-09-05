@@ -123,22 +123,8 @@ $(".nav > ul > li > .sub-menu").removeClass("visible-sm");
 
 
 
-						<div class="search">Search
-
-
-
-							<form action="" method="">
-
-
-
-								<input type="text" id="search" name="search" />
-
-
-
-							</form>
-
-
-
+						<div class="search-form">Search
+              <?php get_search_form(); ?>
 						</div>
 
 
@@ -333,7 +319,7 @@ $(".nav > ul > li > .sub-menu").removeClass("visible-sm");
 
 
 
-			<?php if( is_single() || is_archive() || is_page( 'rr-blog' ) ) { 
+			<?php if( is_single() || is_archive() || is_page( 'rr-blog' ) || is_search()) { 
 			  //echo do_shortcode('[add_header_image title="Blog" image_url="/wp-content/uploads/2013/09/blog-bg.png"]'); 
 			  $blog_page_id = get_ID_by_slug('blog/rr-blog');
         $page_rr_blog = get_page($blog_page_id);
@@ -342,7 +328,7 @@ $(".nav > ul > li > .sub-menu").removeClass("visible-sm");
         //echo apply_filters('the_content', $page_rr_blog->post_content); 
         
         //if ( is_search() ) {
-        if ( isset($_GET['search']) ) {
+        if ( is_search() ) {
           $content = str_replace('Blog', 'Search', $content);
           echo $content;
         } else if ( is_archive() ) {
@@ -354,7 +340,7 @@ $(".nav > ul > li > .sub-menu").removeClass("visible-sm");
         
 			}?>
 			
-      <?php if ( !is_single() && !is_archive() && !get_post_meta($post->ID, 'banner', true) && function_exists('easingsliderpro') ) { 
+      <?php if ( !is_single() && !is_archive() && !is_search() && !get_post_meta($post->ID, 'banner', true) && function_exists('easingsliderpro') ) { 
           echo '<div class="slider home">';
           easingsliderpro( 1 ); 
           echo '</div>';
