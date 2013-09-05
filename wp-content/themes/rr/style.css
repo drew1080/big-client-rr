@@ -2784,6 +2784,11 @@ section[role="leader"] .leader-popout {
   height: 250px;
 }
 
+.slider.with-excerpt {
+	z-index: 0;
+	position: relative;
+  height: 300px;
+}
 .slider.home {
   height: 400px;
 }
@@ -2824,6 +2829,7 @@ section[role="leader"] .leader-popout {
   padding: 0 15%;
 	display: table;
 	background-repeat: no-repeat;
+	height: 300px;
 }
 
 .slider h1.entry-title {
@@ -2849,7 +2855,7 @@ section[role="leader"] .leader-popout {
 /*  margin-top: 45px;*/
   display: table-cell;
   vertical-align: middle;
-  padding-right: 40px;
+  padding-right: 50px;
 }
 
 .long h1.with-excerpt {
@@ -2886,7 +2892,7 @@ section[role="leader"] .leader-popout {
   }
 
   .long h1.with-excerpt {
-    font-size: 5em;
+    font-size: 4.5em;
   }
 
   .slider p {
@@ -2901,9 +2907,6 @@ section[role="leader"] .leader-popout {
     vertical-align: middle;
   }
 
-  .long p {
-    font-size: 2em;
-  }
 }
 
 
