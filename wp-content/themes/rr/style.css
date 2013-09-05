@@ -861,7 +861,8 @@ section[role="leader"] .tagline {
 }
 
 .leader-popout-content {
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   height: 375px;
   margin-top: 20px;
 }
