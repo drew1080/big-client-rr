@@ -2069,7 +2069,7 @@ display:block;
 
 }
 
-@media (min-width:481px) and (max-width: 768px) { /* nav */
+@media (min-width:481px) and (max-width: 769px) { /* nav */
 .nav {	
 	display:none;
 	position: absolute; 
