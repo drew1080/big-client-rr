@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: All Blog Posts
+ * Template Name: All Blog Posts - DO NOT USE
  */
 get_header();
  ?>
@@ -9,6 +9,7 @@ get_header();
 	<section role="main">
    	<div style="max-width:1080px;margin:0 auto;">
    		<div class="all-posts">
+   		  <h1>page-blog.php</h1>
 	   		<?php $wp_query = new WP_Query('post_type=post&posts_per_page=5&paged='.$paged ); ?>
 				<?php while ($wp_query->have_posts()) :$wp_query->the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>">

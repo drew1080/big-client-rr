@@ -1,5 +1,5 @@
+<!-- NOT BEING USED...blog post styling go to loop_blog.php -->
 <div class="wrap">
-
 	<h3>Blog</h3>
 <?php $wp_query2 = new WP_Query('post_type=post'); ?>	
 <?php //if (have_posts()): while (have_posts()) : $wp_query->the_post(); ?><?php while ($wp_query2->have_posts()) :$wp_query2->the_post(); ?>
