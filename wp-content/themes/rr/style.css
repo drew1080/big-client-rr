@@ -2827,7 +2827,7 @@ section[role="leader"] .leader-popout {
 }
 
 .slider h1.entry-title {
-  font-size: 6.5em;
+  font-size: 6em;
   width: 100%;
   line-height: 65px;
   text-align: center;
@@ -2838,7 +2838,7 @@ section[role="leader"] .leader-popout {
 }
 
 .slider h1.with-excerpt {
-  font-size: 6.5em;
+  font-size: 6em;
   width: 48%;
   max-width: 480px;
   line-height: 80px;
@@ -2858,7 +2858,7 @@ section[role="leader"] .leader-popout {
 
 .slider p {
   color: #ffffff;
-  font-size: 2.8em;
+  font-size: 2.5em;
   width: 48%;
   max-width: 480px;
   position: relative;
@@ -2984,7 +2984,7 @@ section[role="leader"] .leader-popout {
 
   .slider p {
     color: #ffffff;
-    font-size: 2.0em;
+    font-size: 1.8em;
     position: relative;
     padding: 0px;
     margin-top: 5px;
