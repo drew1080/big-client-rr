@@ -22,13 +22,13 @@
 <section role="circles" class="white ">
   <div class="wrap">
     <nav class="oldernewer">  
+      <div class="newer">	
+      <?php previous_posts_link('<img src="/wp-content/uploads/2013/09/nav-newer-entries.png">') ?>  
+      </div><!--.newer-->
       <div class="older">		
-      <?php next_posts_link('<img src="/wp-content/uploads/2013/08/nav-promotions.png">') ?>   
+      <?php next_posts_link('<img src="/wp-content/uploads/2013/09/nav-older-entries.png">') ?>   
       </div>
       <!--.older-->   
-      <div class="newer">	
-      <?php previous_posts_link('<img src="/wp-content/uploads/2013/08/nav-promotions.png">') ?>  
-      </div><!--.newer--> 
     </nav><!--.oldernewer-->
   </div>
 </section>	

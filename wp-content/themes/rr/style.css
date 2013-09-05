@@ -2850,6 +2850,11 @@ section[role="leader"] .leader-popout {
 /*  margin-top: 45px;*/
   display: table-cell;
   vertical-align: middle;
+  padding-right: 40px;
+}
+
+.long h1.with-excerpt {
+  font-size: 5em;
 }
 
 .slider p {
@@ -2858,12 +2863,13 @@ section[role="leader"] .leader-popout {
   width: 48%;
   max-width: 480px;
   position: relative;
-  padding-left: 40px;
+/*  padding-left: 40px;*/
   display: inline-block;
 /*  margin-top: 41px;*/
   display: table-cell;
   vertical-align: middle;
 }
+
 
 @media only screen and (max-width:1250px) {
 
@@ -2880,47 +2886,25 @@ section[role="leader"] .leader-popout {
     vertical-align: middle;
   }
 
+  .long h1.with-excerpt {
+    font-size: 5em;
+  }
+
   .slider p {
     color: #ffffff;
     font-size: 2.5em;
     width: 48%;
     position: relative;
-    padding-left: 40px;
+    /*padding-left: 40px;*/
     display: inline-block;
   /*  margin-top: 41px;*/
     display: table-cell;
     vertical-align: middle;
   }
 
-}
-
-@media only screen and (max-width:1100px) {
-
-  .slider h1.with-excerpt {
-    font-size: 4.5em;
-    width: 50%;
-    line-height: 70px;
-    text-align: right;
-    display: inline-block;
-    position: relative;
-/*    vertical-align: top;*/
-/*    margin-top: 49px;*/
-    padding: 0px;
-    display: table-cell;
-    vertical-align: middle;
+  .long p {
+    font-size: 2em;
   }
-
-  .slider p {
-    color: #ffffff;
-    font-size: 2.2em;
-    position: relative;
-    padding-left: 40px;
-/*    margin-top: 47px;*/
-    width: 49%;
-    display: table-cell;
-    vertical-align: middle;
-  }
-
 }
 
 
@@ -2931,6 +2915,7 @@ section[role="leader"] .leader-popout {
    }*/
   .slider-content.with-excerpt {
     display: block;
+    text-align: center;
   }
     
   .slider h1.with-excerpt {
@@ -2953,8 +2938,12 @@ section[role="leader"] .leader-popout {
     margin-top: 5px;
     width: 100%;
     text-align: center;
+    display: inline-block;
   }
 
+  .long p {
+    font-size: 2em;
+  }
 }
 
 @media only screen and (max-width:930px) {
@@ -3015,7 +3004,7 @@ section[role="leader"] .leader-popout {
   }
     
   .slider h1.with-excerpt {
-    font-size: 2.8em;
+    font-size: 3.2em;
     line-height: 40px;
     display: inline-block;
     position: relative;
@@ -3025,6 +3014,7 @@ section[role="leader"] .leader-popout {
     width: 100%;
     text-align: center;
   }
+  
 
   .slider p {
     color: #ffffff;
