@@ -3009,6 +3009,10 @@ section[role="leader"] .leader-popout {
     display: block;
     padding: 0;
   }
+  
+  .category .slider h1.entry-title {
+    font-size: 4.9em;
+  }
 }
 
 @media only screen and (max-width:900px) {
@@ -3040,6 +3044,10 @@ section[role="leader"] .leader-popout {
 
    .slider p {
      font-size: 2em;
+   }
+   
+   .category .slider h1.entry-title {
+     font-size: 3.0em;
    }
 
 }
