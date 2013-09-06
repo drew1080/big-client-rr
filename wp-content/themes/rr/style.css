@@ -2814,12 +2814,14 @@ section[role="leader"] .leader-popout {
 	z-index: 0;
 	position: relative;
   height: 250px;
+  display: table;
 }
 
 .slider.with-excerpt {
 	z-index: 0;
 	position: relative;
   height: 300px;
+  display: table;
 }
 .slider.home {
   height: 400px;
@@ -2851,19 +2853,25 @@ section[role="leader"] .leader-popout {
 }
 
 .slider-content {
-	width: 100%;
-	position: absolute;
-	height: 250px;
-	background-repeat: no-repeat;
+	display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  padding-bottom: 40px;
+  width: 100%;
 }
 
 .slider-content.with-excerpt {
-  padding: 0 15%;
-	display: table;
-	background-repeat: no-repeat;
-	height: 300px;
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  padding: 0px;
+  width: 100%;
 }
 
+.slider .slider-content .inner-content {
+   width: 60%;
+   margin: 0 auto;
+ }
 .slider h1.entry-title {
   font-size: 6em;
   width: 100%;
@@ -2897,6 +2905,7 @@ section[role="leader"] .leader-popout {
 .slider p {
   color: #ffffff;
   font-size: 2.5em;
+  line-height: 1.7em;
   width: 48%;
   max-width: 480px;
   position: relative;
@@ -2957,20 +2966,21 @@ section[role="leader"] .leader-popout {
   }
   
   .slider .slider-content .inner-content {
+    display: table;
     width: 70%;
     margin: 0 auto;
   }
     
   .slider h1.with-excerpt {
     font-size: 4.0em;
-    line-height: 1em;
-    display:table-row;
+    line-height: 1.5em;
     position: relative;
     vertical-align: top;
     margin: 0px;
     padding: 0px;
     width: 100%;
     text-align: center;
+    display:table-row;
   }
 
   .slider p {
@@ -2988,15 +2998,13 @@ section[role="leader"] .leader-popout {
   .long p {
     font-size: 2em;
   }
-}
-
-@media only screen and (max-width:930px) {
+  
   .section_items li div {
-  width: 100%;
+    width: 100%;
   }
   
   .section_items li div > h4 {
-  text-align: center;
+    text-align: center;
   }
   
   .section_items li img {
@@ -3022,31 +3030,45 @@ section[role="leader"] .leader-popout {
  /* .slider-content {
      display: block;
    }*/
-  .slider-content.with-excerpt {
-    display: block;
-  }
-    
-  .slider h1.with-excerpt {
-    font-size: 3.4em;
-    line-height: 40px;
-    display: inline-block;
-    position: relative;
-    vertical-align: top;
-    margin: 38px 0 15px 0;
-    padding: 0px;
-    width: 100%;
-    text-align: center;
-  }
+   .slider {
+     display: table; 
+   }
 
-  .slider p {
-    color: #ffffff;
-    font-size: 1.8em;
-    position: relative;
-    padding: 0px;
-    margin-top: 5px;
-    width: 100%;
-    text-align: center;
-  }
+   .slider-content.with-excerpt {
+     display: table-cell;
+     vertical-align: middle;
+     position: relative;
+     padding: 0px;
+   }
+
+   .slider .slider-content .inner-content {
+     width: 70%;
+     margin: 0 auto;
+   }
+
+   .slider h1.with-excerpt {
+     font-size: 4.0em;
+     line-height: 1.5em;
+     display:table-row;
+     position: relative;
+     vertical-align: top;
+     margin: 0px;
+     padding: 0px;
+     width: 100%;
+     text-align: center;
+   }
+
+   .slider p {
+     color: #ffffff;
+     font-size: 2em;
+     position: relative;
+     padding: 0px;
+     margin-top: 0px;
+     width: 100%;
+     text-align: center;
+     display:table-row;
+
+   }
 
 }
 
@@ -3054,32 +3076,45 @@ section[role="leader"] .leader-popout {
  /* .slider-content {
      display: block;
    }*/
-  .slider-content.with-excerpt {
-    display: block;
-  }
-    
-  .slider h1.with-excerpt {
-    font-size: 3.2em;
-    line-height: 40px;
-    display: inline-block;
-    position: relative;
-    vertical-align: top;
-    margin: 38px 0 15px 0;
-    padding: 0px;
-    width: 100%;
-    text-align: center;
-  }
-  
+   .slider {
+     display: table; 
+   }
 
-  .slider p {
-    color: #ffffff;
-    font-size: 1.8em;
-    position: relative;
-    padding: 0px;
-    margin-top: 5px;
-    width: 100%;
-    text-align: center;
-  }
+   .slider-content.with-excerpt {
+     display: table-cell;
+     vertical-align: middle;
+     position: relative;
+     padding: 0px;
+   }
+
+   .slider .slider-content .inner-content {
+     width: 70%;
+     margin: 0 auto;
+   }
+
+   .slider h1.with-excerpt {
+     font-size: 4.0em;
+     line-height: 1.5em;
+     display:table-row;
+     position: relative;
+     vertical-align: top;
+     margin: 0px;
+     padding: 0px;
+     width: 100%;
+     text-align: center;
+   }
+
+   .slider p {
+     color: #ffffff;
+     font-size: 1.8em;
+     position: relative;
+     padding: 0px;
+     margin-top: 0px;
+     width: 100%;
+     text-align: center;
+     display:table-row;
+
+   }
 
 }
 

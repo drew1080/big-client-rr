@@ -536,7 +536,7 @@ function add_header_image_func($atts, $content = null) {
 	          <div class="slider-content ' . $has_excerpt_class . '" >
     			    <div class="inner-content">
     			      <h1 class="entry-title ' . $has_excerpt_class . '">' . esc_attr($title) . '</h1>
-        			  <p>' . esc_attr($excerpt) . '</p>
+        			  <p>' . $excerpt . '</p>
       			  </div>
             </div>
             <div class="clear"></div>
