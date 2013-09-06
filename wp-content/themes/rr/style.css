@@ -2811,8 +2811,10 @@ section[role="leader"] .leader-popout {
 
 
 
-/* home */
-/* Banner Styling */
+
+/* BEGIN BANNER STLYING */
+
+/* BEGIN LEVEL ONE SLIDER DIV */
 
 .slider {
 	z-index: 0;
@@ -2831,30 +2833,9 @@ section[role="leader"] .leader-popout {
   height: 400px;
 }
 
-.slider h1 {
-	color: #FFF;
-	display: block;
-	font-family: oswaldbold;
-	font-size: 96px;
-	line-height: 2.5em;
-	position: absolute;
-	text-align: center;
-	text-transform: uppercase;
-	width: 100%;
-}
+/* END LEVEL ONE SLIDER DIV */
 
-.slider img { 
-  width:100%; 
-  min-height: 150px
-}
-
-.easingsliderpro img {
-  min-height: 0;
-}
-
-.easingsliderpro-arrows {
-	top:45% !important;
-}
+/* BEGIN LEVEL TWO SLIDER DIV */
 
 .slider-content {
 	display: table-cell;
@@ -2872,12 +2853,34 @@ section[role="leader"] .leader-popout {
   width: 100%;
 }
 
+/* END LEVEL TWO SLIDER DIV */
+
+/* BEGIN LEVEL THREE SLIDER DIV */
+
 .slider .slider-content .inner-content {
-   width: 60%;
-   margin: 0 auto;
- }
+  width: 60%;
+  margin: 0 auto;
+}
+
+/* END LEVEL THREE SLIDER DIV */
+
+
+/* BEGIN SLIDER CONTENT */
+
+.slider img { 
+  width:100%; 
+  min-height: 150px
+}
+
 .slider h1.entry-title {
-  font-size: 6em;
+  color: #FFF;
+	display: block;
+	font-family: oswaldbold;
+	font-size: 6.5em;
+	line-height: 2.5em;
+	position: absolute;
+	text-align: center;
+	text-transform: uppercase;
   width: 100%;
   line-height: 65px;
   text-align: center;
@@ -2888,15 +2891,12 @@ section[role="leader"] .leader-popout {
 }
 
 .slider h1.with-excerpt {
-  font-size: 6em;
   width: 48%;
   max-width: 480px;
   line-height: 80px;
   text-align: right;
   display: inline-block;
   position: relative;
-/*  vertical-align: top;*/
-/*  margin-top: 45px;*/
   display: table-cell;
   vertical-align: middle;
   padding-right: 50px;
@@ -2908,17 +2908,32 @@ section[role="leader"] .leader-popout {
 
 .slider p {
   color: #ffffff;
-  font-size: 41px;
+  font-size: 2.5em;
   line-height: 1.7em;
   width: 48%;
   max-width: 480px;
   position: relative;
-/*  padding-left: 40px;*/
   display: inline-block;
-/*  margin-top: 41px;*/
   display: table-cell;
   vertical-align: middle;
 }
+
+/* END SLIDER CONTENT */
+
+
+/* BEGIN EASING SLIDER */
+
+.easingsliderpro img {
+  min-height: 0;
+}
+
+.easingsliderpro-arrows {
+	top:45% !important;
+}
+
+/* END EASING SLIDER */
+
+/* END BANNER STLYING - media queries for banner styling below */
 
 
 @media only screen and (max-width:1250px) {
