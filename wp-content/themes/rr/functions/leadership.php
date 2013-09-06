@@ -237,8 +237,8 @@ function create_leadership_func($atts) {
                   <div class="leader-popout-left">
                     <img class="leader-thumbnail" src="' . $item["thumbnail"]  . '" />
                       <ul class="social">
+                    	  <li class="li"><a href="' . $item["linkedin"]  . '" target="_blank" title="Linkedin">Linkedin</a></li>
                         <li class="tw"><a href="' . $item["twitter"]  . '" target="_blank" title="Twitter">Twitter</a></li>
-                      	<li class="li"><a href="' . $item["linkedin"]  . '" target="_blank" title="Linkedin">Linkedin</a></li>
                       </ul>
                   </div>
                   <div class="leader-popout-right">

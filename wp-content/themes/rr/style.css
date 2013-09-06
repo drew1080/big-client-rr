@@ -766,7 +766,37 @@ section[role="leader"] .tagline {
 }
 
 /* Fancybox Styling */
-.fancybox-lock {
+/* BEGIN NEW FB STYLING*/
+
+.fancybox-skin {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.fancybox-nav {
+ width: 55px;
+}
+
+.fancybox-nav span {
+ visibility: visible;
+}
+
+.fancybox-prev {
+  left: -55px;
+}
+
+.fancybox-prev span {
+/*  left: -45px;*/
+}
+
+.fancybox-next {
+  right: -55px;
+}
+
+/* END NEW FB STYLING*/
+
+/*.fancybox-lock {
   overflow: hidden;
   margin: 0 !important;
 }
@@ -806,7 +836,7 @@ section[role="leader"] .tagline {
 #fancybox-right-ico {
   right: 20px;
   left: auto;
-}
+}*/
 
 /*#fancybox-close {
   right: -55px !important;
@@ -855,7 +885,7 @@ section[role="leader"] .tagline {
 }
 
 .leader-popout-right {
-  max-width: 380px;
+  max-width: 410px;
   float: left;
   padding: 20px;
 }
@@ -863,7 +893,7 @@ section[role="leader"] .tagline {
 .leader-popout-content {
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 375px;
+  height: 345px;
   margin-top: 20px;
 }
 
@@ -944,7 +974,7 @@ header .icons {
 	top: 0;
 }
 
-.search {
+.search-form {
 	width: 32px;
 	height: 32px;
 	display: inline-block;
@@ -957,19 +987,20 @@ header .icons {
 	-ms-transition: all .3s ease;
 	-o-transition: all .3s ease;
 }
-.search input {
+.search-form input {
 	width: 200px;
 	display: none;
 }
 
-.search:hover {
-	width: 232px;
-	background-position: 0 bottom;
-	padding: 0 0 0 32px;
+.search-form:hover {
+	width: 240px;
+  background-position: 0 bottom;
+  padding: 0 0 0 32px;
+  overflow: hidden;
 }
 
-.search form {float: left;}
-.search:hover input {
+.search-form form {float: left;}
+.search-form:hover input {
 	display: block;
 	line-height: 28px;
 	border: 1px solid #f1f3f5;
@@ -1299,7 +1330,7 @@ section[role="blog"] .all-posts{
 }
 
 
-section[role="blog"] h3 {
+section[role="blog"] h4 {
 
 	background-color:#f0f2f4;
 
@@ -2068,7 +2099,7 @@ display:block;
 
 }
 
-@media (min-width:481px) and (max-width: 768px) { /* nav */
+@media (min-width:481px) and (max-width: 769px) { /* nav */
 .nav {	
 	display:none;
 	position: absolute; 
@@ -2975,6 +3006,17 @@ section[role="leader"] .leader-popout {
   display: block;
   padding: 0;
   }
+}
+
+@media only screen and (max-width:900px) {
+  .columns3{
+    float: none;
+    width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center;
+  }
+
 }
 
 @media only screen and (max-width:650px) {
