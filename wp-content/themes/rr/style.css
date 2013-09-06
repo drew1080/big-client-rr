@@ -2831,7 +2831,7 @@ section[role="leader"] .leader-popout {
 	color: #FFF;
 	display: block;
 	font-family: oswaldbold;
-	font-size: 6.5em;
+	font-size: 96px;
 	line-height: 2.5em;
 	position: absolute;
 	text-align: center;
@@ -2904,7 +2904,7 @@ section[role="leader"] .leader-popout {
 
 .slider p {
   color: #ffffff;
-  font-size: 2.5em;
+  font-size: 41px;
   line-height: 1.7em;
   width: 48%;
   max-width: 480px;
