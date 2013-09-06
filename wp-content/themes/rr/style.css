@@ -2816,7 +2816,7 @@ section[role="leader"] .leader-popout {
 
 .slider-home {
   display: block;
-  height: 400px;
+  max-height: 400px;
 }
 
 .slider {
