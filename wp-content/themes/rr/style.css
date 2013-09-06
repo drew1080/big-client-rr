@@ -2948,7 +2948,21 @@ section[role="leader"] .leader-popout {
 
 }
 
-
+@media only screen and (max-width:960px) {
+  section[role="leader"] ul {
+    text-align: center;
+  }
+  section[role="leader"] ul li {
+    display: inline-table;
+    float: none;
+    margin: 30px 20px 0 20px;
+    text-align: left;
+  }
+  section[role="leader"] ul li.last {
+    display: inline-table;
+    float: none;
+    margin: 30px 20px 0 20px !important;
+  }
 
 @media only screen and (max-width:930px) {
   /* TODO: replicate this section everywhere */
