@@ -2951,11 +2951,11 @@ section[role="leader"] .leader-popout {
 }
 
 @media only screen and (max-width:930px) {
-  .slider {
+  .slider.with-excerpt {
     display: table; 
   }
   
-  .slider-content.with-excerpt {
+  .slider.with-excerpt .slider-content {
     display: table-cell;
     vertical-align: middle;
     position: relative;
@@ -2968,7 +2968,7 @@ section[role="leader"] .leader-popout {
     margin: 0 auto;
   }
     
-  .slider h1.with-excerpt {
+  .slider.with-excerpt h1 {
     font-size: 4.0em;
     line-height: 1.5em;
     position: relative;
@@ -3033,93 +3033,26 @@ section[role="leader"] .leader-popout {
 }
 
 @media only screen and (max-width:650px) {
- /* .slider-content {
-     display: block;
-   }*/
-   .slider {
-     display: table; 
-   }
 
-   .slider-content.with-excerpt {
-     display: table-cell;
-     vertical-align: middle;
-     position: relative;
-     padding: 0px;
-   }
-
-   .slider .slider-content .inner-content {
-     width: 70%;
-     margin: 0 auto;
-   }
-
-   .slider h1.with-excerpt {
+   .slider.with-excerpt  h1{
      font-size: 4.0em;
      line-height: 1.5em;
-     display:table-row;
-     position: relative;
-     vertical-align: top;
-     margin: 0px;
-     padding: 0px;
-     width: 100%;
-     text-align: center;
    }
 
    .slider p {
-     color: #ffffff;
      font-size: 2em;
-     position: relative;
-     padding: 0px;
-     margin-top: 0px;
-     width: 100%;
-     text-align: center;
-     display:table-row;
-
    }
 
 }
 
 @media only screen and (max-width:400px) {
- /* .slider-content {
-     display: block;
-   }*/
-   .slider {
-     display: table; 
-   }
 
-   .slider-content.with-excerpt {
-     display: table-cell;
-     vertical-align: middle;
-     position: relative;
-     padding: 0px;
-   }
-
-   .slider .slider-content .inner-content {
-     width: 70%;
-     margin: 0 auto;
-   }
-
-   .slider h1.with-excerpt {
-     font-size: 4.0em;
-     line-height: 1.5em;
-     display:table-row;
-     position: relative;
-     vertical-align: top;
-     margin: 0px;
-     padding: 0px;
-     width: 100%;
-     text-align: center;
+   .slider.with-excerpt h1 {
+     line-height: 1.1em;
    }
 
    .slider p {
-     color: #ffffff;
      font-size: 1.8em;
-     position: relative;
-     padding: 0px;
-     margin-top: 0px;
-     width: 100%;
-     text-align: center;
-     display:table-row;
-
    }
 
 }
