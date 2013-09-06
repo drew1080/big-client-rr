@@ -786,12 +786,16 @@ section[role="leader"] .tagline {
   left: -55px;
 }
 
-.fancybox-prev span {
-/*  left: -45px;*/
-}
-
 .fancybox-next {
   right: -55px;
+}
+
+.fancybox-type-iframe .fancybox-prev {
+  left: -70px;
+}
+
+.fancybox-type-iframe .fancybox-next {
+  right: -70px;
 }
 
 /* END NEW FB STYLING*/
