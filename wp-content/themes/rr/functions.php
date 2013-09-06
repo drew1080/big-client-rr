@@ -184,8 +184,8 @@ if (function_exists('register_sidebar'))
         'id' => 'widget-area-1',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
+        'before_title' => '<h4>',
+        'after_title' => '</h4>'
     ));
 
     // Define Sidebar Widget Area 2
@@ -195,8 +195,8 @@ if (function_exists('register_sidebar'))
         'id' => 'widget-area-2',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
+        'before_title' => '<h4>',
+        'after_title' => '</h4>'
     ));
 }
 
@@ -536,7 +536,7 @@ function add_header_image_func($atts, $content = null) {
 	          <div class="slider-content ' . $has_excerpt_class . '" >
     			    <div class="inner-content">
     			      <h1 class="entry-title ' . $has_excerpt_class . '">' . esc_attr($title) . '</h1>
-        			  <p>' . esc_attr($excerpt) . '</p>
+        			  <p>' . $excerpt . '</p>
       			  </div>
             </div>
             <div class="clear"></div>
@@ -555,4 +555,15 @@ function get_ID_by_slug($page_slug) {
         return null;
     }
 }
+
+//Disable updates for the FancyBox plugin
+add_filter('site_transient_update_plugins', 'dd_remove_update_nag');
+
+function dd_remove_update_nag($value) {
+
+  unset($value->response['fancybox-for-wordpress/fancybox.php']);
+
+return $value;
+}
+
 ?>

@@ -1,4 +1,8 @@
-<?php $wp_query = new WP_Query('post_type=post&posts_per_page=5&paged='.$paged ); ?>
+<?php 
+if (!is_single()) {
+  $wp_query = new WP_Query('post_type=post&posts_per_page=5&paged='.$paged );
+}
+?>
 <?php while ($wp_query->have_posts()) :$wp_query->the_post(); ?>	
   <article id="post-<?php the_ID(); ?>" "<?php post_class(); ?>">		
     <div class="date" style="float:left;">			
@@ -22,13 +26,13 @@
 <section role="circles" class="white ">
   <div class="wrap">
     <nav class="oldernewer">  
+      <div class="newer">	
+      <?php previous_posts_link('<img src="/wp-content/uploads/2013/09/nav-newer-entries.png">') ?>  
+      </div><!--.newer-->
       <div class="older">		
-      <?php next_posts_link('<img src="/wp-content/uploads/2013/08/nav-promotions.png">') ?>   
+      <?php next_posts_link('<img src="/wp-content/uploads/2013/09/nav-older-entries.png">') ?>   
       </div>
       <!--.older-->   
-      <div class="newer">	
-      <?php previous_posts_link('<img src="/wp-content/uploads/2013/08/nav-promotions.png">') ?>  
-      </div><!--.newer--> 
     </nav><!--.oldernewer-->
   </div>
-</section>	
+</section>
