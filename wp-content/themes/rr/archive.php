@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <section role="blog">
-	<div class="wrap">
+	<div class="wrap archive">
 		<div class="all-posts">
       <?php get_template_part('loop_blog'); ?>
 		</div>		

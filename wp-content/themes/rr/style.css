@@ -1477,17 +1477,16 @@ section[role="blog"] .year {
 
 section[role="blog"] h2 {
 
-	margin: 0;
+	margin-bottom: 30px;
+  font-size: 24px;
+  font-family: robotoregular;
 
 }
 
 section[role="blog"] h2 a {
-
+  font-size: 20px;
+  margin: 0px;
 	color: #991b1e;
-
-	font-size: 20px;
-
-	font-family: robotoregular;
 
 }
 

@@ -327,10 +327,16 @@ $(".nav > ul > li > .sub-menu").removeClass("visible-sm");
         $content = apply_filters('the_content', $page_rr_blog->post_content); 
         
         if ( is_search() ) {
+          // $title = get_search_query();
           $content = str_replace('Blog', 'Search', $content);
           echo $content;
+        } else if ( is_category() ) {
+          $current_category = single_cat_title("", false);
+          $content = str_replace('Blog', $current_category, $content);
+          echo $content;
         } else if ( is_archive() ) {
-          $content = str_replace('Blog', 'Archive', $content);
+          $current_archive = wp_title('', false);
+          $content = str_replace('Blog', $current_archive, $content);
           echo $content;
         } else {
           echo $content;
