@@ -2814,6 +2814,11 @@ section[role="leader"] .leader-popout {
 
 /* BEGIN LEVEL ONE SLIDER DIV */
 
+.slider-home {
+  display: block;
+  height: 400px;
+}
+
 .slider {
 	z-index: 0;
 	position: relative;
@@ -2822,14 +2827,6 @@ section[role="leader"] .leader-popout {
   text-align: center;
   display: block;
 }
-
-.slider.with-excerpt {
-  height: 300px;
-}
-.slider.home {
-  display: block;
-  height: 400px;
-}
  
 .slider:before {
   content: '';
@@ -2837,6 +2834,10 @@ section[role="leader"] .leader-popout {
   height: 100%; 
   vertical-align: middle;
   margin-right: -0.25em; /* Adjusts for spacing */    
+}
+
+.slider.with-excerpt {
+  height: 300px;
 }
 
 /* END LEVEL ONE SLIDER DIV */
@@ -2866,7 +2867,6 @@ section[role="leader"] .leader-popout {
 /* BEGIN SLIDER CONTENT */
 
 .slider h1.entry-title {
-  display: table-cell;
   vertical-align: middle;
   position: relative;
   color: #FFF;
@@ -2876,6 +2876,7 @@ section[role="leader"] .leader-popout {
 }
 
 .slider.with-excerpt h1 {
+  display: table-cell;
   font-size: 6.5em;
   line-height: 1.25em;
   text-align: right;
@@ -2889,6 +2890,7 @@ section[role="leader"] .leader-popout {
 .slider p {
   position: relative;
   display: table-cell;
+  vertical-align: middle;
   color: #ffffff;
   font-size: 2.8em;
   line-height: 1.4em;

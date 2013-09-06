@@ -339,7 +339,7 @@ $(".nav > ul > li > .sub-menu").removeClass("visible-sm");
 			}?>
 			
       <?php if ( !is_single() && !is_archive() && !is_search() && !get_post_meta($post->ID, 'banner', true) && function_exists('easingsliderpro') ) { 
-          echo '<div class="slider home">';
+          echo '<div class="slider-home">';
           easingsliderpro( 1 ); 
           echo '</div>';
       } ?>
