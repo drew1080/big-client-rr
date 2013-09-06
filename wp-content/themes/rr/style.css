@@ -786,12 +786,16 @@ section[role="leader"] .tagline {
   left: -55px;
 }
 
-.fancybox-prev span {
-/*  left: -45px;*/
-}
-
 .fancybox-next {
   right: -55px;
+}
+
+.fancybox-type-iframe .fancybox-prev {
+  left: -70px;
+}
+
+.fancybox-type-iframe .fancybox-next {
+  right: -70px;
 }
 
 /* END NEW FB STYLING*/
@@ -3016,12 +3020,21 @@ section[role="leader"] .leader-popout {
 }
 
 @media only screen and (max-width:900px) {
-  .columns3{
+  .cloud-platform .columns3{
     float: none;
     width: 100%;
     margin-left: auto !important;
     margin-right: auto !important;
     text-align: center;
+  }
+
+}
+
+@media only screen and (max-width:900px) {
+  .columns3{
+    float: left;
+    width: 100%;
+    margin: 0 !important;
   }
 
 }
