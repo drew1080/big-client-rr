@@ -3046,6 +3046,10 @@ section[role="leader"] .leader-popout {
      font-size: 2em;
    }
    
+   .archive .slider h1.entry-title {
+      font-size: 5.0em;
+    }
+    
    .category .slider h1.entry-title {
      font-size: 3.0em;
    }
