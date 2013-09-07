@@ -3062,7 +3062,7 @@ section[role="leader"] .leader-popout {
 @media only screen and (max-width:400px) {
 
    .slider.with-excerpt h1 {
-     line-height: 1.1em;
+    /* line-height: 1.1em; */
    }
 
    .slider p {
