@@ -1,7 +1,16 @@
 <?php 
-//TODO Cat and archive pages not showing proper results
-if (!is_single() && !is_search()) {
-  $wp_query = new WP_Query('post_type=post&posts_per_page=5&paged='.$paged );
+if (!is_single() && !is_search() && !is_category() && !is_archive()) {
+  
+  // if (is_category()) {
+  //   $category = get_the_category();
+  //   $category_id = $category[0]->cat_ID; 
+  //   $category_search = '&cat='.$category_id;
+  // }
+  
+  //$wp_query = new WP_Query('post_type=post&posts_per_page=5&paged='.$paged . $category_search);
+  $wp_query = new WP_Query('post_type=post&posts_per_page=5&paged='.$paged);
+} else {
+  wp_reset_query();
 }
 ?>
 <?php while ($wp_query->have_posts()) :$wp_query->the_post(); ?>	
