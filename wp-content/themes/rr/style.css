@@ -2825,6 +2825,7 @@ section[role="leader"] .leader-popout {
   width: 100%;
   text-align: center;
   display: block;
+  background-position-x: center;
 }
  
 .slider:before {
@@ -2891,6 +2892,7 @@ section[role="leader"] .leader-popout {
   display: table-cell;
   vertical-align: middle;
   color: #ffffff;
+  font-family: robotolight; 
   font-size: 2.8em;
   line-height: 1.4em;
   width: 480px;
@@ -2950,6 +2952,7 @@ section[role="leader"] .leader-popout {
 }
 
 @media only screen and (max-width:930px) {
+  
   .slider.with-excerpt {
     display: table; 
   }
@@ -2968,7 +2971,7 @@ section[role="leader"] .leader-popout {
   }
     
   .slider.with-excerpt h1 {
-    font-size: 4.0em;
+    font-size: 5em;
     line-height: 1.5em;
     position: relative;
     vertical-align: top;
@@ -2981,7 +2984,7 @@ section[role="leader"] .leader-popout {
 
   .slider p {
     color: #ffffff;
-    font-size: 2.5em;
+    font-size: 2.3em;
     position: relative;
     padding: 0px;
     margin-top: 0px;
@@ -3039,11 +3042,11 @@ section[role="leader"] .leader-popout {
 
    .slider.with-excerpt  h1{
      font-size: 4.0em;
-     line-height: 1.5em;
+     line-height: 1.3em; 
    }
 
    .slider p {
-     font-size: 2em;
+     font-size: 1.8em;
    }
    
    .archive .slider h1.entry-title {
@@ -3073,7 +3076,3 @@ section[role="leader"] .leader-popout {
 .wrap br{
   display: none;
 }	  
-
-
-
-
