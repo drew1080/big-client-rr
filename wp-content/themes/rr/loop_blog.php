@@ -30,8 +30,13 @@ if (!is_single() && !is_search() && !is_category() && !is_archive()) {
           <?php the_title(); ?>
         </a>
       </h2>			
-      <span class="author"><?php _e( 'by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>            
-      <p><?php the_content(); ?></p>            
+      <span class="author"><?php _e( 'by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
+      <?php if ( is_single() ) { ?>
+        <p><?php the_content(); ?></p>
+      <?php } else { ?> 
+        <p><?php the_excerpt(); ?></p>
+      <?php } ?>
+               
       <p class="button"><a href="<?php the_permalink() ?>">Read More</a></p>        
     </div>    
   </article>   

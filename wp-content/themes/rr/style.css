@@ -1536,8 +1536,8 @@ section[role="blog"] .view-article {
 	font-size: 12px;
 
 	font-family: robotolight;
-
-	display: block;
+  /* Hiding the view article, since we have the read more button*/
+	display: none;
 
 	float: right;
 
