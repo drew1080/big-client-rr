@@ -1,5 +1,6 @@
 <?php 
-if (!is_single()) {
+//TODO Cat and archive pages not showing proper results
+if (!is_single() && !is_search()) {
   $wp_query = new WP_Query('post_type=post&posts_per_page=5&paged='.$paged );
 }
 ?>
