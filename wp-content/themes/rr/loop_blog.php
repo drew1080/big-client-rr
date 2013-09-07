@@ -15,10 +15,14 @@ if (!is_single() && !is_search() && !is_category() && !is_archive()) {
 ?>
 <?php while ($wp_query->have_posts()) :$wp_query->the_post(); ?>	
   <article id="post-<?php the_ID(); ?>" "<?php post_class(); ?>">		
-    <div class="date" style="float:left;">			
-      <span class="day" ><?php the_time('d'); ?></span>			
-      <span class="month"><?php the_time('M'); ?></span>			
-      <span class="year" ><?php the_time('Y'); ?></span>		
+    <div class="date" style="float:left;">		
+      <?php if (is_search() && get_post_type(get_the_ID()) != 'post') { ?>
+        <span class="day">rr</span>
+      <?php } else { ?>
+        <span class="day" ><?php the_time('d'); ?></span>
+        <span class="month"><?php the_time('M'); ?></span>	
+        <span class="year" ><?php the_time('Y'); ?></span>
+      <?php } ?>	
     </div>	
     <div class="post-content">          	
       <h2>
