@@ -311,7 +311,6 @@ section[role="about-us"] ul.newsroom li {
 	list-style: none;
 	font-family:robotocondensed;
 	margin-bottom: 15px;
-	display: inline-block;
 }
 section[role="about-us"] ul.newsroom li strong{
 	margin-right: 35px;
