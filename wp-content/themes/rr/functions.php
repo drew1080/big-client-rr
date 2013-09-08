@@ -11,6 +11,7 @@
 include("functions/pagemeta.php");include("functions/clients.php");include("functions/clientsmeta.php");include("functions/utils.php");
 include("functions/bfm.php");include("functions/technology.php");include("functions/core_values.php");include("functions/capabilities.php");
 include("functions/leadership.php");
+include("functions/insights.php");
 
 /*------------------------------------*\
 	Theme Support
