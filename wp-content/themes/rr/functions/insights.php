@@ -64,18 +64,31 @@ if (!function_exists('create_insight')) {
 $insight_box_data = array(
     'id' => 'data-meta-box',
     'title' => 'Insight Info',
-    'page' => 'insight_gallery',
+    'page' => 'insights_gallery',
     'context' => 'normal',
     'priority' => 'high',
     'fields' => array(
-        // array(
-        //     'name' => __('Tagline', 'framework'),
-        //     'desc' => __('Please enter the insight tagline.', 'framework'),
-        //     'id' => 'tagline',
-        //     "type" => "text",
-        //     'std' => ''
-        // ),
-       
+        array(
+            'name' => __('Marketo iframe', 'framework'),
+            'desc' => __('Please enter the Marketo iframe.', 'framework'),
+            'id' => 'marketo_iframe',
+            "type" => "text",
+            'std' => ''
+        ),
+        array(
+            'name' => __('Webinar Video URL', 'framework'),
+            'desc' => __('Please enter the webinar video URL.', 'framework'),
+            'id' => 'webinar_video_url',
+            "type" => "text",
+            'std' => ''
+        ),
+        array(
+            'name' => __('Infographic Media URL', 'framework'),
+            'desc' => __('Please enter the infographic media URL.', 'framework'),
+            'id' => 'infographic_url',
+            "type" => "text",
+            'std' => ''
+        ),
     )
 );
 
@@ -201,9 +214,7 @@ function create_insight_func($atts) {
     'class' => '',
 		'cat' => '',
 		'bg' => 'white',
-		'title' => '',
-    // TODO Remove
-		'marketo_iframe' => '<iframe class="marketo-insight" height="420" width="" frameborder="0" hspace="0" scrolling="auto" src="http://pages.richrelevance.com/HillClimbing_RichRecsEmail_RichRecsOnsite.html"></iframe>'), $atts ) );
+		'title' => ''), $atts ) );
 	
   $insights = get_insights();
   
@@ -218,25 +229,47 @@ function create_insight_func($atts) {
 
 		if (!empty($item)) 
 		{
-    	
-			$lis .= '<li ' . $last_class . ' >
-                <a class="insight-popouts" rel="insights" href="#insight-' . $atts['cat'] . '-'. $key . '">
-                  <img class="custom-fancybox-thumbnail" src="' . $item["thumbnail"]  . '" "/>
-
-                  <h4>' . $item["title"]  . '</h4>
-                  <span class="tagline">' . $item["cat"]  . '</span>
-                </a>
-                <div id="insight-' . $atts['cat'] . '-'. $key . '" class="custom-fancybox-popout">
-                  <div class="custom-fancybox-popout-left">
-                    <img class="insight-thumbnail" src="' . $item["thumbnail"]  . '" />
-                    <span class="insight-category-popout">' . $item["format"] . '</span>
-                    <h4>' . $item["title"]  . '</h4>
-                  	<div class="custom-fancybox-popout-content">' . apply_filters('the_content', $item["content"])  . '</div>
-                  </div>
-                  <div class="custom-fancybox-popout-right"><iframe class="marketo-insight" height="420" width="" frameborder="0" hspace="0" scrolling="auto" src="http://pages.richrelevance.com/HillClimbing_FancyBoxForm.html"></iframe></div>
-                  <div class="custom-fancybox-popout-right">' . esc_attr($atts['marketo_iframe']) . '</div>
-                </div>
-              </li>';
+      switch ($item["format"]) {
+          case "WHITE PAPERS":
+          case "RESEARCH":
+              $lis .= '<li ' . $last_class . ' >
+                        <a class="insight-popouts" rel="insights" href="#insight-' . $atts['cat'] . '-'. $key . '">
+                          <img class="custom-fancybox-thumbnail" src="' . $item["thumbnail"]  . '" "/>
+                          <span class="tagline">' . $item["format"]  . '</span>
+                          <h4>' . $item["title"]  . '</h4>
+                        </a>
+                        <div id="insight-' . $atts['cat'] . '-'. $key . '" class="custom-fancybox-popout">
+                          <div class="custom-fancybox-popout-left">
+                            <img class="insight-thumbnail" src="' . $item["thumbnail"]  . '" />
+                            <span class="insight-category-popout">' . $item["format"] . '</span>
+                            <h4>' . $item["title"]  . '</h4>
+                          	<div class="custom-fancybox-popout-content">' . apply_filters('the_content', $item["content"])  . '</div>
+                          </div>
+                          <div class="custom-fancybox-popout-right">' . $item["marketo_iframe"] . '</div>
+                        </div>
+                      </li>';
+              break;
+          case "INFOGRAPHICS":
+              $lis .= '<li ' . $last_class . ' >
+                        <a target="_blank" href="' . $item["infographic_url"] . '">
+                          <img class="custom-fancybox-thumbnail" src="' . $item["thumbnail"]  . '" "/>
+                          <span class="tagline">' . $item["format"]  . '</span>
+                          <h4>' . $item["title"]  . '</h4>
+                        </a>
+                      </li>';
+              break;
+          case "WEBINARS":
+              $lis .= '<li ' . $last_class . ' >
+                        <a class="fancybox-media" rel="insights" href="' . $item["webinar_video_url"] . '">
+                          <img class="custom-fancybox-thumbnail" src="' . $item["thumbnail"]  . '" "/>
+                          <span class="tagline">' . $item["format"]  . '</span>
+                          <h4>' . $item["title"]  . '</h4>
+                        </a>
+                      </li>';
+              break;
+      }
+          	
+			
 			
 		}
 		
@@ -279,7 +312,11 @@ if (!function_exists('get_insights')) {
         $data[$key]['thumbnail'] = wp_get_attachment_url( get_post_thumbnail_id($item->ID) );
         $data[$key]['title'] = get_the_title($item->ID);
         $data[$key]['content'] = $item->post_content;
-        $data[$key]['format'] = 'WHITE PAPER (FAKE)';//TODO get the format
+        $data[$key]['marketo_iframe'] = get_post_meta($item->ID,'marketo_iframe',TRUE);
+        $data[$key]['webinar_video_url'] = get_post_meta($item->ID,'webinar_video_url',TRUE);
+        $data[$key]['infographic_url'] = get_post_meta($item->ID,'infographic_url',TRUE);
+        $format_list = wp_get_post_terms($item->ID, 'rr-format');
+        $data[$key]['format'] = strtoupper($format_list[0]->name);
       }
       
       wp_reset_query();
