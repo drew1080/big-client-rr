@@ -228,23 +228,23 @@ function create_leadership_func($atts) {
     	
 			$lis .= '<li ' . $last_class . ' >
                 <a class="leader-popouts" rel="leaders" href="#leader-' . $atts['cat'] . '-'. $key . '">
-                  <img class="leader-thumbnail" src="' . $item["thumbnail"]  . '" ' . $onmouseover  . '  ' . $onmouseout  . '"/>
+                  <img class="custom-fancybox-thumbnail" src="' . $item["thumbnail"]  . '" ' . $onmouseover  . '  ' . $onmouseout  . '"/>
 
                   <h4>' . $item["title"]  . '</h4>
                   <span class="tagline">' . $item["tagline"]  . '</span>
                 </a>
-                <div id="leader-' . $atts['cat'] . '-'. $key . '" class="leader-popout">
-                  <div class="leader-popout-left">
-                    <img class="leader-thumbnail" src="' . $item["thumbnail"]  . '" />
+                <div id="leader-' . $atts['cat'] . '-'. $key . '" class="custom-fancybox-popout">
+                  <div class="custom-fancybox-popout-left">
+                    <img class="custom-fancybox-thumbnail" src="' . $item["thumbnail"]  . '" />
                       <ul class="social">
                     	  <li class="li"><a href="' . $item["linkedin"]  . '" target="_blank" title="Linkedin">Linkedin</a></li>
                         <li class="tw"><a href="' . $item["twitter"]  . '" target="_blank" title="Twitter">Twitter</a></li>
                       </ul>
                   </div>
-                  <div class="leader-popout-right">
+                  <div class="custom-fancybox-popout-right">
                     <h4>' . $item["title"]  . '</h4>
                     <span class="tagline">' . $item["tagline"]  . '</span>
-                  	<div class="leader-popout-content">' . apply_filters('the_content', $item["content"])  . '</div>
+                  	<div class="custom-fancybox-popout-content">' . apply_filters('the_content', $item["content"])  . '</div>
                   </div>
                 </div>
               </li>';
@@ -255,7 +255,7 @@ function create_leadership_func($atts) {
 		$count++;
 	}
 	
-	$content .= '<section role="leader" class="'. esc_attr($class).' '. esc_attr($bg).'">
+	$content .= '<section role="leader" class="custom-fancybox-wrapper '. esc_attr($class).' '. esc_attr($bg).'">
 	              <div class="wrap">
 	                <h3>'. esc_attr($title).'</h3>
 	                <ul>' . $lis . '</ul>

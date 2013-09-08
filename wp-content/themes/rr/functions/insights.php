@@ -219,19 +219,19 @@ function create_insight_func($atts) {
     	
 			$lis .= '<li ' . $last_class . ' >
                 <a class="insight-popouts" rel="insights" href="#insight-' . $atts['cat'] . '-'. $key . '">
-                  <img class="insight-thumbnail" src="' . $item["thumbnail"]  . '" "/>
+                  <img class="custom-fancybox-thumbnail" src="' . $item["thumbnail"]  . '" "/>
 
                   <h4>' . $item["title"]  . '</h4>
                   <span class="tagline">' . $item["cat"]  . '</span>
                 </a>
-                <div id="insight-' . $atts['cat'] . '-'. $key . '" class="insight-popout">
-                  <div class="insight-popout-left">
+                <div id="insight-' . $atts['cat'] . '-'. $key . '" class="custom-fancybox-popout">
+                  <div class="custom-fancybox-popout-left">
                     <img class="insight-thumbnail" src="' . $item["thumbnail"]  . '" />
                   </div>
-                  <div class="insight-popout-right">
+                  <div class="custom-fancybox-popout-right">
                     <h4>' . $item["title"]  . '</h4>
                     <span class="tagline">' . $item["tagline"]  . '</span>
-                  	<div class="insight-popout-content">' . apply_filters('the_content', $item["content"])  . '</div>
+                  	<div class="custom-fancybox-popout-content">' . apply_filters('the_content', $item["content"])  . '</div>
                   </div>
                 </div>
               </li>';
@@ -242,7 +242,7 @@ function create_insight_func($atts) {
 		$count++;
 	}
 	
-	$content .= '<section role="insight" class="'. esc_attr($class).' '. esc_attr($bg).'">
+	$content .= '<section role="insight" class="custom-fancybox-wrapper '. esc_attr($class).' '. esc_attr($bg).'">
 	              <div class="wrap">
 	                <h3>'. esc_attr($title).'</h3>
 	                <ul>' . $lis . '</ul>
