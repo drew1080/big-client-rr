@@ -5,19 +5,39 @@
 /*-----------------------------------------------------------------------------------*/
 
 if (!function_exists('create_insight')) {
-  function create_insight_tax() {
+  function create_insight_taxonomies() {
   	register_taxonomy(
-  		'insight-category',
-  		'insight',
+  		'rr-format',
+  		array( 'insight' ),
   		array(
-  			'label' => __( 'Insight Categories' ),
-  			'rewrite' => array( 'slug' => 'insight-categories' ),
+  			'label' => __( 'Format' ),
+  			'rewrite' => array( 'slug' => 'rr-format' ),
+  			'hierarchical' => true
+  		)
+  	);
+  	
+  	register_taxonomy(
+  		'rr-topic',
+  		array( 'insight' ),
+  		array(
+  			'label' => __( 'Topic' ),
+  			'rewrite' => array( 'slug' => 'rr-topic' ),
+  			'hierarchical' => true
+  		)
+  	);
+  	register_taxonomy(
+  		'rr-region',
+  		array( 'insight' ),
+  		array(
+  			'label' => __( 'Region' ),
+  			'rewrite' => array( 'slug' => 'rr-region' ),
   			'hierarchical' => true
   		)
   	);
   }
   
-  add_action( 'init', 'create_insight_tax' );
+  add_action( 'init', 'create_insight_taxonomies' );
+  
 }
 if (!function_exists('create_insight')) {
     function create_insight()
@@ -33,9 +53,9 @@ if (!function_exists('create_insight')) {
             // TODO Find this
             // 'menu_icon' => get_bloginfo('template_directory').'/img/ico-admin-insight.png', // 16px16
             'supports' => array('title','editor','thumbnail'),
-            'taxonomies' => array('insight-category')
+            'taxonomies' => array('rr-format', 'rr-topic', 'rr-region')
          );
-        register_post_type('insight_gallery', $tech_args);
+        register_post_type('insights_gallery', $tech_args);
     }
 
     add_action('init', 'create_insight');
@@ -43,46 +63,18 @@ if (!function_exists('create_insight')) {
 
 $insight_box_data = array(
     'id' => 'data-meta-box',
-    'title' => 'Leader Personal Info',
+    'title' => 'Insight Info',
     'page' => 'insight_gallery',
     'context' => 'normal',
     'priority' => 'high',
     'fields' => array(
-        array(
-            'name' => __('Tagline', 'framework'),
-            'desc' => __('Please enter the leader tagline.', 'framework'),
-            'id' => 'tagline',
-            "type" => "text",
-            'std' => ''
-        ),
-        array(
-            'name' => __('Hover Image', 'framework'),
-            'desc' => __('Upload the leader image. Once uploaded, click "Insert to Post".', 'framework'),
-            'id' => 'hover_image',
-            "type" => "text",
-            'std' => ''
-        ),
-        array(
-            'name' => '',
-            'desc' => '',
-            'id' => 'hover_image_button',
-            'type' => 'button',
-            'std' => 'Browse'
-        ),
-         array(
-            'name' => __('Twitter', 'framework'),
-            'desc' => __('Enter twitter acount.', 'framework'),
-            'id' => 'leader_twitter',
-            "type" => "text",
-            'std' => ''
-        ),
-         array(
-            'name' => __('LinkedIn', 'framework'),
-            'desc' => __('Enter linkedin acount.', 'framework'),
-            'id' => 'leader_linkedin',
-            "type" => "text",
-            'std' => ''
-        ),
+        // array(
+        //     'name' => __('Tagline', 'framework'),
+        //     'desc' => __('Please enter the insight tagline.', 'framework'),
+        //     'id' => 'tagline',
+        //     "type" => "text",
+        //     'std' => ''
+        // ),
        
     )
 );
@@ -202,21 +194,21 @@ function save_insight_meta_data($post_id)
 /*------------------------------------*\
 	Section Shortcode
 \*------------------------------------*/
-add_shortcode('insight', 'create_insight_func');
+add_shortcode('insights', 'create_insight_func');
 
 function create_insight_func($atts) {
   extract( shortcode_atts( array(
     'class' => '',
-		'cat' => 'executive-team',
+		'cat' => '',
 		'bg' => 'white',
 		'title' => ''), $atts ) );
 	
-  $insight = get_insight($atts['cat']);
+  $insights = get_insights();
   
   $count = 1;
   $last_class = "";
 	
-	foreach ($insight as $key => $item ) 
+	foreach ($insights as $key => $item ) 
 	{
 	  if ( $count % 4 == 0 ) {
 	    $last_class = 'class="last"';
@@ -224,28 +216,22 @@ function create_insight_func($atts) {
 
 		if (!empty($item)) 
 		{
-    	$onmouseover = "onmouseover=\"this.src='" . $item["hover_image"]  . "'\" ";
-    	$onmouseout = "onmouseout=\"this.src='" . $item["thumbnail"]  . "'\"";
     	
 			$lis .= '<li ' . $last_class . ' >
-                <a class="leader-popouts" rel="leaders" href="#leader-' . $atts['cat'] . '-'. $key . '">
-                  <img class="leader-thumbnail" src="' . $item["thumbnail"]  . '" ' . $onmouseover  . '  ' . $onmouseout  . '"/>
+                <a class="insight-popouts" rel="insights" href="#insight-' . $atts['cat'] . '-'. $key . '">
+                  <img class="insight-thumbnail" src="' . $item["thumbnail"]  . '" "/>
 
                   <h4>' . $item["title"]  . '</h4>
-                  <span class="tagline">' . $item["tagline"]  . '</span>
+                  <span class="tagline">' . $item["cat"]  . '</span>
                 </a>
-                <div id="leader-' . $atts['cat'] . '-'. $key . '" class="leader-popout">
-                  <div class="leader-popout-left">
-                    <img class="leader-thumbnail" src="' . $item["thumbnail"]  . '" />
-                      <ul class="social">
-                    	  <li class="li"><a href="' . $item["linkedin"]  . '" target="_blank" title="Linkedin">Linkedin</a></li>
-                        <li class="tw"><a href="' . $item["twitter"]  . '" target="_blank" title="Twitter">Twitter</a></li>
-                      </ul>
+                <div id="insight-' . $atts['cat'] . '-'. $key . '" class="insight-popout">
+                  <div class="insight-popout-left">
+                    <img class="insight-thumbnail" src="' . $item["thumbnail"]  . '" />
                   </div>
-                  <div class="leader-popout-right">
+                  <div class="insight-popout-right">
                     <h4>' . $item["title"]  . '</h4>
                     <span class="tagline">' . $item["tagline"]  . '</span>
-                  	<div class="leader-popout-content">' . apply_filters('the_content', $item["content"])  . '</div>
+                  	<div class="insight-popout-content">' . apply_filters('the_content', $item["content"])  . '</div>
                   </div>
                 </div>
               </li>';
@@ -256,7 +242,7 @@ function create_insight_func($atts) {
 		$count++;
 	}
 	
-	$content .= '<section role="leader" class="'. esc_attr($class).' '. esc_attr($bg).'">
+	$content .= '<section role="insight" class="'. esc_attr($class).' '. esc_attr($bg).'">
 	              <div class="wrap">
 	                <h3>'. esc_attr($title).'</h3>
 	                <ul>' . $lis . '</ul>
@@ -270,34 +256,28 @@ function create_insight_func($atts) {
 /*-----------------------------------------------------------------------------------*/
 /* Get Insights
 /*-----------------------------------------------------------------------------------*/
-if (!function_exists('get_insight')) {
-    function get_insight($cat)
-    {
+if (!function_exists('get_insights')) {
+    function get_insights()
+    { 
       $args=array(
-          'insight-category' => $cat,
-          'post_type' => 'insight_gallery',
+          'post_type' => 'insights_gallery',
           'post_status' => 'publish',
-          'posts_per_page' => 100,
+          'posts_per_page' => 10,
           'caller_get_posts'=> 1
         );
         
       $my_query = null;
       $my_query = new WP_Query($args);
-      $posts = $my_query->get_posts();
+      $insight_posts = $my_query->get_posts();
       
       $data = array();
       
-      foreach ($posts as $key => $item ) 
-      {
-        $data[$key]['hover_image'] = get_post_meta($item->ID,'hover_image',TRUE);
-        $data[$key]['thumbnail'] = wp_get_attachment_url( get_post_thumbnail_id($item->ID) );
-        #$data[$key]['cartoon'] = get_post_meta($item->ID,'leader_cartoon',TRUE);
-        $data[$key]['twitter'] = get_post_meta($item->ID,'leader_twitter',TRUE);
-        $data[$key]['linkedin'] = get_post_meta($item->ID,'leader_linkedin',TRUE);
-        $data[$key]['title'] = get_the_title($item->ID);
-        $data[$key]['tagline'] = get_post_meta($item->ID,'tagline',TRUE);
-        $data[$key]['content'] = $item->post_content;
-      }
+      foreach ($insight_posts as $key => $item ) 
+            {
+              $data[$key]['thumbnail'] = wp_get_attachment_url( get_post_thumbnail_id($item->ID) );
+              $data[$key]['title'] = get_the_title($item->ID);
+              $data[$key]['content'] = $item->post_content;
+            }
       
       wp_reset_query();
     
