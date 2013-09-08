@@ -302,13 +302,16 @@ section[role="about-us"] ul.newsroom {
 	padding: 0px;
 	margin: 0 0 30px 0;
 	float: left;
+	max-width: 100%;
 }
 section[role="about-us"] ul.newsroom li {
 	width: 910px;
+	max-width: 100%;
 	font-size: 19px;
 	list-style: none;
 	font-family:robotocondensed;
 	margin-bottom: 15px;
+	display: inline-block;
 }
 section[role="about-us"] ul.newsroom li strong{
 	margin-right: 35px;
@@ -320,6 +323,7 @@ section[role="about-us"] ul.newsroom li a{
 	font-family:robotolight;
 	float: left;
 	width: 780px;
+	max-width: 100%;
 }
 section[role="customers"] h3,section[role="rr-number"] h3 {
 	color:#667280;
@@ -2082,7 +2086,7 @@ display:block;
     margin: 0 auto;
     }
         
-  p.button a {
+  .technology p.button a {
     display: block !important;
   }
 }
@@ -3062,7 +3066,10 @@ section[role="leader"] .leader-popout {
 }
 
 @media only screen and (max-width:400px) {
-
+   .slider h1.entry-title {
+     font-size: 5em;
+   }
+   
    .slider.with-excerpt h1 {
      line-height: 1.1em;
    }
