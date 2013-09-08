@@ -302,9 +302,11 @@ section[role="about-us"] ul.newsroom {
 	padding: 0px;
 	margin: 0 0 30px 0;
 	float: left;
+	max-width: 100%;
 }
 section[role="about-us"] ul.newsroom li {
 	width: 910px;
+	max-width: 100%;
 	font-size: 19px;
 	list-style: none;
 	font-family:robotocondensed;
@@ -320,6 +322,7 @@ section[role="about-us"] ul.newsroom li a{
 	font-family:robotolight;
 	float: left;
 	width: 780px;
+	max-width: 100%;
 }
 section[role="customers"] h3,section[role="rr-number"] h3 {
 	color:#667280;
@@ -1545,6 +1548,59 @@ section[role="blog"] .newer {
   margin: 0 10px;
 }
 
+.comments h2 {
+  margin-top: 24px;
+  margin-bottom: 14px !important;
+  padding: 24px 0;
+  border-top: 1px solid #e7e7e7;
+}
+
+.comments ul {
+  padding: 0px;
+}
+
+.comments ul.children  {
+  padding: 0 0 0 40px !important;
+}
+
+li.comment {
+  border-bottom: 1px solid #e7e7e7;
+  line-height: 24px;
+  margin: 0 0 24px 0;
+  padding: 0 0 0 56px;
+  position: relative;
+}
+
+.children li.comment {
+  border-bottom: none;
+}
+
+.comment-author.vcard img {
+  height: 40px;
+  width: 40px;
+  top: 4px;
+  left: 0;
+  position: absolute;
+}
+
+.comment-author cite {
+  font-style: normal;
+  font-weight: bold;
+}
+
+.comment-author .says {
+  font-style: italic;
+}
+
+.reply {
+  padding: 0 0 24px 0;
+}
+
+.comment-reply-title {
+  font-family: robotolight;
+  font-size: 16px;
+}
+
 /** Submenu **/
 
 	.subnav {
@@ -2075,7 +2131,7 @@ display:block;
     margin: 0 auto;
     }
         
-  p.button a {
+  .technology p.button a {
     display: block !important;
   }
 }
@@ -3055,7 +3111,10 @@ p a.imgpartners:nth-child(4) img {
 }
 
 @media only screen and (max-width:400px) {
-
+   .slider h1.entry-title {
+     font-size: 5em;
+   }
+   
    .slider.with-excerpt h1 {
     /* line-height: 1.1em; */
    }
