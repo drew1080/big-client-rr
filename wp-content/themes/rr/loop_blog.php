@@ -33,11 +33,12 @@ if (!is_single() && !is_search() && !is_category() && !is_archive()) {
       <span class="author"><?php _e( 'by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
       <?php if ( is_single() ) { ?>
         <p><?php the_content(); ?></p>
+        <?php comments_template(); ?>  
+        <?php do_action('oa_social_login'); ?>
       <?php } else { ?> 
         <p><?php the_excerpt(); ?></p>
+        <p class="button"><a href="<?php the_permalink() ?>">Read More</a></p>
       <?php } ?>
-               
-      <p class="button"><a href="<?php the_permalink() ?>">Read More</a></p>        
     </div>    
   </article>   
   <div class="post-separator"></div>

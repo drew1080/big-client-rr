@@ -1555,6 +1555,59 @@ section[role="blog"] .newer {
   margin: 0 10px;
 }
 
+.comments h2 {
+  margin-top: 24px;
+  margin-bottom: 14px !important;
+  padding: 24px 0;
+  border-top: 1px solid #e7e7e7;
+}
+
+.comments ul {
+  padding: 0px;
+}
+
+.comments ul.children  {
+  padding: 0 0 0 40px !important;
+}
+
+li.comment {
+  border-bottom: 1px solid #e7e7e7;
+  line-height: 24px;
+  margin: 0 0 24px 0;
+  padding: 0 0 0 56px;
+  position: relative;
+}
+
+.children li.comment {
+  border-bottom: none;
+}
+
+.comment-author.vcard img {
+  height: 40px;
+  width: 40px;
+  top: 4px;
+  left: 0;
+  position: absolute;
+}
+
+.comment-author cite {
+  font-style: normal;
+  font-weight: bold;
+}
+
+.comment-author .says {
+  font-style: italic;
+}
+
+.reply {
+  padding: 0 0 24px 0;
+}
+
+.comment-reply-title {
+  font-family: robotolight;
+  font-size: 16px;
+}
+
 /** Submenu **/
 
 	.subnav {
@@ -3070,7 +3123,7 @@ section[role="leader"] .leader-popout {
    }
    
    .slider.with-excerpt h1 {
-     line-height: 1.1em;
+    /* line-height: 1.1em; */
    }
 
    .slider p {
