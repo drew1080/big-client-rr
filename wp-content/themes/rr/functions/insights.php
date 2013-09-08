@@ -201,7 +201,9 @@ function create_insight_func($atts) {
     'class' => '',
 		'cat' => '',
 		'bg' => 'white',
-		'title' => ''), $atts ) );
+		'title' => '',
+    // TODO Remove
+		'marketo_iframe' => '<iframe class="marketo-insight" height="420" width="" frameborder="0" hspace="0" scrolling="auto" src="http://pages.richrelevance.com/HillClimbing_RichRecsEmail_RichRecsOnsite.html"></iframe>'), $atts ) );
 	
   $insights = get_insights();
   
@@ -227,12 +229,12 @@ function create_insight_func($atts) {
                 <div id="insight-' . $atts['cat'] . '-'. $key . '" class="custom-fancybox-popout">
                   <div class="custom-fancybox-popout-left">
                     <img class="insight-thumbnail" src="' . $item["thumbnail"]  . '" />
-                  </div>
-                  <div class="custom-fancybox-popout-right">
+                    <span class="insight-category-popout">' . $item["format"] . '</span>
                     <h4>' . $item["title"]  . '</h4>
-                    <span class="tagline">' . $item["tagline"]  . '</span>
                   	<div class="custom-fancybox-popout-content">' . apply_filters('the_content', $item["content"])  . '</div>
                   </div>
+                  <div class="custom-fancybox-popout-right"><iframe class="marketo-insight" height="420" width="" frameborder="0" hspace="0" scrolling="auto" src="http://pages.richrelevance.com/HillClimbing_FancyBoxForm.html"></iframe></div>
+                  <div class="custom-fancybox-popout-right">' . esc_attr($atts['marketo_iframe']) . '</div>
                 </div>
               </li>';
 			
@@ -273,11 +275,12 @@ if (!function_exists('get_insights')) {
       $data = array();
       
       foreach ($insight_posts as $key => $item ) 
-            {
-              $data[$key]['thumbnail'] = wp_get_attachment_url( get_post_thumbnail_id($item->ID) );
-              $data[$key]['title'] = get_the_title($item->ID);
-              $data[$key]['content'] = $item->post_content;
-            }
+      {
+        $data[$key]['thumbnail'] = wp_get_attachment_url( get_post_thumbnail_id($item->ID) );
+        $data[$key]['title'] = get_the_title($item->ID);
+        $data[$key]['content'] = $item->post_content;
+        $data[$key]['format'] = 'WHITE PAPER (FAKE)';//TODO get the format
+      }
       
       wp_reset_query();
     
