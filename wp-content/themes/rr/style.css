@@ -3226,11 +3226,8 @@ section[role="insight"].custom-fancybox-wrapper h4 {
 span.insight-category-popout {
   font-family: robotocondensed;
   font-weight: bold;
+  font-size: 14px;
 }
-/*.marketo-insight {
-  height: 420px;
-}*/
-
 
 /**** Isotope Filtering ****/
 
