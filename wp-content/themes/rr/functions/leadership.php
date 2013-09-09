@@ -206,7 +206,7 @@ add_shortcode('leadership', 'create_leadership_func');
 function create_leadership_func($atts) {
   extract( shortcode_atts( array(
     'class' => '',
-		'cat' => 'executive-team',
+		'cat' => '',
 		'bg' => 'white',
 		'title' => ''), $atts ) );
 	
@@ -253,7 +253,7 @@ function create_leadership_func($atts) {
 		$count++;
 	}
 	
-	$content .= '<section role="leader" class="custom-fancybox-wrapper '. esc_attr($class).' '. esc_attr($bg).'">
+	$content .= '<section role="leader" class="custom-fancybox-wrapper ' . $atts['cat'] . ' '. esc_attr($class).' '. esc_attr($bg).'">
 	              <div class="wrap">
 	                <h3>'. esc_attr($title).'</h3>
 	                <ul>' . $lis . '</ul>
