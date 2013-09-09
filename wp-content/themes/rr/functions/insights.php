@@ -229,13 +229,13 @@ function create_insight_func($atts) {
 		if (!empty($item)) 
 		{
       switch ($item["format"]) {
-          case "WHITE PAPERS":
+          case "WHITE PAPER":
           case "RESEARCH":
               $lis .= '<li ' . $last_class . ' >
                         <a class="insight-popouts item ' . $item["format_id"] . ' ' . $item["topic_ids"] . ' ' . $item["region_ids"] . '" rel="insights" href="#insight-'. $key . '" style="background-image: url(' . $item["thumbnail"]  . ')">
+                          <span class="tagline">' . $item["format"]  . '</span>
+                          <h4>' . $item["title"]  . '</h4>
                         </a>
-                        <span class="tagline">' . $item["format"]  . '</span>
-                        <h4>' . $item["title"]  . '</h4>
                         <div id="insight-'. $key . '" class="custom-fancybox-popout">
                           <div class="custom-fancybox-popout-left">
                             <img class="insight-thumbnail" src="' . $item["thumbnail"]  . '" />
@@ -250,17 +250,17 @@ function create_insight_func($atts) {
           case "INFOGRAPHICS":
               $lis .= '<li ' . $last_class . ' >
                         <a class="item ' . $item["format_id"] . ' ' . $item["topic_ids"] . ' ' . $item["region_ids"] . '" target="_blank" href="' . $item["infographic_url"] . '" style="background-image: url(' . $item["thumbnail"]  . ')">
+                          <span class="tagline">' . $item["format"]  . '</span>
+                          <h4>' . $item["title"]  . '</h4>
                         </a>
-                        <span class="tagline">' . $item["format"]  . '</span>
-                        <h4>' . $item["title"]  . '</h4>
                       </li>';
               break;
           case "WEBINARS":
               $lis .= '<li ' . $last_class . ' >
-                        <a class="fancybox-media item ' . $item["format_id"] . ' ' . $item["topic_ids"] . ' ' . $item["region_ids"] . '" rel="insights" href="' . $item["webinar_video_url"] . '" style="background-image: url(' . $item["thumbnail"]  . ')">                          
+                        <a class="fancybox-media item ' . $item["format_id"] . ' ' . $item["topic_ids"] . ' ' . $item["region_ids"] . '" rel="insights" href="' . $item["webinar_video_url"] . '" style="background-image: url(' . $item["thumbnail"]  . ')">
+                          <span class="tagline">' . $item["format"]  . '</span>
+                          <h4>' . $item["title"]  . '</h4>                          
                         </a>
-                        <span class="tagline">' . $item["format"]  . '</span>
-                        <h4>' . $item["title"]  . '</h4>
                       </li>';
               break;
       }
