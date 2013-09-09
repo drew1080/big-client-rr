@@ -129,7 +129,7 @@ function show_insight_box_data()
                 echo '<tr>',
                 '<th style="width:25%"><label for="', $field['id'], '"><strong>', $field['name'], '</strong><span style=" display:block; color:#999; margin:5px 0 0 0; line-height: 18px;">' . $field['desc'] . '</span></label></th>',
                 '<td>';
-                echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta
+                echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? esc_html($meta)
                     : stripslashes(htmlspecialchars(($field['std']), ENT_QUOTES)), '" size="30" style="width:75%; margin-right: 20px; float:left;" />';
 
                 break;
