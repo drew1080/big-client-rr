@@ -69,7 +69,7 @@ $(".nav > ul > li > .sub-menu").removeClass("visible-sm");
         </script>	
 
 
-        <script type="text/javascript" src="<?php echo plugins_url(); ?>/fancybox-for-wordpress/fancybox/helpers/jquery.fancybox-media.js"></script>
+        
         
 	</head>
 
