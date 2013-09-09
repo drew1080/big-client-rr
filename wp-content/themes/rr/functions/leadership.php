@@ -223,16 +223,14 @@ function create_leadership_func($atts) {
 
 		if (!empty($item)) 
 		{
-    	$onmouseover = "onmouseover=\"this.src='" . $item["hover_image"]  . "'\" ";
-    	$onmouseout = "onmouseout=\"this.src='" . $item["thumbnail"]  . "'\"";
+    	//$onmouseover = "onmouseover=\"this.src='" . $item["hover_image"]  . "'\" ";
+    	//$onmouseout = "onmouseout=\"this.src='" . $item["thumbnail"]  . "'\"";
     	
 			$lis .= '<li ' . $last_class . ' >
-                <a class="leader-popouts" rel="leaders" href="#leader-' . $atts['cat'] . '-'. $key . '">
-                  <img class="custom-fancybox-thumbnail" src="' . $item["thumbnail"]  . '" ' . $onmouseover  . '  ' . $onmouseout  . '"/>
-
-                  <h4>' . $item["title"]  . '</h4>
-                  <span class="tagline">' . $item["tagline"]  . '</span>
+                <a class="leader-popouts" rel="leaders" href="#leader-' . $atts['cat'] . '-'. $key . '" style="background-image: url(' . $item["thumbnail"]  . ')">
                 </a>
+                <h4>' . $item["title"]  . '</h4>
+                <span class="tagline">' . $item["tagline"]  . '</span>
                 <div id="leader-' . $atts['cat'] . '-'. $key . '" class="custom-fancybox-popout">
                   <div class="custom-fancybox-popout-left">
                     <img class="custom-fancybox-thumbnail" src="' . $item["thumbnail"]  . '" />

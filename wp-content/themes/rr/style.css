@@ -746,10 +746,25 @@ section[role="main"] .view-article {
 .custom-fancybox-wrapper ul li a:hover {
   text-decoration: none;
 }
+
+.custom-fancybox-wrapper ul li a {
+  background-position: 0 0;
+  width: 199px;
+  height: 212px;
+  display: block;
+}
+
+.custom-fancybox-wrapper ul li a:hover {
+  background-position: -199px 0;
+  width: 199px;
+  height: 212px;
+}
+
 .custom-fancybox-wrapper h4 {
   font-family: robotoregular;
   font-size: 18px;
   margin: 0;
+  color: #990101;
 }
 .custom-fancybox-wrapper .tagline {
   font-family: robotolight;
