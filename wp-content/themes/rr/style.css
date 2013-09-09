@@ -324,6 +324,7 @@ section[role="about-us"] ul.newsroom li a{
 	width: 780px;
 	max-width: 100%;
 }
+
 section[role="customers"] h3,section[role="rr-number"] h3 {
 	color:#667280;
 	font-size:44px;
@@ -3065,6 +3066,10 @@ section[role="leader"] .leader-popout {
 }
 
 @media only screen and (max-width:400px) {
+   section[role="about"] p,
+   section[role="about-us"] p {
+     font-size: 18px;
+   }
    .slider h1.entry-title {
      font-size: 5em;
    }
