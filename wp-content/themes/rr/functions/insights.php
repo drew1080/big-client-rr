@@ -212,7 +212,6 @@ add_shortcode('insights', 'create_insight_func');
 function create_insight_func($atts) {
   extract( shortcode_atts( array(
     'class' => '',
-		'cat' => '',
 		'bg' => 'white',
 		'title' => ''), $atts ) );
 	
@@ -233,12 +232,12 @@ function create_insight_func($atts) {
           case "WHITE PAPERS":
           case "RESEARCH":
               $lis .= '<li ' . $last_class . ' >
-                        <a class="insight-popouts" rel="insights" href="#insight-' . $atts['cat'] . '-'. $key . '">
+                        <a class="insight-popouts item ' . $item["format_id"] . ' ' . $item["topic_ids"] . ' ' . $item["region_ids"] . '" rel="insights" href="#insight-'. $key . '">
                           <img class="custom-fancybox-thumbnail" src="' . $item["thumbnail"]  . '" "/>
                           <span class="tagline">' . $item["format"]  . '</span>
                           <h4>' . $item["title"]  . '</h4>
                         </a>
-                        <div id="insight-' . $atts['cat'] . '-'. $key . '" class="custom-fancybox-popout">
+                        <div id="insight-'. $key . '" class="custom-fancybox-popout">
                           <div class="custom-fancybox-popout-left">
                             <img class="insight-thumbnail" src="' . $item["thumbnail"]  . '" />
                             <span class="insight-category-popout">' . $item["format"] . '</span>
@@ -251,7 +250,7 @@ function create_insight_func($atts) {
               break;
           case "INFOGRAPHICS":
               $lis .= '<li ' . $last_class . ' >
-                        <a target="_blank" href="' . $item["infographic_url"] . '">
+                        <a class="item ' . $item["format_id"] . ' ' . $item["topic_ids"] . ' ' . $item["region_ids"] . '" target="_blank" href="' . $item["infographic_url"] . '">
                           <img class="custom-fancybox-thumbnail" src="' . $item["thumbnail"]  . '" "/>
                           <span class="tagline">' . $item["format"]  . '</span>
                           <h4>' . $item["title"]  . '</h4>
@@ -260,7 +259,7 @@ function create_insight_func($atts) {
               break;
           case "WEBINARS":
               $lis .= '<li ' . $last_class . ' >
-                        <a class="fancybox-media" rel="insights" href="' . $item["webinar_video_url"] . '">
+                        <a class="fancybox-media item ' . $item["format_id"] . ' ' . $item["topic_ids"] . ' ' . $item["region_ids"] . '" rel="insights" href="' . $item["webinar_video_url"] . '">
                           <img class="custom-fancybox-thumbnail" src="' . $item["thumbnail"]  . '" "/>
                           <span class="tagline">' . $item["format"]  . '</span>
                           <h4>' . $item["title"]  . '</h4>
@@ -268,17 +267,45 @@ function create_insight_func($atts) {
                       </li>';
               break;
       }
-          	
-			
-			
 		}
 		
 		$last_class = "";
 		$count++;
 	}
 	
-	$content .= '<section role="insight" class="custom-fancybox-wrapper '. esc_attr($class).' '. esc_attr($bg).'">
-	              <div class="wrap">
+	$format_args = array(
+	  'show_option_all'    => 'All',
+	  'id'        => 'format',
+	  'class'     => 'option-set',
+    'taxonomy'  => 'rr-format',
+    'echo' => 0
+  );
+  
+  $topic_args = array(
+	  'show_option_all'    => 'All',
+	  'id'        => 'topic',
+	  'class'     => 'option-set',
+    'taxonomy'  => 'rr-topic',
+    'echo' => 0
+  );
+  
+  $region_args = array(
+	  'show_option_all'    => 'All',
+	  'id'        => 'region',
+	  'class'     => 'option-set',
+    'taxonomy'  => 'rr-region',
+    'echo' => 0
+  );
+	
+	$content .= '
+              <span>FORMAT: </span>
+              ' . wp_dropdown_categories($format_args) . '
+              <span>TOPIC: </span>
+              ' . wp_dropdown_categories($topic_args) . '
+              <span>REGION: </span>
+              ' . wp_dropdown_categories($region_args) . '
+	            <section role="insight" class="custom-fancybox-wrapper '. esc_attr($class).' '. esc_attr($bg).'">
+	              <div id="insights" class="wrap">
 	                <h3>'. esc_attr($title).'</h3>
 	                <ul>' . $lis . '</ul>
 	              </div>
@@ -315,8 +342,30 @@ if (!function_exists('get_insights')) {
         $data[$key]['marketo_iframe'] = get_post_meta($item->ID,'marketo_iframe',TRUE);
         $data[$key]['webinar_video_url'] = get_post_meta($item->ID,'webinar_video_url',TRUE);
         $data[$key]['infographic_url'] = get_post_meta($item->ID,'infographic_url',TRUE);
+        
         $format_list = wp_get_post_terms($item->ID, 'rr-format');
         $data[$key]['format'] = strtoupper($format_list[0]->name);
+        $data[$key]['format_id'] = 'format-' . $format_list[0]->term_id;
+        
+        
+        $topic_ids = '';
+        $topic_list = wp_get_post_terms($item->ID, 'rr-topic');
+        
+        foreach ($topic_list as $topic) {
+          $topic_ids .= 'topic-' .  $topic->term_id . ' ';
+        }
+        
+        $data[$key]['topic_ids'] = $topic_ids;
+        
+        
+        $region_ids = '';
+        $region_list = wp_get_post_terms($item->ID, 'rr-region');
+        
+        foreach ($region_list as $region) {
+          $region_ids .= 'region-' .  $region->term_id . ' ';
+        }
+        
+        $data[$key]['region_ids'] = $region_ids;
       }
       
       wp_reset_query();

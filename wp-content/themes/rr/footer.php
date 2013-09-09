@@ -70,6 +70,7 @@
 			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
 			s.parentNode.insertBefore(g,s)})(document,'script');
 		</script>
-	
+	  <script type="text/javascript" src="<?php echo plugins_url(); ?>/fancybox-for-wordpress/fancybox/helpers/jquery.fancybox-media.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.isotope.min.js"></script>
 	</body>
 </html>
