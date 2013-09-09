@@ -198,6 +198,12 @@ section[role="about-us"] .third p {
 	margin:0 auto;
 }
 
+section[role="about"] h2,section[role="about-us"] h2 {
+	font-family: robotolight;
+	font-size: 50px;
+	text-align: center;
+}
+
 section[role="about"] h3,section[role="about-us"] h3 {
 	color:#667280;
 	font-size:44px;
@@ -302,9 +308,11 @@ section[role="about-us"] ul.newsroom {
 	padding: 0px;
 	margin: 0 0 30px 0;
 	float: left;
+	max-width: 100%;
 }
 section[role="about-us"] ul.newsroom li {
 	width: 910px;
+	max-width: 100%;
 	font-size: 19px;
 	list-style: none;
 	font-family:robotocondensed;
@@ -320,7 +328,9 @@ section[role="about-us"] ul.newsroom li a{
 	font-family:robotolight;
 	float: left;
 	width: 780px;
+	max-width: 100%;
 }
+
 section[role="customers"] h3,section[role="rr-number"] h3 {
 	color:#667280;
 	font-size:44px;
@@ -710,31 +720,24 @@ section[role="main"] .view-article {
 	float:right;
 	margin-top:30px;
 }
-section[role="leader"] {
+
+.custom-fancybox-wrapper {
   padding: 40px 0 40px;
 }
 
-section[role="leader"] h3 {
+.custom-fancybox-wrapper h3 {
 	color:#667280;
 	font-size:44px;
 	font-family:oswaldbold;
 	text-align:center;
 }
 
-/*section[role="leader"] img.leader-thumbnail:hover{
-  display: none;
-}
-
-section[role="leader"] img.leader-hover-thumbnail:hover{
-  display: block;
-}*/
-
-section[role="leader"] ul {
+.custom-fancybox-wrapper ul {
   list-style-type: none;
   padding: 0;
 }
 
-section[role="leader"] ul li {
+.custom-fancybox-wrapper ul li {
   display: block;
   float: left;
   width: 199px;
@@ -742,26 +745,49 @@ section[role="leader"] ul li {
   line-height: 22px;
 }
 
-section[role="leader"] ul li.last {
+.custom-fancybox-wrapper ul li.last {
   margin: 30px 0 0 0;
 }
 
-section[role="leader"] ul li a:hover {
+.custom-fancybox-wrapper ul li a:hover {
   text-decoration: none;
 }
-section[role="leader"] h4 {
+
+.custom-fancybox-wrapper ul li a {
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 199px;
+  height: 212px;
+  display: block;
+  margin: 30px 38px 0 0;
+}
+
+.custom-fancybox-wrapper ul li.last a {
+  margin: 30px 0 0 0;
+}
+
+section[role="leader"] .custom-fancybox-wrapper ul li a:hover {
+  background-position: -199px 0;
+  width: 199px;
+  height: 212px;
+}
+
+.custom-fancybox-wrapper h4 {
   font-family: robotoregular;
   font-size: 18px;
   margin: 0;
+  color: #990101;
 }
-section[role="leader"] .tagline {
+
+.custom-fancybox-wrapper .tagline {
   font-family: robotolight;
   font-size: 14px;
   color: #667280;
   line-height: 3px;
+  
 }
 
-.leader-popout-content p {
+.custom-fancybox-popout-content p {
   margin-top: 0px;
 }
 
@@ -875,44 +901,52 @@ section[role="leader"] .tagline {
 }*/
 
 
-.leader-popout {
+.custom-fancybox-popout {
   max-width: 680px;
 }
 
-.leader-popout-left{
+.custom-fancybox-popout-left{
   width: 200px;
   float: left;
   margin: 25px 5px 15px 25px;
+  color: #667280;
 }
-.leader-popout-left img.leader-thumbnail {
+.custom-fancybox-popout-left img.custom-fancybox-thumbnail {
   float: left;
 }
 
-.leader-popout-right {
+.custom-fancybox-popout-left span.custom-fancybox-thumbnail {
+  background-position: 0 0;
+  width: 199px;
+  height: 212px;
+  display: block;
+}
+
+.custom-fancybox-popout-right {
   max-width: 410px;
   float: left;
   padding: 20px;
 }
 
-.leader-popout-content {
+.custom-fancybox-popout-content {
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 345px;
+ /* height: 345px;*/
   margin-top: 20px;
 }
 
-.leader-popout-right h4 {
+.custom-fancybox-popout-right h4 {
   font-family: robotolight;
   font-size: 28px;
   margin: 0.1em 0 0.5em 0;
 }
 
-.leader-popout-right .tagline {
+.custom-fancybox-popout-right .tagline {
   font-family: robotobold;
   font-size: 14px;
 }
 
-.leader-popout-right p {
+.custom-fancybox-popout-right p {
   font-family: robotolight;
   font-size: 14px;
 }
@@ -1552,6 +1586,59 @@ section[role="blog"] .newer {
   margin: 0 10px;
 }
 
+.comments h2 {
+  margin-top: 24px;
+  margin-bottom: 14px !important;
+  padding: 24px 0;
+  border-top: 1px solid #e7e7e7;
+}
+
+.comments ul {
+  padding: 0px;
+}
+
+.comments ul.children  {
+  padding: 0 0 0 40px !important;
+}
+
+li.comment {
+  border-bottom: 1px solid #e7e7e7;
+  line-height: 24px;
+  margin: 0 0 24px 0;
+  padding: 0 0 0 56px;
+  position: relative;
+}
+
+.children li.comment {
+  border-bottom: none;
+}
+
+.comment-author.vcard img {
+  height: 40px;
+  width: 40px;
+  top: 4px;
+  left: 0;
+  position: absolute;
+}
+
+.comment-author cite {
+  font-style: normal;
+  font-weight: bold;
+}
+
+.comment-author .says {
+  font-style: italic;
+}
+
+.reply {
+  padding: 0 0 24px 0;
+}
+
+.comment-reply-title {
+  font-family: robotolight;
+  font-size: 16px;
+}
+
 /** Submenu **/
 
 	.subnav {
@@ -2082,7 +2169,7 @@ display:block;
     margin: 0 auto;
     }
         
-  p.button a {
+  .technology p.button a {
     display: block !important;
   }
 }
@@ -2802,11 +2889,11 @@ p a.imgpartners:nth-child(4) img {
 
 \*------------------------------------*/
 
-section[role="leader"] .leader-hover-thumbnail {
+.custom-fancybox-hover-thumbnail {
   display: none;
 }
 
-section[role="leader"] .leader-popout {
+.custom-fancybox-popout {
   display: none;
 }
 
@@ -2937,16 +3024,16 @@ section[role="leader"] .leader-popout {
 }
 
 @media only screen and (max-width:960px) {
-  section[role="leader"] ul {
+  .custom-fancybox-wrapper ul {
     text-align: center;
   }
-  section[role="leader"] ul li {
+  .custom-fancybox-wrapper ul li {
     display: inline-table;
     float: none;
     margin: 30px 20px 0 20px;
     text-align: left;
   }
-  section[role="leader"] ul li.last {
+  .custom-fancybox-wrapper ul li.last {
     display: inline-table;
     float: none;
     margin: 30px 20px 0 20px !important;
@@ -3062,7 +3149,14 @@ section[role="leader"] .leader-popout {
 }
 
 @media only screen and (max-width:400px) {
-
+   section[role="about"] p,
+   section[role="about-us"] p {
+     font-size: 18px;
+   }
+   .slider h1.entry-title {
+     font-size: 5em;
+   }
+   
    .slider.with-excerpt h1 {
     /* line-height: 1.1em; */
    }
@@ -3086,3 +3180,111 @@ section[role="leader"] .leader-popout {
 .wrap br{
   display: none;
 }	  
+
+/* Insights page */
+
+
+.filter-options{
+  text-align: center;
+  font-family: robotocondensed;
+  font-weight: bold;
+}
+.filter-options span{
+  margin-right: 10px;
+  margin-left: 20px;
+  
+}
+.filter-options span:first-child{
+  margin-left: 0px;
+}
+
+section[role="insight"].custom-fancybox-wrapper {
+  padding: 10px 0 40px;
+}
+section[role="insight"].custom-fancybox-wrapper ul li a {
+  height: 290px;
+}
+
+section[role="insight"].custom-fancybox-wrapper .tagline {
+  font-family: robotocondensed;
+  font-size: 14px;
+  font-weight: bold;
+  color: #667280;
+  line-height: 3px;
+  margin-top: 222px;
+  display: block;
+}
+section[role="insight"].custom-fancybox-wrapper h4 {
+  margin-top: 10px;
+  line-height: 1.6em;
+}
+.custom-fancybox-popout-left h4{
+  font-family: robotolight;
+  font-size: 32px;
+  margin: 14px 0 -10px 0;
+}
+
+.custom-fancybox-popout-left p{
+  font-family: robotolight;
+  font-size: 13px;
+  overflow-y: auto;
+}
+
+span.insight-category-popout {
+  font-family: robotocondensed;
+  font-weight: bold;
+}
+/*.marketo-insight {
+  height: 420px;
+}*/
+
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
