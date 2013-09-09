@@ -54,20 +54,20 @@ $leadership_box_data = array(
             "type" => "text",
             'std' => ''
         ),
-        array(
-            'name' => __('Hover Image', 'framework'),
-            'desc' => __('Upload the leader image. Once uploaded, click "Insert to Post".', 'framework'),
-            'id' => 'hover_image',
-            "type" => "text",
-            'std' => ''
-        ),
-        array(
-            'name' => '',
-            'desc' => '',
-            'id' => 'hover_image_button',
-            'type' => 'button',
-            'std' => 'Browse'
-        ),
+        // array(
+        //             'name' => __('Hover Image', 'framework'),
+        //             'desc' => __('Upload the leader image. Once uploaded, click "Insert to Post".', 'framework'),
+        //             'id' => 'hover_image',
+        //             "type" => "text",
+        //             'std' => ''
+        //         ),
+        // array(
+        //             'name' => '',
+        //             'desc' => '',
+        //             'id' => 'hover_image_button',
+        //             'type' => 'button',
+        //             'std' => 'Browse'
+        //         ),
          array(
             'name' => __('Twitter', 'framework'),
             'desc' => __('Enter twitter acount.', 'framework'),
@@ -286,7 +286,7 @@ if (!function_exists('get_leadership')) {
       
       foreach ($posts as $key => $item ) 
       {
-        $data[$key]['hover_image'] = get_post_meta($item->ID,'hover_image',TRUE);
+        // $data[$key]['hover_image'] = get_post_meta($item->ID,'hover_image',TRUE);
         $data[$key]['thumbnail'] = wp_get_attachment_url( get_post_thumbnail_id($item->ID) );
         #$data[$key]['cartoon'] = get_post_meta($item->ID,'leader_cartoon',TRUE);
         $data[$key]['twitter'] = get_post_meta($item->ID,'leader_twitter',TRUE);
