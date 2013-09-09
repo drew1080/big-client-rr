@@ -900,6 +900,13 @@ section[role="main"] .view-article {
   float: left;
 }
 
+.custom-fancybox-popout-left span.custom-fancybox-thumbnail {
+  background-position: 0 0;
+  width: 199px;
+  height: 212px;
+  display: block;
+}
+
 .custom-fancybox-popout-right {
   max-width: 410px;
   float: left;

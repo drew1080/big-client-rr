@@ -233,7 +233,7 @@ function create_leadership_func($atts) {
                 <span class="tagline">' . $item["tagline"]  . '</span>
                 <div id="leader-' . $atts['cat'] . '-'. $key . '" class="custom-fancybox-popout">
                   <div class="custom-fancybox-popout-left">
-                    <img class="custom-fancybox-thumbnail" src="' . $item["thumbnail"]  . '" />
+                    <span class="custom-fancybox-thumbnail" style="background-image: url(' . $item["thumbnail"]  . ')"></span>
                       <ul class="social">
                     	  <li class="li"><a href="' . $item["linkedin"]  . '" target="_blank" title="Linkedin">Linkedin</a></li>
                         <li class="tw"><a href="' . $item["twitter"]  . '" target="_blank" title="Twitter">Twitter</a></li>
