@@ -198,6 +198,12 @@ section[role="about-us"] .third p {
 	margin:0 auto;
 }
 
+section[role="about"] h2,section[role="about-us"] h2 {
+	font-family: robotolight;
+	font-size: 50px;
+	text-align: center;
+}
+
 section[role="about"] h3,section[role="about-us"] h3 {
 	color:#667280;
 	font-size:44px;
@@ -748,13 +754,19 @@ section[role="main"] .view-article {
 }
 
 .custom-fancybox-wrapper ul li a {
+  background-repeat: no-repeat;
   background-position: 0 0;
   width: 199px;
   height: 212px;
   display: block;
+  margin: 30px 38px 0 0;
 }
 
-.custom-fancybox-wrapper ul li a:hover {
+.custom-fancybox-wrapper ul li.last a {
+  margin: 30px 0 0 0;
+}
+
+section[role="leader"] .custom-fancybox-wrapper ul li a:hover {
   background-position: -199px 0;
   width: 199px;
   height: 212px;
@@ -766,11 +778,13 @@ section[role="main"] .view-article {
   margin: 0;
   color: #990101;
 }
+
 .custom-fancybox-wrapper .tagline {
   font-family: robotolight;
   font-size: 14px;
   color: #667280;
   line-height: 3px;
+  
 }
 
 .custom-fancybox-popout-content p {
@@ -895,6 +909,7 @@ section[role="main"] .view-article {
   width: 200px;
   float: left;
   margin: 25px 5px 15px 25px;
+  color: #667280;
 }
 .custom-fancybox-popout-left img.custom-fancybox-thumbnail {
   float: left;
@@ -916,7 +931,7 @@ section[role="main"] .view-article {
 .custom-fancybox-popout-content {
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 345px;
+ /* height: 345px;*/
   margin-top: 20px;
 }
 
@@ -3167,6 +3182,58 @@ p a.imgpartners:nth-child(4) img {
 }	  
 
 /* Insights page */
+
+
+.filter-options{
+  text-align: center;
+  font-family: robotocondensed;
+  font-weight: bold;
+}
+.filter-options span{
+  margin-right: 10px;
+  margin-left: 20px;
+  
+}
+.filter-options span:first-child{
+  margin-left: 0px;
+}
+
+section[role="insight"].custom-fancybox-wrapper {
+  padding: 10px 0 40px;
+}
+section[role="insight"].custom-fancybox-wrapper ul li a {
+  height: 290px;
+}
+
+section[role="insight"].custom-fancybox-wrapper .tagline {
+  font-family: robotocondensed;
+  font-size: 14px;
+  font-weight: bold;
+  color: #667280;
+  line-height: 3px;
+  margin-top: 222px;
+  display: block;
+}
+section[role="insight"].custom-fancybox-wrapper h4 {
+  margin-top: 10px;
+  line-height: 1.6em;
+}
+.custom-fancybox-popout-left h4{
+  font-family: robotolight;
+  font-size: 32px;
+  margin: 14px 0 -10px 0;
+}
+
+.custom-fancybox-popout-left p{
+  font-family: robotolight;
+  font-size: 13px;
+  overflow-y: auto;
+}
+
+span.insight-category-popout {
+  font-family: robotocondensed;
+  font-weight: bold;
+}
 /*.marketo-insight {
   height: 420px;
 }*/
