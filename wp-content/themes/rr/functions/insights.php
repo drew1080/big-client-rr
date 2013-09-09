@@ -229,11 +229,10 @@ function create_insight_func($atts) {
 		if (!empty($item)) 
 		{
       switch ($item["format"]) {
-          case "WHITE PAPERS":
+          case "WHITE PAPER":
           case "RESEARCH":
               $lis .= '<li ' . $last_class . ' >
-                        <a class="insight-popouts item ' . $item["format_id"] . ' ' . $item["topic_ids"] . ' ' . $item["region_ids"] . '" rel="insights" href="#insight-'. $key . '">
-                          <img class="custom-fancybox-thumbnail" src="' . $item["thumbnail"]  . '" "/>
+                        <a class="insight-popouts item ' . $item["format_id"] . ' ' . $item["topic_ids"] . ' ' . $item["region_ids"] . '" rel="insights" href="#insight-'. $key . '" style="background-image: url(' . $item["thumbnail"]  . ')">
                           <span class="tagline">' . $item["format"]  . '</span>
                           <h4>' . $item["title"]  . '</h4>
                         </a>
@@ -250,8 +249,7 @@ function create_insight_func($atts) {
               break;
           case "INFOGRAPHICS":
               $lis .= '<li ' . $last_class . ' >
-                        <a class="item ' . $item["format_id"] . ' ' . $item["topic_ids"] . ' ' . $item["region_ids"] . '" target="_blank" href="' . $item["infographic_url"] . '">
-                          <img class="custom-fancybox-thumbnail" src="' . $item["thumbnail"]  . '" "/>
+                        <a class="item ' . $item["format_id"] . ' ' . $item["topic_ids"] . ' ' . $item["region_ids"] . '" target="_blank" href="' . $item["infographic_url"] . '" style="background-image: url(' . $item["thumbnail"]  . ')">
                           <span class="tagline">' . $item["format"]  . '</span>
                           <h4>' . $item["title"]  . '</h4>
                         </a>
@@ -259,10 +257,9 @@ function create_insight_func($atts) {
               break;
           case "WEBINARS":
               $lis .= '<li ' . $last_class . ' >
-                        <a class="fancybox-media item ' . $item["format_id"] . ' ' . $item["topic_ids"] . ' ' . $item["region_ids"] . '" rel="insights" href="' . $item["webinar_video_url"] . '">
-                          <img class="custom-fancybox-thumbnail" src="' . $item["thumbnail"]  . '" "/>
+                        <a class="fancybox-media item ' . $item["format_id"] . ' ' . $item["topic_ids"] . ' ' . $item["region_ids"] . '" rel="insights" href="' . $item["webinar_video_url"] . '" style="background-image: url(' . $item["thumbnail"]  . ')">
                           <span class="tagline">' . $item["format"]  . '</span>
-                          <h4>' . $item["title"]  . '</h4>
+                          <h4>' . $item["title"]  . '</h4>                          
                         </a>
                       </li>';
               break;
@@ -297,13 +294,14 @@ function create_insight_func($atts) {
     'echo' => 0
   );
 	
-	$content .= '
+	$content .= '<div class="filter-options">
               <span>FORMAT: </span>
               ' . wp_dropdown_categories($format_args) . '
               <span>TOPIC: </span>
               ' . wp_dropdown_categories($topic_args) . '
               <span>REGION: </span>
               ' . wp_dropdown_categories($region_args) . '
+              </div>
 	            <section role="insight" class="custom-fancybox-wrapper '. esc_attr($class).' '. esc_attr($bg).'">
 	              <div id="insights" class="wrap">
 	                <h3>'. esc_attr($title).'</h3>
