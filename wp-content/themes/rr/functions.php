@@ -566,5 +566,4 @@ function dd_remove_update_nag($value) {
 
 return $value;
 }
-
 ?>
