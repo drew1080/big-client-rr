@@ -1,0 +1,1 @@
+[09-Sep-2013 22:08:05] WordPress database error Multiple primary key defined for query ALTER TABLE rr__duplicator CHANGE COLUMN id id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT  PRIMARY KEY made by require('wp-admin/plugins.php'), activate_plugins, activate_plugin, do_action('activate_duplicator/duplicator.php'), call_user_func_array, duplicator_activate, dbDelta

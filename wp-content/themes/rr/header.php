@@ -320,35 +320,43 @@ $(".nav > ul > li > .sub-menu").removeClass("visible-sm");
 
 
 
-			<?php if( is_single() || is_archive() || is_page( 'rr-blog' ) || is_search()) { 
-			  $blog_page_id = get_ID_by_slug('blog/rr-blog');
-        $page_rr_blog = get_page($blog_page_id);
-        $content = $page_rr_blog->post_content;
-        $content = apply_filters('the_content', $page_rr_blog->post_content); 
-        
-        if ( is_search() ) {
-          // $title = get_search_query();
-          $content = str_replace('Blog', 'Search', $content);
-          echo $content;
-        } else if ( is_category() ) {
-          $current_category = single_cat_title("", false);
-          $content = str_replace('Blog', $current_category, $content);
-          echo $content;
-        } else if ( is_archive() ) {
-          $current_archive = wp_title('', false);
-          $content = str_replace('Blog', $current_archive, $content);
-          echo $content;
-        } else {
-          echo $content;
-        }
-        
-			}?>
+			<?php 
+			global $blog_id;
 			
-      <?php if ( !is_single() && !is_archive() && !is_search() && !get_post_meta($post->ID, 'banner', true) && function_exists('easingsliderpro') ) { 
-          echo '<div class="slider-home">';
-          easingsliderpro( 1 ); 
-          echo '</div>';
-      } ?>
+      
+      if ( $blog_id == 1 ) {
+        $blog_page_id = get_ID_by_slug('blog/rr-blog');
+      } else {
+        $blog_page_id = get_ID_by_slug('engineering-blog');
+      }
+      
+      $page_rr_blog = get_page($blog_page_id);  
+      $content = $page_rr_blog->post_content;
+      $content = apply_filters('the_content', $page_rr_blog->post_content); 
+      
+      if ( is_search() ) {
+        // $title = get_search_query();
+        $content = str_replace('Blog', 'Search', $content);
+        echo $content;
+      } else if ( is_category() ) {
+        $current_category = single_cat_title("", false);
+        $content = str_replace('Blog', $current_category, $content);
+        echo $content;
+      } else if ( is_archive() ) {
+        $current_archive = wp_title('', false);
+        $content = str_replace('Blog', $current_archive, $content);
+        echo $content;
+      } else if ( $blog_id == 2 ) {
+        $content = str_replace('Blog', 'Engineering Blog', $content);
+        echo $content;
+      } else if ( is_single() || is_page('rr-blog')) {
+        echo $content;
+      } else if ( is_front_page()  && function_exists('easingsliderpro') ) {
+        echo '<div class="slider-home">';
+        easingsliderpro( 1 ); 
+        echo '</div>';
+      } 
+      ?>
       
 			
 			

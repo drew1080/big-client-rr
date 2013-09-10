@@ -54,20 +54,20 @@ $leadership_box_data = array(
             "type" => "text",
             'std' => ''
         ),
-        array(
-            'name' => __('Hover Image', 'framework'),
-            'desc' => __('Upload the leader image. Once uploaded, click "Insert to Post".', 'framework'),
-            'id' => 'hover_image',
-            "type" => "text",
-            'std' => ''
-        ),
-        array(
-            'name' => '',
-            'desc' => '',
-            'id' => 'hover_image_button',
-            'type' => 'button',
-            'std' => 'Browse'
-        ),
+        // array(
+        //             'name' => __('Hover Image', 'framework'),
+        //             'desc' => __('Upload the leader image. Once uploaded, click "Insert to Post".', 'framework'),
+        //             'id' => 'hover_image',
+        //             "type" => "text",
+        //             'std' => ''
+        //         ),
+        // array(
+        //             'name' => '',
+        //             'desc' => '',
+        //             'id' => 'hover_image_button',
+        //             'type' => 'button',
+        //             'std' => 'Browse'
+        //         ),
          array(
             'name' => __('Twitter', 'framework'),
             'desc' => __('Enter twitter acount.', 'framework'),
@@ -206,7 +206,7 @@ add_shortcode('leadership', 'create_leadership_func');
 function create_leadership_func($atts) {
   extract( shortcode_atts( array(
     'class' => '',
-		'cat' => 'executive-team',
+		'cat' => '',
 		'bg' => 'white',
 		'title' => ''), $atts ) );
 	
@@ -223,19 +223,17 @@ function create_leadership_func($atts) {
 
 		if (!empty($item)) 
 		{
-    	$onmouseover = "onmouseover=\"this.src='" . $item["hover_image"]  . "'\" ";
-    	$onmouseout = "onmouseout=\"this.src='" . $item["thumbnail"]  . "'\"";
+    	//$onmouseover = "onmouseover=\"this.src='" . $item["hover_image"]  . "'\" ";
+    	//$onmouseout = "onmouseout=\"this.src='" . $item["thumbnail"]  . "'\"";
     	
 			$lis .= '<li ' . $last_class . ' >
-                <a class="leader-popouts" rel="leaders" href="#leader-' . $atts['cat'] . '-'. $key . '">
-                  <img class="custom-fancybox-thumbnail" src="' . $item["thumbnail"]  . '" ' . $onmouseover  . '  ' . $onmouseout  . '"/>
-
-                  <h4>' . $item["title"]  . '</h4>
-                  <span class="tagline">' . $item["tagline"]  . '</span>
+                <a class="leader-popouts" rel="leaders" href="#leader-' . $atts['cat'] . '-'. $key . '" style="background-image: url(' . $item["thumbnail"]  . ')">
                 </a>
+                <h4>' . $item["title"]  . '</h4>
+                <span class="tagline">' . $item["tagline"]  . '</span>
                 <div id="leader-' . $atts['cat'] . '-'. $key . '" class="custom-fancybox-popout">
                   <div class="custom-fancybox-popout-left">
-                    <img class="custom-fancybox-thumbnail" src="' . $item["thumbnail"]  . '" />
+                    <span class="custom-fancybox-thumbnail" style="background-image: url(' . $item["thumbnail"]  . ')"></span>
                       <ul class="social">
                     	  <li class="li"><a href="' . $item["linkedin"]  . '" target="_blank" title="Linkedin">Linkedin</a></li>
                         <li class="tw"><a href="' . $item["twitter"]  . '" target="_blank" title="Twitter">Twitter</a></li>
@@ -255,7 +253,7 @@ function create_leadership_func($atts) {
 		$count++;
 	}
 	
-	$content .= '<section role="leader" class="custom-fancybox-wrapper '. esc_attr($class).' '. esc_attr($bg).'">
+	$content .= '<section role="leader" class="custom-fancybox-wrapper ' . $atts['cat'] . ' '. esc_attr($class).' '. esc_attr($bg).'">
 	              <div class="wrap">
 	                <h3>'. esc_attr($title).'</h3>
 	                <ul>' . $lis . '</ul>
@@ -288,7 +286,7 @@ if (!function_exists('get_leadership')) {
       
       foreach ($posts as $key => $item ) 
       {
-        $data[$key]['hover_image'] = get_post_meta($item->ID,'hover_image',TRUE);
+        // $data[$key]['hover_image'] = get_post_meta($item->ID,'hover_image',TRUE);
         $data[$key]['thumbnail'] = wp_get_attachment_url( get_post_thumbnail_id($item->ID) );
         #$data[$key]['cartoon'] = get_post_meta($item->ID,'leader_cartoon',TRUE);
         $data[$key]['twitter'] = get_post_meta($item->ID,'leader_twitter',TRUE);
