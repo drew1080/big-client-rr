@@ -155,14 +155,14 @@ if ( is_search() ) {
   $current_category = single_cat_title("", false);
   $content = str_replace('Blog', $current_category, $content);
   echo $content;
-} else if ( is_archive() ) {
+} else if ( is_archive() && !is_author() ) {
   $current_archive = wp_title('', false);
   $content = str_replace('Blog', $current_archive, $content);
   echo $content;
 } else if ( $blog_id == 2 ) {
   $content = str_replace('Blog', 'Engineering Blog', $content);
   echo $content;
-} else if ( is_single() || is_page('rr-blog')) {
+} else if ( is_single() || is_page('rr-blog') || is_author() ) {
   echo $content;
 } else if ( is_front_page()  && function_exists('easingsliderpro') ) {
   echo '<div class="slider-home">';
