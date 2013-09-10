@@ -199,7 +199,7 @@ section[role="about-us"] .third p {
 }
 
 /* Hiding the default image */
-.easingsliderpro-slide.active .easingsliderpro-image {
+.easingsliderpro-slide .easingsliderpro-image {
   display: none !important;
 }
 
