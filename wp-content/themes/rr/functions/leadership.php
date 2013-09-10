@@ -206,7 +206,7 @@ add_shortcode('leadership', 'create_leadership_func');
 function create_leadership_func($atts) {
   extract( shortcode_atts( array(
     'class' => '',
-		'cat' => 'executive-team',
+		'cat' => '',
 		'bg' => 'white',
 		'title' => ''), $atts ) );
 	
@@ -233,7 +233,7 @@ function create_leadership_func($atts) {
                 <span class="tagline">' . $item["tagline"]  . '</span>
                 <div id="leader-' . $atts['cat'] . '-'. $key . '" class="custom-fancybox-popout">
                   <div class="custom-fancybox-popout-left">
-                    <img class="custom-fancybox-thumbnail" src="' . $item["thumbnail"]  . '" />
+                    <span class="custom-fancybox-thumbnail" style="background-image: url(' . $item["thumbnail"]  . ')"></span>
                       <ul class="social">
                     	  <li class="li"><a href="' . $item["linkedin"]  . '" target="_blank" title="Linkedin">Linkedin</a></li>
                         <li class="tw"><a href="' . $item["twitter"]  . '" target="_blank" title="Twitter">Twitter</a></li>
@@ -253,7 +253,7 @@ function create_leadership_func($atts) {
 		$count++;
 	}
 	
-	$content .= '<section role="leader" class="custom-fancybox-wrapper '. esc_attr($class).' '. esc_attr($bg).'">
+	$content .= '<section role="leader" class="custom-fancybox-wrapper ' . $atts['cat'] . ' '. esc_attr($class).' '. esc_attr($bg).'">
 	              <div class="wrap">
 	                <h3>'. esc_attr($title).'</h3>
 	                <ul>' . $lis . '</ul>
