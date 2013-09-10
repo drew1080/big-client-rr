@@ -774,6 +774,16 @@ section[role="main"] .view-article {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
+  
+}
+
+#fancybox-loading div {
+/*  background: #fff;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;*/
+/*  background:#fff url("$path to animation/ajax-loader.gif") no-repeat 50% 50% !important;*/
 }
 
 .fancybox-nav {
