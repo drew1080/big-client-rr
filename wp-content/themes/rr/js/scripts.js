@@ -13,26 +13,27 @@ $(function() {
 		}
 	}
   
-  $(".marketo-insight").each(function() {
-    $(this).load(function (){
-        // do something once the iframe is loaded
-        var script=document.createElement('script');
-
-        // script=document.standardCreateElement('script');
-        // script.src = 'http://localhost:8888/rr/wp-content/themes/rr/js/marketo.js';
-        // script.type = 'text/javascript';
-        
-        var $head = $(this).contents().find("head");      
-        
-        $head.append(script);
-        
-        $head.append($("<link/>", 
-            { rel: "stylesheet", href: "http://fonts.googleapis.com/css?family=Roboto:400,300", type: "text/css" }));
-                      
-        $head.append($("<link/>", 
-            { rel: "stylesheet", href: "http://localhost:8888/rr/wp-content/themes/rr/css/marketo.css", type: "text/css" }));
-    });
-  });
+  // If you need to add styles to Marketo, uncomment this
+  // $(".marketo-insight").each(function() {
+  //   $(this).load(function (){
+  //       // do something once the iframe is loaded
+  //       var script=document.createElement('script');
+  // 
+  //       // script=document.standardCreateElement('script');
+  //       // script.src = 'http://localhost:8888/rr/wp-content/themes/rr/js/marketo.js';
+  //       // script.type = 'text/javascript';
+  //       
+  //       var $head = $(this).contents().find("head");      
+  //       
+  //       $head.append(script);
+  //       
+  //       $head.append($("<link/>", 
+  //           { rel: "stylesheet", href: "http://fonts.googleapis.com/css?family=Roboto:400,300", type: "text/css" }));
+  //                     
+  //       $head.append($("<link/>", 
+  //           { rel: "stylesheet", href: "http://localhost:8888/rr/wp-content/themes/rr/css/marketo.css", type: "text/css" }));
+  //   });
+  // });
   
   $('#format-select').click(function(){
     $('#format').show();        
