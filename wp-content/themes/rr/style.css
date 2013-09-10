@@ -198,6 +198,11 @@ section[role="about-us"] .third p {
 	margin:0 auto;
 }
 
+/* Hiding the default image */
+.easingsliderpro-slide.active .easingsliderpro-image {
+  display: none !important;
+}
+
 section[role="about"] h3,section[role="about-us"] h3 {
 	color:#667280;
 	font-size:44px;

@@ -73,5 +73,6 @@
 	  <script type="text/javascript" src="<?php echo plugins_url(); ?>/fancybox-for-wordpress/fancybox/helpers/jquery.fancybox-media.js"></script>
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.isotope.min.js"></script>
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/response.min.js"></script>
+    
 	</body>
 </html>

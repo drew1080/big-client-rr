@@ -73,9 +73,9 @@ $(".nav > ul > li > .sub-menu").removeClass("visible-sm");
         
 	</head>
 
-
-
-	<body <?php body_class(); ?>>
+	<body <?php body_class(); ?>  data-responsejs='{ "create": 
+       {"mode" : "src", "prefix" : "src"}  }
+  '>
 		<!-- wrapper -->
 
 		<div class="wrapper">
