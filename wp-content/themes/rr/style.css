@@ -3187,21 +3187,6 @@ p a.imgpartners:nth-child(4) img {
 
 /* Insights page */
 
-
-.filter-options{
-  text-align: center;
-  font-family: robotocondensed;
-  font-weight: bold;
-}
-.filter-options span{
-  margin-right: 10px;
-  margin-left: 20px;
-  
-}
-.filter-options span:first-child{
-  margin-left: 0px;
-}
-
 section[role="insight"].custom-fancybox-wrapper {
   padding: 10px 0 40px;
 }
@@ -3245,38 +3230,95 @@ span.insight-category-popout {
   font-size: 14px;
 }
 
-.filter-options .selected {
-  background: red;
-}
+
 
 /* Style filters on insights as drop downs*/
+
+.filter-options span{
+  margin-right: 10px;
+  margin-left: 20px;
+  
+}
+.filter-options span:first-child{
+  margin-left: 0px;
+}
 .filter-options{
   position:relative;
+  width: 910px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.filter-options span{
+  float: left;
+  font-family: robotocondensed;
+  font-weight: bold;
+  font-size: 14px;
 }
 .filter-options a {
   text-decoration:none;
 }
-.selector-box {
-  display:block;
-  width:235px;
-  height:20px;
-  border:1px solid #999;
-  padding:5px;
+
+.filter-options .option-set li{
+  list-style: none;
+  height: 30px;
 }
+.selector-box {
+  background: url("http://localhost:8888/rr/wp-content/uploads/2013/09/filter-arrow3.png") no-repeat scroll 0 0 #ffffff;
+  display:block;
+  position: relative;
+  width:170px;
+  height:30px;
+  border:1px solid #f1f3f5;
+  padding:5px 0px 0px 15px;
+  cursor: pointer;
+  font-family: robotolight !important;
+  font-weight: normal !important;
+}
+
+
 .option-set {
   position:absolute;
   top:32px;
-  background:#f1f1f1;
-  width:250px;
+  background:#fafbfc;
+  width:170px;
   display:none;
-  margin-top: -17px;
+  margin-top: -32px;
+  padding: 0px;
+  z-index: 10;
+  -webkit-box-shadow: 0px 6px 10px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 6px 10px rgba(0,0,0,0.2);
+  box-shadow: 0px 6px 10px rgba(0,0,0,0.2);
+  
 }
 .option-set li{
   padding:5px 10px;
-  border-bottom:1px solid #999;
   cursor: pointer;
+  font-family: robotolight;
+  font-weight: normal;
+  font-size: 14px;
 }
 
+.option-set li a{
+  color: #667280;
+}
+
+.option-set li:hover {
+  background-color: #f1f3f5;
+}
+
+.option-set li:hover a {
+  color: #990101;
+}
+
+.option-set li a:hover{
+  color: #990101;
+}
+
+.filer-wrap {
+  width: 170px;
+  float: left;
+}
 
 /**** Isotope Filtering ****/
 
