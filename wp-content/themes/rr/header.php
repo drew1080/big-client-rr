@@ -324,8 +324,13 @@ $(".nav > ul > li > .sub-menu").removeClass("visible-sm");
 			global $blog_id;
 			
       
-      $blog_page_id = get_ID_by_slug('blog/rr-blog');
-      $page_rr_blog = get_page($blog_page_id);
+      if ( $blog_id == 1 ) {
+        $blog_page_id = get_ID_by_slug('blog/rr-blog');
+      } else {
+        $blog_page_id = get_ID_by_slug('engineering-blog');
+      }
+      
+      $page_rr_blog = get_page($blog_page_id);  
       $content = $page_rr_blog->post_content;
       $content = apply_filters('the_content', $page_rr_blog->post_content); 
       

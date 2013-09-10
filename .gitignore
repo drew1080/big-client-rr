@@ -16,3 +16,4 @@ wp-content/bps-backup/
 _notes/
 wp-snapshots/
 *.sh
+error_log
