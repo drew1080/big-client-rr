@@ -948,7 +948,7 @@ section[role="leader"].custom-fancybox-wrapper.board-of-directors ul li a:hover 
 .custom-fancybox-popout-content {
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 345px;
+  /*height: 345px;*/
   margin-top: 20px;
 }
 
