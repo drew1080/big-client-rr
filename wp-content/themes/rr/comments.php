@@ -19,6 +19,12 @@
 	
 <?php endif; ?>
 
-<?php comment_form(); ?>
+<?php 
+$args = array(
+  'title_reply'       => __( 'Leave a Comment' )
+);
+
+comment_form($args); 
+?>
 
 </div>
