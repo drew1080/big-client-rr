@@ -1641,20 +1641,22 @@ li.comment {
 }
 
 h3.comment-reply-title {
-  font-size: 48px;
+  font-size: 44px;
   text-align: center;
+  margin-bottom: 25px;
 }
 
 p.comment-notes {
   font-size: 14px !important;
-  margin: 0 0 30px 0;
+  margin: 0 0 22px 0;
 }
 
 #commentform input, textarea{
   font-family: robotolight;
   width: 100%;
   display: block;
-  margin-top: 20px;
+  margin-top: 12px;
+  line-height: 35px;
 }
 
 #commentform .required{
@@ -1664,7 +1666,7 @@ p.comment-notes {
 }
 
 #commentform label {
-  font-size: 18px;
+  font-size: 20px;
 }
 p.form-allowed-tags {
   display: none;
@@ -1672,7 +1674,7 @@ p.form-allowed-tags {
 
 #commentform input[type=submit] {
 	background-color: #a3aab3;
-  padding:10px 14px;
+  padding:5px 14px;
   color: #ffffff !important;
   margin: 0 0 12px 12px;
   font-family: robotocondensed;
