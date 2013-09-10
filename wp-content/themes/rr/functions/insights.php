@@ -298,21 +298,28 @@ function create_insight_func($atts) {
   );
 	
 	$content .= '<div class="filter-options">
-              <span>FORMAT: </span>
-              <div class="format-wrap filter-wrap"><span id="format-select" class="selector-box">All</span>
-              <ul id="format" class="option-set">
-              ' . wp_list_categories($format_args) . '
-              </ul></div>
-              <span>TOPIC: </span>
-              <div class="topic-wrap filter-wrap"><span id="topic-select" class="selector-box">All</span>
-              <ul id="topic" class="option-set">
-              ' . wp_list_categories($topic_args) . '
-              </ul></div>
-              <span>REGION: </span>
-              <div class="region-wrap filter-wrap"><span id="region-select" class="selector-box">All</span>
-              <ul id="region" class="option-set">
-              ' . wp_list_categories($region_args) . '
-              </ul></div>
+              
+              <div class="format-wrap filter-wrap">
+                <span>FORMAT: </span>
+                <span id="format-select" class="selector-box">All</span>
+                <ul id="format" class="option-set">
+                ' . wp_list_categories($format_args) . '
+                </ul>
+              </div>
+              <div class="topic-wrap filter-wrap">
+                <span>TOPIC: </span>
+                <span id="topic-select" class="selector-box">All</span>
+                <ul id="topic" class="option-set">
+                ' . wp_list_categories($topic_args) . '
+                </ul>
+              </div>
+              <div class="region-wrap filter-wrap">
+                <span>REGION: </span>
+                <span id="region-select" class="selector-box">All</span>
+                <ul id="region" class="option-set">
+                ' . wp_list_categories($region_args) . '
+                </ul>
+              </div>
               </div>
               <div class="clear"></div>
 	            <section role="insight" class="custom-fancybox-wrapper '. esc_attr($class).' '. esc_attr($bg).'">
