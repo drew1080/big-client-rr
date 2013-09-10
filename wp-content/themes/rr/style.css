@@ -1670,6 +1670,24 @@ p.form-allowed-tags {
   display: none;
 }
 
+#commentform input[type=submit] {
+	background-color: #a3aab3;
+  padding:10px 14px;
+  color: #ffffff !important;
+  margin: 0 0 12px 12px;
+  font-family: robotocondensed;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+  border: none;
+  float: right;
+  width: 85px;
+}
+#commentform input[type=submit]:hover {
+	background-color: #990101;
+	text-decoration: none;
+}
+
 /** Submenu **/
 
 	.subnav {
