@@ -3237,6 +3237,39 @@ span.insight-category-popout {
   font-size: 14px;
 }
 
+.filter-options .selected {
+  background: red;
+}
+
+/* Style filters on insights as drop downs*/
+.filter-options{
+  position:relative;
+}
+.filter-options a {
+  text-decoration:none;
+}
+.selector-box {
+  display:block;
+  width:235px;
+  height:20px;
+  border:1px solid #999;
+  padding:5px;
+}
+.option-set {
+  position:absolute;
+  top:32px;
+  background:#f1f1f1;
+  width:250px;
+  display:none;
+  margin-top: -17px;
+}
+.option-set li{
+  padding:5px 10px;
+  border-bottom:1px solid #999;
+  cursor: pointer;
+}
+
+
 /**** Isotope Filtering ****/
 
 .isotope-item {
