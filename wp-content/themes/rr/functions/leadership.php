@@ -226,6 +226,17 @@ function create_leadership_func($atts) {
     	//$onmouseover = "onmouseover=\"this.src='" . $item["hover_image"]  . "'\" ";
     	//$onmouseout = "onmouseout=\"this.src='" . $item["thumbnail"]  . "'\"";
     	
+    	$linkedin_li = '';
+    	$twitter_li = '';
+    	
+    	if ( $item["linkedin"] != "" ) {
+    	  $linkedin_li = '<li class="li"><a href="' . $item["linkedin"]  . '" target="_blank" title="Linkedin">Linkedin</a></li>';
+    	}
+    	
+    	if ( $item["twitter"] != "" ) {
+    	  $twitter_li = '<li class="tw"><a href="' . $item["twitter"]  . '" target="_blank" title="Twitter">Twitter</a></li>';
+    	}
+    	
 			$lis .= '<li ' . $last_class . ' >
                 <a class="leader-popouts" rel="leaders" href="#leader-' . $atts['cat'] . '-'. $key . '" style="background-image: url(' . $item["thumbnail"]  . ')">
                 </a>
@@ -235,8 +246,8 @@ function create_leadership_func($atts) {
                   <div class="custom-fancybox-popout-left">
                     <span class="custom-fancybox-thumbnail" style="background-image: url(' . $item["thumbnail"]  . ')"></span>
                       <ul class="social">
-                    	  <li class="li"><a href="' . $item["linkedin"]  . '" target="_blank" title="Linkedin">Linkedin</a></li>
-                        <li class="tw"><a href="' . $item["twitter"]  . '" target="_blank" title="Twitter">Twitter</a></li>
+                        ' . $linkedin_li . '
+                    	  ' . $twitter_li . '
                       </ul>
                   </div>
                   <div class="custom-fancybox-popout-right">
