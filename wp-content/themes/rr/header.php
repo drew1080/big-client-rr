@@ -82,7 +82,7 @@
             <div class="search-form">Search
               <?php get_search_form(); ?>
             </div>
-            <a href="#" title="Chat" class="chat">Chat</a>
+            <a href="<?php echo get_permalink( get_ID_by_slug( 'contact-us')); ?>" title="Chat" class="chat">Chat</a>
             <!--ul class="langs">
 <li class="padre"><a href="#" title="USA">USA</a>
 <ul>
