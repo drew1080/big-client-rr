@@ -205,8 +205,9 @@ section[role="about-us"] .third p {
 
 section[role="about"] h2,section[role="about-us"] h2 {
 	font-family: robotolight;
-	font-size: 50px;
+	font-size: 44px;
 	text-align: center;
+	margin: 0.78em;
 }
 
 section[role="about"] h3,section[role="about-us"] h3 {
@@ -3211,8 +3212,25 @@ p a.imgpartners:nth-child(4) img {
    .category .slider h1.entry-title {
      font-size: 3.0em;
    }
+   
+   /*Responsive for dropdown filtering on insights page*/
 
+  .filter-options span {
+    float: none !important;
+  }
+  
+  .filter-options {
+    width: 170px !important;
+  }
+  
+  .selector-box {
+    margin-bottom: 15px !important;
+  }
+  
+ 
 }
+
+
 
 @media only screen and (max-width:400px) {
    section[role="about"] p,
@@ -3251,21 +3269,6 @@ p a.imgpartners:nth-child(4) img {
 }	  
 
 /* Insights page */
-
-
-.filter-options{
-  text-align: center;
-  font-family: robotocondensed;
-  font-weight: bold;
-}
-.filter-options span{
-  margin-right: 10px;
-  margin-left: 20px;
-  
-}
-.filter-options span:first-child{
-  margin-left: 0px;
-}
 
 section[role="insight"].custom-fancybox-wrapper {
   padding: 10px 0 40px;
@@ -3310,37 +3313,105 @@ span.insight-category-popout {
   font-size: 14px;
 }
 
-.filter-options .selected {
-  background: red;
-}
+
 
 /* Style filters on insights as drop downs*/
+
+}
+.filter-options span:first-child{
+  margin-left: 0px;
+}
 .filter-options{
   position:relative;
+  width: 636px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.filter-options span{
+  float: left;
+  font-family: robotocondensed;
+  font-weight: bold;
+  font-size: 14px;
+  padding-top: 5px;
+  margin-right: 10px;
 }
 .filter-options a {
   text-decoration:none;
 }
-.selector-box {
-  display:block;
-  width:235px;
-  height:20px;
-  border:1px solid #999;
-  padding:5px;
+
+.filter-options .option-set li{
+  list-style: none;
+  height: 30px;
 }
+.selector-box {
+  background: url("/wp-content/uploads/2013/09/filter-arrow3.png") no-repeat scroll 0 0 #ffffff;
+  display:block;
+  position: relative;
+  width:170px;
+  height:30px;
+  border:1px solid #f1f3f5;
+  padding:5px 0px 0px 15px;
+  cursor: pointer;
+  font-family: robotolight !important;
+  font-weight: normal !important;
+  margin-right: 20px !important;
+}
+#format-select.selector-box{
+  background: url("/wp-content/uploads/2013/09/filter-arrow-short.png") no-repeat scroll 0 0 #ffffff;
+  width: 110px;
+}
+#region-select.selector-box{
+  background: url("/wp-content/uploads/2013/09/filter-arrow-short.png") no-repeat scroll 0 0 #ffffff;
+  width: 110px;
+}
+
 .option-set {
   position:absolute;
   top:32px;
-  background:#f1f1f1;
-  width:250px;
+  background:#fafbfc;
+  width:170px;
   display:none;
-  margin-top: -17px;
+  margin-top: -32px;
+  padding: 0px;
+  z-index: 10;
+  -webkit-box-shadow: 0px 6px 10px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 6px 10px rgba(0,0,0,0.2);
+  box-shadow: 0px 6px 10px rgba(0,0,0,0.2);
+  
 }
+
+#format.option-set {
+  width: 110px;
+}
+#region.option-set {
+  width: 110px;
+}
+
 .option-set li{
-  padding:5px 10px;
-  border-bottom:1px solid #999;
+  padding:5px 0 0 15px;
   cursor: pointer;
+  font-family: robotolight;
+  font-weight: normal;
+  font-size: 14px;
 }
+
+.option-set li a{
+  color: #667280;
+}
+
+.option-set li:hover {
+  background-color: #f1f3f5;
+}
+
+.option-set li:hover a {
+  color: #990101;
+}
+
+.option-set li a:hover{
+  color: #990101;
+}
+
 
 
 /**** Isotope Filtering ****/

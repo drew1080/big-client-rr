@@ -35,15 +35,27 @@ $(function() {
   //   });
   // });
   
+  $('body').bind('click', function(e) {
+    if($(e.target).closest('#format-select').length == 0
+    && $(e.target).closest('#topic-select').length == 0
+    && $(e.target).closest('#region-select').length == 0) {
+      // click happened outside of menu, hide any visible menu items
+      hideFilterDropdowns();  
+    }
+  });
+  
   $('#format-select').click(function(){
+    hideFilterDropdowns();
     $('#format').show();        
   });
   
   $('#topic-select').click(function(){
+    hideFilterDropdowns();
     $('#topic').show();        
   });
   
   $('#region-select').click(function(){
+    hideFilterDropdowns();
     $('#region').show();        
   });
 	
@@ -104,6 +116,12 @@ $(function() {
     $container.isotope({ filter: selector });
     
     return false;
+  }
+  
+  function hideFilterDropdowns() {
+    $('#format').hide(); 
+    $('#topic').hide(); 
+    $('#region').hide(); 
   }
   
 });
