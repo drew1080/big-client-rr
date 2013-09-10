@@ -271,43 +271,69 @@ function create_insight_func($atts) {
 	}
 	
 	$format_args = array(
-	  'show_option_all'    => 'All',
-	  'id'        => 'format',
-	  'class'     => 'option-set',
+    'show_option_all'    => 'All',
+	  'title_li'           => __( '' ),
+    // 'id'        => 'format',
+    // 'class'     => 'option-set',
     'taxonomy'  => 'rr-format',
     'echo' => 0
   );
   
   $topic_args = array(
-	  'show_option_all'    => 'All',
-	  'id'        => 'topic',
-	  'class'     => 'option-set',
+    'show_option_all'    => 'All',
+	  'title_li'           => __( '' ),
+    // 'id'        => 'topic',
+    // 'class'     => 'option-set',
     'taxonomy'  => 'rr-topic',
     'echo' => 0
   );
   
   $region_args = array(
-	  'show_option_all'    => 'All',
-	  'id'        => 'region',
-	  'class'     => 'option-set',
+    'show_option_all'    => 'All',
+	  'title_li'           => __( '' ),
+    // 'id'        => 'region',
+    // 'class'     => 'option-set',
     'taxonomy'  => 'rr-region',
     'echo' => 0
   );
 	
-	$content .= '<div class="filter-options">
-              <span>FORMAT: </span>
-              ' . wp_dropdown_categories($format_args) . '
-              <span>TOPIC: </span>
-              ' . wp_dropdown_categories($topic_args) . '
-              <span>REGION: </span>
-              ' . wp_dropdown_categories($region_args) . '
+  $content .= '<div class="filter-options">
+
+              <div class="format-wrap filter-wrap">
+                <span>FORMAT: </span>
+                <div class="format-dropdown insight-dropdown">
+                  <span id="format-select" class="selector-box">All</span>
+                  <ul id="format" class="option-set">
+                  ' . wp_list_categories($format_args) . '
+                  </ul>
+                </div>
               </div>
-	            <section role="insight" class="custom-fancybox-wrapper '. esc_attr($class).' '. esc_attr($bg).'">
-	              <div id="insights" class="wrap">
-	                <h3>'. esc_attr($title).'</h3>
-	                <ul>' . $lis . '</ul>
-	              </div>
-	              <div class="clear"></div></section>';
+              <div class="topic-wrap filter-wrap">
+                <span>TOPIC: </span>
+                <div class="topic-dropdown insight-dropdown">
+                  <span id="topic-select" class="selector-box">All</span>
+                  <ul id="topic" class="option-set">
+                  ' . wp_list_categories($topic_args) . '
+                  </ul>
+                </div>
+              </div>
+              <div class="region-wrap filter-wrap">
+                <span>REGION: </span>
+                <div class="region-dropdown insight-dropdown">
+                  <span id="region-select" class="selector-box">All</span>
+                  <ul id="region" class="option-set">
+                  ' . wp_list_categories($region_args) . '
+                  </ul>
+                </div>
+              </div>
+              </div>
+              <div class="clear"></div>
+              <section role="insight" class="custom-fancybox-wrapper '. esc_attr($class).' '. esc_attr($bg).'">
+                <div id="insights" class="wrap">
+                  <h3>'. esc_attr($title).'</h3>
+                  <ul>' . $lis . '</ul>
+                </div>
+                <div class="clear"></div></section>';
 	
 	/* $html = '<section role="'.$atts['role'].'" class="' . esc_attr($bg) . ' ' . esc_attr($align) . '" ><div class="wrap" >'.do_shortcode($content).'</div><div class="' . esc_attr($class) . '"></div></section>'; */
 	
