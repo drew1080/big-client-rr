@@ -12,6 +12,29 @@ $(function() {
 			}
 		}
 	}
+  
+  $(".marketo-insight").each(function() {
+    $(this).load(function (){
+        // do something once the iframe is loaded
+        var script=document.createElement('script');
+
+        // script=document.standardCreateElement('script');
+        // script.src = 'http://localhost:8888/rr/wp-content/themes/rr/js/marketo.js';
+        // script.type = 'text/javascript';
+        
+        var $head = $(this).contents().find("head");      
+        
+        $head.append(script);
+        
+        $head.append($("<link/>", 
+            { rel: "stylesheet", href: "http://fonts.googleapis.com/css?family=Roboto:400,300", type: "text/css" }));
+                      
+        $head.append($("<link/>", 
+            { rel: "stylesheet", href: "http://localhost:8888/rr/wp-content/themes/rr/css/marketo.css", type: "text/css" }));
+    });
+  });
+  
+  
 	
   var $container = $('#insights');
   var filters = {};
@@ -42,30 +65,6 @@ $(function() {
     
     selector = isoFilters.join('');
     $container.isotope({ filter: selector });
-    
-    // var $this = $(this);
-    //     // don't proceed if already selected
-    //     if ( $this.hasClass('selected') ) {
-    //       return;
-    //     }
-    //     
-    //     var $optionSet = $this.parents('.option-set');
-    //     // change selected class
-    //     $optionSet.find('.selected').removeClass('selected');
-    //     $this.addClass('selected');
-    //     
-    //     // store filter value in object
-    //     // i.e. filters.color = 'red'
-    //     var group = $optionSet.attr('data-filter-group');
-    //     filters[ group ] = $this.attr('data-filter-value');
-    //     // convert object into array
-    //     var isoFilters = [];
-    //     for ( var prop in filters ) {
-    //       isoFilters.push( filters[ prop ] )
-    //     }
-    //     var selector = isoFilters.join('');
-    //     $container.isotope({ filter: selector });
-    
     
     return false;
   });
