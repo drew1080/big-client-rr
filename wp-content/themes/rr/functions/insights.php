@@ -299,17 +299,17 @@ function create_insight_func($atts) {
 	
 	$content .= '<div class="filter-options">
               <span>FORMAT: </span>
-              <div class="format-wrap filer-wrap"><span id="format-select" class="selector-box">All</span>
+              <div class="format-wrap filter-wrap"><span id="format-select" class="selector-box">All</span>
               <ul id="format" class="option-set">
               ' . wp_list_categories($format_args) . '
               </ul></div>
               <span>TOPIC: </span>
-              <div class="topic-wrap filer-wrap"><span id="topic-select" class="selector-box">All</span>
+              <div class="topic-wrap filter-wrap"><span id="topic-select" class="selector-box">All</span>
               <ul id="topic" class="option-set">
               ' . wp_list_categories($topic_args) . '
               </ul></div>
               <span>REGION: </span>
-              <div class="region-wrap filer-wrap"><span id="region-select" class="selector-box">All</span>
+              <div class="region-wrap filter-wrap"><span id="region-select" class="selector-box">All</span>
               <ul id="region" class="option-set">
               ' . wp_list_categories($region_args) . '
               </ul></div>

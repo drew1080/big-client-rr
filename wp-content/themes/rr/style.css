@@ -200,8 +200,9 @@ section[role="about-us"] .third p {
 
 section[role="about"] h2,section[role="about-us"] h2 {
 	font-family: robotolight;
-	font-size: 50px;
+	font-size: 44px;
 	text-align: center;
+	margin: 0.78em;
 }
 
 section[role="about"] h3,section[role="about-us"] h3 {
@@ -3244,7 +3245,7 @@ span.insight-category-popout {
 }
 .filter-options{
   position:relative;
-  width: 910px;
+  width: 625px;
   margin: 0 auto;
   text-align: left;
 }
@@ -3254,6 +3255,7 @@ span.insight-category-popout {
   font-family: robotocondensed;
   font-weight: bold;
   font-size: 14px;
+  padding-top: 5px;
 }
 .filter-options a {
   text-decoration:none;
@@ -3275,7 +3277,14 @@ span.insight-category-popout {
   font-family: robotolight !important;
   font-weight: normal !important;
 }
-
+#format-select.selector-box{
+  background: url("http://localhost:8888/rr/wp-content/uploads/2013/09/filter-arrow-short.png") no-repeat scroll 0 0 #ffffff;
+  width: 110px;
+}
+#region-select.selector-box{
+  background: url("http://localhost:8888/rr/wp-content/uploads/2013/09/filter-arrow-short.png") no-repeat scroll 0 0 #ffffff;
+  width: 110px;
+}
 
 .option-set {
   position:absolute;
@@ -3291,8 +3300,16 @@ span.insight-category-popout {
   box-shadow: 0px 6px 10px rgba(0,0,0,0.2);
   
 }
+
+#format.option-set {
+  width: 110px;
+}
+#region.option-set {
+  width: 110px;
+}
+
 .option-set li{
-  padding:5px 10px;
+  padding:5px 0 0 15px;
   cursor: pointer;
   font-family: robotolight;
   font-weight: normal;
@@ -3315,9 +3332,13 @@ span.insight-category-popout {
   color: #990101;
 }
 
-.filer-wrap {
-  width: 170px;
+.filter-wrap {
+  width: 110px;
   float: left;
+}
+
+.topic-wrap {
+  width: 170px;
 }
 
 /**** Isotope Filtering ****/
