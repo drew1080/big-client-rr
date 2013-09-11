@@ -38,12 +38,21 @@ if (!is_single() && !is_search() && !is_category() && !is_archive()) {
 <section role="circles" class="white ">
   <div class="wrap">
     <nav class="oldernewer">  
+      <? if ( is_search() ) { ?>
       <div class="newer">	
       <?php previous_posts_link('<img src="' . get_template_directory_uri() . '/img/nav-previous_results.png">') ?>  
       </div><!--.newer-->
       <div class="older">		
       <?php next_posts_link('<img src="' . get_template_directory_uri() . '/img/nav-more_results.png">') ?>   
       </div>
+      <? } else { ?>
+      <div class="newer">	
+      <?php previous_posts_link('<img src="' . get_template_directory_uri() . '/img/nav-newer-entries.png">') ?>
+      </div><!--.newer-->
+      <div class="older">		
+      <?php next_posts_link('<img src="' . get_template_directory_uri() . '/img/nav-older-entries.png">') ?>  
+      </div>
+      <? } ?> 
       <!--.older-->   
     </nav><!--.oldernewer-->
   </div>
