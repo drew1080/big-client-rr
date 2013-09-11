@@ -74,7 +74,7 @@
           <div class="logo">
             <a href="<?php echo home_url(); ?>" class="a-logo">
               <!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-              <img src="<?php echo get_template_directory_uri(); ?>/img/logo_new.png" alt="Rich Relevance" class="logo-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/logo_new.png" alt="RichRelevance" class="logo-img">
             </a>
           </div>
           <!-- /logo -->
@@ -156,7 +156,7 @@ if ( is_search() ) {
   $content = str_replace('Blog', $current_category, $content);
   echo $content;
 } else if ( is_archive() && !is_author() ) {
-  $current_archive = wp_title('', false);
+  $current_archive = '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'twentytwelve' ) ) . '</span>';
   $content = str_replace('Blog', $current_archive, $content);
   echo $content;
 } else if ( $blog_id == 2 ) {

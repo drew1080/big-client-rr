@@ -523,7 +523,7 @@ function icon_box_func($atts, $content = null) {
 function add_header_image_func($atts, $content = null) {
   extract( shortcode_atts( array(
     'class' => '',
-		'title' => 'Rich Relevance',
+		'title' => '',
 		'excerpt' => '',
 		'image_url' => ''), $atts ) );
 		
