@@ -231,7 +231,7 @@ section[role="about-us"] p {
 	font-size:18px;
 	line-height:30px;
 	font-family:robotolight;
-	padding:0 27px 0 0;
+	padding:0 27px 40px 0;
 	border-right:1px solid #e4e6e8;
 }
 
@@ -3358,6 +3358,15 @@ span.insight-category-popout {
 }
 
 @media only screen and (max-width:960px) {
+  
+   section[role="about"] {
+    background: none;
+  }
+  section[role="about"] p {
+    border-right: none;
+    max-width: 100%;
+  }
+  
   .custom-fancybox-wrapper ul {
     text-align: center;
   }
@@ -3532,6 +3541,11 @@ span.insight-category-popout {
    section[role="about-us"] p {
      font-size: 18px;
    }
+   
+   section[role="about"] h3, section[role="about-us"] h3 {
+      font-size: 38px;
+    }
+    
    .slider h1.entry-title {
      font-size: 4em;
    }
@@ -3550,9 +3564,6 @@ span.insight-category-popout {
 }
 
 @media only screen and (max-width:320px) {
-  section[role="about"] h3, section[role="about-us"] h3 {
-    font-size: 38px;
-  }
   
   .slider.long h1 {
     font-size: 3.2em;
