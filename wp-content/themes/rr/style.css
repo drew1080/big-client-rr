@@ -952,6 +952,15 @@ section[role="leader"].custom-fancybox-wrapper.board-of-directors ul li a:hover 
   margin-top: 20px;
 }
 
+.insights .custom-fancybox-popout-content {
+  height: 180px;
+}
+
+/* 515px */
+.marketo-insight {
+  height: 475px;
+}
+
 .custom-fancybox-popout-right h4 {
   font-family: robotolight;
   font-size: 28px;
