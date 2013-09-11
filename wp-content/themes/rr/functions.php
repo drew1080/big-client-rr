@@ -514,7 +514,7 @@ function icon_box_func($atts, $content = null) {
   							' . $video_html . '
   						</div>
   					</li>
-  				</ul>';
+  				</ul><div class="clear"></div>';
   				
   return $html; 
 }

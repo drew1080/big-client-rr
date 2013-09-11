@@ -1,0 +1,300 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-04 15:24+0200\n"
+"PO-Revision-Date: 2013-07-04 15:26+0200\n"
+"Last-Translator: Nsp-Code <electronice_delphi@yahoo.com>\n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.5.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../include/licence.php:19 ../include/licence.php:26
+msgid "Advanced Post Types Order plugin is inactive, please enter your"
+msgstr ""
+"El plugin Advanced Post Types Order esta inactivo, por favor ingrese su"
+
+#: ../include/licence.php:19 ../include/licence.php:26
+msgid "Licence Key"
+msgstr "Clave de Licencia"
+
+#: ../include/licence.php:242 ../include/licence.php:287
+#: ../include/licence.php:328 ../include/options.php:22
+msgid "General Settings"
+msgstr "Ajustes Generales"
+
+#: ../include/licence.php:246 ../include/licence.php:293
+#: ../include/licence.php:330
+msgid "Software License"
+msgstr "Licencia de software"
+
+#: ../include/licence.php:260
+#, fuzzy
+msgid ""
+"Enter the License Key you got when bought this product. If you lost the key, "
+"you can always retrieve it from"
+msgstr ""
+"Ingrese su Clave de Licencia la cual recibió cuando adquirió este producto. "
+"Si pierde la clave, siempre la puede recuperar desde"
+
+#: ../include/licence.php:261
+msgid "More keys can be generate from"
+msgstr ""
+
+#: ../include/licence.php:270
+msgid "Save"
+msgstr "Guardar"
+
+#: ../include/licence.php:301
+msgid "License Key"
+msgstr "Clave de Licencia"
+
+#: ../include/licence.php:306 ../include/licence.php:338
+#, fuzzy
+msgid "You can generate more keys from"
+msgstr "Puede generar más claves desde"
+
+#: ../include/licence.php:337
+msgid ""
+"Enter your License Key that you got when bought this product. If you lost "
+"the key, you can always retrieve that from"
+msgstr ""
+"Ingrese su Clave de Licencia la cual recibió cuando adquirió este producto. "
+"Si pierde la clave, siempre la puede recuperar desde"
+
+#: ../include/options.php:32
+msgid "Allow reorder"
+msgstr "Permitir reordenar"
+
+#: ../include/options.php:74
+msgid "General"
+msgstr "General"
+
+#: ../include/options.php:79
+msgid "Minimum Level to use this plugin"
+msgstr "Mínimo nivel para usar este plugin"
+
+#: ../include/options.php:82
+msgid "Subscriber"
+msgstr "Suscriptor"
+
+#: ../include/options.php:83
+msgid "Contributor"
+msgstr "Colaborador"
+
+#: ../include/options.php:84
+msgid "Author"
+msgstr "Autor"
+
+#: ../include/options.php:85
+msgid "Editor"
+msgstr "Editor"
+
+#: ../include/options.php:86
+msgid "Administrator"
+msgstr "Administrador"
+
+#: ../include/options.php:93
+msgid "Auto Sort"
+msgstr "Orden automático"
+
+#: ../include/options.php:98
+msgid ""
+"<b>OFF</b> - If checked, you will need to manually update the queries to use "
+"the menu_order"
+msgstr ""
+"<b>APAGADO</b> - Si se marca, tendrá que actualizar manualmente las "
+"consultas (queries) para utilizar: menu_order"
+
+#: ../include/options.php:100 ../include/options.php:143
+#: ../include/options.php:172
+msgid "Show Example"
+msgstr "Ver Ejemplo"
+
+#: ../include/options.php:103
+msgid "You must include a 'orderby' parameter with value as 'menu_order'"
+msgstr "Debe incluir un parámetro 'orderby' con un valor 'menu_order '"
+
+#: ../include/options.php:129
+msgid ""
+"<b>ON</b> - If checked, the plug-in will automatically update the wp-queries "
+"to use the new order (<b>No code update is necessarily</b>)."
+msgstr ""
+"<b>ENCENDIDO</ b> - Si se marca, el plugin actualizará automáticamente el "
+"'wp-queries' para utilizar el nuevo orden (<b> No es necesario actualizar el "
+"código </ b>)."
+
+#: ../include/options.php:141
+msgid ""
+"<b>ON/Custom</b> - If checked, the plug-in will automatically update the wp-"
+"queries to use the new order, but if a query already contain a 'orderby' "
+"parameter then this will be used instead."
+msgstr ""
+"<b>ENCENDIDO/Personalizado</ b> - Si se marca, el plugin actualizará "
+"automáticamente el 'wp-queries' para utilizar el nuevo orden, pero si una "
+"consulta 'query' ya contiene un parámetro 'orderby' entonces esto va a ser "
+"utilizado en su lugar."
+
+#: ../include/options.php:146
+msgid "The following code will return the posts ordered by title"
+msgstr "El siguiente código devolverá las entradas ordenadas por título"
+
+#: ../include/options.php:167
+msgid "Ignore Sticky Posts"
+msgstr "Ignorar Entradas Fijas"
+
+#: ../include/options.php:171
+msgid "Ignore Sticky Posts when Auto Sort is ON."
+msgstr "Ignorar Entradas Fijas cuando el Orden Automático esté ENCENDIDO"
+
+#: ../include/options.php:172
+msgid ""
+"You can overwrite this from code using the 'ignore_sticky_posts' within your "
+"query"
+msgstr ""
+"Puede sobrescribir esto desde el código usando 'ignore_sticky_posts' dentro "
+"de su consulta 'query'"
+
+#: ../include/options.php:175
+msgid ""
+"The following code will return the Stiky posts first even if the Autosort is "
+"ON"
+msgstr ""
+"El siguiente código devuelve los Mensajes Fijos primero aunque el Orden "
+"Automático este ENCENDIDO"
+
+#: ../include/options.php:195
+msgid "Admin Sort"
+msgstr "Orden de Administrador"
+
+#: ../include/options.php:199
+msgid ""
+"To update the admin interface and see the post types per your new sort, this "
+"need to be checked"
+msgstr ""
+"Para actualizar la interfaz de administrador y ver los tipos de entradas por "
+"su nuevo orden, esto debe estar marcado"
+
+#: ../include/options.php:204
+msgid "Feed Sort"
+msgstr "Order de Feed"
+
+#: ../include/options.php:208
+msgid ""
+"Use defined order when gernerate a feed. Leave unchecked to use the default "
+"date order"
+msgstr ""
+"Utiliza un orden definido cuando gernerate un feed. Dejar sin marcar para "
+"utilizar el orden predeterminado por fecha"
+
+#: ../include/options.php:213 ../include/reorder-class.php:725
+msgid "Toggle Thumbnails"
+msgstr "Alternar Miniaturas"
+
+#: ../include/options.php:217
+msgid "Always show the Thumbnails within the re-order interface"
+msgstr "Siempre muestra las Miniaturas dentro de la interfaz reordenar"
+
+#: ../include/options.php:222
+msgid "Ignore Suppress Filters"
+msgstr "pasar por alto  Suppress Filters"
+
+#: ../include/options.php:226
+msgid ""
+"Set FALSE the <b>suppress_filters</b> for get_posts() default function. Use "
+"this feature if Autosort will not work with you, otherwise you should leave "
+"un-checked."
+msgstr ""
+"Establecer FALSO <b> suppress_filters </ b> para get_posts () función "
+"predeterminada. Utilice esta función si Autosort no funcionará con usted, si "
+"usted debe dejar desmarcado."
+
+#: ../include/options.php:232
+msgid "bbPress Replies"
+msgstr "respuestas bbPress"
+
+#: ../include/options.php:236
+msgid "Reverse the order of bbPress replies, show newest posts first"
+msgstr ""
+"Revertir el orden de las respuestas bbPress, mostrar entradas más nuevas "
+"primero"
+
+#: ../include/options.php:245
+msgid "Save Settings"
+msgstr "Guardar Ajustes"
+
+#: ../include/reorder-class.php:247
+msgid " -  Re-order"
+msgstr " -  Re-ordenar"
+
+#: ../include/reorder-class.php:253
+msgid ""
+"This plugin can't work without javascript, because it's use drag and drop "
+"and AJAX."
+msgstr ""
+"Este plugin no funciona sin javascript, porque usa arrastrar y soltar y AJAX"
+
+#: ../include/reorder-class.php:412
+msgid "Archive & Taxonomies"
+msgstr "Archivo & Taxonomías"
+
+#: ../include/reorder-class.php:416 ../include/reorder-class.php:420
+msgid "Archive"
+msgstr "Archivo"
+
+#: ../include/reorder-class.php:416 ../include/reorder-class.php:432
+#: ../include/reorder-class.php:437
+msgid "Total"
+msgstr "Total"
+
+#: ../include/reorder-class.php:416
+msgid "Archive Posts"
+msgstr "Entradas de Archivo"
+
+#: ../include/reorder-class.php:432 ../include/reorder-class.php:437
+msgid "Taxonomy Title"
+msgstr "Título de Taxonomia"
+
+#: ../include/reorder-class.php:432 ../include/reorder-class.php:437
+msgid "Posts"
+msgstr "Entradas"
+
+#: ../include/reorder-class.php:688
+msgid "Show all dates"
+msgstr "Mostrar todos los datos"
+
+#: ../include/reorder-class.php:689
+msgid "Today"
+msgstr "Hoy"
+
+#: ../include/reorder-class.php:690
+msgid "Yesterday"
+msgstr "Ayer"
+
+#: ../include/reorder-class.php:691
+msgid "Last Week"
+msgstr "Ultima semana"
+
+#: ../include/reorder-class.php:734 ../include/reorder-class.php:786
+msgid "Update"
+msgstr "Actualizar"
+
+#: ../include/reorder-class.php:799
+msgid "Reset Order"
+msgstr "Restablecer Orden"
+
+#: ../include/reorder-class.php:805
+msgid "Are you sure you want to reset the order??"
+msgstr "Está seguro que desea restablecer el orden??"
+
+#: ../include/reorder-class.php:860
+msgid "Items Order Updated"
+msgstr "Orden de Items Actualizado"
