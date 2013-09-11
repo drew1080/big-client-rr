@@ -2993,10 +2993,10 @@ display:block;
 	.desplegar-menu{
 		right:34px;
 	}
-	section[role="explore"] .wrap{
+/*  section[role="explore"] .wrap{
     width:70%;
     margin: 0 auto;
-    }
+    }*/
         
   .technology p.button a {
     display: block !important;
