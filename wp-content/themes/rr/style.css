@@ -2949,7 +2949,13 @@ display:block;
   .slider.long p {
     font-size: 1.6em;
   }
+  
+  section[role="about"] h3, section[role="about-us"] h3 {
+    font-size: 38px;
+  }
 }
+
+
 
 @media only screen and (max-width:400px) {
    section[role="about"] p,
@@ -2957,11 +2963,11 @@ display:block;
      font-size: 18px;
    }
    .slider h1.entry-title {
-     font-size: 5em;
+     font-size: 4em;
    }
    
    .slider.long h1 {
-     font-size: 4.2em;
+     font-size: 4em;
    }
    .slider.with-excerpt h1 {
     /* line-height: 1.1em; */
