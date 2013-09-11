@@ -47,10 +47,10 @@ if (!is_single() && !is_search() && !is_category() && !is_archive()) {
   <div class="wrap">
     <nav class="oldernewer">  
       <div class="newer">	
-      <?php previous_posts_link('<img src="/wp-content/uploads/2013/09/nav-newer-entries.png">') ?>  
+      <?php previous_posts_link('<img src="<?php echo get_template_directory_uri(); ?>/img/nav-more_results.png">') ?>  
       </div><!--.newer-->
       <div class="older">		
-      <?php next_posts_link('<img src="/wp-content/uploads/2013/09/nav-older-entries.png">') ?>   
+      <?php next_posts_link('<img src="<?php echo get_template_directory_uri(); ?>/img/nav-previous_results.png">') ?>   
       </div>
       <!--.older-->   
     </nav><!--.oldernewer-->
