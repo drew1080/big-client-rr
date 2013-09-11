@@ -3560,6 +3560,9 @@ span.insight-category-popout {
   .slider.long p {
     font-size: 1.6em;
   }
+  .category .slider h1.entry-title {
+    font-size: 2.4em;
+  }
 }
 
 /* END MEDIA QUERIES */
