@@ -156,7 +156,7 @@ if ( is_search() ) {
   $content = str_replace('Blog', $current_category, $content);
   echo $content;
 } else if ( is_archive() && !is_author() ) {
-  $current_archive = wp_title('', false);
+  $current_archive = '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'twentytwelve' ) ) . '</span>';
   $content = str_replace('Blog', $current_archive, $content);
   echo $content;
 } else if ( $blog_id == 2 ) {

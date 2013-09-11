@@ -344,8 +344,15 @@ section[role="customers"] h3,section[role="rr-number"] h3 {
 	text-align:center;
 	margin:0 0 55px;
 }
-
 section[role="about-us"] h5 {
+	color:#667280;
+	font-family:robotolight;
+	font-size:30px;
+	margin-bottom:35px;
+	text-align:center;
+}
+
+.insights section[role="about-us"] h5 {
 	color:#667280;
 	font-family:robotothin;
 	font-size:30px;
