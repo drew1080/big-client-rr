@@ -85,6 +85,7 @@ function customize_text_sizes($initArray){
    $initArray['theme_advanced_font_sizes'] = "12px,14px,16px,18px,20px,22px,24px,28px,40px,44px";
    $initArray['theme_advanced_fonts'] =
    		'Roboto Condensed=robotocondensed, sans-serif;'.
+   		'Roboto Thin=robotothin, sans-serif;'.
    		'Roboto Light=robotolight, sans-serif;'.
    		'Roboto Regular=robotoregular, sans-serif;'.
    		'Roboto Bold=robotobold, sans-serif;'.
