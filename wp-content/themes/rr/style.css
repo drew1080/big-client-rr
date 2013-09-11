@@ -2233,13 +2233,13 @@ display:block;
 
 
 @media only screen and (max-width:320px) {
-	section[role="explore"] .wrap p{
-		margin-left: 42px;
-	}
-        section[role="explore"] .wrap{
-      max-width: 960px;
-      margin:0 auto;
-      }
+	/*section[role="explore"] .wrap p{
+	   margin-left: 42px;
+	 }*/
+  section[role="explore"] .wrap{
+  max-width: 960px;
+  margin:0 auto;
+  }
 }
 @media only screen and (max-width:480px) {
 	.a-logo{
@@ -2255,21 +2255,16 @@ display:block;
 	.desplegar-menu{
 		right:34px;
 	}
-	section[role="explore"] .wrap{
-    width:70%;
-    margin: 0 auto;
-    }
+	/*section[role="explore"] .wrap{
+	    width:70%;
+	    margin: 0 auto;
+	    }*/
         
   .technology p.button a {
     display: block !important;
   }
 }
-@media only screen and (max-width:320px) {	
-        section[role="explore"] .wrap{
-      max-width: 960px;
-      margin:0 auto;
-      }
-}
+
 @media (max-width: 767px){
        section[role="main"] article {
          margin: 0 auto;
