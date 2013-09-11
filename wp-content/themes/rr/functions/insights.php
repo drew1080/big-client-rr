@@ -247,7 +247,7 @@ function create_insight_func($atts) {
                         </div>
                       </li>';
               break;
-          case "INFOGRAPHICS":
+          case "INFOGRAPHIC":
               $lis .= '<li ' . $last_class . ' >
                         <a class="item ' . $item["format_id"] . ' ' . $item["topic_ids"] . ' ' . $item["region_ids"] . '" target="_blank" href="' . $item["infographic_url"] . '" style="background-image: url(' . $item["thumbnail"]  . ')">
                           <span class="tagline">' . $item["format"]  . '</span>
