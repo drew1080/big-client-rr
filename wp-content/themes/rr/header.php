@@ -74,7 +74,7 @@
           <div class="logo">
             <a href="<?php echo home_url(); ?>" class="a-logo">
               <!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-              <img src="<?php echo get_template_directory_uri(); ?>/img/logo_new.png" alt="Rich Relevance" class="logo-img">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/logo_new.png" alt="RichRelevance" class="logo-img">
             </a>
           </div>
           <!-- /logo -->
