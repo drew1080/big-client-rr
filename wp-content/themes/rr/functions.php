@@ -510,7 +510,7 @@ function icon_box_func($atts, $content = null) {
   						<img src="'. esc_attr($icon_url) . '">
   						<div>
   							<h4>' . esc_attr($title) . '</h4>
-  							<p>' . esc_attr($content) . '</p>
+  						  ' . apply_filters('the_content', $content) . '
   							' . $video_html . '
   						</div>
   					</li>
