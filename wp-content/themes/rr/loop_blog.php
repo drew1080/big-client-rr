@@ -47,10 +47,10 @@ if (!is_single() && !is_search() && !is_category() && !is_archive()) {
   <div class="wrap">
     <nav class="oldernewer">  
       <div class="newer">	
-      <?php previous_posts_link('<img src="<?php echo get_template_directory_uri(); ?>/img/nav-more_results.png">') ?>  
+      <?php previous_posts_link('<img src="' . get_template_directory_uri() . '/img/nav-more_results.png">') ?>  
       </div><!--.newer-->
       <div class="older">		
-      <?php next_posts_link('<img src="<?php echo get_template_directory_uri(); ?>/img/nav-previous_results.png">') ?>   
+      <?php next_posts_link('<img src="' . get_template_directory_uri() . '/img/nav-previous_results.png">') ?>   
       </div>
       <!--.older-->   
     </nav><!--.oldernewer-->
