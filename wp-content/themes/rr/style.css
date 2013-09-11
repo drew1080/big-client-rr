@@ -3380,9 +3380,18 @@ span.insight-category-popout {
   
   .slider .slider-content .inner-content {
     display: table;
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
   }
+  
+  .slider.with-excerpt .slider-content .inner-content {
+    width: 70%;
+  } 
+  
+  .slider.long .slider-content .inner-content {
+     width: 70%;
+   }
+  
     
   .slider.with-excerpt h1 {
     font-size: 5em;
@@ -3459,6 +3468,10 @@ span.insight-category-popout {
      line-height: 1.3em; 
    }
 
+   .slider.long h1 {
+     font-size: 4.7em;
+   }
+   
    .slider p {
      font-size: 1.8em;
    }
