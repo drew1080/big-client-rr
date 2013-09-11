@@ -229,7 +229,7 @@ function create_insight_func($atts) {
 		if (!empty($item)) 
 		{
       switch ($item["format"]) {
-          case "WHITE PAPER":
+          case "WHITE PAPERS":
           case "RESEARCH":
               $lis .= '<li ' . $last_class . ' >
                         <a class="insight-popouts item ' . $item["format_id"] . ' ' . $item["topic_ids"] . ' ' . $item["region_ids"] . '" rel="insights" href="#insight-'. $key . '" style="background-image: url(' . $item["thumbnail"]  . ')">
@@ -247,7 +247,7 @@ function create_insight_func($atts) {
                         </div>
                       </li>';
               break;
-          case "INFOGRAPHIC":
+          case "INFOGRAPHICS":
               $lis .= '<li ' . $last_class . ' >
                         <a class="item ' . $item["format_id"] . ' ' . $item["topic_ids"] . ' ' . $item["region_ids"] . '" target="_blank" href="' . $item["infographic_url"] . '" style="background-image: url(' . $item["thumbnail"]  . ')">
                           <span class="tagline">' . $item["format"]  . '</span>
