@@ -985,30 +985,36 @@ section[role="leader"].custom-fancybox-wrapper.board-of-directors ul li a:hover 
 	TECHNOLOGY ITEMS
 \*------------------------------------*/
 
-.section_items{
+.section_items {
 	list-style: none;
 	float: left;
 	padding: 0px;
 	margin: 0px;
+	width: 100%;
 }
+
 ul.section_items li {
 	width: 100% !important;
 	list-style: none !important;
 	margin-bottom: 20px !important;
 }
+
 .section_items li img {
 	vertical-align: top;
 	padding-right: 25px;
 	margin-bottom: 15px;
 }
+
 .section_items li div {
-	width: 774px;
+	width: 85%;
 	display: inline-block;
 }
+
 .section_items li div > h4 {
 	text-transform: uppercase;
 	margin: 0;
 }
+
 .section_items li div > p {
 	font-size: 19px;
 	line-height: 30px;
