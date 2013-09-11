@@ -3458,16 +3458,17 @@ span.insight-category-popout {
     margin-right: auto !important;
     text-align: center;
   }
-
-}
-
-@media only screen and (max-width:900px) {
   .columns3{
     float: left;
     width: 100%;
     margin: 0 !important;
   }
+}
 
+@media only screen and (max-width:815px) {
+  .nav li{
+    margin: 0 15px 0 0;
+  }
 }
 
 @media only screen and (max-width:650px) {
