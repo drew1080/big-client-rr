@@ -3163,7 +3163,7 @@ span.insight-category-popout {
   height: 30px;
 }
 .selector-box {
-  background: url("/wp-content/uploads/2013/09/filter-arrow3.png") no-repeat scroll 0 0 #ffffff;
+  background: url("/wp-content/themes/rr/img/filter-arrow.png") no-repeat scroll 0 0 #ffffff;
   display:block;
   position: relative;
   width:170px;
@@ -3176,11 +3176,11 @@ span.insight-category-popout {
   margin-right: 20px !important;
 }
 #format-select.selector-box{
-  background: url("/wp-content/uploads/2013/09/filter-arrow-short.png") no-repeat scroll 0 0 #ffffff;
+  background: url("/wp-content/themes/rr/img/filter-arrow-short.png") no-repeat scroll 0 0 #ffffff;
   width: 110px;
 }
 #region-select.selector-box{
-  background: url("/wp-content/uploads/2013/09/filter-arrow-short.png") no-repeat scroll 0 0 #ffffff;
+  background: url("/wp-content/themes/rr/img/filter-arrow-short.png") no-repeat scroll 0 0 #ffffff;
   width: 110px;
 }
 
