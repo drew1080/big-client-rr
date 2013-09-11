@@ -205,8 +205,9 @@ section[role="about-us"] .third p {
 
 section[role="about"] h2,section[role="about-us"] h2 {
 	font-family: robotolight;
-	font-size: 50px;
+	font-size: 44px;
 	text-align: center;
+	margin: 0.78em;
 }
 
 section[role="about"] h3,section[role="about-us"] h3 {
@@ -949,6 +950,14 @@ section[role="leader"].custom-fancybox-wrapper.board-of-directors ul li a:hover 
   overflow-x: hidden;
   height: 345px;
   margin-top: 20px;
+}
+
+.insights .custom-fancybox-popout-content {
+  height: 180px;
+}
+
+.marketo-insight {
+  height: 475px;
 }
 
 .custom-fancybox-popout-right h4 {
@@ -3070,8 +3079,242 @@ p a.imgpartners:nth-child(4) img {
 
 /* END EASING SLIDER */
 
-/* END BANNER STLYING - media queries for banner styling below */
+/* END BANNER STLYING  */
 
+
+
+/* About Us Styling */
+.wrap br{
+  display: none;
+}	  
+
+/* Insights page */
+
+section[role="insight"].custom-fancybox-wrapper {
+  padding: 10px 0 40px;
+}
+section[role="insight"].custom-fancybox-wrapper ul li a {
+  height: 290px;
+}
+
+section[role="insight"].custom-fancybox-wrapper .tagline {
+  font-family: robotocondensed;
+  font-size: 14px;
+  font-weight: bold;
+  color: #667280;
+  line-height: 3px;
+  margin-top: 222px;
+  display: block;
+}
+section[role="insight"].custom-fancybox-wrapper h4 {
+  margin-top: 10px;
+  line-height: 1.6em;
+}
+
+.insight-thumbnail {
+  margin-bottom: 8px;
+}
+
+.custom-fancybox-popout-left h4{
+  font-family: robotolight;
+  font-size: 28px;
+  margin: 6px 0 -10px 0;
+}
+
+.custom-fancybox-popout-left p{
+  font-family: robotolight;
+  font-size: 13px;
+  overflow-y: auto;
+}
+
+span.insight-category-popout {
+  font-family: robotocondensed;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+
+/* Style filters on insights as drop downs*/
+.filter-options span:first-child{
+  margin-left: 0px;
+}
+.filter-options{
+  position:relative;
+  width: 644px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.filter-options span{
+  float: left;
+  font-family: robotocondensed;
+  font-weight: bold;
+  font-size: 14px;
+  padding-top: 5px;
+  margin-right: 10px;
+}
+.filter-options a {
+  text-decoration:none;
+}
+
+.filter-options .option-set li{
+  list-style: none;
+  height: 30px;
+}
+.selector-box {
+  background: url("/wp-content/uploads/2013/09/filter-arrow3.png") no-repeat scroll 0 0 #ffffff;
+  display:block;
+  position: relative;
+  width:170px;
+  height:30px;
+  border:1px solid #f1f3f5;
+  padding:5px 0px 0px 15px;
+  cursor: pointer;
+  font-family: robotolight !important;
+  font-weight: normal !important;
+  margin-right: 20px !important;
+}
+#format-select.selector-box{
+  background: url("/wp-content/uploads/2013/09/filter-arrow-short.png") no-repeat scroll 0 0 #ffffff;
+  width: 110px;
+}
+#region-select.selector-box{
+  background: url("/wp-content/uploads/2013/09/filter-arrow-short.png") no-repeat scroll 0 0 #ffffff;
+  width: 110px;
+}
+
+.option-set {
+  position:absolute;
+  top:32px;
+  background:#fafbfc;
+  width:170px;
+  display:none;
+  margin-top: -32px;
+  padding: 0px;
+  z-index: 10;
+  -webkit-box-shadow: 0px 6px 10px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 6px 10px rgba(0,0,0,0.2);
+  box-shadow: 0px 6px 10px rgba(0,0,0,0.2);
+}
+
+#format.option-set {
+  left: 68px;
+}
+
+#topic.option-set {
+  left: 254px;
+}
+
+#region.option-set {
+  left: 507px;
+}
+
+.cat-item.selected {
+  background: #667280;
+}
+
+.cat-item.selected:hover {
+  background: #667280;
+}
+
+.cat-item.selected a {
+  color: #FFF;
+}
+
+.filter-wrap {
+  width: 200px;
+  float: left;
+}
+
+.topic-wrap {
+  width: 244px;
+}
+
+#format.option-set {
+  width: 110px;
+}
+#region.option-set {
+  width: 110px;
+}
+
+.option-set li{
+  padding:5px 0 0 15px;
+  cursor: pointer;
+  font-family: robotolight;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.option-set li a{
+  color: #667280;
+}
+
+.option-set li:hover {
+  background-color: #f1f3f5;
+}
+
+.option-set li:hover a {
+  color: #990101;
+}
+
+.option-set li a:hover{
+  color: #990101;
+}
+
+
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* BEGIN MEDIA QUERIES */
 
 @media only screen and (max-width:1250px) {
 
@@ -3211,8 +3454,39 @@ p a.imgpartners:nth-child(4) img {
    .category .slider h1.entry-title {
      font-size: 3.0em;
    }
+   
+   /*Responsive for dropdown filtering on insights page*/
 
+  .filter-options span {
+    float: none !important;
+  }
+  
+  .filter-options {
+    width: 170px !important;
+  }
+  
+  .selector-box {
+    margin-bottom: 15px !important;
+  }
+  
+  #format.option-set {
+    left: 0px;
+    top: 51px;
+  }
+
+  #topic.option-set {
+    left: 0px;
+    top: 115px;
+  }
+
+  #region.option-set {
+    left: 0px;
+    top: 179px;
+  }
+ 
 }
+
+
 
 @media only screen and (max-width:400px) {
    section[role="about"] p,
@@ -3223,6 +3497,9 @@ p a.imgpartners:nth-child(4) img {
      font-size: 5em;
    }
    
+   .slider.long h1 {
+     font-size: 4.2em;
+   }
    .slider.with-excerpt h1 {
     /* line-height: 1.1em; */
    }
@@ -3242,115 +3519,5 @@ p a.imgpartners:nth-child(4) img {
   }
 }
 
-/* About Us Styling */
-.wrap br{
-  display: none;
-}	  
-
-/* Insights page */
-
-
-.filter-options{
-  text-align: center;
-  font-family: robotocondensed;
-  font-weight: bold;
-}
-.filter-options span{
-  margin-right: 10px;
-  margin-left: 20px;
-  
-}
-.filter-options span:first-child{
-  margin-left: 0px;
-}
-
-section[role="insight"].custom-fancybox-wrapper {
-  padding: 10px 0 40px;
-}
-section[role="insight"].custom-fancybox-wrapper ul li a {
-  height: 290px;
-}
-
-section[role="insight"].custom-fancybox-wrapper .tagline {
-  font-family: robotocondensed;
-  font-size: 14px;
-  font-weight: bold;
-  color: #667280;
-  line-height: 3px;
-  margin-top: 222px;
-  display: block;
-}
-section[role="insight"].custom-fancybox-wrapper h4 {
-  margin-top: 10px;
-  line-height: 1.6em;
-}
-.custom-fancybox-popout-left h4{
-  font-family: robotolight;
-  font-size: 32px;
-  margin: 14px 0 -10px 0;
-}
-
-.custom-fancybox-popout-left p{
-  font-family: robotolight;
-  font-size: 13px;
-  overflow-y: auto;
-}
-
-span.insight-category-popout {
-  font-family: robotocondensed;
-  font-weight: bold;
-}
-/*.marketo-insight {
-  height: 420px;
-}*/
-
-
-/**** Isotope Filtering ****/
-
-.isotope-item {
-  z-index: 2;
-}
-
-.isotope-hidden.isotope-item {
-  pointer-events: none;
-  z-index: 1;
-}
-
-/**** Isotope CSS3 transitions ****/
-
-.isotope,
-.isotope .isotope-item {
-  -webkit-transition-duration: 0.8s;
-     -moz-transition-duration: 0.8s;
-      -ms-transition-duration: 0.8s;
-       -o-transition-duration: 0.8s;
-          transition-duration: 0.8s;
-}
-
-.isotope {
-  -webkit-transition-property: height, width;
-     -moz-transition-property: height, width;
-      -ms-transition-property: height, width;
-       -o-transition-property: height, width;
-          transition-property: height, width;
-}
-
-.isotope .isotope-item {
-  -webkit-transition-property: -webkit-transform, opacity;
-     -moz-transition-property:    -moz-transform, opacity;
-      -ms-transition-property:     -ms-transform, opacity;
-       -o-transition-property:      -o-transform, opacity;
-          transition-property:         transform, opacity;
-}
-
-/**** disabling Isotope CSS3 transitions ****/
-
-.isotope.no-transition,
-.isotope.no-transition .isotope-item,
-.isotope .isotope-item.no-transition {
-  -webkit-transition-duration: 0s;
-     -moz-transition-duration: 0s;
-      -ms-transition-duration: 0s;
-       -o-transition-duration: 0s;
-          transition-duration: 0s;
-}
+/* END MEDIA QUERIES */
+/* NOTHING BELOW THIS LINE!!! */
