@@ -1384,6 +1384,11 @@ section[role="trusted"] .wrap ul li {
  word-wrap: normal;       /* Internet Explorer 5.5+ */
 }
 
+.lastnav ul.sub-menu {
+  right: 4px;
+  background: url("img/selector2-respon.jpg") no-repeat scroll 0 0 #FAFBFC;
+  width: 129px;
+}
 
 /** Blog **/
 
