@@ -765,7 +765,6 @@ section[role="main"] .view-article {
   width: 199px;
   margin: 40px 19px 0 19px;
   line-height: 22px;
-  min-height: 300px;
 }
 
 /* Removing as its causing layout issues with isotope
@@ -785,7 +784,6 @@ section[role="main"] .view-article {
   display: block;
  /* margin: 40px 19px 0 19px;*/
 }
-
 
 section[role="leader"] .wrap {
   padding: 0px;
@@ -3571,7 +3569,7 @@ span.insight-category-popout {
     }
     
    .slider h1.entry-title {
-     font-size: 4em;
+     font-size: 5em;
    }
    
    .slider.long h1 {
