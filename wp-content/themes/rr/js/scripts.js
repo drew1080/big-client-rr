@@ -41,21 +41,23 @@ $(function() {
     && $(e.target).closest('#region-select').length == 0) {
       // click happened outside of menu, hide any visible menu items
       hideFilterDropdowns();  
+    } else {
+      showFilters();
     }
   });
   
   $('#format-select').click(function(){
-    hideFilterDropdowns();
+    hideFilterDropdowns(this);
     $('#format').show();        
   });
   
   $('#topic-select').click(function(){
-    hideFilterDropdowns();
+    hideFilterDropdowns(this);
     $('#topic').show();        
   });
   
   $('#region-select').click(function(){
-    hideFilterDropdowns();
+    hideFilterDropdowns(this);
     $('#region').show();        
   });
 	
@@ -115,13 +117,22 @@ $(function() {
     selector = isoFilters.join('');
     $container.isotope({ filter: selector });
     
+    $('#' + type + '-select').show();
+    
     return false;
   }
   
-  function hideFilterDropdowns() {
+  function hideFilterDropdowns(current_filterbox) {
+    $(current_filterbox).hide();
     $('#format').hide(); 
     $('#topic').hide(); 
     $('#region').hide(); 
+  }
+  
+  function showFilters() {
+    $('#format-select').show();
+    $('#topic-select').show();
+    $('#region-select').show();
   }
   
 });
