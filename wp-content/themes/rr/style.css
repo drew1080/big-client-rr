@@ -1405,6 +1405,10 @@ section[role="trusted"] .wrap ul li {
   width: 129px;
 }
 
+.pointer_hand {
+	cursor: pointer;
+}
+
 /** Blog **/
 
 section[role="blog"] {
