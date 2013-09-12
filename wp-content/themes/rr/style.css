@@ -3403,14 +3403,16 @@ span.insight-category-popout {
     margin: 30px 20px 0 20px;
     text-align: left;
   }
-  .leadership .custom-fancybox-wrapper ul li {
-    height: 320px;
-  }
-  
   .custom-fancybox-wrapper ul li.last {
     display: inline-table;
     float: none;
     margin: 30px 20px 0 20px !important;
+  }
+  
+  .newsroom .columns2 {
+    text-align: center;
+    float: none;
+    width: 100%;
   }
 }
 
@@ -3488,6 +3490,14 @@ span.insight-category-popout {
   .category .slider h1.entry-title {
     font-size: 4.9em;
   }
+  
+  .capabilities .section_items p {
+    text-align: center;
+  }
+  .capabilities .button {
+    text-align: center !important;
+    margin-left: 0 !important;
+  }
 }
 
 @media only screen and (max-width:900px) {
@@ -3503,6 +3513,13 @@ span.insight-category-popout {
     width: 100%;
     margin: 0 !important;
   }
+  .contact-us section[role="about-us"] p, h4 {
+     text-align: center;
+   }
+
+   .contact-us section[role="about-us"] a img.alignnone {
+     margin: 0;
+   }
 }
 
 @media only screen and (max-width:815px) {
