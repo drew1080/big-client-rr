@@ -204,7 +204,7 @@ function create_leadership_func($atts) {
 	foreach ($leadership as $key => $item ) 
 	{
 	  if ( $count % 4 == 0 ) {
-	    $last_class = 'class="last"';
+	    $last_class = 'class="last-leader"';
 	  }
 
 		if (!empty($item)) 
