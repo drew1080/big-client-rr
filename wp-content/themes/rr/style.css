@@ -81,10 +81,6 @@ input:focus {
 	border:1px solid #04A4CC;
 }
 
-ul, li {
-  margin: 0;
-  padding: 0;
-}
 /*------------------------------------*\
 
     STRUCTURE
@@ -3187,6 +3183,10 @@ span.insight-category-popout {
 
 
 /* Style filters on insights as drop downs*/
+.format-dropdown.insight-dropdown {
+  position: relative;
+}
+
 .filter-options span:first-child{
   margin-left: 0px;
 }
