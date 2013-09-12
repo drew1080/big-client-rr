@@ -138,7 +138,7 @@ global $blog_id;
 
 
 if ( $blog_id == 1 ) {
-  $blog_page_id = get_ID_by_slug('blog/blog');
+  $blog_page_id = get_ID_by_slug('blog');
 } else {
   $blog_page_id = get_ID_by_slug('engineering-blog');
 }
@@ -156,7 +156,7 @@ if ( is_search() ) {
   $content = str_replace('Blog', $current_category, $content);
   echo $content;
 } else if ( is_archive() && !is_author() ) {
-  $current_archive = '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'twentytwelve' ) ) . '</span>';
+  $current_archive = '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'rr' ) ) . '</span>';
   $content = str_replace('Blog', $current_archive, $content);
   echo $content;
 } else if ( $blog_id == 2 ) {
