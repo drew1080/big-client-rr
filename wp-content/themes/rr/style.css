@@ -777,11 +777,11 @@ section[role="main"] .view-article {
   width: 199px;
   height: 212px;
   display: block;
-  margin: 30px 38px 0 0;
+  margin: 40px 38px 0 0;
 }
 
 .custom-fancybox-wrapper ul li.last a {
-  margin: 30px 0 0 0;
+  margin: 40px 0 0 0;
 }
 
 section[role="leader"].custom-fancybox-wrapper.executive-team ul li a:hover,
