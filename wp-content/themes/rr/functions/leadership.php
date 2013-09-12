@@ -54,20 +54,6 @@ $leadership_box_data = array(
             "type" => "text",
             'std' => ''
         ),
-        // array(
-        //             'name' => __('Hover Image', 'framework'),
-        //             'desc' => __('Upload the leader image. Once uploaded, click "Insert to Post".', 'framework'),
-        //             'id' => 'hover_image',
-        //             "type" => "text",
-        //             'std' => ''
-        //         ),
-        // array(
-        //             'name' => '',
-        //             'desc' => '',
-        //             'id' => 'hover_image_button',
-        //             'type' => 'button',
-        //             'std' => 'Browse'
-        //         ),
          array(
             'name' => __('Twitter', 'framework'),
             'desc' => __('Enter twitter acount.', 'framework'),
@@ -222,10 +208,7 @@ function create_leadership_func($atts) {
 	  }
 
 		if (!empty($item)) 
-		{
-    	//$onmouseover = "onmouseover=\"this.src='" . $item["hover_image"]  . "'\" ";
-    	//$onmouseout = "onmouseout=\"this.src='" . $item["thumbnail"]  . "'\"";
-    	
+		{	
     	$linkedin_li = '';
     	$twitter_li = '';
     	
@@ -271,8 +254,6 @@ function create_leadership_func($atts) {
 	              </div>
 	              <div class="clear"></div></section>';
 	
-	/* $html = '<section role="'.$atts['role'].'" class="' . esc_attr($bg) . ' ' . esc_attr($align) . '" ><div class="wrap" >'.do_shortcode($content).'</div><div class="' . esc_attr($class) . '"></div></section>'; */
-	
 	return $content; 
 }
 /*-----------------------------------------------------------------------------------*/
@@ -297,9 +278,7 @@ if (!function_exists('get_leadership')) {
       
       foreach ($posts as $key => $item ) 
       {
-        // $data[$key]['hover_image'] = get_post_meta($item->ID,'hover_image',TRUE);
         $data[$key]['thumbnail'] = wp_get_attachment_url( get_post_thumbnail_id($item->ID) );
-        #$data[$key]['cartoon'] = get_post_meta($item->ID,'leader_cartoon',TRUE);
         $data[$key]['twitter'] = get_post_meta($item->ID,'leader_twitter',TRUE);
         $data[$key]['linkedin'] = get_post_meta($item->ID,'leader_linkedin',TRUE);
         $data[$key]['title'] = get_the_title($item->ID);

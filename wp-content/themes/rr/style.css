@@ -759,13 +759,14 @@ section[role="main"] .view-article {
   display: block;
   float: left;
   width: 199px;
-  margin: 0 38px 0 0;
+/*  margin: 0px;*/
   line-height: 22px;
 }
 
+/* Removing as its causing layout issues with isotope
 .custom-fancybox-wrapper ul li.last {
   margin: 0;
-}
+}*/
 
 .custom-fancybox-wrapper ul li a:hover {
   text-decoration: none;
@@ -777,7 +778,7 @@ section[role="main"] .view-article {
   width: 199px;
   height: 212px;
   display: block;
-  margin: 40px 38px 0 0;
+  margin: 40px 14px 0 14px;
 }
 
 .custom-fancybox-wrapper ul li.last a {
@@ -793,7 +794,7 @@ section[role="leader"].custom-fancybox-wrapper.board-of-directors ul li a:hover 
 
 .custom-fancybox-wrapper h4 {
   font-family: robotoregular;
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
   color: #990101;
 }
@@ -1394,6 +1395,11 @@ section[role="trusted"] .wrap ul li {
  word-wrap: normal;       /* Internet Explorer 5.5+ */
 }
 
+.lastnav ul.sub-menu {
+  right: 4px;
+  background: url("img/selector2-respon.jpg") no-repeat scroll 0 0 #FAFBFC;
+  width: 129px;
+}
 
 /** Blog **/
 
@@ -2257,13 +2263,13 @@ display:block;
 
 
 @media only screen and (max-width:320px) {
-	section[role="explore"] .wrap p{
-		margin-left: 42px;
-	}
-        section[role="explore"] .wrap{
-      max-width: 960px;
-      margin:0 auto;
-      }
+	/*section[role="explore"] .wrap p{
+	   margin-left: 42px;
+	 }*/
+  section[role="explore"] .wrap{
+  max-width: 960px;
+  margin:0 auto;
+  }
 }
 @media only screen and (max-width:480px) {
 	.a-logo{
@@ -2279,21 +2285,16 @@ display:block;
 	.desplegar-menu{
 		right:34px;
 	}
-	section[role="explore"] .wrap{
-    width:70%;
-    margin: 0 auto;
-    }
+	/*section[role="explore"] .wrap{
+	    width:70%;
+	    margin: 0 auto;
+	    }*/
         
   .technology p.button a {
     display: block !important;
   }
 }
-@media only screen and (max-width:320px) {	
-        section[role="explore"] .wrap{
-      max-width: 960px;
-      margin:0 auto;
-      }
-}
+
 @media (max-width: 767px){
        section[role="main"] article {
          margin: 0 auto;
@@ -2944,12 +2945,13 @@ a img.aligncenter {
 
 p.button a {
 	background-color: #a3aab3;
-  padding: 2px 14px;
+  padding: 6px 12px;
   color: #ffffff !important;
   margin: 0 12px;
   margin-bottom: 12px;
   font-family: robotocondensed;
   font-size: 18px;
+  line-height: 27px;
   font-weight: bold;
   display: inline-block;
 }
@@ -3148,7 +3150,7 @@ section[role="insight"].custom-fancybox-wrapper .tagline {
 }
 section[role="insight"].custom-fancybox-wrapper h4 {
   margin-top: 10px;
-  line-height: 1.6em;
+  line-height: 1.3em;
 }
 
 .insight-thumbnail {
@@ -3157,7 +3159,7 @@ section[role="insight"].custom-fancybox-wrapper h4 {
 
 .custom-fancybox-popout-left h4{
   font-family: robotolight;
-  font-size: 28px;
+  font-size: 18px;
   margin: 6px 0 -10px 0;
 }
 
@@ -3373,6 +3375,15 @@ span.insight-category-popout {
 }
 
 @media only screen and (max-width:960px) {
+  
+   section[role="about"] {
+    background: none;
+  }
+  section[role="about"] p {
+    border-right: none;
+    max-width: 100%;
+  }
+  
   .custom-fancybox-wrapper ul {
     text-align: center;
   }
@@ -3404,9 +3415,18 @@ span.insight-category-popout {
   
   .slider .slider-content .inner-content {
     display: table;
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
   }
+  
+  .slider.with-excerpt .slider-content .inner-content {
+    width: 70%;
+  } 
+  
+  .slider.long .slider-content .inner-content {
+     width: 70%;
+   }
+  
     
   .slider.with-excerpt h1 {
     font-size: 5em;
@@ -3464,16 +3484,17 @@ span.insight-category-popout {
     margin-right: auto !important;
     text-align: center;
   }
-
-}
-
-@media only screen and (max-width:900px) {
   .columns3{
     float: left;
     width: 100%;
     margin: 0 !important;
   }
+}
 
+@media only screen and (max-width:815px) {
+  .nav li{
+    margin: 0 15px 0 0;
+  }
 }
 
 @media only screen and (max-width:650px) {
@@ -3483,6 +3504,10 @@ span.insight-category-popout {
      line-height: 1.3em; 
    }
 
+   .slider.long h1 {
+     font-size: 4.7em;
+   }
+   
    .slider p {
      font-size: 1.8em;
    }
@@ -3533,6 +3558,11 @@ span.insight-category-popout {
    section[role="about-us"] p {
      font-size: 18px;
    }
+   
+   section[role="about"] h3, section[role="about-us"] h3 {
+      font-size: 38px;
+    }
+    
    .slider h1.entry-title {
      font-size: 4em;
    }
@@ -3551,15 +3581,15 @@ span.insight-category-popout {
 }
 
 @media only screen and (max-width:320px) {
-  section[role="about"] h3, section[role="about-us"] h3 {
-    font-size: 38px;
-  }
   
   .slider.long h1 {
     font-size: 3.2em;
   }
   .slider.long p {
     font-size: 1.6em;
+  }
+  .category .slider h1.entry-title {
+    font-size: 2.4em;
   }
 }
 

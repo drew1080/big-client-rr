@@ -221,7 +221,7 @@ function create_insight_func($atts) {
 	foreach ($insights as $key => $item ) 
 	{
 	  if ( $count % 4 == 0 ) {
-	    $last_class = 'class="last"';
+	    $last_class = 'class="last-insight"';
 	  }
 
 		if (!empty($item)) 
@@ -271,8 +271,6 @@ function create_insight_func($atts) {
 	$format_args = array(
     'show_option_all'    => 'All',
 	  'title_li'           => __( '' ),
-    // 'id'        => 'format',
-    // 'class'     => 'option-set',
     'taxonomy'  => 'rr-format',
     'echo' => 0
   );
@@ -280,8 +278,6 @@ function create_insight_func($atts) {
   $topic_args = array(
     'show_option_all'    => 'All',
 	  'title_li'           => __( '' ),
-    // 'id'        => 'topic',
-    // 'class'     => 'option-set',
     'taxonomy'  => 'rr-topic',
     'echo' => 0
   );
@@ -289,8 +285,6 @@ function create_insight_func($atts) {
   $region_args = array(
     'show_option_all'    => 'All',
 	  'title_li'           => __( '' ),
-    // 'id'        => 'region',
-    // 'class'     => 'option-set',
     'taxonomy'  => 'rr-region',
     'echo' => 0
   );
@@ -332,8 +326,6 @@ function create_insight_func($atts) {
                   <ul>' . $lis . '</ul>
                 </div>
                 <div class="clear"></div></section>';
-	
-	/* $html = '<section role="'.$atts['role'].'" class="' . esc_attr($bg) . ' ' . esc_attr($align) . '" ><div class="wrap" >'.do_shortcode($content).'</div><div class="' . esc_attr($class) . '"></div></section>'; */
 	
 	return $content; 
 }
