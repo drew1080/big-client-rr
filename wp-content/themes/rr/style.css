@@ -3402,10 +3402,6 @@ span.insight-category-popout {
     margin: 30px 20px 0 20px;
     text-align: left;
   }
-  .leadership .custom-fancybox-wrapper ul li {
-    height: 320px;
-  }
-  
   .custom-fancybox-wrapper ul li.last {
     display: inline-table;
     float: none;
@@ -3502,6 +3498,13 @@ span.insight-category-popout {
     width: 100%;
     margin: 0 !important;
   }
+  .contact-us section[role="about-us"] p, h4 {
+     text-align: center;
+   }
+
+   .contact-us section[role="about-us"] a img.alignnone {
+     margin: 0;
+   }
 }
 
 @media only screen and (max-width:815px) {
