@@ -81,6 +81,10 @@ input:focus {
 	border:1px solid #04A4CC;
 }
 
+ul, li {
+  margin: 0;
+  padding: 0;
+}
 /*------------------------------------*\
 
     STRUCTURE
