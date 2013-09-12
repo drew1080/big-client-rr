@@ -348,7 +348,7 @@ if (!function_exists('get_insights')) {
       $args=array(
           'post_type' => 'insights_gallery',
           'post_status' => 'publish',
-          'posts_per_page' => 10,
+          'posts_per_page' => 100,
           'caller_get_posts'=> 1
         );
         
