@@ -40,9 +40,9 @@ $(function() {
     && $(e.target).closest('#topic-select').length == 0
     && $(e.target).closest('#region-select').length == 0) {
       // click happened outside of menu, hide any visible menu items
-      hideFilterDropdowns();  
+      hideFilterDropdowns(e.target);  
     } else {
-      showFilters();
+      //showFilters();
     }
   });
   
@@ -123,10 +123,17 @@ $(function() {
   }
   
   function hideFilterDropdowns(current_filterbox) {
-    $(current_filterbox).hide();
+    showFilters();
+    
     $('#format').hide(); 
     $('#topic').hide(); 
     $('#region').hide(); 
+    
+    if ($(current_filterbox).attr('id') == 'format-select'
+    || $(current_filterbox).attr('id') == 'topic-select'
+    || $(current_filterbox).attr('id') == 'region-select') {
+      $(current_filterbox).hide();
+    }
   }
   
   function showFilters() {
