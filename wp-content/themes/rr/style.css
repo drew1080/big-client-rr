@@ -763,7 +763,7 @@ section[role="main"] .view-article {
   display: block;
   float: left;
   width: 199px;
-/*  margin: 0px;*/
+  margin: 40px 38px 0 0;
   line-height: 22px;
 }
 
