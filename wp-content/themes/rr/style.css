@@ -3582,7 +3582,10 @@ span.insight-category-popout {
    .slider p {
      font-size: 1.8em;
    }
-
+   
+   section[role="explore"] .wrap {
+     padding: 0px;
+   }
 }
 
 @media only screen and (max-width:320px) {
