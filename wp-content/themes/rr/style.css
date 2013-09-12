@@ -160,6 +160,10 @@ section > .wrap {
 	padding: 0 25px;
 }
 
+.insights section > .wrap {
+  padding: 0px;
+}
+
 /* SECTIONS */
 
 
@@ -778,7 +782,7 @@ section[role="main"] .view-article {
   width: 199px;
   height: 212px;
   display: block;
-  margin: 40px 14px 0 14px;
+  margin: 40px 19px 0 19px;
 }
 
 .custom-fancybox-wrapper ul li.last a {
