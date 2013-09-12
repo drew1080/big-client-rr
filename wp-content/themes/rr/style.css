@@ -3489,6 +3489,14 @@ span.insight-category-popout {
   .category .slider h1.entry-title {
     font-size: 4.9em;
   }
+  
+  .capabilities .section_items p {
+    text-align: center;
+  }
+  .capabilities .button {
+    text-align: center !important;
+    margin-left: 0 !important;
+  }
 }
 
 @media only screen and (max-width:900px) {
