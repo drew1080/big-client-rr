@@ -469,7 +469,7 @@ function contact_us_func($atts, $content = null) {
 	extract( shortcode_atts( array(
 		'bg' => 'white',
 		'tagline_thickness' => 'regular',
-		'url' => 'http://rr.dev.secretsushi.com/company/contact-us/',
+		'url' => '/company/contact-us/',
 		'title' => 'Enough about us; we want to hear from you!'), $atts ) );
 	
 	$html = '<section role="enough" class="'. esc_attr($bg).'">
@@ -510,7 +510,7 @@ function icon_box_func($atts, $content = null) {
   						<img src="'. esc_attr($icon_url) . '">
   						<div>
   							<h4>' . esc_attr($title) . '</h4>
-  							<p>' . esc_attr($content) . '</p>
+  						  ' . apply_filters('the_content', $content) . '
   							' . $video_html . '
   						</div>
   					</li>
@@ -523,7 +523,7 @@ function icon_box_func($atts, $content = null) {
 function add_header_image_func($atts, $content = null) {
   extract( shortcode_atts( array(
     'class' => '',
-		'title' => 'Rich Relevance',
+		'title' => '',
 		'excerpt' => '',
 		'image_url' => ''), $atts ) );
 		

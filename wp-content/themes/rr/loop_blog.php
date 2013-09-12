@@ -1,13 +1,5 @@
 <?php 
 if (!is_single() && !is_search() && !is_category() && !is_archive()) {
-  
-  // if (is_category()) {
-  //   $category = get_the_category();
-  //   $category_id = $category[0]->cat_ID; 
-  //   $category_search = '&cat='.$category_id;
-  // }
-  
-  //$wp_query = new WP_Query('post_type=post&posts_per_page=5&paged='.$paged . $category_search);
   $wp_query = new WP_Query('post_type=post&posts_per_page=5&paged='.$paged);
 } else {
   wp_reset_query();
@@ -46,12 +38,21 @@ if (!is_single() && !is_search() && !is_category() && !is_archive()) {
 <section role="circles" class="white ">
   <div class="wrap">
     <nav class="oldernewer">  
+      <? if ( is_search() ) { ?>
       <div class="newer">	
-      <?php previous_posts_link('<img src="' . get_template_directory_uri() . '/img/nav-more_results.png">') ?>  
+      <?php previous_posts_link('<img src="' . get_template_directory_uri() . '/img/nav-previous_results.png">') ?>  
       </div><!--.newer-->
       <div class="older">		
-      <?php next_posts_link('<img src="' . get_template_directory_uri() . '/img/nav-previous_results.png">') ?>   
+      <?php next_posts_link('<img src="' . get_template_directory_uri() . '/img/nav-more_results.png">') ?>   
       </div>
+      <? } else { ?>
+      <div class="newer">	
+      <?php previous_posts_link('<img src="' . get_template_directory_uri() . '/img/nav-newer-entries.png">') ?>
+      </div><!--.newer-->
+      <div class="older">		
+      <?php next_posts_link('<img src="' . get_template_directory_uri() . '/img/nav-older-entries.png">') ?>  
+      </div>
+      <? } ?> 
       <!--.older-->   
     </nav><!--.oldernewer-->
   </div>

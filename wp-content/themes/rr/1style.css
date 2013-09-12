@@ -854,7 +854,7 @@ section[role="enough"] h3 {
 
 section[role="enough"] .contact-us {
 
-	/* background: url("http://rr.dev.secretsushi.com/wp-content/uploads/2013/08/contact-us1.png") no-repeat scroll 240px 138px transparent; */
+	/* background: url("/wp-content/uploads/2013/08/contact-us1.png") no-repeat scroll 240px 138px transparent; */
 
     margin: 0 auto;
 
@@ -865,7 +865,7 @@ section[role="enough"] .contact-us {
 }
 
 section[role="enough"] .contact-us p {
-	background: url("http://rr.dev.secretsushi.com/wp-content/uploads/2013/08/contact-us1.png") no-repeat scroll transparent;
+	background: url("/wp-content/uploads/2013/08/contact-us1.png") no-repeat scroll transparent;
 	color:#fafbfc;
 	font-size: 44px;
 	font-family: oswaldbold;
@@ -876,7 +876,7 @@ section[role="enough"] .contact-us p {
 	background-color:#a5acb4;*/
 }
 section[role="enough"] .contact-us p:hover{
-	background: url("http://rr.dev.secretsushi.com/wp-content/uploads/2013/08/contact-us-h1.png") no-repeat scroll transparent;
+	background: url("/wp-content/uploads/2013/08/contact-us-h1.png") no-repeat scroll transparent;
 
 }
 section[role="enough"] .contact-us p > span{

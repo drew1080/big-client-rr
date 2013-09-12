@@ -166,14 +166,7 @@ function save_tech_meta_data($post_id)
 add_shortcode('technology', 'create_tech_func');
 
 function create_tech_func($atts) {
-
-	//[footag foo="bar"]
-	//return "foo = {$atts['foo']}";
-	
 	$tech_items = get_tech_items();
-	//print_r($tech_items);
-	
-
 	
 	foreach ($tech_items as $item) 
 	{
