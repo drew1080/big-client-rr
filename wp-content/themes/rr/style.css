@@ -975,6 +975,7 @@ section[role="leader"].custom-fancybox-wrapper.board-of-directors ul li a:hover 
 
 .insights .custom-fancybox-popout-content {
   height: 180px;
+  padding-right: 12px;
 }
 
 .marketo-insight {
@@ -3133,7 +3134,7 @@ section[role="insight"].custom-fancybox-wrapper {
   padding: 10px 0 40px;
 }
 section[role="insight"].custom-fancybox-wrapper ul li a {
-  height: 290px;
+  height: 320px;
 }
 
 section[role="insight"].custom-fancybox-wrapper .tagline {
