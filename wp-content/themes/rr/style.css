@@ -789,7 +789,7 @@ section[role="leader"].custom-fancybox-wrapper.board-of-directors ul li a:hover 
 
 .custom-fancybox-wrapper h4 {
   font-family: robotoregular;
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
   color: #990101;
 }
@@ -2912,12 +2912,13 @@ a img.aligncenter {
 
 p.button a {
 	background-color: #a3aab3;
-  padding: 2px 14px;
+  padding: 6px 12px;
   color: #ffffff !important;
   margin: 0 12px;
   margin-bottom: 12px;
   font-family: robotocondensed;
   font-size: 18px;
+  line-height: 27px;
   font-weight: bold;
   display: inline-block;
 }
@@ -3116,7 +3117,7 @@ section[role="insight"].custom-fancybox-wrapper .tagline {
 }
 section[role="insight"].custom-fancybox-wrapper h4 {
   margin-top: 10px;
-  line-height: 1.6em;
+  line-height: 1.3em;
 }
 
 .insight-thumbnail {
@@ -3125,7 +3126,7 @@ section[role="insight"].custom-fancybox-wrapper h4 {
 
 .custom-fancybox-popout-left h4{
   font-family: robotolight;
-  font-size: 28px;
+  font-size: 18px;
   margin: 6px 0 -10px 0;
 }
 
