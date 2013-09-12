@@ -929,9 +929,12 @@ section[role="leader"].custom-fancybox-wrapper.board-of-directors ul li a:hover 
   height: 360px !important;
 }*/
 
-
-.custom-fancybox-popout {
+.leadership .custom-fancybox-popout {
   max-width: 680px;
+}
+
+.insights .custom-fancybox-popout {
+  max-width: 770px;
 }
 
 .custom-fancybox-popout-left{
@@ -951,10 +954,16 @@ section[role="leader"].custom-fancybox-wrapper.board-of-directors ul li a:hover 
   display: block;
 }
 
-.custom-fancybox-popout-right {
+.leadership .custom-fancybox-popout-right {
   max-width: 410px;
   float: left;
   padding: 20px;
+}
+
+.insights .custom-fancybox-popout-right {
+  max-width: 500px;
+  float: left;
+  padding: 25px;
 }
 
 .custom-fancybox-popout-content {
