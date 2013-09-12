@@ -42,7 +42,7 @@ if (!function_exists('create_insight')) {
 if (!function_exists('create_insight')) {
     function create_insight()
     {
-        $tech_args = array(
+        $insight_args = array(
             'label' => __('Insights', 'framework'),
             'singular_label' => __('Insight', 'framework'),
             'public' => true,
@@ -50,12 +50,10 @@ if (!function_exists('create_insight')) {
             'capability_type' => 'post',
             'hierarchical' => false,
             'rewrite' => true,
-            // TODO Find this
-            // 'menu_icon' => get_bloginfo('template_directory').'/img/ico-admin-insight.png', // 16px16
             'supports' => array('title','editor','thumbnail'),
             'taxonomies' => array('rr-format', 'rr-topic', 'rr-region')
          );
-        register_post_type('insights_gallery', $tech_args);
+        register_post_type('insights_gallery', $insight_args);
     }
 
     add_action('init', 'create_insight');
