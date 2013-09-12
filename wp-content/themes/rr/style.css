@@ -3402,6 +3402,10 @@ span.insight-category-popout {
     margin: 30px 20px 0 20px;
     text-align: left;
   }
+  .leadership .custom-fancybox-wrapper ul li {
+    min-height: 320px;
+  }
+  
   .custom-fancybox-wrapper ul li.last {
     display: inline-table;
     float: none;
