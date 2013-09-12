@@ -221,7 +221,7 @@ function create_insight_func($atts) {
 	foreach ($insights as $key => $item ) 
 	{
 	  if ( $count % 4 == 0 ) {
-	    $last_class = 'class="last"';
+	    $last_class = 'class="last-insight"';
 	  }
 
 		if (!empty($item)) 

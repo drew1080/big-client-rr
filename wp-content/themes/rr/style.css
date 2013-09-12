@@ -759,13 +759,14 @@ section[role="main"] .view-article {
   display: block;
   float: left;
   width: 199px;
-  margin: 0 38px 0 0;
+/*  margin: 0px;*/
   line-height: 22px;
 }
 
+/* Removing as its causing layout issues with isotope
 .custom-fancybox-wrapper ul li.last {
   margin: 0;
-}
+}*/
 
 .custom-fancybox-wrapper ul li a:hover {
   text-decoration: none;
@@ -777,7 +778,7 @@ section[role="main"] .view-article {
   width: 199px;
   height: 212px;
   display: block;
-  margin: 40px 38px 0 0;
+  margin: 40px 14px 0 14px;
 }
 
 .custom-fancybox-wrapper ul li.last a {
