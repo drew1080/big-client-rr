@@ -469,7 +469,7 @@ function contact_us_func($atts, $content = null) {
 	extract( shortcode_atts( array(
 		'bg' => 'white',
 		'tagline_thickness' => 'regular',
-		'url' => 'http://rr.dev.secretsushi.com/company/contact-us/',
+		'url' => '/company/contact-us/',
 		'title' => 'Enough about us; we want to hear from you!'), $atts ) );
 	
 	$html = '<section role="enough" class="'. esc_attr($bg).'">

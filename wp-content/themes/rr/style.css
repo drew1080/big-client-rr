@@ -542,14 +542,14 @@ section[role="enough"] h3 {
 }
 
 section[role="enough"] .contact-us {
-/* background: url("http://rr.dev.secretsushi.com/wp-content/uploads/2013/08/contact-us1.png") no-repeat scroll 240px 138px transparent; */
+/* background: url("/wp-content/uploads/2013/08/contact-us1.png") no-repeat scroll 240px 138px transparent; */
 	margin:0 auto;
 	padding-bottom:0px;
 	width:290px;
 }
 
 section[role="enough"] .contact-us p {
-	background:url(http://rr.dev.secretsushi.com/wp-content/uploads/2013/08/contact-us1.png) no-repeat scroll transparent;
+	background:url(/wp-content/uploads/2013/08/contact-us1.png) no-repeat scroll transparent;
 	color:#fafbfc;
 	font-size:44px;
 	font-family:oswaldbold;
@@ -561,7 +561,7 @@ section[role="enough"] .contact-us p {
 }
 
 section[role="enough"] .contact-us p:hover {
-	background:url(http://rr.dev.secretsushi.com/wp-content/uploads/2013/08/contact-us-h1.png) no-repeat scroll transparent;
+	background:url(/wp-content/uploads/2013/08/contact-us-h1.png) no-repeat scroll transparent;
 }
 
 section[role="enough"] .contact-us p > span {
@@ -759,13 +759,14 @@ section[role="main"] .view-article {
   display: block;
   float: left;
   width: 199px;
-  margin: 0 38px 0 0;
+/*  margin: 0px;*/
   line-height: 22px;
 }
 
+/* Removing as its causing layout issues with isotope
 .custom-fancybox-wrapper ul li.last {
   margin: 0;
-}
+}*/
 
 .custom-fancybox-wrapper ul li a:hover {
   text-decoration: none;
@@ -777,11 +778,11 @@ section[role="main"] .view-article {
   width: 199px;
   height: 212px;
   display: block;
-  margin: 30px 38px 0 0;
+  margin: 40px 14px 0 14px;
 }
 
 .custom-fancybox-wrapper ul li.last a {
-  margin: 30px 0 0 0;
+  margin: 40px 0 0 0;
 }
 
 section[role="leader"].custom-fancybox-wrapper.executive-team ul li a:hover,
@@ -793,7 +794,7 @@ section[role="leader"].custom-fancybox-wrapper.board-of-directors ul li a:hover 
 
 .custom-fancybox-wrapper h4 {
   font-family: robotoregular;
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
   color: #990101;
 }
@@ -929,9 +930,12 @@ section[role="leader"].custom-fancybox-wrapper.board-of-directors ul li a:hover 
   height: 360px !important;
 }*/
 
-
-.custom-fancybox-popout {
+.leadership .custom-fancybox-popout {
   max-width: 680px;
+}
+
+.insights .custom-fancybox-popout {
+  max-width: 770px;
 }
 
 .custom-fancybox-popout-left{
@@ -951,10 +955,16 @@ section[role="leader"].custom-fancybox-wrapper.board-of-directors ul li a:hover 
   display: block;
 }
 
-.custom-fancybox-popout-right {
+.leadership .custom-fancybox-popout-right {
   max-width: 410px;
   float: left;
   padding: 20px;
+}
+
+.insights .custom-fancybox-popout-right {
+  max-width: 500px;
+  float: left;
+  padding: 25px;
 }
 
 .custom-fancybox-popout-content {
@@ -2934,12 +2944,13 @@ a img.aligncenter {
 
 p.button a {
 	background-color: #a3aab3;
-  padding: 2px 14px;
+  padding: 6px 12px;
   color: #ffffff !important;
   margin: 0 12px;
   margin-bottom: 12px;
   font-family: robotocondensed;
   font-size: 18px;
+  line-height: 27px;
   font-weight: bold;
   display: inline-block;
 }
@@ -3138,7 +3149,7 @@ section[role="insight"].custom-fancybox-wrapper .tagline {
 }
 section[role="insight"].custom-fancybox-wrapper h4 {
   margin-top: 10px;
-  line-height: 1.6em;
+  line-height: 1.3em;
 }
 
 .insight-thumbnail {
@@ -3147,7 +3158,7 @@ section[role="insight"].custom-fancybox-wrapper h4 {
 
 .custom-fancybox-popout-left h4{
   font-family: robotolight;
-  font-size: 28px;
+  font-size: 18px;
   margin: 6px 0 -10px 0;
 }
 

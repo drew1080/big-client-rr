@@ -4,15 +4,14 @@ get_header();
 
 <section role="blog">
 	<div class="wrap">
-		<div class="all-posts">	   		
-			<h1><?php _e( 'Page not found', 'html5blank' ); ?></h1>
-			<h2>
-				<a href="<?php echo home_url(); ?>"><?php _e( 'Return home?', 'html5blank' ); ?></a>
-			</h2>
-		</div>		
-		<div class="posts-sidebar">		   
-			<?php get_sidebar(); ?>		
-		</div>      	         			
+		<div class="page-404">	   		
+			<?php
+			$page_id = get_ID_by_slug('404-2');
+      $page_404 = get_post($page_id);
+      $content = $page_404->post_content;
+      echo apply_filters('the_content', $content);
+      ?>
+		</div>	         			
 	</div>         
 </section>   
 <div class="clear" style="clear:both;"></div>
