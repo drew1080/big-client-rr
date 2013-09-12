@@ -3407,6 +3407,12 @@ span.insight-category-popout {
     float: none;
     margin: 30px 20px 0 20px !important;
   }
+  
+  .newsroom .columns2 {
+    text-align: center;
+    float: none;
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width:930px) {
