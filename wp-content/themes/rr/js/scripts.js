@@ -1,6 +1,19 @@
 // DOM Ready
 $(function() {
   
+  // Longest work is 561px
+  var category_title = $(".entry-title")[0];
+  var category_name_width = $(category_title).width();
+  var wordCount = $(category_title).text().replace( /[^\w ]/g, "" ).split( /\s+/ ).length
+  
+  if ( category_name_width >= 480 ) {
+    $(category_title).addClass('category-long');
+  }
+    
+  // } else if (longest word count >= whatever)  {
+  //   
+  // }
+  
   function mycarousel_initCallback(carousel) {
   	$('#mycarousel-next').bind('click', function() {
         carousel.next();
@@ -13,16 +26,18 @@ $(function() {
     });
   }
   
-  $("#mycarousel").jcarousel({
-    scroll: 3,
-    initCallback: mycarousel_initCallback,
-    buttonNextHTML: null,
-    buttonPrevHTML: null,
-    auto: 2,
-    wrap: "circular",
-    animation: 2000
-	});
-	
+  if ($('body').hasClass('home')) {
+    $("#mycarousel").jcarousel({
+      scroll: 6,
+      initCallback: mycarousel_initCallback,
+      buttonNextHTML: null,
+      buttonPrevHTML: null,
+      auto: 2,
+      wrap: "circular",
+      animation: 2000
+  	});
+  }
+  
 	// SVG fallback
 	// toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script#update
 	if (!Modernizr.svg) {

@@ -3450,7 +3450,12 @@ span.insight-category-popout {
 }*/
 
 .jcarousel-skin-tango .jcarousel-clip-horizontal {
+  max-height: 90px !important;
   min-height: 90px !important;
+}
+
+.jcarousel-list {
+  height: 90px;
 }
 
 /* Additional styles for the jcarousel controls. */	
@@ -3581,7 +3586,7 @@ span.insight-category-popout {
     padding: 0;
   }
   
-  .category .slider h1.entry-title {
+  .slider h1.entry-title.category-long {
     font-size: 4.9em;
   }
   
@@ -3645,8 +3650,8 @@ span.insight-category-popout {
       font-size: 5.0em;
     }
     
-   .category .slider h1.entry-title {
-     font-size: 3em;
+   .slider h1.entry-title.category-long {
+     font-size: 3.0em;
    }
    
    /*Responsive for dropdown filtering on insights page*/
@@ -3720,7 +3725,7 @@ span.insight-category-popout {
     /* line-height: 1.1em; */
    }
    
-   .category .slider h1.entry-title {
+   .slider h1.entry-title.category-long {
      font-size: 2.4em;
    }
 
@@ -3741,7 +3746,7 @@ span.insight-category-popout {
   .slider.long p {
     font-size: 1.6em;
   }
-  .category .slider h1.entry-title {
+  .slider h1.entry-title.category-long {
     font-size: 2.4em;
   }
   
