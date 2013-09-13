@@ -3446,7 +3446,12 @@ span.insight-category-popout {
 }*/
 
 .jcarousel-skin-tango .jcarousel-clip-horizontal {
+  max-height: 90px !important;
   min-height: 90px !important;
+}
+
+.jcarousel-list {
+  height: 90px;
 }
 
 /* Additional styles for the jcarousel controls. */	

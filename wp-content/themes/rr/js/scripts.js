@@ -1,6 +1,17 @@
 // DOM Ready
 $(function() {
   
+  // Longest work is 561px
+  var category_title = $(".entry-title")[0];
+  var category_name_width = $(category_title).width();
+  var wordCount = category_title.text().replace( /[^\w ]/g, "" ).split( /\s+/ ).length
+  
+  if(  ) {
+    
+  } else if (longest word count >= whatever)  {
+    
+  }
+  
   function mycarousel_initCallback(carousel) {
   	$('#mycarousel-next').bind('click', function() {
         carousel.next();
@@ -14,7 +25,7 @@ $(function() {
   }
   
   $("#mycarousel").jcarousel({
-    scroll: 3,
+    scroll: 6,
     initCallback: mycarousel_initCallback,
     buttonNextHTML: null,
     buttonPrevHTML: null,
