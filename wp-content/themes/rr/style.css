@@ -3389,13 +3389,15 @@ span.insight-category-popout {
 
 /*Newsroom custom styling*/
 
-.newsroom section[role="about-us"] .columns2 h4, p {
+.newsroom section[role="about-us"] .columns2 h4 {
   margin-bottom: 18px !important;
   line-height: 20px !important;
+  margin-top: 40px;
 }
 
-.newsroom section[role="about-us"] .columns2 h4 {
-  margin-top: 40px;
+.newsroom section[role="about-us"] .columns2 p {
+  margin-bottom: 18px !important;
+  line-height: 20px !important;
 }
 
 /* Additional styles for the jcarousel controls. */						 
@@ -3657,6 +3659,10 @@ span.insight-category-popout {
   .slider.verylong h1 {
      font-size: 3.8em;
    }
+   
+  .slider.long.with-excerpt h1 {
+    font-size: 4.4em;
+  }
   
 }
 
@@ -3670,12 +3676,16 @@ span.insight-category-popout {
       font-size: 38px;
     }
     
-   .slider h1.entry-title {
+   .slider h1 {
      font-size: 5em;
    }
    
    .slider.long h1 {
      font-size: 4em;
+   }
+   
+   .slider.long.with-excerpt h1 {
+     font-size: 3.4em;
    }
    
    .slider.verylong h1 {
