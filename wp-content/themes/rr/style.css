@@ -2324,7 +2324,15 @@ display:block;
   }
   
   .desplegar-menu {
-    top: 8px;
+    top: 8px !important;
+  }
+  
+  .header {
+    min-height: 68px !important;
+  }
+  
+  .nav {
+    top: 68px !important;
   }
 }
 
@@ -2441,7 +2449,9 @@ section[role="trusted"] .wrap ul{		width:85% !important; margin:0 auto !importan
 
 .nav > ul > li > .sub-menu > li > a{	     padding-left: 17px;		 padding-right: 25px;		 text-transform: none;	}
 
-.desplegar-menu{	display:block;	right: 9px;    top: 47px;	background:url(img/menu-desplegar1.png) no-repeat 0 -75px;	width:48px;	height:68px;	position:absolute;	cursor:pointer;}.desplegar-menu:hover{	background:url(img/menu-desplegar.png) no-repeat 0 0px;}
+.desplegar-menu{	display:block;	right: 9px;    top: 47px;	background:url(img/menu-desplegar1.png) no-repeat 0 -75px;	width:48px;	height:68px;	position:absolute;	cursor:pointer;}
+
+.desplegar-menu:hover{	background:url(img/menu-desplegar1.png) no-repeat 0 0px;}
 
 
 
