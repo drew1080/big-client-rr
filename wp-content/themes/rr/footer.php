@@ -25,14 +25,12 @@
 					<div class="clear"></div>
 
 					<div class="icons">
+              
+						  <div class="search-form">Search
+                <?php get_search_form(); ?>
+              </div>
 
-						<div class="search">Search
-							<form action="" method="">
-								<input type="text" id="search" name="search" />
-							</form>
-						</div>
-
-						<a href="#" title="Chat" class="chat">Chat</a>
+						<a href="<?php echo get_permalink( get_ID_by_slug( 'company/contact-us')); ?>" title="Chat" class="chat">Chat</a>
 
 						<ul class="langs">
 							<li class="padre"><a href="#" title="USA">USA</a>
