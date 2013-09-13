@@ -1,5 +1,26 @@
 // DOM Ready
 $(function() {
+  
+  function mycarousel_initCallback(carousel) {
+  	$('#mycarousel-next').bind('click', function() {
+        carousel.next();
+        return false;
+    });
+
+    $('#mycarousel-prev').bind('click', function() {
+        carousel.prev();
+        return false;
+    });
+  }
+  
+  $("#mycarousel").jcarousel({
+    scroll: 3,
+    initCallback: mycarousel_initCallback,
+    buttonNextHTML: null,
+    buttonPrevHTML: null,
+    auto: 2,
+    wrap: "circular"
+	});
 	
 	// SVG fallback
 	// toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script#update

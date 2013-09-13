@@ -15,7 +15,7 @@ if (!function_exists('create_clients')) {
             'hierarchical' => false,
             'rewrite' => true,
             'supports' => array('title'));
-        register_post_type('Clients', $clients_args);
+        register_post_type('clients', $clients_args);
     }
 
     add_action('init', 'create_clients');
