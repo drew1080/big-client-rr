@@ -3707,7 +3707,7 @@ span.insight-category-popout {
    }
    
    .slider.long h1 {
-     font-size: 4em;
+     font-size: 3.6em;
    }
    
    .slider.long.with-excerpt h1 {
@@ -3719,6 +3719,10 @@ span.insight-category-popout {
    }
    .slider.with-excerpt h1 {
     /* line-height: 1.1em; */
+   }
+   
+   .slider h1.entry-title.category-long {
+     font-size: 2.4em;
    }
 
    .slider p {
