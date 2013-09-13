@@ -2304,6 +2304,18 @@ display:block;
   .technology p.button a {
     display: block !important;
   }
+  
+  header .icons {
+    display: none;
+  }
+  
+  .logo {
+    margin: 8px 0 0 15px;
+  }
+  
+  .desplegar-menu {
+    top: 8px;
+  }
 }
 
 @media (max-width: 767px){
