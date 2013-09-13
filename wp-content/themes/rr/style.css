@@ -1298,7 +1298,8 @@ header .icons {
 
 	float: left;
 
-    margin-top: -29px;
+    margin-top: -4px;
+
 
     padding: 0;
 
@@ -2054,7 +2055,7 @@ color: #990101;
 
 	font-size: 12px;
 
-	line-height: 20px;
+	line-height: 10px !important;
 
 	font-family: robotolight;
 
@@ -2062,7 +2063,15 @@ color: #990101;
 
 }
 
+.footer .copy a {
+  
+  color: #667280;
+}
 
+.footer .copy a:hover {
+  
+  color: #990101;
+}
 
 /*------------------------------------*\
 
@@ -3380,6 +3389,7 @@ span.insight-category-popout {
 .newsroom section[role="about-us"] .columns2 h4 {
   margin-top: 40px;
 }
+
 
 /* BEGIN MEDIA QUERIES */
 

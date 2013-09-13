@@ -5,17 +5,17 @@
 				
 					<ul class="social">
 
-						<li class="fb"><a href="#" title="Facebook">Facebook</a></li>
-						<li class="gplus"><a href="#" title="Google+">Google+</a></li>
-						<li class="tw"><a href="#" title="Twitter">Twitter</a></li>
-						<li class="li"><a href="#" title="Linkedin">Linkedin</a></li>
-						<li class="yt"><a href="#" title="Youtube">Youtube</a></li>
+						<li class="fb"><a href="http://www.facebook.com/richrelevance" target="_blank" title="Facebook">Facebook</a></li>
+						<li class="gplus"><a href="http://plus.google.com/100318823509149944458/posts" target="_blank"        title="Google+">Google+</a></li>
+						<li class="tw"><a href="http://www.twitter.com/richrelevance" target="_blank" title="Twitter">Twitter</a></li>
+						<li class="li"><a href="http://www.linkedin.com/company/richrelevance" target="_blank" title="Linkedin">Linkedin</a></li>
+						<li class="yt"><a href="http://www.youtube.com/user/richrelevance" target="_blank" title="Youtube">Youtube</a></li>
 
 					</ul>
 
-					<div class="newsletter">
-						Sign up for our newsletter
-					</div>
+				  <!-- <div class="newsletter">
+				            Sign up for our newsletter
+				          </div> -->
 
 					<div class="sections">
 						<?php wp_nav_menu( array('menu'=>'FooterNav') ); ?>
@@ -49,7 +49,9 @@
 
 					<div class="copy">
 
-						<p>Privacy (Updated July 24, 2012)<br />Retargeting Opt-out<br />Copyright © 2007-2013 RichRelevance, Inc. <span>All Rights Reserved.</span></p>
+						<p><a href="<?php echo site_url(); ?>/privacy/" title="Privacy">Privacy (Updated July 24, 2012)</a></p>
+						<p><a href="<?php echo site_url(); ?>/privacy/opt-out/" title="Opt-out">Retargeting Opt-out</a></p>
+						<p>Copyright © 2007-2013 RichRelevance, Inc. <span>All Rights Reserved.</span></p>
 
 					</div>
 
