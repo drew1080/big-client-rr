@@ -1365,7 +1365,11 @@ header .icons {
 /* trusted */
 
 section[role="trusted"] .wrap ul {	
-	margin: 0 auto;    overflow: hidden;    padding-left: 20px;    width: 100% !important;
+	margin: 0 auto;    overflow: hidden;    padding-left: 20px;    
+/*  
+!important causing jcarousel issues homepage client slider
+width: 100% !important;*/
+  width: 100%;
 }
 section[role="trusted"] .wrap ul li {	
 	float: left;    list-style: none outside none;    margin-left: 5px;    margin-right: 5px;    min-height: 89px;    min-width: 137px;}
@@ -3383,7 +3387,6 @@ span.insight-category-popout {
           transition-duration: 0s;
 }
 
-
 /*Newsroom custom styling*/
 
 .newsroom section[role="about-us"] .columns2 h4, p {
@@ -3394,6 +3397,36 @@ span.insight-category-popout {
 .newsroom section[role="about-us"] .columns2 h4 {
   margin-top: 40px;
 }
+
+/* Additional styles for the jcarousel controls. */						 
+
+/*.jcarousel-scroll {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.jcarousel-scroll form {
+    margin: 0;
+    padding: 0;
+}
+
+.jcarousel-scroll select {
+    font-size: 75%;
+}
+
+#mycarousel-next,
+#mycarousel-prev {
+    cursor: pointer;
+    margin-bottom: -10px;
+    text-decoration: underline;
+    font-size: 11px;
+}*/
+
+.jcarousel-skin-tango .jcarousel-clip-horizontal {
+  min-height: 90px !important;
+}
+
+/* Additional styles for the jcarousel controls. */	
 
 
 /* BEGIN MEDIA QUERIES */
