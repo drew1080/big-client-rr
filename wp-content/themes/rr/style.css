@@ -789,8 +789,7 @@ section[role="leader"] .wrap {
   padding: 0px;
 }
 
-section[role="leader"].custom-fancybox-wrapper.executive-team ul li a:hover,
-section[role="leader"].custom-fancybox-wrapper.board-of-directors ul li a:hover {
+section[role="leader"].custom-fancybox-wrapper.executive-team ul li a:hover {
   background-position: -199px 0;
   width: 199px;
   height: 212px;
