@@ -19,7 +19,8 @@ $(function() {
     buttonNextHTML: null,
     buttonPrevHTML: null,
     auto: 2,
-    wrap: "circular"
+    wrap: "circular",
+    animation: 2000
 	});
 	
 	// SVG fallback

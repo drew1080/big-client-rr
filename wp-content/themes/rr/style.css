@@ -790,8 +790,7 @@ section[role="leader"] .wrap {
   padding: 0px;
 }
 
-section[role="leader"].custom-fancybox-wrapper.executive-team ul li a:hover,
-section[role="leader"].custom-fancybox-wrapper.board-of-directors ul li a:hover {
+section[role="leader"].custom-fancybox-wrapper.executive-team ul li a:hover {
   background-position: -199px 0;
   width: 199px;
   height: 212px;
@@ -2314,6 +2313,18 @@ display:block;
         
   .technology p.button a {
     display: block !important;
+  }
+  
+  header .icons {
+    display: none;
+  }
+  
+  .logo {
+    margin: 8px 0 0 15px;
+  }
+  
+  .desplegar-menu {
+    top: 8px;
   }
 }
 
