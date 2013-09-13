@@ -3121,7 +3121,6 @@ p a.imgpartners:nth-child(4) img {
 
 .easingsliderpro-arrows {
 	top:45% !important;
-	z-index: 1;
 }
 
 /* END EASING SLIDER */
@@ -3364,6 +3363,18 @@ span.insight-category-popout {
       -ms-transition-duration: 0s;
        -o-transition-duration: 0s;
           transition-duration: 0s;
+}
+
+
+/*Newsroom custom styling*/
+
+.newsroom section[role="about-us"] .columns2 h4, p {
+  margin-bottom: 18px !important;
+  line-height: 20px !important;
+}
+
+.newsroom section[role="about-us"] .columns2 h4 {
+  margin-top: 40px;
 }
 
 /* BEGIN MEDIA QUERIES */
