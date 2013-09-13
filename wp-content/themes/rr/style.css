@@ -2315,6 +2315,10 @@ display:block;
     display: block !important;
   }
   
+  .ad-units p.button a {
+    display: block !important;
+  }
+  
   header .icons {
     display: none;
   }
@@ -3739,6 +3743,10 @@ span.insight-category-popout {
   }
   .category .slider h1.entry-title {
     font-size: 2.4em;
+  }
+  
+  section[role="enough"] .wrap {
+    padding: 0;
   }
 }
 
