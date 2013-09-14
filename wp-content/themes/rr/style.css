@@ -3765,7 +3765,11 @@ span.insight-category-popout {
       padding: 0 0 0 32px;
       overflow: hidden;
     }
-  
+  .search-form input {
+  	display: block;
+  	line-height: 28px;
+  	border: 1px solid #f1f3f5;
+  }
 }
 
 @media only screen and (max-width:400px) {
