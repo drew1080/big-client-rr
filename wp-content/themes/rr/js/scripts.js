@@ -1,86 +1,89 @@
-jQuery(window).load(function() {
-   // code here
-   
-   if ($('body').hasClass('category') || $('body').hasClass('date')) {        
-     // Longest word is 561px
-     var window_width = $(window).width();
-     var category_title = $(".entry-title")[0];
-     var category_name_width = $(category_title).width();
-     var category_name_height = $(category_title).height();
-     var word_count = $(category_title).text().replace( /[^\w ]/g, "" ).split( /\s+/ ).length;
-     var check_category_header_class = false;
-     var max_acceptable_header_width = 0;
-     var max_acceptable_header_height = 0;
-     var min_acceptable_header_width = 0;
-     var min_acceptable_header_height = 0;
+function responsiveCategoryHeader() {
+  if ($('body').hasClass('category') || $('body').hasClass('date')) {        
+    // Longest word is 561px
+    var window_width = $(window).width();
+    var category_title = $(".entry-title")[0];
+    var category_name_width = $(category_title).width();
+    var category_name_height = $(category_title).height();
+    var word_count = $(category_title).text().replace( /[^\w ]/g, "" ).split( /\s+/ ).length;
+    var check_category_header_class = false;
+    var max_acceptable_header_width = 0;
+    var max_acceptable_header_height = 0;
+    var min_acceptable_header_width = 0;
+    var min_acceptable_header_height = 0;
 
-     if ( window_width <= 320) {
-       check_category_header_class = true;
-       max_acceptable_header_width = 290;
-       min_acceptable_header_width = 175;
-       max_acceptable_header_height = 80;//77 is default
-     } else if ( window_width <= 400 ) {
-       check_category_header_class = true;
-       max_acceptable_header_width = 370;
-       min_acceptable_header_width = 178;
-       max_acceptable_header_height = 80;//77 is default
-     } else if ( window_width <= 650 ) {
-       check_category_header_class = true;
-       max_acceptable_header_width = 620;
-       min_acceptable_header_width = 490;
-       max_acceptable_header_height = 80;//77 is default
-     } else if ( window_width <= 930 ) {
-       check_category_header_class = true;
-       max_acceptable_header_width = 900;
-       min_acceptable_header_width = 770;
-       max_acceptable_header_height = 110;//106 is default
-     }
+    if ( window_width <= 320) {
+      check_category_header_class = true;
+      max_acceptable_header_width = 290;
+      min_acceptable_header_width = 175;
+      max_acceptable_header_height = 80;//77 is default
+    } else if ( window_width <= 400 ) {
+      check_category_header_class = true;
+      max_acceptable_header_width = 370;
+      min_acceptable_header_width = 178;
+      max_acceptable_header_height = 80;//77 is default
+    } else if ( window_width <= 650 ) {
+      check_category_header_class = true;
+      max_acceptable_header_width = 620;
+      min_acceptable_header_width = 490;
+      max_acceptable_header_height = 80;//77 is default
+    } else if ( window_width <= 930 ) {
+      check_category_header_class = true;
+      max_acceptable_header_width = 900;
+      min_acceptable_header_width = 770;
+      max_acceptable_header_height = 110;//106 is default
+    }
 
-     if ( check_category_header_class ) {
-       var category_header_class = checkHeaderLength(word_count, category_name_width, 
-           category_name_height, max_acceptable_header_width, max_acceptable_header_height); 
-       $(category_title).addClass(category_header_class);
-       
-       var category_name_width = $(category_title).width();
-       var category_name_height = $(category_title).height();
-       
-       if (category_header_class != '') {
-         category_header_class = recheckHeaderLength(word_count, category_name_width, 
-               category_name_height, min_acceptable_header_width, min_acceptable_header_height); 
-         $(category_title).addClass(category_header_class);
-       }
-     }
+    if ( check_category_header_class ) {
+      var category_header_class = checkHeaderLength(word_count, category_name_width, 
+          category_name_height, max_acceptable_header_width, max_acceptable_header_height); 
+      $(category_title).addClass(category_header_class);
+      
+      var category_name_width = $(category_title).width();
+      var category_name_height = $(category_title).height();
+      
+      if (category_header_class != '') {
+        category_header_class = recheckHeaderLength(word_count, category_name_width, 
+              category_name_height, min_acceptable_header_width, min_acceptable_header_height); 
+        $(category_title).addClass(category_header_class);
+      }
+    }
 
-     $(".entry-title").css('visibility', 'visible');
+    $(".entry-title").css('visibility', 'visible');
 
-     function checkHeaderLength(word_count, title_width, title_height, max_acceptable_header_width, max_acceptable_header_height) {
+    function checkHeaderLength(word_count, title_width, title_height, max_acceptable_header_width, max_acceptable_header_height) {
+      var category_header_class = '';
+
+       if ( title_height > max_acceptable_header_height ) {
+          category_header_class = 'category-long category-long-wrap';
+        } else if ( title_width >= max_acceptable_header_width)  {
+          category_header_class = 'category-long';
+        } 
+
+      return category_header_class;
+    }
+    
+    function recheckHeaderLength(word_count, title_width, title_height, min_acceptable_header_width, min_acceptable_header_height) {
        var category_header_class = '';
 
-        if ( title_height > max_acceptable_header_height ) {
-           category_header_class = 'category-long category-long-wrap';
-         } else if ( title_width >= max_acceptable_header_width)  {
-           category_header_class = 'category-long';
+        if ( title_height <= min_acceptable_header_height ) {
+           category_header_class = 'category-medium category-medium-wrap';
+         } else if ( title_width <= min_acceptable_header_width)  {
+           category_header_class = 'category-medium';
          } 
 
        return category_header_class;
      }
-     
-     function recheckHeaderLength(word_count, title_width, title_height, min_acceptable_header_width, min_acceptable_header_height) {
-        var category_header_class = '';
+  }
+}
 
-         if ( title_height <= min_acceptable_header_height ) {
-            category_header_class = 'category-medium category-medium-wrap';
-          } else if ( title_width <= min_acceptable_header_width)  {
-            category_header_class = 'category-medium';
-          } 
-
-        return category_header_class;
-      }
-   }
-});
+// $(window).resize(function() {
+//   responsiveCategoryHeader();
+// });
 
 // DOM Ready
 $(function() {
+  responsiveCategoryHeader();
   
   function mycarousel_initCallback(carousel) {
   	$('#mycarousel-next').bind('click', function() {
