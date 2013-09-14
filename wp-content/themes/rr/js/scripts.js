@@ -129,12 +129,17 @@ $(function() {
   // });
   
   $("#mycarousel ul").carouFredSel({
+    width   : "100%",
   	responsive	: true,
-  	scroll		: 6,
+  	scroll		:  6,
   	items		: {
-  		visible		: 6,
+  		visible		: {
+  		  min : 1,
+  		  max : 6
+  		},
   		width		: 200,
-  		duration: 2000
+  		duration: 2000,
+  		minimum: 1
   	}
   });
   
