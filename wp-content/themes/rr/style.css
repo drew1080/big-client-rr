@@ -2681,6 +2681,7 @@ section[role="blog"] .date {
 	footer .copy span {
 
 		display: block;
+		margin-top: 10px;
 
 	}
 	
@@ -3674,6 +3675,7 @@ span.insight-category-popout {
    .contact-us section[role="about-us"] a img.alignnone {
      margin: 0;
    }
+   
 }
 
 @media only screen and (max-width:815px) {
@@ -3757,6 +3759,13 @@ span.insight-category-popout {
     font-size: 20px !important;
   }
   
+  .search-form {
+    	 width: 240px;
+      background-position: 0 bottom;
+      padding: 0 0 0 32px;
+      overflow: hidden;
+    }
+  
 }
 
 @media only screen and (max-width:400px) {
@@ -3809,6 +3818,7 @@ span.insight-category-popout {
    .embed-box {
      padding-top: 60px;
    }
+   
 }
 
 @media only screen and (max-width:320px) {
