@@ -3509,6 +3509,10 @@ span.insight-category-popout {
 
 @media only screen and (max-width:930px) {
   
+  .category .slider h1.entry-title {
+    visibility: hidden;
+  }
+  
   .slider.with-excerpt {
     display: table; 
   }
@@ -3586,6 +3590,12 @@ span.insight-category-popout {
     font-size: 4.9em;
   }
   
+  .slider h1.entry-title.category-long-wrap {
+    font-size: 4.9em;
+    width: 70%;
+    margin: 0 auto;
+  }
+  
   .capabilities .section_items p {
     text-align: center;
   }
@@ -3650,6 +3660,10 @@ span.insight-category-popout {
      font-size: 3.0em;
    }
    
+   .slider h1.entry-title.category-medium {
+     font-size: 3.2em;
+   }
+   
    /*Responsive for dropdown filtering on insights page*/
 
   .filter-options span {
@@ -3710,19 +3724,25 @@ span.insight-category-popout {
      font-size: 3.6em;
    }
    
-   .slider.long.with-excerpt h1 {
-     font-size: 3.4em;
-   }
+  .slider.long.with-excerpt h1 {
+    font-size: 3.4em;
+  }
+
+  .slider.verylong h1 {
+    font-size: 3em;
+  }
+
+  .slider h1.entry-title.category-long {
+    font-size: 2.4em;
+  }
+
+  .slider h1.entry-title.category-medium {
+    font-size: 3.0em;
+  }
    
-   .slider.verylong h1 {
-     font-size: 3em;
-   }
+   
    .slider.with-excerpt h1 {
     /* line-height: 1.1em; */
-   }
-   
-   .slider h1.entry-title.category-long {
-     font-size: 2.4em;
    }
 
    .slider p {
@@ -3744,6 +3764,10 @@ span.insight-category-popout {
   }
   .slider h1.entry-title.category-long {
     font-size: 2.4em;
+  }
+  
+  .slider h1.entry-title.category-medium {
+    font-size: 2.7em;
   }
 }
 
