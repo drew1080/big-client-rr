@@ -97,17 +97,48 @@ $(function() {
     });
   }
   
-  if ($('body').hasClass('home')) {
-    $("#mycarousel").jcarousel({
-      scroll: 6,
-      initCallback: mycarousel_initCallback,
-      buttonNextHTML: null,
-      buttonPrevHTML: null,
-      auto: 2,
-      wrap: "circular",
-      animation: 2000
-  	});
-  }
+  // if ($('body').hasClass('home')) {
+  //   $("#mycarousel").jcarousel({
+  //     scroll: 6,
+  //     initCallback: mycarousel_initCallback,
+  //     buttonNextHTML: null,
+  //     buttonPrevHTML: null,
+  //     auto: 2,
+  //     wrap: "circular",
+  //     animation: 2000
+  //  });
+  // }
+  
+  /*	CarouFredSel: a circular, responsive jQuery carousel.
+  	Configuration created by the "Configuration Robot"
+  	at caroufredsel.dev7studios.com
+  */
+  // $("#mycarousel").carouFredSel({
+  //  width: "100%",
+  //  height: "auto",
+  //  items: {
+  //    visible: 6,
+  //    width: "variable",
+  //    height: "variable"
+  //  },
+  //  scroll: {
+  //    items: 6,
+  //    duration: 2000,
+  //    pauseOnHover: true
+  //  }
+  // });
+  
+  $("#mycarousel ul").carouFredSel({
+  	responsive	: true,
+  	scroll		: 6,
+  	items		: {
+  		visible		: 6,
+  		width		: 200,
+  		duration: 2000
+  	}
+  });
+  
+  
   
 	// SVG fallback
 	// toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script#update

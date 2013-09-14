@@ -21,17 +21,21 @@
     <shuffle>0</shuffle>
     <slide_start>0</slide_start>
     <disable_right_click>0</disable_right_click>
+    <thumbnail_type>scroller</thumbnail_type>
+    <custom_class></custom_class>
+    <enable_custom_css>0</enable_custom_css>
+    <enable_custom_js>0</enable_custom_js>
   </settings>
   <panels_state>
     <publish>opened</publish>
     <general>opened</general>
     <slideshow>closed</slideshow>
-    <slide_navigation_controls>closed</slide_navigation_controls>
+    <slide_navigation_controls>opened</slide_navigation_controls>
     <lightbox>closed</lightbox>
     <fullscreen>closed</fullscreen>
     <timer_animation>closed</timer_animation>
     <transition_effects>closed</transition_effects>
-    <thumbnails>closed</thumbnails>
+    <thumbnails>opened</thumbnails>
     <video>closed</video>
     <timthumb_resizing>closed</timthumb_resizing>
     <slides_order>closed</slides_order>
@@ -48,7 +52,7 @@
 }]]></custom_css>
   <slides>
     <slide>
-      <id>1</id>
+      <id>2</id>
       <slider_id>1</slider_id>
       <name><![CDATA[Slide 1]]></name>
       <content>
