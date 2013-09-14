@@ -1,0 +1,9 @@
+.glossy-square-gray .thumbnail-scroller .arrows a {
+  background: url(/wp-content/themes/our-new-tenet/images/slider-arrows.jpg) no-repeat;
+  width: 38px;
+  height: 38px;
+}
+
+.glossy-square-gray .thumbnail-scroller.horizontal .arrows a.next {
+  background-position: -36px 0;
+}
