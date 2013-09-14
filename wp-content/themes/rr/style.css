@@ -3503,6 +3503,18 @@ span.insight-category-popout {
   height: 90px;
 }
 
+/**
+ * Overwrite for having a carousel with dynamic width.
+ */
+.jcarousel-skin-tango .jcarousel-container-horizontal {
+    width: 85%;
+}
+
+.jcarousel-skin-tango .jcarousel-clip-horizontal {
+    width: 100%;
+}
+
+
 /* Additional styles for the jcarousel controls. */	
 
 
