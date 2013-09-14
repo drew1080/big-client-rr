@@ -420,7 +420,7 @@ section[role="trusted"] {
 
 section[role="trusted"] .wrap {
 	margin:0 auto;
-	/* max-width:960px; */
+	/* max-width:910px; */
 	overflow:hidden;
 }
 
@@ -489,6 +489,7 @@ section[role="explore"] .wrap .perso-p {
 	padding:47px 0;
 	margin-top:23px;
 }
+
 section[role="block-quote"] {
 	text-align:center;
 	background:#f5f7fa;
@@ -525,7 +526,41 @@ section[role="block-quote"] p {
 	line-height:60px;
 }
 
+section[role="block-quote2"] {
+	text-align:center;
+	background:#a3aab3;
+	padding:40px 0 40px;
+}
+section[role="block-quote2"] .wrap {
+	/* max-width:960px; */
+	margin:0 auto;
+}
 
+section[role="block-quote2"] h3 {
+	color:#f5f7fa;
+	font-size:44px;
+	font-family:oswaldbold;
+	text-align:center;
+	margin:0 0 40px;
+}
+
+section[role="block-quote2"] h5 {
+	color:#f5f7fa;
+	font-size:20px;
+	font-family:robotolight;
+	text-align:center;
+	margin:0;
+	line-height:35px;
+}
+
+section[role="block-quote2"] p {
+	color:#f5f7fa;
+	font-size:18px;
+	font-family:robotoregular;
+	text-align:center;
+	margin:0 0 0px;
+	line-height:27px;
+}
 
 section[role="enough"] {
 	text-align:center;
@@ -968,7 +1003,7 @@ section[role="leader"].custom-fancybox-wrapper.board-of-directors ul li a:hover 
 .insights .custom-fancybox-popout-right {
   max-width: 500px;
   float: left;
-  padding: 25px;
+  padding: 25px 25px 25px 10px;
 }
 
 .custom-fancybox-popout-content {
@@ -2655,10 +2690,10 @@ section[role="blog"] .date {
 \*------------------------------------*/
 
 
-
+/* used to be #04A4CC */
 ::selection {
 
-	background:#04A4CC;
+	background:#990101;
 
 	color:#FFF;
 
@@ -2666,9 +2701,10 @@ section[role="blog"] .date {
 
 }
 
+
 ::-webkit-selection {
 
-	background:#04A4CC;
+	background:#990101;
 
 	color:#FFF;
 
@@ -2678,7 +2714,7 @@ section[role="blog"] .date {
 
 ::-moz-selection {
 
-	background:#04A4CC;
+	background:#990101;
 
 	color:#FFF;
 
@@ -3495,9 +3531,9 @@ span.insight-category-popout {
     font-size: 4.9em;
   }
   
-  .capabilities .section_items p {
+/*  .capabilities .section_items p {
     text-align: center;
-  }
+  } */
   .capabilities .button {
     text-align: center !important;
     margin-left: 0 !important;
