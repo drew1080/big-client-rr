@@ -3162,7 +3162,7 @@ p a.imgpartners:nth-child(4) img {
 
 /* BEGIN SLIDER CONTENT */
 
-.slider h1.entry-title {
+.slider h1 {
   vertical-align: middle;
   position: relative;
   color: #FFF;
