@@ -3160,6 +3160,47 @@ p a.imgpartners:nth-child(4) img {
 
 /* END LEVEL THREE SLIDER DIV */
 
+#mycarousel {
+  margin-bottom: 60px;
+}
+
+div.caroufredsel_wrapper {
+  margin-bottom: 15px !important;
+}
+
+/*.caroufredsel_wrapper ul li {
+  text-align: center;
+}*/
+
+.pagination {
+  left: 50%;
+  margin: 5px 0 0 -37px;
+  position: absolute;
+  text-align: center;
+}
+
+.pagination a {
+  background-color: #FFFFFF;
+  border: 1px solid #C1C7CD;
+  border-radius: 10px 10px 10px 10px;
+  color: #EEEEEE;
+  font-size: 9px;
+  margin: 0 3px 5px;
+  padding: 0 6px;
+  text-decoration: none;
+  text-indent: -99999px;
+  overflow: hidden;
+  float: left;
+}
+
+.pagination a:hover {
+  background-color: #667280;
+}
+
+.pagination .selected {
+  background-color: #667280;
+}
+
 
 /* BEGIN SLIDER CONTENT */
 
@@ -3781,6 +3822,10 @@ span.insight-category-popout {
   	display: block;
   	line-height: 28px;
   	border: 1px solid #f1f3f5;
+  }
+  
+  .pagination {
+   display: none;
   }
 }
 

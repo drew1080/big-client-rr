@@ -50,11 +50,14 @@ get_header();
 				    	  //                   echo '<a href="#">' . $i . '</a>'; 
 				    	  //                 }
 				      	?>
-				      	<a href="#" id="mycarousel-prev">Prev</a>
-				      	<a href="#" id="mycarousel-next">Next</a>
+				      	<!-- <a href="#" id="mycarousel-prev">Prev</a>
+				      	               <a href="#" id="mycarousel-next">Next</a> -->
+				      	
 				    </div>
 				      <?= $content; ?>
+				      <div class="pagination" id="clients-pagination"></div>
 			 	 </div>
+			 	 <div class="clear"></div>
 		</div>
 	</section>
   

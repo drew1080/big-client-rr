@@ -129,21 +129,24 @@ $(function() {
   // });
   
   $("#mycarousel ul").carouFredSel({
-    width   : "100%",
+    width: 100,
+    align: "center",
   	responsive	: true,
   	scroll		:  6,
   	items		: {
+  	  width: 135,
   		visible		: {
   		  min : 1,
   		  max : 6
-  		},
-  		width		: 200,
-  		duration: 2000,
-  		minimum: 1
-  	}
+  		}
+  	},
+  	pagination: "#clients-pagination",
+  	auto		: {
+    	timeoutDuration	: 3000
+      // ,play : false
+    }
+  	
   });
-  
-  
   
 	// SVG fallback
 	// toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script#update
