@@ -2737,12 +2737,12 @@ section[role="blog"] .date {
 \*------------------------------------*/
 
 
-/* used to be #04A4CC */
+/* used to be #04A4CC, then #990101*/
 ::selection {
 
-	background:#990101;
+	background:#FFFFFF;
 
-	color:#FFF;
+	color:#000000;
 
 	text-shadow:none;
 
@@ -2751,9 +2751,9 @@ section[role="blog"] .date {
 
 ::-webkit-selection {
 
-	background:#990101;
+	background:#FFFFFF;
 
-	color:#FFF;
+	color:#000000;
 
 	text-shadow:none;
 
@@ -2761,9 +2761,9 @@ section[role="blog"] .date {
 
 ::-moz-selection {
 
-	background:#990101;
+	background:#FFFFFF;
 
-	color:#FFF;
+	color:#000000;
 
 	text-shadow:none;
 
@@ -3558,6 +3558,112 @@ span.insight-category-popout {
 
 
 /* Additional styles for the jcarousel controls. */	
+
+
+
+/* STARTING Avada Carousel */
+.related-posts{
+	margin-bottom:55px;
+}
+.related-posts .image{
+	width:180px;
+	height:138px;
+	margin-bottom:0;
+}
+.single-related-posts .es-carousel ul{margin-left:7px !important;}
+.related-posts .image-extras-content{
+}
+.es-carousel-wrapper{
+	background:none;
+	padding:0px 0px;
+	position:relative;
+}
+.es-carousel{
+	overflow:hidden;
+}
+.related-projects .es-carousel{
+	padding-left:44px;
+}
+.clients-carousel{
+	padding:0;
+}
+.clients-carousel .es-carousel{
+	padding-left:13px;
+}
+.clients-carousel .es-carousel li{
+	height:117px;
+	text-align:center;
+	line-height:117px;
+	width:159px;
+	margin-right:13px;
+}
+.clients-carousel .es-carousel li img{
+	vertical-align:middle;
+	max-height:115px;
+	border:1px solid #eeeded;
+}
+.es-carousel ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.es-carousel ul li{
+	height:100%;
+	float:left;
+	display:block;
+	margin:0;
+	padding:0;
+	margin-right:44px;
+}
+.es-carousel ul li a{
+	display:block;
+}
+.es-carousel ul li a img{
+	border:none;
+}
+.es-nav-prev, .es-nav-next {
+	background-color: rgba(0, 0, 0, 0.5);
+	background-repeat: no-repeat;
+	width: 29px;
+	height: 29px;
+	position: absolute;
+	top: 50%;
+	margin-top:-14px;
+	text-indent:-10000px;
+	opacity:0.8;
+	z-index:1000;
+}
+.no-rgba .es-nav-prev, .no-rgba .es-nav-next{
+	background-color:#3e3e3e;
+}
+.es-nav-prev, .es-nav-next {
+	display: block;
+}
+.es-nav-prev:hover, .es-nav-next:hover{
+	opacity:1;
+}
+.es-nav-prev {
+	background-image: url(../images/arrow-bullet.png);
+	background-position: center center;
+    -webkit-transform:rotate(180deg);
+    -moz-transform:rotate(180deg); 
+    -o-transform:rotate(180deg);
+    transform:rotate(180deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+    -ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+	left: 0;
+}
+.no-csstransforms .es-nav-prev{
+	background-image: url(../images/arrow-bullet-left.png);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+}
+.es-nav-next {
+	background-image: url(../images/arrow-bullet.png);
+	background-position: center center;
+	right: 0;
+}
+
+/* Ending Avada carousel */
 
 
 /* BEGIN MEDIA QUERIES */

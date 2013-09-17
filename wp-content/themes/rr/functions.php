@@ -566,4 +566,39 @@ function dd_remove_update_nag($value) {
 
 return $value;
 }
+
+add_shortcode('images', 'shortcode_avada_images');
+function shortcode_avada_images($atts, $content = null) {
+  wp_deregister_script( 'jquery.carouFredSel' );
+  wp_register_script( 'jquery.carouFredSel', get_template_directory_uri().'/js/jquery.carouFredSel-6.2.1-packed.js', array(), null, true);
+	wp_enqueue_script( 'jquery.carouFredSel' );
+
+	extract(shortcode_atts(array(
+		'lightbox' => 'no'
+	), $atts));
+
+	$class = '';
+
+	if($lightbox == 'yes') {
+		$class = 'lightbox-enabled';
+	}
+
+	$html = '<div class="related-posts related-projects '.$class.'"><div id="carousel" class="clients-carousel es-carousel-wrapper"><div class="es-carousel"><ul>';
+	$html .= do_shortcode($content);
+	$html .= '</ul><div class="es-nav"><span class="es-nav-prev">Previous</span><span class="es-nav-next">Next</span></div></div></div></div>';
+	return $html;
+}
+
+//////////////////////////////////////////////////////////////////
+// Image
+//////////////////////////////////////////////////////////////////
+add_shortcode('image', 'shortcode_avada_image');
+function shortcode_avada_image($atts, $content = null) {
+	$html = '<li>';
+	$html .= '<a href="'.$atts['link'].'" target="'.$atts['linktarget'].'"><img src="'.$atts['image'].'" alt="" /></a>';
+	$html .= '</li>';
+	return $html;
+}
+
+
 ?>
