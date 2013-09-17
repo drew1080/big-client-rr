@@ -150,75 +150,9 @@ $(function() {
     });
   }
   
-  // if ($('body').hasClass('home')) {
-  //   $("#mycarousel").jcarousel({
-  //     scroll: 6,
-  //     initCallback: mycarousel_initCallback,
-  //     buttonNextHTML: null,
-  //     buttonPrevHTML: null,
-  //     auto: 2,
-  //     wrap: "circular",
-  //     animation: 2000
-  //  });
-  // }
-  
-  /*	CarouFredSel: a circular, responsive jQuery carousel.
-  	Configuration created by the "Configuration Robot"
-  	at caroufredsel.dev7studios.com
-  */
-  // $("#mycarousel").carouFredSel({
-  //  width: "100%",
-  //  height: "auto",
-  //  items: {
-  //    visible: 6,
-  //    width: "variable",
-  //    height: "variable"
-  //  },
-  //  scroll: {
-  //    items: 6,
-  //    duration: 2000,
-  //    pauseOnHover: true
-  //  }
-  // });
-  
-  /* LATEST CUSTOM CAROUSEL...Sept 17th
   if ( $('body').hasClass('home') ) {
-    $("#mycarousel ul").carouFredSel({
-      width: 100,
-      align: "center",
-    	responsive	: true,
-    	scroll		:  6,
-    	items		: {
-    	  width: 135,
-    		visible		: {
-    		  min : 1,
-    		  max : 6
-    		}
-    	},
-    	pagination: "#clients-pagination",
-    	auto		: {
-      	timeoutDuration	: 3000
-        // ,play : false
-      }
-
-    });
-  }*/
-  
-  if ( $('body').hasClass('home') ) {
-    // jQuery('.es-carousel-wrapper').each(function() {
-    //     jQuery(this).find('ul').carouFredSel({
-    //     auto: false,
-    //     prev: jQuery(this).find('.es-nav-prev'),
-    //     next: jQuery(this).find('.es-nav-next'),
-    //     width: '100%'
-    //   });
-    // });
     generateCarousel();
   }
-  
-  
-  
-  
   
 	// SVG fallback
 	// toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script#update
