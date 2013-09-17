@@ -433,6 +433,26 @@ section[role="trusted"] h3 {
 	margin:0 0 30px;
 }
 
+section[role="trusted-home"] {
+	text-align:center;
+	/* background:#f5f7fa; */
+	padding:50px 0 30px;
+}
+
+section[role="trusted-home"] .wrap {
+	margin:0 auto;
+	/* max-width:910px; */
+	overflow:hidden;
+}
+
+section[role="trusted-home"] h3 {
+	color:#667280;
+	font-size:44px;
+	font-family:oswaldbold;
+	text-align:center;
+	margin:0 0 30px;
+}
+
 
 section[role="explore"] {
 	text-align:center;
@@ -3643,7 +3663,7 @@ span.insight-category-popout {
 	opacity:1;
 }
 .es-nav-prev {
-	background-image: url(../images/arrow-bullet.png);
+	background-image: url(/wp-content/themes/rr/img/arrow-bullet.png) !important;
 	background-position: center center;
     -webkit-transform:rotate(180deg);
     -moz-transform:rotate(180deg); 
@@ -3654,11 +3674,11 @@ span.insight-category-popout {
 	left: 0;
 }
 .no-csstransforms .es-nav-prev{
-	background-image: url(../images/arrow-bullet-left.png);
+	background-image: url(/wp-content/themes/rr/img/arrow-bullet-left.png) !important;
 	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
 }
 .es-nav-next {
-	background-image: url(../images/arrow-bullet.png);
+	background-image: url(/wp-content/themes/rr/img/arrow-bullet.png) !important;
 	background-position: center center;
 	right: 0;
 }
