@@ -85,7 +85,7 @@ var generateCarousel = function() {
 	if(jQuery().carouFredSel) {
 		jQuery('.clients-carousel').each(function() {
 			jQuery(this).find('ul').carouFredSel({
-				auto: false,
+				auto: true,
 				prev: jQuery(this).find('.es-nav-prev'),
 				next: jQuery(this).find('.es-nav-next'),
 				width: '100%',
@@ -94,7 +94,7 @@ var generateCarousel = function() {
 
 		jQuery('.es-carousel-wrapper').each(function() {
 			jQuery(this).find('ul').carouFredSel({
-				auto: false,
+				auto: true,
 				prev: jQuery(this).find('.es-nav-prev'),
 				next: jQuery(this).find('.es-nav-next'),
 				width: '100%',
@@ -104,7 +104,7 @@ var generateCarousel = function() {
 		jQuery('.products-slider').each(function() {
 			var carousel = jQuery(this).find('ul');
 			carousel.carouFredSel({
-				auto: false,
+				auto: true,
 				prev: jQuery(this).find('.es-nav-prev'),
 				next: jQuery(this).find('.es-nav-next'),
 				align: 'left',

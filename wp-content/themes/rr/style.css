@@ -3180,46 +3180,27 @@ p a.imgpartners:nth-child(4) img {
 
 /* END LEVEL THREE SLIDER DIV */
 
-#mycarousel {
+/*#mycarousel {
   margin-bottom: 60px;
 }
 
 div.caroufredsel_wrapper {
   margin-bottom: 15px !important;
-}
+}*/
 
 /*.caroufredsel_wrapper ul li {
   text-align: center;
 }*/
 
-.pagination {
-  left: 50%;
-  margin: 5px 0 0 -37px;
-  position: absolute;
-  text-align: center;
-}
 
-.pagination a {
-  background-color: #FFFFFF;
-  border: 1px solid #C1C7CD;
-  border-radius: 10px 10px 10px 10px;
-  color: #EEEEEE;
-  font-size: 9px;
-  margin: 0 3px 5px;
-  padding: 0 6px;
-  text-decoration: none;
-  text-indent: -99999px;
-  overflow: hidden;
-  float: left;
-}
 
-.pagination a:hover {
+/*.es-nav a:hover {
   background-color: #667280;
 }
 
-.pagination .selected {
+.es-nav .selected {
   background-color: #667280;
-}
+}*/
 
 
 /* BEGIN SLIDER CONTENT */
@@ -3581,13 +3562,13 @@ span.insight-category-popout {
 
 
 
-/* STARTING Avada Carousel */
+/* STARTING Client Carousel */
 .related-posts{
 	margin-bottom:55px;
 }
 .related-posts .image{
-	width:180px;
-	height:138px;
+	width:130px;
+	height:80px;
 	margin-bottom:0;
 }
 .single-related-posts .es-carousel ul{margin-left:7px !important;}
@@ -3602,25 +3583,26 @@ span.insight-category-popout {
 	overflow:hidden;
 }
 .related-projects .es-carousel{
-	padding-left:44px;
+/*  padding-left:44px;*/
 }
 .clients-carousel{
 	padding:0;
 }
 .clients-carousel .es-carousel{
-	padding-left:13px;
+/*  padding-left:13px;*/
 }
 .clients-carousel .es-carousel li{
-	height:117px;
+	height:80px;
 	text-align:center;
-	line-height:117px;
-	width:159px;
-	margin-right:13px;
+	line-height:80px;
+/*  width:159px;*/
+  width: 130px;
+	margin-right:21px;
 }
 .clients-carousel .es-carousel li img{
 	vertical-align:middle;
-	max-height:115px;
-	border:1px solid #eeeded;
+	max-height:80px;
+/*  border:1px solid #eeeded;*/
 }
 .es-carousel ul{
 	list-style:none;
@@ -3633,7 +3615,7 @@ span.insight-category-popout {
 	display:block;
 	margin:0;
 	padding:0;
-	margin-right:44px;
+/*  margin-right:44px;*/
 }
 .es-carousel ul li a{
 	display:block;
@@ -3642,7 +3624,7 @@ span.insight-category-popout {
 	border:none;
 }
 .es-nav-prev, .es-nav-next {
-	background-color: rgba(0, 0, 0, 0.5);
+/*  background-color: rgba(0, 0, 0, 0.5);*/
 	background-repeat: no-repeat;
 	width: 29px;
 	height: 29px;
@@ -3652,18 +3634,41 @@ span.insight-category-popout {
 	text-indent:-10000px;
 	opacity:0.8;
 	z-index:1000;
+	cursor: pointer;
 }
-.no-rgba .es-nav-prev, .no-rgba .es-nav-next{
-	background-color:#3e3e3e;
-}
+/*.no-rgba .es-nav-prev, .no-rgba .es-nav-next{
+  background-color:#3e3e3e;
+}*/
 .es-nav-prev, .es-nav-next {
 	display: block;
 }
 .es-nav-prev:hover, .es-nav-next:hover{
 	opacity:1;
 }
+
+.es-nav {
+  left: 49%;
+  margin: 30px 0 0 0;
+  position: absolute;
+  text-align: center;
+}
+
+.es-nav a {
+  background-color: #FFFFFF;
+  border: 1px solid #C1C7CD;
+/*  border-radius: 10px 10px 10px 10px;*/
+  color: #EEEEEE;
+  font-size: 9px;
+  margin: 0 3px 5px;
+  padding: 0 6px;
+  text-decoration: none;
+  text-indent: -99999px;
+  overflow: hidden;
+  float: left;
+}
+
 .es-nav-prev {
-	background-image: url(/wp-content/themes/rr/img/arrow-bullet.png) !important;
+	background-image: url(/wp-content/plugins/easingsliderpro/images/slideshow_arrow_next.png) !important;
 	background-position: center center;
     -webkit-transform:rotate(180deg);
     -moz-transform:rotate(180deg); 
@@ -3671,19 +3676,19 @@ span.insight-category-popout {
     transform:rotate(180deg);
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
     -ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
-	left: 0;
+	left: -35px;
 }
 .no-csstransforms .es-nav-prev{
-	background-image: url(/wp-content/themes/rr/img/arrow-bullet-left.png) !important;
+	background-image: url(/wp-content/plugins/easingsliderpro/images/slideshow_arrow_prev.png) !important;
 	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
 }
 .es-nav-next {
-	background-image: url(/wp-content/themes/rr/img/arrow-bullet.png) !important;
+	background-image: url(/wp-content/plugins/easingsliderpro/images/slideshow_arrow_next.png) !important;
 	background-position: center center;
-	right: 0;
+	right: -35px;
 }
 
-/* Ending Avada carousel */
+/* Ending Client carousel */
 
 
 /* BEGIN MEDIA QUERIES */
