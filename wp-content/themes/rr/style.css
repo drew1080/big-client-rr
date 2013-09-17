@@ -3589,7 +3589,7 @@ span.insight-category-popout {
 	padding:0;
 }
 .clients-carousel .es-carousel{
-/*  padding-left:13px;*/
+  padding-left:13px;
 }
 .clients-carousel .es-carousel li{
 	height:80px;
@@ -3597,7 +3597,7 @@ span.insight-category-popout {
 	line-height:80px;
 /*  width:159px;*/
   width: 130px;
-	margin-right:21px;
+	margin-right:15px;
 }
 .clients-carousel .es-carousel li img{
 	vertical-align:middle;
