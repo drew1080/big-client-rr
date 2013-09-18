@@ -35,9 +35,14 @@ function responsiveCategoryHeader() {
     }
 
     if ( check_category_header_class ) {
+      
       var category_header_class = checkHeaderLength(word_count, category_name_width, 
           category_name_height, max_acceptable_header_width, max_acceptable_header_height); 
-      $(category_title).addClass(category_header_class);
+          
+      if (category_header_class != '') {
+        $(category_title).removeClass('category-long category-long-wrap category-medium category-medium-wrap');
+        $(category_title).addClass(category_header_class);
+      }
       
       var category_name_width = $(category_title).width();
       var category_name_height = $(category_title).height();
@@ -77,9 +82,62 @@ function responsiveCategoryHeader() {
   }
 }
 
-// $(window).resize(function() {
-//   responsiveCategoryHeader();
-// });
+$(window).resize(function() {
+  responsiveCategoryHeader();
+});
+
+var generateCarousel = function() {
+	if(jQuery().carouFredSel) {
+		jQuery('.clients-carousel').each(function() {
+			jQuery(this).find('ul').carouFredSel({
+				auto: true,
+				prev: jQuery(this).find('.es-nav-prev'),
+				next: jQuery(this).find('.es-nav-next'),
+				width: '100%',
+			});
+		});
+
+		jQuery('.es-carousel-wrapper').each(function() {
+			jQuery(this).find('ul').carouFredSel({
+				auto: true,
+				prev: jQuery(this).find('.es-nav-prev'),
+				next: jQuery(this).find('.es-nav-next'),
+				width: '100%',
+			});
+		});
+
+		jQuery('.products-slider').each(function() {
+			var carousel = jQuery(this).find('ul');
+			carousel.carouFredSel({
+				auto: true,
+				prev: jQuery(this).find('.es-nav-prev'),
+				next: jQuery(this).find('.es-nav-next'),
+				align: 'left',
+				left: 0,
+				width: '100%',
+				height: 'variable',
+				responsive: true,
+				scroll: {
+					items: 1
+				},
+				items: {
+					width: 500,
+					height: 'variable',
+					visible: {
+						min: 1,
+						max: 30
+					}
+				}
+			});
+		});
+	}
+};
+
+jQuery(window).load(function() {
+  if ( $('body').hasClass('home') ) {
+    generateCarousel();
+  }
+});
 
 // DOM Ready
 $(function() {
@@ -97,60 +155,9 @@ $(function() {
     });
   }
   
-  // if ($('body').hasClass('home')) {
-  //   $("#mycarousel").jcarousel({
-  //     scroll: 6,
-  //     initCallback: mycarousel_initCallback,
-  //     buttonNextHTML: null,
-  //     buttonPrevHTML: null,
-  //     auto: 2,
-  //     wrap: "circular",
-  //     animation: 2000
-  //  });
-  // }
-  
-  /*	CarouFredSel: a circular, responsive jQuery carousel.
-  	Configuration created by the "Configuration Robot"
-  	at caroufredsel.dev7studios.com
-  */
-  // $("#mycarousel").carouFredSel({
-  //  width: "100%",
-  //  height: "auto",
-  //  items: {
-  //    visible: 6,
-  //    width: "variable",
-  //    height: "variable"
-  //  },
-  //  scroll: {
-  //    items: 6,
-  //    duration: 2000,
-  //    pauseOnHover: true
-  //  }
-  // });
-  
   if ( $('body').hasClass('home') ) {
-    $("#mycarousel ul").carouFredSel({
-      width: 100,
-      align: "center",
-    	responsive	: true,
-    	scroll		:  6,
-    	items		: {
-    	  width: 135,
-    		visible		: {
-    		  min : 1,
-    		  max : 6
-    		}
-    	},
-    	pagination: "#clients-pagination",
-    	auto		: {
-      	timeoutDuration	: 3000
-        // ,play : false
-      }
-
-    });
+    generateCarousel();
   }
-  
-  
   
 	// SVG fallback
 	// toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script#update

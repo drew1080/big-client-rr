@@ -17,3 +17,5 @@ _notes/
 wp-snapshots/
 *.sh
 error_log
+*.tmproj
+wp-content/themes/Avada/
