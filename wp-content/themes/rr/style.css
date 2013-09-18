@@ -3589,7 +3589,8 @@ span.insight-category-popout {
 	padding:0;
 }
 .clients-carousel .es-carousel{
-  padding-left:13px;
+  /*padding-left:13px; */
+  padding-left: 5px;
 }
 .clients-carousel .es-carousel li{
 	height:80px;
