@@ -139,8 +139,13 @@ jQuery(window).load(function() {
   }
 });
 
+
+
 // DOM Ready
 $(function() {
+  var filters = {};
+  var $container = $('#insights');
+  
   responsiveCategoryHeader();
   
   if ( $('body').hasClass('home') ) {
@@ -183,116 +188,123 @@ $(function() {
   
   insightsIsotopeFiltering();
   
+  function insightsIsotopeFiltering() {
+    $('body').bind('click', function(e) {
+      if($(e.target).closest('#format-select').length == 0
+      && $(e.target).closest('#topic-select').length == 0
+      && $(e.target).closest('#region-select').length == 0) {
+        // click happened outside of menu, hide any visible menu items
+        hideFilterDropdowns(e.target);  
+      } else {
+        //showFilters();
+      }
+    });
+
+    $('#format-select').click(function(){
+      hideFilterDropdowns(this);
+      $('#format').show();        
+    });
+
+    $('#topic-select').click(function(){
+      hideFilterDropdowns(this);
+      $('#topic').show();        
+    });
+
+    $('#region-select').click(function(){
+      hideFilterDropdowns(this);
+      $('#region').show();        
+    });
+
+    $container.isotope({
+      // options
+      itemSelector : '.item',
+      layoutMode : 'fitRows'
+    });
+
+    $('#format a').click(function(e){
+      processFilter('format', this);
+      e.preventDefault();
+      return false;
+    });
+
+    $('#topic li').click(function(e){
+      processFilter('topic', this);
+      e.preventDefault();
+      return false;
+    });
+
+    $('#region li').click(function(e){
+      processFilter('region', this);
+      e.preventDefault();
+      return false;
+    });
+  }
+
+  function processFilter(type, current_element) {
+    $('#' + type + '-select').text($(current_element).text());
+
+    var selector = $.grep(current_element.className.split(" "), function(v, i){
+           return v.indexOf('cat-item-') === 0;
+       }).join();
+
+    if (selector != "") {
+      selector = selector.replace('cat-item-', '.'+ type + '-');
+    }
+    
+    if ( type != 'format' ) {
+      $('#' + type + '').hide();
+      var $optionSet = $(current_element).parents('.option-set');
+      
+      $optionSet.find('.selected').removeClass('selected');
+      $(current_element).addClass('selected');
+    } else {
+      var $buttonParent = $(current_element).parents('.button');
+      
+      $buttonParent.find('.selected').removeClass('selected');
+      
+      if ( filters[type] != selector) {
+        $(current_element).addClass('selected');
+      } else {
+        selector = '';
+      }
+    }
+
+    filters[type] = selector;
+
+    //convert object into array
+    var isoFilters = [];
+    for ( var prop in filters ) {
+      isoFilters.push( filters[ prop ] );
+    }
+
+    selector = isoFilters.join('');
+    $container.isotope({ filter: selector });
+
+    $('#' + type + '-select').show();
+
+    return false;
+  }
+
+  function hideFilterDropdowns(current_filterbox) {
+    showFilters();
+
+    //$('#format').hide(); 
+    $('#topic').hide(); 
+    $('#region').hide(); 
+
+    if (
+    //$(current_filterbox).attr('id') == 'format-select' ||
+    $(current_filterbox).attr('id') == 'topic-select'
+    || $(current_filterbox).attr('id') == 'region-select') {
+      $(current_filterbox).hide();
+    }
+  }
+
+  function showFilters() {
+    //$('#format-select').show();
+    $('#topic-select').show();
+    $('#region-select').show();
+  }
+  
 });
 
-function insightsIsotopeFiltering() {
-  $('body').bind('click', function(e) {
-    if($(e.target).closest('#format-select').length == 0
-    && $(e.target).closest('#topic-select').length == 0
-    && $(e.target).closest('#region-select').length == 0) {
-      // click happened outside of menu, hide any visible menu items
-      hideFilterDropdowns(e.target);  
-    } else {
-      //showFilters();
-    }
-  });
-  
-  $('#format-select').click(function(){
-    hideFilterDropdowns(this);
-    $('#format').show();        
-  });
-  
-  $('#topic-select').click(function(){
-    hideFilterDropdowns(this);
-    $('#topic').show();        
-  });
-  
-  $('#region-select').click(function(){
-    hideFilterDropdowns(this);
-    $('#region').show();        
-  });
-	
-  var $container = $('#insights');
-  var filters = {};
-  
-  $container.isotope({
-    // options
-    itemSelector : '.item',
-    layoutMode : 'fitRows'
-  });
-
-  $('#format a').click(function(e){
-    processFilter('format', this);
-    e.preventDefault();
-    return false;
-  });
-  
-  $('#topic li').click(function(e){
-    processFilter('topic', this);
-    e.preventDefault();
-    return false;
-  });
-  
-  $('#region li').click(function(e){
-    processFilter('region', this);
-    e.preventDefault();
-    return false;
-  });
-}
-
-function processFilter(type, current_element) {
-  $('#' + type + '-select').text($(current_element).text());
-  if ( type != 'format' ) {
-    $('#' + type + '').hide();
-  }
-  
-  var selector = $.grep(current_element.className.split(" "), function(v, i){
-         return v.indexOf('cat-item-') === 0;
-     }).join();
-  
-  if (selector != "") {
-    selector = selector.replace('cat-item-', '.'+ type + '-');
-  }
-  
-  filters[type] = selector;
-  
-  var $optionSet = $(current_element).parents('.option-set');
-  // change selected class
-  $optionSet.find('.selected').removeClass('selected');
-  $(current_element).addClass('selected');
-  //$(this).parent().addClass('selected');
-  
-  //convert object into array
-  var isoFilters = [];
-  for ( var prop in filters ) {
-    isoFilters.push( filters[ prop ] )
-  }
-  
-  selector = isoFilters.join('');
-  $container.isotope({ filter: selector });
-  
-  $('#' + type + '-select').show();
-  
-  return false;
-}
-
-function hideFilterDropdowns(current_filterbox) {
-  showFilters();
-  
-  //$('#format').hide(); 
-  $('#topic').hide(); 
-  $('#region').hide(); 
-  
-  if (
-  //$(current_filterbox).attr('id') == 'format-select' ||
-  $(current_filterbox).attr('id') == 'topic-select'
-  || $(current_filterbox).attr('id') == 'region-select') {
-    $(current_filterbox).hide();
-  }
-}
-
-function showFilters() {
-  //$('#format-select').show();
-  $('#topic-select').show();
-  $('#region-select').show();
-}
