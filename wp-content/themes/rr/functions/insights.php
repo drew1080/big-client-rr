@@ -308,7 +308,7 @@ function create_insight_func($atts) {
   $content .= '<div class="filter-options">
 
               <div id="format" class="format-wrap">
-                <h3>FORMAT: </h3>
+                <!--<h3>FORMAT: </h3>-->
                 ' . $format_list . '
               </div>
               <div class="topic-wrap filter-wrap">
