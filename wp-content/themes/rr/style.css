@@ -3401,6 +3401,14 @@ span.insight-category-popout {
   left: 410px;
 }
 
+#format a.selected {
+  background-color: #990101;
+}
+
+/*#format a.selected:hover {
+  background-color: #a3aab3;
+}*/
+
 .cat-item.selected {
   background: #667280;
 }
