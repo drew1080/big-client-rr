@@ -35,9 +35,14 @@ function responsiveCategoryHeader() {
     }
 
     if ( check_category_header_class ) {
+      
       var category_header_class = checkHeaderLength(word_count, category_name_width, 
           category_name_height, max_acceptable_header_width, max_acceptable_header_height); 
-      $(category_title).addClass(category_header_class);
+          
+      if (category_header_class != '') {
+        $(category_title).removeClass('category-long category-long-wrap category-medium category-medium-wrap');
+        $(category_title).addClass(category_header_class);
+      }
       
       var category_name_width = $(category_title).width();
       var category_name_height = $(category_title).height();
@@ -77,9 +82,9 @@ function responsiveCategoryHeader() {
   }
 }
 
-// $(window).resize(function() {
-//   responsiveCategoryHeader();
-// });
+$(window).resize(function() {
+  responsiveCategoryHeader();
+});
 
 var generateCarousel = function() {
 	if(jQuery().carouFredSel) {
