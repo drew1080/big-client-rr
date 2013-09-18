@@ -600,5 +600,19 @@ function carousel_image_func($atts, $content = null) {
 	return $html;
 }
 
+add_shortcode('rr_easing_slider_pro', 'rr_easing_slider_pro_func');
+function rr_easing_slider_pro_func($atts, $content = null) {
+  extract( shortcode_atts( array(
+    'class' => '',
+		'easing_slider_id' => '1',), $atts ) );
+		
+	if ( function_exists('easingsliderpro') ) {
+    $html = '<div class="slider-home '. esc_attr($class).'">';
+    $html .= easingsliderpro( esc_attr($easing_slider_id) ); 
+    $html .= '</div>';
+    
+    return $html;
+  }
+}
 
 ?>
