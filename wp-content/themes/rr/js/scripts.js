@@ -143,18 +143,6 @@ jQuery(window).load(function() {
 $(function() {
   responsiveCategoryHeader();
   
-  function mycarousel_initCallback(carousel) {
-  	$('#mycarousel-next').bind('click', function() {
-        carousel.next();
-        return false;
-    });
-
-    $('#mycarousel-prev').bind('click', function() {
-        carousel.prev();
-        return false;
-    });
-  }
-  
   if ( $('body').hasClass('home') ) {
     generateCarousel();
   }
@@ -193,6 +181,11 @@ $(function() {
   //   });
   // });
   
+  insightsIsotopeFiltering();
+  
+});
+
+function insightsIsotopeFiltering() {
   $('body').bind('click', function(e) {
     if($(e.target).closest('#format-select').length == 0
     && $(e.target).closest('#topic-select').length == 0
@@ -228,7 +221,7 @@ $(function() {
     layoutMode : 'fitRows'
   });
 
-  $('#format li').click(function(e){
+  $('#format a').click(function(e){
     processFilter('format', this);
     e.preventDefault();
     return false;
@@ -245,59 +238,61 @@ $(function() {
     e.preventDefault();
     return false;
   });
-  
-  function processFilter(type, current_element) {
-    $('#' + type + '-select').text($(current_element).text());
+}
+
+function processFilter(type, current_element) {
+  $('#' + type + '-select').text($(current_element).text());
+  if ( type != 'format' ) {
     $('#' + type + '').hide();
-    
-    var selector = $.grep(current_element.className.split(" "), function(v, i){
-           return v.indexOf('cat-item-') === 0;
-       }).join();
-    
-    if (selector != "") {
-      selector = selector.replace('cat-item-', '.'+ type + '-');
-    }
-    
-    filters[type] = selector;
-    
-    var $optionSet = $(current_element).parents('.option-set');
-    // change selected class
-    $optionSet.find('.selected').removeClass('selected');
-    $(current_element).addClass('selected');
-    //$(this).parent().addClass('selected');
-    
-    //convert object into array
-    var isoFilters = [];
-    for ( var prop in filters ) {
-      isoFilters.push( filters[ prop ] )
-    }
-    
-    selector = isoFilters.join('');
-    $container.isotope({ filter: selector });
-    
-    $('#' + type + '-select').show();
-    
-    return false;
   }
   
-  function hideFilterDropdowns(current_filterbox) {
-    showFilters();
-    
-    $('#format').hide(); 
-    $('#topic').hide(); 
-    $('#region').hide(); 
-    
-    if ($(current_filterbox).attr('id') == 'format-select'
-    || $(current_filterbox).attr('id') == 'topic-select'
-    || $(current_filterbox).attr('id') == 'region-select') {
-      $(current_filterbox).hide();
-    }
+  var selector = $.grep(current_element.className.split(" "), function(v, i){
+         return v.indexOf('cat-item-') === 0;
+     }).join();
+  
+  if (selector != "") {
+    selector = selector.replace('cat-item-', '.'+ type + '-');
   }
   
-  function showFilters() {
-    $('#format-select').show();
-    $('#topic-select').show();
-    $('#region-select').show();
+  filters[type] = selector;
+  
+  var $optionSet = $(current_element).parents('.option-set');
+  // change selected class
+  $optionSet.find('.selected').removeClass('selected');
+  $(current_element).addClass('selected');
+  //$(this).parent().addClass('selected');
+  
+  //convert object into array
+  var isoFilters = [];
+  for ( var prop in filters ) {
+    isoFilters.push( filters[ prop ] )
   }
   
-});
+  selector = isoFilters.join('');
+  $container.isotope({ filter: selector });
+  
+  $('#' + type + '-select').show();
+  
+  return false;
+}
+
+function hideFilterDropdowns(current_filterbox) {
+  showFilters();
+  
+  //$('#format').hide(); 
+  $('#topic').hide(); 
+  $('#region').hide(); 
+  
+  if (
+  //$(current_filterbox).attr('id') == 'format-select' ||
+  $(current_filterbox).attr('id') == 'topic-select'
+  || $(current_filterbox).attr('id') == 'region-select') {
+    $(current_filterbox).hide();
+  }
+}
+
+function showFilters() {
+  //$('#format-select').show();
+  $('#topic-select').show();
+  $('#region-select').show();
+}
