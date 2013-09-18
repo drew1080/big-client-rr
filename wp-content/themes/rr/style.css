@@ -819,7 +819,7 @@ section[role="main"] .view-article {
   display: block;
   float: left;
   width: 199px;
-  margin: 40px 19px 0 19px;
+  margin: 40px 20px 0 21px;
   line-height: 22px;
 }
 
@@ -3276,7 +3276,7 @@ section[role="insight"].custom-fancybox-wrapper {
 }
 section[role="insight"].custom-fancybox-wrapper ul li a {
   height: 320px;
-  margin: 40px 19px 0 19px;
+  margin: 40px 20px 0 21px;
 }
 
 section[role="insight"].custom-fancybox-wrapper .tagline {
@@ -3328,13 +3328,17 @@ span.insight-category-popout {
 }
 .filter-options{
   position:relative;
-  width: 644px;
+  width: 712px;
   margin: 0 auto;
   text-align: left;
 }
 
 .filter-options #format {
   text-align: center;
+}
+
+.filter-options #format.format-wrap p.button a {
+  width: 130px;
 }
 
 .filter-options span{
@@ -3394,11 +3398,11 @@ span.insight-category-popout {
 }
 
 #topic.option-set {
-  left: 156px;
+  left: 201px;
 }
 
 #region.option-set {
-  left: 410px;
+  left: 455px;
 }
 
 #format a.selected {
@@ -3428,7 +3432,7 @@ span.insight-category-popout {
 
 .topic-wrap {
   width: 244px;
-  margin-left: 102px;
+  margin-left: 147px;
 }
 
 #format.option-set {
@@ -3461,7 +3465,6 @@ span.insight-category-popout {
 .option-set li a:hover{
   color: #990101;
 }
-
 
 
 /**** Isotope Filtering ****/
@@ -3925,7 +3928,7 @@ span.insight-category-popout {
   }
   
   .filter-options #format p.button a {
-    width: 165px;
+    width: 165px !important;
   }
   
   .topic-wrap {
