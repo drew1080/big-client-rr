@@ -288,17 +288,27 @@ function create_insight_func($atts) {
     'taxonomy'  => 'rr-region',
     'echo' => 0
   );
+  
+  $args=array(
+    'name'  => 'rr-format'
+  );
+  $output = 'objects'; // or objects
+  $format_list = '<p class="button">';
+  //$taxonomies = get_taxonomies($args,$output); 
+  
+  $taxonomies = get_terms("rr-format");
+  
+  if  ($taxonomies) {
+    foreach ($taxonomies as $taxonomy ) {
+      $format_list .=  '<a href="#" class="cat-item-'. $taxonomy->term_id . '">' . $taxonomy->name . '</a>';
+    }
+  }
+  $format_list .= '</p>';
 	
   $content .= '<div class="filter-options">
 
-              <div class="format-wrap filter-wrap">
-                <span>FORMAT: </span>
-                <div class="format-dropdown insight-dropdown">
-                  <span id="format-select" class="selector-box">All</span>
-                  <ul id="format" class="option-set">
-                  ' . wp_list_categories($format_args) . '
-                  </ul>
-                </div>
+              <div id="format" class="format-wrap">
+                ' . $format_list . '
               </div>
               <div class="topic-wrap filter-wrap">
                 <span>TOPIC: </span>

@@ -164,11 +164,12 @@ if ( is_search() ) {
   echo $content;
 } else if ( is_single() || is_page('blog') || is_author() ) {
   echo $content;
-} else if ( is_front_page()  && function_exists('easingsliderpro') ) {
-  echo '<div class="slider-home">';
-  easingsliderpro( 1 ); 
-  echo '</div>';
 } 
+// else if ( is_front_page()  && function_exists('easingsliderpro') ) {
+//   echo '<div class="slider-home">';
+//   easingsliderpro( 1 ); 
+//   echo '</div>';
+// } 
 ?>
 
 <!-- /Slider -->
