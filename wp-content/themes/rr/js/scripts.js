@@ -133,11 +133,11 @@ var generateCarousel = function() {
 	}
 };
 
-jQuery(window).load(function() {
-  if ( $('body').hasClass('home') ) {
-    generateCarousel();
-  }
-});
+// jQuery(window).load(function() {
+//   if ( $('body').hasClass('home') ) {
+//     generateCarousel();
+//   }
+// });
 
 
 
@@ -148,7 +148,7 @@ $(function() {
   
   responsiveCategoryHeader();
   
-  if ( $('body').hasClass('home') ) {
+  if ( $('body').hasClass('home') || $('body').hasClass('uk') ) {
     generateCarousel();
   }
   

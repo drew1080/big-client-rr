@@ -821,6 +821,7 @@ section[role="main"] .view-article {
   width: 199px;
   margin: 40px 20px 0 21px;
   line-height: 22px;
+  height: 300px;
 }
 
 /* Removing as its causing layout issues with isotope
