@@ -608,7 +608,7 @@ function rr_easing_slider_pro_func($atts, $content = null) {
 		
 	if ( function_exists('easingsliderpro') ) {
     $html = '<div class="slider-home '. esc_attr($class).'">';
-    $html .= easingsliderpro( esc_attr($easing_slider_id) ); 
+    $html .= do_shortcode('[easingsliderpro id="' . $easing_slider_id . '"]');
     $html .= '</div>';
     
     return $html;
