@@ -148,7 +148,8 @@ $(function() {
   
   responsiveCategoryHeader();
   
-  if ( $('body').hasClass('home') || $('body').hasClass('uk') ) {
+  //if ( $('body').hasClass('home') || $('body').hasClass('uk') ) {
+  if ( $('#carousel').length > 0 ) {
     generateCarousel();
   }
   
