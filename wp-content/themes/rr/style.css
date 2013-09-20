@@ -3324,14 +3324,17 @@ span.insight-category-popout {
   position: relative;
 }
 
-.filter-options span:first-child{
+.filter-options span:first-child {
   margin-left: 0px;
 }
-.filter-options{
+.filter-options {
   position:relative;
-  width: 712px;
+  width: 960px;
   margin: 0 auto;
   text-align: left;
+}
+
+.filter-outer-wrap {
 }
 
 .filter-options #format {
@@ -3399,11 +3402,11 @@ span.insight-category-popout {
 }
 
 #topic.option-set {
-  left: 201px;
+  left: 325px;
 }
 
 #region.option-set {
-  left: 455px;
+  left: 579px;
 }
 
 #format a.selected {
@@ -3433,7 +3436,7 @@ span.insight-category-popout {
 
 .topic-wrap {
   width: 244px;
-  margin-left: 147px;
+  margin-left: 271px;
 }
 
 #format.option-set {

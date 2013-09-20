@@ -298,6 +298,8 @@ function create_insight_func($atts) {
   
   $taxonomies = get_terms("rr-format");
   
+  $format_list .=  '<a href="#" class="">All</a>';
+  
   if  ($taxonomies) {
     foreach ($taxonomies as $taxonomy ) {
       $format_list .=  '<a href="#" class="cat-item-'. $taxonomy->term_id . '">' . $taxonomy->name . '</a>';
@@ -310,22 +312,24 @@ function create_insight_func($atts) {
               <div id="format" class="format-wrap">
                 ' . $format_list . '
               </div>
-              <div class="topic-wrap filter-wrap">
-                <span>TOPIC: </span>
-                <div class="topic-dropdown insight-dropdown">
-                  <span id="topic-select" class="selector-box">All</span>
-                  <ul id="topic" class="option-set">
-                  ' . wp_list_categories($topic_args) . '
-                  </ul>
+              <div class="filter-outer-wrap">
+                <div class="topic-wrap filter-wrap">
+                  <span>TOPIC: </span>
+                  <div class="topic-dropdown insight-dropdown">
+                    <span id="topic-select" class="selector-box">All</span>
+                    <ul id="topic" class="option-set">
+                    ' . wp_list_categories($topic_args) . '
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              <div class="region-wrap filter-wrap">
-                <span>REGION: </span>
-                <div class="region-dropdown insight-dropdown">
-                  <span id="region-select" class="selector-box">All</span>
-                  <ul id="region" class="option-set">
-                  ' . wp_list_categories($region_args) . '
-                  </ul>
+                <div class="region-wrap filter-wrap">
+                  <span>REGION: </span>
+                  <div class="region-dropdown insight-dropdown">
+                    <span id="region-select" class="selector-box">All</span>
+                    <ul id="region" class="option-set">
+                    ' . wp_list_categories($region_args) . '
+                    </ul>
+                  </div>
                 </div>
               </div>
               </div>
