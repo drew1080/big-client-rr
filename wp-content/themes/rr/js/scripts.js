@@ -267,6 +267,7 @@ $(function() {
         $(current_element).addClass('selected');
       } else {
         selector = '';
+        $('#format-option-all').addClass('selected');
       }
     }
 

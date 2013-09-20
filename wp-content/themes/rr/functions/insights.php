@@ -298,7 +298,7 @@ function create_insight_func($atts) {
   
   $taxonomies = get_terms("rr-format");
   
-  $format_list .=  '<a href="#" class="">All</a>';
+  $format_list .=  '<a href="#" id="format-option-all" class="selected">All</a>';
   
   if  ($taxonomies) {
     foreach ($taxonomies as $taxonomy ) {
