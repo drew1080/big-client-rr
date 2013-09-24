@@ -59,7 +59,7 @@
 
       </script>	
     </head>
-
+    <?php echo get_option('easing_slider_image_maps'); ?>
     <body <?php body_class(); ?>  data-responsejs='{ "create": 
       {"mode" : "src", "prefix" : "src"}  }
       '>
