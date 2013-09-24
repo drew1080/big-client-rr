@@ -620,13 +620,13 @@ function rr_easing_slider_pro_func($atts, $content = null) {
 add_action('admin_menu', 'add_gcf_interface');
 
 function add_gcf_interface() {
-	add_options_page('Global Custom Fields', 'Global Custom Fields', '8', 'functions', 'editglobalcustomfields');
+	add_options_page('Easing Slider Links for Mobile', 'Easing Slider Links for Mobile', '8', 'functions', 'editglobalcustomfields');
 }
 
 function editglobalcustomfields() {
 	?>
 	<div class='wrap'>
-	<h2>Global Custom Fields</h2>
+	<h2>Easing Slider Links for Mobile</h2>
 	<form method="post" action="options.php">
 	<?php wp_nonce_field('update-options') ?>
 

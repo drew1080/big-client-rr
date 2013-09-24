@@ -19,3 +19,4 @@ wp-snapshots/
 error_log
 *.tmproj
 wp-content/themes/Avada/
+wp-content/plugins/wp-optimize/
