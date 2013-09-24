@@ -83,16 +83,16 @@
               <?php get_search_form(); ?>
             </div>
             <a href="<?php echo get_permalink( get_ID_by_slug( 'company/contact-us')); ?>" title="Chat" class="chat">Chat</a>
-            <!--ul class="langs">
-<li class="padre"><a href="#" title="USA">USA</a>
-<ul>
-<li><a href="#" title="USA">USA</a></li>
-<li><a href="#" title="UK">UK</a></li>
-<li><a href="#" title="France">France</a></li>
-<li><a href="#" title="Deutschland">Deutschland</a></li>
-</ul>
-</li>
-</ul-->
+            <ul class="langs">
+            <li class="padre"><a href="#" title="USA">USA</a>
+                <ul>
+                    <li><a href="#" title="USA">USA</a></li>
+                    <li><a href="http://rr.dev.bradleynewton.net/uk/" title="UK">UK</a></li>
+                    <li><a href="http://richrelevance.fr/" title="France">France</a></li>
+                    <li><a href="http://www.richrelevance.de/" title="Deutschland">Deutschland</a></li>
+                </ul>
+            </li>
+            </ul>
 </div>					<div class="desplegar-menu"></div>
 <!-- nav -->
 <nav class="nav" role="navigation">
