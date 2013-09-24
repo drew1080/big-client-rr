@@ -33,7 +33,7 @@
 }
 
 body {
-	font:300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font:300 14px/1.4 'Roboto Light', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color:#667280;
 	border-top: 4px solid #990101;
 	min-width: 320px;
@@ -1193,6 +1193,10 @@ header .icons {
 	position: relative;
 }
 
+.langs li.padre.uk {
+	background: url(img/actual-lang-uk.jpg) no-repeat 0 0;
+}
+
 .langs li.padre:hover ul {
 	opacity: 1;
 	top: 25px;
@@ -1433,7 +1437,7 @@ width: 100% !important;*/
   width: 100%;
 }
 section[role="trusted"] .wrap ul li {	
-	float: left;    list-style: none outside none;    margin-left: 5px;    margin-right: 5px;    min-height: 89px;    min-width: 137px;}
+	float: left;    list-style: none outside none;    margin-left: 5px;    margin-right: 5px;    min-height: 89px;    min-width: 320px;}
 
 
 
