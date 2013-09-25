@@ -86,7 +86,7 @@
             <ul class="langs">
             <?php if(is_page('uk')){echo '<li class="padre uk"><a href="#" title="UK">UK</a>';} else {echo '<li class="padre"><a href="#" title="USA">USA</a>';} ?>
                 <ul>
-                    <li><a href="http://rrr.dev.bradleynewton.com/" title="USA">USA</a></li>
+                    <li><a href="http://rr.dev.bradleynewton.com/" title="USA">USA</a></li>
                     <li><a href="http://rr.dev.bradleynewton.net/uk/" title="UK">UK</a></li>
                     <li><a href="http://richrelevance.fr/" title="France">France</a></li>
                     <li><a href="http://www.richrelevance.de/" title="Deutschland">Deutschland</a></li>

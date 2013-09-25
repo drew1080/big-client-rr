@@ -173,7 +173,7 @@ section[role="about"] {
 	max-width:960px;
 	margin:40px auto;
 	padding: 0 25px;
-	background:url(img/logo-rr.png) no-repeat right 90px;
+	background:url(/wp-content/uploads/2013/09/home-rr-logo.png) no-repeat right 90px;
 	/*
 	
 	padding-left:10px;
@@ -3251,7 +3251,7 @@ div.caroufredsel_wrapper {
   vertical-align: middle;
   color: #ffffff;
   font-family: robotolight; 
-  font-size: 2.8em;
+  font-size: 2.3em;
   line-height: 1.4em;
   width: 480px;
   padding-left: 50px;
@@ -3748,7 +3748,7 @@ span.insight-category-popout {
   }
 
   .slider p {
-    font-size: 2.5em;
+    font-size: 2.3em;
   }
 
 }
