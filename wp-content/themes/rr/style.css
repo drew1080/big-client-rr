@@ -37,6 +37,7 @@ body {
 	color:#667280;
 	border-top: 4px solid #990101;
 	min-width: 320px;
+	-webkit-text-size-adjust: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {font-weight: normal; font-style: normal;}
@@ -3610,6 +3611,14 @@ span.insight-category-popout {
 .related-posts{
 	margin-bottom:55px;
 }
+
+@media only screen and (max-width:480px) {
+	.related-posts{
+		width: 116%;
+		margin-left: -5%;
+	}
+}
+
 .related-posts .image{
 	width:130px;
 	height:80px;

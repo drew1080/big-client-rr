@@ -143,6 +143,12 @@ var generateCarousel = function() {
 
 // DOM Ready
 $(function() {
+  var window_width = $(window).width();
+  
+  if( window_width > 450 ) {
+    $('#image-maps').html('');
+  }
+
   var filters = {};
   var $container = $('#insights');
   
