@@ -2524,7 +2524,18 @@ section[role="trusted"] .wrap ul{		width:85% !important; margin:0 auto !importan
 
 .desplegar-menu:hover{	background:url(img/menu-desplegar1.png) no-repeat 0 0px;}
 
+	
+.easingsliderpro-arrows.easingsliderpro-next.inside {
+  background-position: center;
+  width: 80px;
+  height: 80px;
+}
 
+.easingsliderpro-arrows.easingsliderpro-prev.inside {
+  background-position: center;
+  width: 80px;
+  height: 80px;
+}
 
 }
 @media (min-width: 700px) and (max-width: 768px){	
@@ -2568,7 +2579,6 @@ section[role="blog"] .date {
 	float: none !important;
 
 	}
-
 
 }
 
