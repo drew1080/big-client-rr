@@ -1473,7 +1473,7 @@ section[role="trusted"] .wrap ul li {
 
 .lastnav ul.sub-menu {
   right: 4px;
-  background: url("img/selector2-respon.jpg") no-repeat scroll 0 0 #FAFBFC;
+  background: url("http://rr.dev.bradleynewton.net/wp-content/uploads/2013/09/selector2-respon2.jpg") no-repeat scroll 0 0 #FAFBFC;
   width: 185px;
 }
 
@@ -2443,7 +2443,7 @@ section[role="trusted"] .wrap ul{		width:85% !important; margin:0 auto !importan
 
 	.nav > ul {	
 
-	background: url(img/selector2-respon.jpg) no-repeat #FAFBFC;
+	background: url(http://rr.dev.bradleynewton.net/wp-content/uploads/2013/09/selector2-respon2.jpg) no-repeat #FAFBFC;
 
 	margin-bottom: 0;
 
@@ -2525,18 +2525,7 @@ section[role="trusted"] .wrap ul{		width:85% !important; margin:0 auto !importan
 
 .desplegar-menu:hover{	background:url(img/menu-desplegar1.png) no-repeat 0 0px;}
 
-	
-.easingsliderpro-arrows.easingsliderpro-next.inside {
-  background-position: center;
-  width: 80px;
-  height: 80px;
-}
 
-.easingsliderpro-arrows.easingsliderpro-prev.inside {
-  background-position: center;
-  width: 80px;
-  height: 80px;
-}
 
 }
 @media (min-width: 700px) and (max-width: 768px){	
@@ -2580,6 +2569,7 @@ section[role="blog"] .date {
 	float: none !important;
 
 	}
+
 
 }
 
@@ -3255,7 +3245,8 @@ div.caroufredsel_wrapper {
   font-size: 4.9em;
 }
 
-.slider h1.entry-title.category-long-wrap {
+.category .slider h1 ,
+.date .slider h1 {
   font-size: 5.8em;
 }
 
@@ -3884,7 +3875,7 @@ span.insight-category-popout {
   
   .slider h1.entry-title.category-long-wrap {
     font-size: 4.9em;
-    width: 85%;
+    width: 70%;
     margin: 0 auto;
   }
   
