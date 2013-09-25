@@ -173,7 +173,7 @@ section[role="about"] {
 	max-width:960px;
 	margin:40px auto;
 	padding: 0 25px;
-	background:url(img/logo-rr.png) no-repeat right 90px;
+	background:url(/wp-content/uploads/2013/09/home-rr-logo.png) no-repeat right 90px;
 	/*
 	
 	padding-left:10px;
@@ -2538,7 +2538,18 @@ section[role="trusted"] .wrap ul{		width:85% !important; margin:0 auto !importan
 
 .desplegar-menu:hover{	background:url(img/menu-desplegar1.png) no-repeat 0 0px;}
 
+	
+.easingsliderpro-arrows.easingsliderpro-next.inside {
+  background-position: center;
+  width: 80px;
+  height: 80px;
+}
 
+.easingsliderpro-arrows.easingsliderpro-prev.inside {
+  background-position: center;
+  width: 80px;
+  height: 80px;
+}
 
 }
 @media (min-width: 700px) and (max-width: 768px){	
@@ -2582,7 +2593,6 @@ section[role="blog"] .date {
 	float: none !important;
 
 	}
-
 
 }
 
@@ -3258,13 +3268,17 @@ div.caroufredsel_wrapper {
   font-size: 4.9em;
 }
 
+.slider h1.entry-title.category-long-wrap {
+  font-size: 5.8em;
+}
+
 .slider p {
   position: relative;
   display: table-cell;
   vertical-align: middle;
   color: #ffffff;
   font-family: robotolight; 
-  font-size: 2.8em;
+  font-size: 2.3em;
   line-height: 1.4em;
   width: 480px;
   padding-left: 50px;
@@ -3761,7 +3775,7 @@ span.insight-category-popout {
   }
 
   .slider p {
-    font-size: 2.5em;
+    font-size: 2.3em;
   }
 
 }
@@ -3883,7 +3897,7 @@ span.insight-category-popout {
   
   .slider h1.entry-title.category-long-wrap {
     font-size: 4.9em;
-    width: 70%;
+    width: 85%;
     margin: 0 auto;
   }
   
