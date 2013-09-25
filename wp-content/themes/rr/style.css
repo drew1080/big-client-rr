@@ -33,7 +33,7 @@
 }
 
 body {
-	font:300 14px/1.4 'Roboto Light', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font:300 11px/1.4 'Roboto Light', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color:#667280;
 	border-top: 4px solid #990101;
 	min-width: 320px;
@@ -265,10 +265,12 @@ section[role="about-us"] ul li {
 section[role="about-us"] .whatsNewleft {
 	background: #ffffff;
   	padding: 8px;
-		-webkit-box-shadow: 0px 7px 12px #999999;
-		-moz-box-shadow: 0px 7px 12px -8px #999999;
-		box-shadow: 0px 7px 12px -8px #999999;
-		margin-top: 8px;
+	-webkit-box-shadow: 0px 7px 12px #999999;
+	-moz-box-shadow: 0px 7px 12px -8px #999999;
+	box-shadow: 0px 7px 12px -8px #999999;
+	margin-top: 8px;
+	font-family: robotolight;
+	font-size: 14px;
 }
 section[role="about-us"] .whatsNewleft img {
 	float: left;
@@ -1605,6 +1607,19 @@ section[role="blog"] .post-content ul {
 
 .single-post section[role="blog"] .post-content ul li {
   list-style-type: disc;
+  font-size: 16px;
+  line-height: 23px;
+  margin-bottom: 6px;
+}
+
+section[role="blog"] .post-content ol {
+  padding: 0;
+  margin: 0 0 24px 30px;
+
+}
+
+.single-post section[role="blog"] .post-content ol li {
+  list-style-type: decimal;
   font-size: 16px;
   line-height: 23px;
   margin-bottom: 6px;
@@ -3258,18 +3273,13 @@ div.caroufredsel_wrapper {
   font-size: 4.9em;
 }
 
-.category .slider h1 ,
-.date .slider h1 {
-  font-size: 5.8em;
-}
-
 .slider p {
   position: relative;
   display: table-cell;
   vertical-align: middle;
   color: #ffffff;
   font-family: robotolight; 
-  font-size: 2.3em;
+  font-size: 2.8em;
   line-height: 1.4em;
   width: 480px;
   padding-left: 50px;
