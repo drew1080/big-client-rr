@@ -68,8 +68,9 @@ class ACPTO
                             continue;
                         
                         //ignore bbpress
-                        if ($post_type_name == 'reply' || $post_type_name == 'topic')
+                        if (is_plugin_active('bbpress/bbpress.php') && ($post_type_name == 'reply' || $post_type_name == 'forum'))
                             continue; 
+
                         
                         //check for exclusion
                         $exclude = FALSE;

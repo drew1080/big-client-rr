@@ -42,12 +42,10 @@
                                                                         'nav_menu_item'
                                                                         );
                                                     
-                                                    if (is_plugin_active('bbpress/bbpress.php'))
+                                                    
+                                                    if (apto_is_plugin_active('bbpress/bbpress.php'))
                                                         {
-                                                            $ignore = array_merge($ignore, array( 'reply',
-                                                                        'topic',
-                                                                        'forum'                                                            
-                                                            ));
+                                                            $ignore = array_merge($ignore, array( 'reply', 'forum'));
                                                         }                    
                                                     
                                                     foreach ($all_post_types as $post_type)

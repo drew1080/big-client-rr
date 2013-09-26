@@ -1340,6 +1340,29 @@
             
             return $additiona_details;   
         }
+        
+    
+    function apto_is_plugin_active( $plugin ) 
+        {
+            return in_array( $plugin, (array) get_option( 'active_plugins', array() ) ) || apto_is_plugin_active_for_network( $plugin );
+        }
+
+    function apto_is_plugin_inactive( $plugin ) 
+        {
+            return ! is_plugin_active( $plugin );
+        }
+
+    function apto_is_plugin_active_for_network( $plugin ) 
+        {
+            if ( !is_multisite() )
+                return false;
+
+            $plugins = get_site_option( 'active_sitewide_plugins');
+            if ( isset($plugins[$plugin]) )
+                return true;
+
+            return false;
+        }
     
   
 ?>

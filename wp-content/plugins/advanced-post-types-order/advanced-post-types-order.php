@@ -5,13 +5,13 @@ Plugin URI: http://www.nsp-code.com
 Description: Order Post Types Objects using a Drag and Drop Sortable javascript capability
 Author: Nsp Code
 Author URI: http://www.nsp-code.com 
-Version: 2.5.7.6
+Version: 2.5.7.7
 */
 
     define('CPTPATH',   plugin_dir_path(__FILE__));
     define('CPTURL',    plugins_url('', __FILE__));
 
-    define('APTO_VERSION', '2.5.7.6');
+    define('APTO_VERSION', '2.5.7.7');
     define('APTO_APP_API_URL',      'http://www.nsp-code.com/index.php'); 
     //define('APTO_APP_API_URL',      'http://127.0.0.1/nsp-code/index.php');
     define('APTO_SLUG',      basename(dirname(__FILE__)));
@@ -239,12 +239,10 @@ Version: 2.5.7.6
             //check for the force_no_custom_order param
             if (isset($query->query_vars['force_no_custom_order']) && $query->query_vars['force_no_custom_order'] === TRUE)
                 return $orderBy;
+                  
+            if (apto_is_plugin_active('bbpress/bbpress.php') && isset($query->query_vars['post_type']) && ((is_array($query->query_vars['post_type']) && in_array("reply", $query->query_vars['post_type'])) || ($query->query_vars['post_type'] == "reply")))
+                return $orderBy;
             
-            //ignore the bbpress
-            if (isset($query->query_vars['post_type']) && ((is_array($query->query_vars['post_type']) && in_array("reply", $query->query_vars['post_type'])) || ($query->query_vars['post_type'] == "reply")))
-                return $orderBy;
-            if (isset($query->query_vars['post_type']) && ((is_array($query->query_vars['post_type']) && in_array("topic", $query->query_vars['post_type'])) || ($query->query_vars['post_type'] == "topic")))
-                return $orderBy;
             
             global $wpdb;
             
