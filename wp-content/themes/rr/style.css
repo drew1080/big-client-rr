@@ -3176,7 +3176,7 @@ p a.imgpartners:nth-child(4) img {
   width: 100%;
   text-align: center;
   display: block;
-  background-position-x: center;
+  background-position: center;
 }
  
 .slider:before {
