@@ -2434,6 +2434,10 @@ display:block;
   .nav {
     top: 68px !important;
   }
+
+  .langs{
+	   display:none;
+}
 }
 
 @media (max-width: 767px){
@@ -2710,10 +2714,6 @@ section[role="blog"] .date {
 		text-align: center;
 
 	}
-        .langs{
-               display:none;
-        }
-
 	.footer .newsletter {
 
 		width: 220px;
